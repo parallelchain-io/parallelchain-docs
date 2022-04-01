@@ -1,0 +1,57 @@
+site_name: ParallelChain® Mainnet SDK Documentation
+site_url: https://testnet.parallelchain.io/explorer
+repo_name: parallelchain-io/parallelchain-docs
+repo_url: https://github.com/parallelchain-io/parallelchain-docs
+copyright: ParallelChain Lab
+nav:
+  - Home: index.md
+  - Smart Contract: 
+    - smart_contract_sdk/index.md
+    - Installation: smart_contract_sdk/installation.md
+    - Prepare Environment: smart_contract_sdk/prepare_env.md
+    - My First Contract: smart_contract_sdk/my_first_contract.md
+    - Using ParallelChain Mainnet Smart Contract Development Kit (SDK): smart_contract_sdk/sdk_and_writing_contract.md
+    - Building and Deploying the Contract: smart_contract_sdk/build_deploy_contract.md
+    - Calling a Contract from an Externally Owned Account: smart_contract_sdk/etoc_call.md
+    - Creating a Smart Contract from Scratch: smart_contract_sdk/zero_to_hero.md
+  - Transaction Receipt and Status: protocol/receipt_and_status.md
+  - Faucet: faucet/index.md
+  - ParallelChain Light Client: 
+    - cli/index.md
+    - Real World Walkthrough: cli/real_world_walkthrough
+extra_css:
+  - stylesheets/extra.css
+theme: 
+  name: material
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+  logo: img/parallelchain-logo.svg
+  favicon: img/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate 
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+  # logo: assets/logo.png
+plugins:
+  - tags:
+      tags_file: tags.md
+  - search
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
