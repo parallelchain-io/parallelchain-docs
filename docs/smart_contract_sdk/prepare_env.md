@@ -44,19 +44,37 @@ In this section, we will configure the `pchain` executable. These steps include:
 
 You can download the precompiled binaries using terminal
 ```bash
-wget www.parallelchain.io/testnet1/releases/pchain
+wget https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz
+```
+You can also use other methods to download the light client binaries.
+
+### **For Windows**, 
+you can download the binaries from [https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip).
+
+Unzip the compressed zip file and you will get a binary with this name: `parallelchain-cli_win_x64_v0.1.0.exe`.
+
+** IMPORTANT: Rename this binary to `pchain`.**
+
+You can follow this guide to add `pchain` to a universal path in windows: [https://stackoverflow.com/a/41895179](https://stackoverflow.com/a/41895179). With this step, `pchain`
+is accessible from any directory in your command prompt.
+
+To access `pchain`, open your command prompt by this method: [https://www.businessinsider.com/how-to-open-command-prompt](https://www.businessinsider.com/how-to-open-command-prompt)
+
+### **For Linux**,
+you can download the binaries from [https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz](https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz).
+
+Extract the binary using this command:
+```
+tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz
 ```
 
-Alternatively, you can download the binaries from [this link.](https://www.parallelchain.io/testnet1/releases/pchain).
+You will obtain a binary with this name: `parallelchain-cli_linux_v0.1.0`.
+
+** IMPORTANT: Rename this binary to `pchain`.**
 
 Add the light client to an installation path
 ```bash
 sudo cp target/release/pchain /usr/bin
-```
-
-Change the premission of the light client
-```bash
-sudo chmod u+x /usr/bin/pchain
 ```
 
 Restart your terminal and test if `pchain` is accessible from any location in your terminal.

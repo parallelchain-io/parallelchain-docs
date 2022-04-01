@@ -9,7 +9,7 @@ tags:
 This section will guide you from creating your own smart contract to making calls to it.
 
 ## Complete Solution
-The complete solution to `my_little_pony` smart contract is available at [https://github.com/parallelchain-io/parallelchain-sdk/examples/my_little_pony](https://github.com/parallelchain-io/parallelchain-sdk/examples/my_little_pony). 
+The complete solution to `my_little_pony` smart contract is available at [https://github.com/parallelchain-io/example-smart-contracts.git](https://github.com/parallelchain-io/example-smart-contracts.git). 
 
 You can use this smart contract as a reference.
 
@@ -32,7 +32,7 @@ See ["Request for tokens from the faucet"](../faucet/index.md#request-for-tokens
 ## Download a Template Smart Contract
 
 Download the template smart contract from this link:
-[https://github.com/parallelchain-io/parallelchain-sdk/examples/parallelchain_sc_template](https://github.com/parallelchain-io/parallelchain-sdk/examples/parallelchain_sc_template). 
+[https://github.com/parallelchain-io/example-smart-contracts.git](https://github.com/parallelchain-io/example-smart-contracts.git). 
 
 The downloaded folder should look like the code snippet below. The whole folder is called a `workspace` in rust.
 ```bash
@@ -70,7 +70,7 @@ You can also observe that the SDK is already included in the manifest file for y
 ```rust
 [dependencies]
 borsh = "0.9"
-smart_contract = { git = "https://github.com/parallelchain-io/parallelchain-sdk/smart_contract" }
+smart_contract = { git = "https://github.com/parallelchain-io/parallelchain-sdk" }
 ```
 
 ## Contract Structure

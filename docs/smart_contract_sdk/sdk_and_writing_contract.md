@@ -49,7 +49,7 @@ For more information on rust's crate system, see [Rust Book Chapter 7: Packages 
 ### Importing the SDK into your Smart Contract
 
 For a rust crate to be considered as a qualified ParallelChain Mainnet Smart Contract, it must have the SDK imported into its crate. If you have downloaded any smart contract templates
-in [https://github.com/parallelchain-io/parallelchain-sdk/examples](https://github.com/parallelchain-io/parallelchain-sdk/examples), the SDK is already imported.
+in [https://github.com/parallelchain-io/example-smart-contracts.git](https://github.com/parallelchain-io/example-smart-contracts.git), the SDK is already imported.
 The example `my_first_contract` illustrates this:
 
 `my_first_contract/src/lib.rs`
@@ -63,10 +63,10 @@ use smart_contract::{
 and in `my_first_contract/Cargo.toml`
 ```rust
 [dependencies]
-parallelchain_smart_contract_sdk = { git = "https://github.com/parallelchain-io/parallelchain-sdk/smart_contract" }
+parallelchain_smart_contract_sdk = { git = "https://github.com/parallelchain-io/parallelchain-sdk" }
 ```
 
-If you intend to build a smart contract without using any of the templates in [https://github.com/parallelchain-io/parallelchain-sdk/examples](https://github.com/parallelchain-io/parallelchain-sdk/examples),
+If you intend to build a smart contract without using any of the templates in [https://github.com/parallelchain-io/example-smart-contracts.git](https://github.com/parallelchain-io/example-smart-contracts.git),
 please see ["Creating and Deploying a Smart Contract from Scratch"](/smart_contract_sdk/zero_to_hero) for more information.
 
 ### Entrypoint and contract_init: 

@@ -38,10 +38,10 @@ the WASM binary through our `optimize_tool` in bash script.
 
 You can download the `optimize_tool` using terminal
 ```bash
-wget https://github.com/parallelchain-io/parallelchain-sdk/optimize.sh
+wget https://github.com/parallelchain-io/example-smart-contracts/blob/main/optimize.sh
 ```
 
-Alternatively, you can download the script [here](https://github.com/parallelchain-io/parallelchain-sdk/optimize.sh).
+Alternatively, you can download the script [here](https://github.com/parallelchain-io/example-smart-contracts/blob/main/optimize.sh).
 
 Set up permissions on the script
 ```bash
