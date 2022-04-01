@@ -67,7 +67,7 @@ parallelchain_smart_contract_sdk = { git = "https://github.com/parallelchain-io/
 ```
 
 If you intend to build a smart contract without using any of the templates in [https://github.com/parallelchain-io/parallelchain-sdk/examples](https://github.com/parallelchain-io/parallelchain-sdk/examples),
-please see ["Creating and Deploying a Smart Contract from Scratch"](/smart_contract_sdk/zero_to_hero.md) for more information.
+please see ["Creating and Deploying a Smart Contract from Scratch"](/smart_contract_sdk/zero_to_hero) for more information.
 
 ### Entrypoint and contract_init: 
 

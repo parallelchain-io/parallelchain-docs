@@ -47,11 +47,16 @@ You can download the precompiled binaries using terminal
 wget www.parallelchain.io/testnet1/releases/pchain
 ```
 
-Alternatively, you can download the binaries from [this link.](www.parallelchain.io/testnet1/releases/pchain).
+Alternatively, you can download the binaries from [this link.](https://www.parallelchain.io/testnet1/releases/pchain).
 
 Add the light client to an installation path
 ```bash
 sudo cp target/release/pchain /usr/bin
+```
+
+Change the premission of the light client
+```bash
+sudo chmod u+x /usr/bin/pchain
 ```
 
 Restart your terminal and test if `pchain` is accessible from any location in your terminal.

@@ -10,7 +10,7 @@ tags:
 
 ## Prerequisites
 * `Rust` and `wasm32-unknown-unknown` are installed in your system. See ["installation"](./installation.md#linux-and-macos) on how to do this.
-* Ensure `pchain` is installed by running. See ["Build pchain from source"](/smart_contract_sdk/prepare_env/#building-pchain-from-source).
+* Ensure `pchain` is installed by running. See ["Setup ParallelChain Light Client"](/smart_contract_sdk/prepare_env/#setup-parallelchain-light-client).
 ```shell
 pchain --version
 ```

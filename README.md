@@ -12,4 +12,3 @@ You will also need `Material for mkdocs` to view the documentation.
 ```
 pip install mkdocs-material
 ```
-

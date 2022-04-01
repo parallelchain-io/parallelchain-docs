@@ -18,15 +18,15 @@ pchain --version
 ## Building the contract
 Download `my_first_contract` contract from [https://github.com/parallelchain-io/parallelchain-sdk/examples/my_first_contract](https://github.com/parallelchain-io/parallelchain-sdk/examples/my_first_contract). 
 
-Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](./build_deploy_contract.md) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at target/wasm32-unknown-unknown of your workspace. The workspace
+Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract/) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at target/wasm32-unknown-unknown of your workspace. The workspace
 is where the source code for `my_first_contract` is located. 
 
-The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our [`optimze_tool`](https://github.com/parallelchain-io/parallelchain-sdk/optimize.sh). See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract.md)
+The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our [`optimze_tool`](https://github.com/parallelchain-io/parallelchain-sdk/optimize.sh). See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract)
 on how to achieve this. However, please note that the `optimize_tool` may lead to breaking changes in more complex code. Future updates in `testnet1` will focus on handling these issues.
 
 ## Deploying the contract
 
-You will require a ParallelChain testnet account to deploy a contract. To create one, see ["Create a new Externally Owned Account (EOA)"](/cli/real_world_walkthrough.md#create-a-new-externally-owned-account-eoa). Make sure you keep the keys in a safe place. The `Public Key` is your account address.
+You will require a ParallelChain testnet account to deploy a contract. To create one, see ["Create a new Externally Owned Account (EOA)"](/cli/real_world_walkthrough/#create-a-new-externally-owned-account-eoa). Make sure you keep the keys in a safe place. The `Public Key` is your account address.
 
 Please make sure your account has enough balance to pay for transactions. You can go to [ParallelChain Testnet Faucet](https://testnet.parallelchain.io/explorer/faucet) to submit token requests and get some tokens for your test. You can use `pchain` to check your account balance:
 ```bash
