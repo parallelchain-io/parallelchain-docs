@@ -21,3 +21,25 @@ or using `pchain`
 ```bash
 $ pchain query account balance --address <YOUR_PUBLIC_KEY>
 ```
+
+## Return testnet tokens
+
+Testnet tokens are distinct from actual coins, and they do not have any monetary value. When you have finished using your test tokens, please return your remaining testnet tokens to the parallalchain account so that other members of the community can use them. 
+
+Please return your test tokens to this address:
+```
+bvxhscIRoJvmu2JQrJyTakMBufl1ogN4py84rtZl7sA=
+```
+Use below `pchain` [command](/cli/#transfer-token) to return tokens
+```
+pchain submit tx \
+--from-address <YOUR_ACCOUNT_ADDRESS> \
+--to-address bvxhscIRoJvmu2JQrJyTakMBufl1ogN4py84rtZl7sA= \
+--value <TOKEN_AMOUNT> \
+--tip 0 \
+--gas-limit 50000 \
+--gas-price 1 \
+--data null \
+--nonce <YOUR_ACCOUNT_NONCE> \
+--keypair <YOUR_ACCOUNT_KEYPAIR>
+```

@@ -120,7 +120,7 @@ pub fn contract(tx: Transaction<A>) -> Result<()>
 ```
 
 The `#[contract_init]` macro will rewrite Result<()> into a method provided by the SDK called `return_value()`. This method takes in a byte string as an argument and returns it as a `Receipt`
-from execution. See `Receipts` and how to read the status code in ["Transaction Receipt and Status"](/protocol/receipt_and_status/)
+from execution. See `Receipts` and how to read the status code in ["Transaction Receipt and Status"](../protocol/index.md)
 
 ### Defining Arguments to the Smart Contract
 
@@ -306,7 +306,7 @@ let my_return_value: String = "I'll be back".to_string();
 tx.return_value(my_return_value.as_bytes().to_vec());
 ```
 
-The return value will appear as part of a successfully executed transaction's `Receipts` field. See `Receipts` and how to read the status code in ["Transaction Receipt and Status"](/protocol/receipt_and_status/).
+The return value will appear as part of a successfully executed transaction's `Receipts` field. See `Receipts` and how to read the status code in ["Transaction Receipt and Status"](../protocol/index.md).
 
 ### `emit_event`: Emitting an Event
 

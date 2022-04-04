@@ -8,16 +8,31 @@ tags:
 
 `Learning outcome`: _Interact with the smart contract using your account._
 
-In ParallelChain Mainnet, there are two kinds of accounts. `Externally Owned Account(EOA)` refers to an account with a public and private key pair that holds your tokens and nonce. The address of EOA is refers to its public key. The second type is `Contract Account` which is associated with smart contract code. Furthermore, the contract account does not have a private key. The address of contract account is generated when a smart contract is deployed.
+You need to perform some data preparation to feed arguments in your contract call if there are any. The light client accepts data as a byte string. In rust these types are `Vec<u8>` or `&[u8]` depending on the context of usage in rust.
 
+Serialization is required for custom data types in rust such as `structs` and `enums`. If the data type you intend to send to the contract are rust primitive types, you can use any method provided by rust to convert such data type into a byte string. See ["Rust's Primitive Types"](https://doc.rust-lang.org/std/#primitives) on how to achieve this.
+
+We recommend that you read the following two sections:
+* [Publich the smart contract to public](#publish-the-smart-contract-to-public)
+* [Preparing the data for serialization](#preparing-the-data-for-serialization)
+
+to facilitate the process of making calls to a smart contract. If you do not need any serialization and just want to make a simple smart contract call, you can skip to ["Calling the contract"](#calling-the-contract).
 
 ## Publish the smart contract to public
-After deploying the contract, you should be able to obtain the contract address if the deploy command has succeeded. 
-
+After deploying the contract, you should be able to obtain the contract address if the deploy command has succeeded. Your `Contract Address` is associated with the smart contract code. 
+ 
 You can publish your contract address, argument format (See ["Defining Arguments to the Smart Contract"](../sdk_and_writing_contract/#defining-arguments-to-the-smart-contract)) and callable functions (See ["Defining Callable Functions through Arguments"](../sdk_and_writing_contract/#defining-callable-functions-through-arguments)) through offline channels so that other people can call your smart contract. Do not forget to open a discussion page to share your smart contract address and arguments at [ParallelChain Mainnet SDK Discussions](https://github.com/parallelchain-io/parallelchain-sdk/discussions).
 
 ## Preparing the data for serialization
 Before you call a smart contract, you need to prepare the arguments for the contract first. The argument of each contract is dependent on how it is defined in the smart contract. The argument can either be rust primitive types or custom data types such as `structs` and `enums`. Do remember that custom data types have to be serialized/deserialized with the [`borsh`](https://borsh.io/) serialization protocol (See more on section ["Defining Arguments to the Smart Contract"](../sdk_and_writing_contract/#defining-arguments-to-the-smart-contract)).
+
+
+In `your_smart_contract/Cargo.toml`, import the required depencies to continue with the tutorial.
+```rust
+[dependencies]
+base64 = "0.13"
+borsh = "0.9"
+```
 
 ### For primitive types argument
 Example 1: An example of the smart contract that takes the primitive type `String` as its argument type is shown below:

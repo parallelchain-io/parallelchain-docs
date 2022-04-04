@@ -6,7 +6,101 @@ tags:
 # Commands Overview
 
 ## Setup
-See ["Setup ParallelChain Light Client"](/smart_contract_sdk/prepare_env/#setup-parallelchain-light-client) to configure `pchain`.
+
+### For Windows 
+
+This section will use `PowerShell` as the command line utility to install ParallelChain Light Client. Open up `PowerShell` using the `run` keyboard shortcut. That is *Ctrl+R* and type in `powershell` to proceed. 
+
+Download the binaries from [https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip)
+
+Unzip the compressed zip file by using the following `PowerShell` command. Make sure that you replace the two variables below with your own.
+* `<SOURCE_PATH>`: the directory where `parallelchain-cli_win_x64_v0.1.0.zip` is located.
+* `<DESTINATION_PATH>`: the directory you intend to install `pchain`. 
+```PowerShell
+Expand-Archive -LiteralPath 'C:\<SOURCE_PATH>\parallelchain-cli_win_x64_v0.1.0.zip' -DestinationPath 'C:\<DESTINATION_PATH>\parallelchain-cli_win_x64_v0.1.0.exe'
+```
+
+Switch the operating mode of `PowerShell` from a normal mode to administrator mode with this command:
+```PowerShell
+Start-Process powershell -Verb runAs
+```
+
+Head to the destination directory where `parallelchain-cli_win_x64_v0.1.0.exe` is extracted:
+```PowerShell
+Set-Location C:\<DESTINATION_PATH>\
+```
+
+In the destination directory (`<DESTINATION_PATH>`), we need to rename the binary to `pchain` so that it is easier to follow this guide:
+```PowerShell
+Rename-Item -Path 'parallelchain-cli_win_x64_v0.1.0.exe' -NewName 'pchain.exe'
+```
+
+<!-- We need to add the path to `pchain` to the system environment in windows. 
+```PowerShell
+[System.Environment]::SetEnvironmentVariable('PATH',$Env:PATH+';C:\<DESTINATION_PATH>\')
+``` -->
+
+Type the command `pchain` to see if it launches.
+```PowerShell
+./pchain.exe
+```
+<details>
+  <summary>To verify that the Light Client works</summary>
+    `pchain` is now an executable from anywhere on your system
+    ```bash
+    verylight 0.1.0
+    <Parallel Chain Lab>
+    Parallel Chain Mainnet verylight
+    ```
+</details>
+
+Congratulations. You have successfully installed `pchain` and are ready to proceed to the following sections.
+
+### For Linux
+
+You can download the precompiled compressed binaries using the terminal command below:
+```bash
+wget https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz
+```
+
+After downloading the file `parallelchain-cli_linux_v0.1.0.tar.xz`, head to the directory where your binaries are located. 
+
+Type this command to extract and use the light client immediately. **The following two commands require privileged access; you can look at `Administrative Action in Linux` at the bottom of this section on allowing these types of actions.**
+```bash
+sudo tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz --directory /usr/bin 
+```
+
+We need to rename the binary to `pchain` so that it is easier to follow this guide:
+```bash
+sudo mv /usr/bin/parallelchain-cli_linux_v0.1.0 /usr/bin/pchain
+```
+
+<details>
+  <summary>Administrative Action in Linux</summary>
+When you add a "sudo" keyword to the front of a command in linux, you need to enter your password like this:
+```bash
+[sudo] password for my_user:
+```
+and press enter to continue with the operation.
+</details>
+
+Type the command `pchain` to see if it launches.
+```bash
+pchain
+```
+<details>
+  <summary>To verify that the Light Client works</summary>
+    `pchain` is now an executable from anywhere on your system
+    ```bash
+    verylight 0.1.0
+    <Parallel Chain Lab>
+    Parallel Chain Mainnet verylight
+    ```
+</details>
+
+Congratulations. You have successfully installed `pchain` and are ready to proceed to the following sections.
+
+## Launching `pchain`
 
 |   Command                  |      Description                                        |
 | -------------------------- | ------------------------------------------------------- |
@@ -42,17 +136,17 @@ pchain set key --generate
 ```
 
 ###`Check balance`
-You can check your account balance through your address
+You can check the account balance by provide the account address.
+See ["Create a New Externally Owned Account (EOA)"](http://pc-tracy.digital-transaction.net:12345/cli/real_world_walkthrough/#create-a-new-externally-owned-account-eoa) for account address details.
 ```bash
-pchain query account balance --address <YOUR_ACCOUNT_ADDRESS>
+pchain query account balance --address <ACCOUNT_ADDRESS>
 ```
 
 ###`Check nonce`
-You can check your account nonce through your address.
-```bash
-pchain query account nonce --address <YOUR_ACCOUNT_ADDRESS>
+The nonce is the number of valid transactions sent from a given address. Each time you send a transaction, the nonce increases by 1.
 ```
-
+pchain query account nonce --address <ACCOUNT_ADDRESS>
+```
 
 ## Transaction 
 
@@ -73,40 +167,42 @@ You can submit different kinds of transactions using the same command with varyi
 --gas-limit <GAS_LIMIT> \
 --gas-price 1 \
 --data <DATA> \
---nonce <YOUR_ACCOUNT_NONCE> \
---keypair <YOUR_ACCOUNT_KEYPAIR>
+--nonce <FROM_ACCOUNT_NONCE> \
+--keypair <FROM_ACCOUNT_KEYPAIR>
 ```
 ##### Transfer token
+See ["EtoE: Transferring Tokens from One Account to Another"](/cli/real_world_walkthrough/#etoe-transferring-tokens-from-one-account-to-another) for detailed steps.
+
 * `from-address`: the source account address. It is usually your account address.
 * `to-address`: the destination account address. This address must be an Externally Owned Account(EOA).
-* `value`: the token amount to transfer
+* `value`: number in TXPLL. The token amount to transfer
 * `gas-limit`: Any token transfer between EOAs consumes a fixed amount of gas. We recommend setting this to 44,600.
 * `data`: no data is needed. Set this to `null`
-* `nonce`: you can get the nonce by ['query command'](#check-nonce)
+* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
 * `keypair`: your account keypair  
 
 ##### Deploy contract
 See ["Building and deploying the contract"](/smart_contract_sdk/build_deploy_contract) for detailed steps.
 
-* `from-address`: your account address
+* `from-address`: the source account address
 * `to-address`: Set to `null`
 * `value`: Set to 0
 * `gas-limit`: It depends on the contract code size. We recommend setting the gas limit to at least _CODE\_SIZE * 105_
-* `nonce`: You can get the nonce by [`query command`](#check-nonce)
+* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
 * `keypair`: Your account keypair 
 
 ##### Call a contract
 See ["Calling a Contract from an Externally Owned Account](/smart_contract_sdk/etoc_call) for detailed steps.
 
-* `from-address`: your account address
+* `from-address`: the source account address
 * `to-address`: contract address
 * `value`: Set to 0
 * `gas-limit`: We recommend setting the gas limit to _at least 500000 gas_
-* `nonce`: you can get the nonce by [`query command`](#check-nonce)
+* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
 * `keypair`: your account keypair that is generated before 
 
 ###`Query transaction`
-You can check the transaction details with the transaction hash.
+Once you submitted a transaction, you will get the transaction hash on terminal output. You can check the transaction details with this hash.
 ```bash
 pchain query tx --tx-hash <TRANSACTION_HASH>
 ```
@@ -121,6 +217,7 @@ pchain query tx --tx-hash <TRANSACTION_HASH>
 ###`Query single block`
 
 ##### By Block number
+Block number refers to the number of blocks that have been created on the blockchain prior to the block. You can get the block number of the block by its hash. See ["Query blcok number"](#query-block-number)
 ```bash
 pchain query block --block-num <BLOCK_NUM>
 ```
@@ -159,14 +256,12 @@ You can query data from the `world state` in a particular block.
 
 * `block-hash`: The hash of the block to query.
 * `address`: It can be either an Externally Owned Account(EOA) or a Contract Account
-* `visibility`: **Must** be `public` or `private`. Set to `public` for contract account and `private` for EOA
 * `key`: The key in the world state.
 
 ```bash
 pchain query state \
 --block-hash <BLOCK_HASH> \
 --address <ADDRESS> \
---visibility <VISIBILITY> \
 --key <KEY>
 ```
 

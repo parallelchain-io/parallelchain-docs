@@ -20,10 +20,31 @@ Download the smart contract examples respository at [https://github.com/parallel
 
 After this folder is downloaded, enter into `my_first_contract` directory.
 
-Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract/) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at target/wasm32-unknown-unknown of your workspace. The workspace
-is where the source code for `my_first_contract` is located. 
+Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract/) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at `target/wasm32-unknown-unknown/release` of your workspace. The workspace is where the source code for `my_first_contract` is located. 
 
-The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our [`optimze_tool`](https://github.com/parallelchain-io/example-smart-contracts/blob/main/optimize.sh). See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract)
+<details>
+  <summary>Click to see the output file for my_first_contract:</summary>
+    1. Go to "my_first_contract"
+    ```bash
+    cd my_first_contract/
+    ```
+
+    1. Go to the output folder of "my_first_contract"
+    ```bash
+    cd target/wasm32-unknown-unknown/release
+    ```
+
+    1. Your built contract can be found:
+    ```bash
+    $ ls
+    my_first_contract.wasm
+    ```
+</details>
+
+The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our [`optimze_tool`](https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.sh). 
+
+
+See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract)
 on how to achieve this. However, please note that the `optimize_tool` may lead to breaking changes in more complex code. Future updates in `testnet1` will focus on handling these issues.
 
 ## Deploying the contract

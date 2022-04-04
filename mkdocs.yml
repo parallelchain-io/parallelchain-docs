@@ -1,5 +1,5 @@
 site_name: ParallelChain® Mainnet SDK Documentation
-site_url: https://testnet.parallelchain.io/explorer
+site_url: https://docs.parallelchain.io
 repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
 copyright: ParallelChain Lab
@@ -14,7 +14,7 @@ nav:
     - Building and Deploying the Contract: smart_contract_sdk/build_deploy_contract.md
     - Calling a Contract from an Externally Owned Account: smart_contract_sdk/etoc_call.md
     - Creating a Smart Contract from Scratch: smart_contract_sdk/zero_to_hero.md
-  - Transaction Receipt and Status: protocol/receipt_and_status.md
+  - Transaction Receipt and Status: protocol/index.md
   - Faucet: faucet/index.md
   - ParallelChain Light Client: 
     - cli/index.md

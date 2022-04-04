@@ -10,8 +10,6 @@ tags:
 
 In this section, you need the tools and environment to develop and run smart contracts. You can utilize our testnet to deploy and make contract calls. 
 
-Alternatively, we will also provide you with the ParallelChain fullnode binary with which you can simulate contract execution before deploying to our testnet. 
-
 ## Verify that the testnet is live
 
 To verify that our testnet is live and running, please make sure that the following URLs are working:
@@ -31,61 +29,11 @@ The testnet explorer can explore transactions, addresses, analytics (performance
 
 ## Setup ParallelChain Light Client 
 
-In this section, we will configure the `pchain` executable. These steps include:
+In this section, we will configure the `pchain` executable. We will assume that `pchain` runs on both Windows and Linux/MacOs as we have guides on setting up the Light Client for these platforms. 
 
-- [Prepare Environment](#prepare-environment)
-  - [Verify that the testnet is live](#verify-that-the-testnet-is-live)
-  - [Testnet1 explorer](#testnet1-explorer)
-  - [Setup ParallelChain Light Client](#setup-parallelchain-light-client)
-  - [Pointing the light client to the testnet](#pointing-the-light-client-to-the-testnet)
-  - [Generate an account](#generate-an-account)
-  - [Request for tokens from the faucet](#request-for-tokens-from-the-faucet)
+Therefore, when you use `pchain`, the same command applies to Windows, Linux and MacOS command line interface.
 
-
-You can download the precompiled binaries using terminal
-```bash
-wget https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz
-```
-You can also use other methods to download the light client binaries.
-
-### **For Windows**, 
-you can download the binaries from [https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip).
-
-Unzip the compressed zip file and you will get a binary with this name: `parallelchain-cli_win_x64_v0.1.0.exe`.
-
-** IMPORTANT: Rename this binary to `pchain`.**
-
-You can follow this guide to add `pchain` to a universal path in windows: [https://stackoverflow.com/a/41895179](https://stackoverflow.com/a/41895179). With this step, `pchain`
-is accessible from any directory in your command prompt.
-
-To access `pchain`, open your command prompt by this method: [https://www.businessinsider.com/how-to-open-command-prompt](https://www.businessinsider.com/how-to-open-command-prompt)
-
-### **For Linux**,
-you can download the binaries from [https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz](https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz).
-
-Extract the binary using this command:
-```
-tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz
-```
-
-You will obtain a binary with this name: `parallelchain-cli_linux_v0.1.0`.
-
-** IMPORTANT: Rename this binary to `pchain`.**
-
-Add the light client to an installation path
-```bash
-sudo cp target/release/pchain /usr/bin
-```
-
-Restart your terminal and test if `pchain` is accessible from any location in your terminal.
-```bash
-pchain
-```
-
-For more details on the usage guide for `pchain`, please head to ParallelChain Light Client page. Alternatively, you can type the command below to see the subcommands available for use:
-```bash
-pchain --help
-```
+See ["ParallelChain Client Setup"](../cli/index.md#setup) to install `pchain` on your pc.
 
 ## Pointing the light client to the testnet
 

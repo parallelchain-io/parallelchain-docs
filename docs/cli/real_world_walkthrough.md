@@ -11,7 +11,7 @@ tags:
 
 ## Acronyms
 
-* `EOA`: Externally Owned Account
+* `EOA`: Externally Owned Account. This is an account with a public and private key pair that holds your tokens and nonce. The address of EOA is refers to its public key.
 
 There are three kinds of transactions in the testnet:
 
@@ -94,7 +94,7 @@ Your value "0"
 Transfer tokens from your account to the dummy acccount using `pchain`
 ```bash
 pchain submit tx \
---from-address  <YOUR_ACCOUNT_ADDRESS> \
+--from-address <FROM_ACCOUNT_ADDRESS> \
 --to-address <DUMMY_ACCOUNT_ADDRESS> \
 --value <AMOUNT_TO_TRANSFER> \
 --tip 0 \
@@ -128,6 +128,7 @@ Hash of tx: "/dg7QxEUKDApdO/OuOufGewo1r6OO/XXLsFay65ozlg="
 Status 200
 Response "Your request has been received."
 ```
+"Status 200" is a HTTP response status codes. It implies that your transaction request was successfully sent to our node to process. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a> for details.
 </details>
 
 You can check the transaction 
@@ -186,7 +187,7 @@ Your Block: Block {
 ```
 </details>
 
-Please refer to ["Transaction Status Code"](/protocol/receipt_and_status/#status-code) section for details.
+Please refer to ["Transaction Status Code"](../protocol/index.md) section for details.
 
 
 ## `DeployC`: Deploying your Smart Contract
@@ -198,7 +199,7 @@ Remember to get your latest account nonce before submitting transaction.
 Deploy the contract using `pchain`
 ```bash
 pchain submit tx \
---from-address  <YOUR_ACCOUNT_ADDRESS> \
+--from-address <FROM_ACCOUNT_ADDRESS> \
 --to-address null \
 --value 0 \
 --tip 0 \
@@ -236,6 +237,7 @@ Hash of tx: "JOKxDTNqlMUjZ65DDxONrRkOjPOKqW3zO44F48SJOec="
 Status 200
 Response "Your request has been received."
 ```
+"Status 200" is a HTTP response status codes. It implies that your transaction request was successfully sent to our node to process. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a> for details.
 </details>
 
 A smart contract is correctly deployed if you get a stream of bytes in the terminal through the `contract-code` flag.
@@ -310,7 +312,7 @@ Your Block: Block {
 }
 ```
 </details>
-Please refer to ["Transaction Status Code"](/protocol/receipt_and_status/#status-code) section for details.
+Please refer to ["Transaction Status Code"](../protocol/index.md#status-code) section for details.
 
 ## `EtoC`: Making calls to your Smart Contract
 
@@ -329,8 +331,8 @@ The gas limit is depended on the complexity of the smart contract. On average, i
 
 ```bash
 pchain submit tx \
---from-address  <YOUR_ACCOUT_ADDRESS> \
---to-address null <CONTRACT_ADDRESS> \
+--from-address <YOUR_ACCOUT_ADDRESS> \
+--to-address <CONTRACT_ADDRESS> \
 --value 0 \
 --tip 0 \
 --gas-limit <GAS_LIMIT> \
@@ -342,7 +344,7 @@ pchain submit tx \
 <details><summary>Click to view real world example to call the smart contract</summary>
 ```bash
 ./pchain submit tx \
---from-address  /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs= \
+--from-address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs= \
 --to-address Ns9DuNe8aS5QISfCyjEoAcZq20OVr2nKQTKsYGmo/Jw= \
 --value 0 \
 --tip 0 \
@@ -359,6 +361,7 @@ Hash of tx: "PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE="
 Status 200
 Response "Your request has been received."
 ```
+"Status 200" is a HTTP response status codes. It implies that your transaction request was successfully sent to our node to process. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a> for details.
 </details>
 
 Check the transaction 
