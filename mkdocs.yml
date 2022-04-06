@@ -1,24 +1,27 @@
-site_name: ParallelChain® Mainnet SDK Documentation
+site_name: ParallelChain® Mainnet Documentation
 site_url: https://docs.parallelchain.io
 repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
-copyright: ParallelChain Lab
+copyright: ParallelChain Lab 2022
 nav:
   - Home: index.md
-  - Smart Contract: 
+  - ParallelChain Smart Contract Development Kit (SDK): 
     - smart_contract_sdk/index.md
     - Installation: smart_contract_sdk/installation.md
     - Prepare Environment: smart_contract_sdk/prepare_env.md
     - My First Contract: smart_contract_sdk/my_first_contract.md
-    - Using ParallelChain Mainnet Smart Contract Development Kit (SDK): smart_contract_sdk/sdk_and_writing_contract.md
+    - Tutorial - Using The SDK: smart_contract_sdk/sdk_tutorial.md
     - Building and Deploying the Contract: smart_contract_sdk/build_deploy_contract.md
     - Calling a Contract from an Externally Owned Account: smart_contract_sdk/etoc_call.md
     - Creating a Smart Contract from Scratch: smart_contract_sdk/zero_to_hero.md
+    - SDK References: smart_contract_sdk/references.md
   - Transaction Receipt and Status: protocol/index.md
   - Faucet: faucet/index.md
   - ParallelChain Light Client: 
     - cli/index.md
-    - Real World Walkthrough: cli/real_world_walkthrough
+    - Installation: cli/installation.md
+    - Tutorial: cli/tutorial.md
+    - Light Client References: cli/references.md
 extra_css:
   - stylesheets/extra.css
 theme: 

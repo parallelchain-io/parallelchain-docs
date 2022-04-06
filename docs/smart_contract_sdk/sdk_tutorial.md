@@ -2,9 +2,10 @@
 tags:
   - testnet 1.0
   - parallelchain sdk
+  - tutorial
 ---
 
-# Using ParallelChain Mainnet Smart Contract Development Kit (SDK)
+# Tutorial: Using the SDK
 
 `Learning outcome`: _Using the methods and macros provided by ParallelChain Mainnet SDK._
 
@@ -67,7 +68,7 @@ parallelchain_smart_contract_sdk = { git = "https://github.com/parallelchain-io/
 ```
 
 If you intend to build a smart contract without using any of the templates in [https://github.com/parallelchain-io/example-smart-contracts.git](https://github.com/parallelchain-io/example-smart-contracts.git),
-please see ["Creating and Deploying a Smart Contract from Scratch"](/smart_contract_sdk/zero_to_hero) for more information.
+please see ["Creating and Deploying a Smart Contract from Scratch"](zero_to_hero.md) for more information.
 
 ### Entrypoint and contract_init: 
 
@@ -424,5 +425,4 @@ enum PowerStatus {
 }
 ```
 
-That is a lot to cover. You are ready to head to the next section of this guide. The next section covers building your contract
-and making calls to it.
+That is a lot to cover. You are ready to head to the next section of this guide. The next section covers building your contract and making calls to it.

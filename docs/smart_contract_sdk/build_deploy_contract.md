@@ -10,7 +10,7 @@ tags:
 
 ## Prerequisites
 * `Rust` and `wasm32-unknown-unknown` are installed in your system. See ["installation"](./installation.md#linux-and-macos) on how to do this.
-* Ensure `pchain` is installed by running. See ["Setup ParallelChain Light Client"](/smart_contract_sdk/prepare_env/#setup-parallelchain-light-client).
+* Ensure `pchain` is installed by running. See ["Setup ParallelChain Light Client"](prepare_env.md#setup-parallelchain-light-client).
 ```shell
 pchain --version
 ```
@@ -75,4 +75,4 @@ The output file `optimized-<ORIGINAL_FILENAME>.wasm` is generated under the same
 
 ## Deploying the contract
 
-See ["`DeployC`: Deploying your Smart Contract"](../cli/real_world_walkthrough.md#deployc-deploying-your-smart-contract)
+See ["`DeployC`: Deploying your Smart Contract"](../cli/tutorial.md#deployc-deploying-your-smart-contract)

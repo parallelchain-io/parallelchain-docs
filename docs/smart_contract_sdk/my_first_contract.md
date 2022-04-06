@@ -9,7 +9,7 @@ tags:
 `Learning outcome`: _Download, build and deploy `my_first_contract` onto ParallelChain `testnet1`_
 
 ## Prerequisites
-* Rust is installed in your system. See ["installation"](/smart_contract_sdk/installation/#linux-and-macos) on how to do this.
+* Rust is installed in your system. See ["installation"](installation.md#linux-and-macos) on how to do this.
 * Ensure `pchain` is installed by running 
 ```bash
 pchain --version
@@ -20,7 +20,7 @@ Download the smart contract examples respository at [https://github.com/parallel
 
 After this folder is downloaded, enter into `my_first_contract` directory.
 
-Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract/) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at `target/wasm32-unknown-unknown/release` of your workspace. The workspace is where the source code for `my_first_contract` is located. 
+Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](build_deploy_contract.md) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at `target/wasm32-unknown-unknown/release` of your workspace. The workspace is where the source code for `my_first_contract` is located. 
 
 <details>
   <summary>Click to see the output file for my_first_contract:</summary>
@@ -49,7 +49,7 @@ on how to achieve this. However, please note that the `optimize_tool` may lead t
 
 ## Deploying the contract
 
-You will require a ParallelChain testnet account to deploy a contract. To create one, see ["Create a new Externally Owned Account (EOA)"](/cli/real_world_walkthrough/#create-a-new-externally-owned-account-eoa). Make sure you keep the keys in a safe place. The `Public Key` is your account address.
+You will require a ParallelChain testnet account to deploy a contract. To create one, see ["Create a new Externally Owned Account (EOA)"](../cli/tutorial.md#create-a-new-externally-owned-account-eoa). Make sure you keep the keys in a safe place. The `Public Key` is your account address.
 
 Please make sure your account has enough balance to pay for transactions. You can go to [ParallelChain Testnet Faucet](https://testnet.parallelchain.io/explorer/faucet) to submit token requests and get some tokens for your test. You can use `pchain` to check your account balance:
 ```bash
@@ -66,7 +66,7 @@ Your value "214"
 Your value(decoded) [219, 94]
 ```
 
-Deploy the contract with your account nonce. You should get the contract address and transaction hash if the command has succeeded. See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract/) for detailed steps.
+Deploy the contract with your account nonce. You should get the contract address and transaction hash if the command has succeeded. See ["Building and Deploying the Contract"](build_deploy_contract.md) for detailed steps.
 ```bash
 pchain submit tx \
 --from-address  <YOUR_ACCOUT_ADDRESS> \

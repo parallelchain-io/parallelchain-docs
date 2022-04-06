@@ -23,7 +23,7 @@ All of these programs below need to be installed before proceeding. Click on the
 
 ### Create account
 
-See ["Create a new Externally Owned Account (EOA)"](../cli/real_world_walkthrough.md#create-a-new-externally-owned-account-eoa)
+See ["Create a new Externally Owned Account (EOA)"](../cli/tutorial.md#create-a-new-externally-owned-account-eoa)
 
 ### Add tokens
 
@@ -75,9 +75,9 @@ smart_contract = { git = "https://github.com/parallelchain-io/parallelchain-sdk"
 
 ## Contract Structure
 
-Now, let us look at the main file of the smart contract, in `my_little_pony/src/lib.rs`:
+Now, let us look at the main file of the smart contract:
 
-```rust
+```rust title="my_little_pony/src/lib.rs" linenums="1"
 use smart_contract::{
     contract_init,
     sdk_method_bindgen,
@@ -132,8 +132,7 @@ We will start modifying the code to write a smart contract in the following sect
 
 Let's modify the contract. 
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 - // REPLACE ARGUMENT STRUCT WITH YOUR OWN IF ANY
 - #[sdk_method_bindgen]
 - #[derive(BorshSerialize, BorshDeserialize)]
@@ -160,8 +159,7 @@ As we can observe, the `gender` field type is a custom data type which is an [`e
 
 Let's modify the contract to define an enum. 
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 struct MyLittlePony {
      name: String,
      age: u32,
@@ -180,8 +178,7 @@ The enum `Gender` is a custom data type that contains variants. In this context,
 
 Let's modify the contract to add the `Borsh` serializer to the struct and the enum
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 #[sdk_method_bindgen]
 + #[derive(BorshSerialize, BorshDeserialize)]
 struct MyLittlePony {
@@ -202,8 +199,7 @@ pub enum Gender {
 
 Let's modify the contract to add the `sdk_method_bindgen` macro.
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 + #[sdk_method_bindgen]
 #[derive(BorshSerialize, BorshDeserialize)]
 struct MyLittlePony {
@@ -228,8 +224,7 @@ We can still use the basic methods provided by the SDK which are `set` and `get`
 
 As `my_little_pony` smart contract accepts arguments that are of type `MyLittlePony`, we can access the SDK's `arguments` field to be used in smart contract. You can access these values my modifying the smart contract.
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 // The `contract_init` macro is required to convert the smart contract code
 // from idiomatic rust to a contract that is readable and executable in
 // ParallelChain Mainnet Fullnode.
@@ -255,8 +250,9 @@ Let us add two functions as an `impl` to `MyLittlePony`. There are two types of 
 * [`Methods`](https://doc.rust-lang.org/book/ch05-03-method-syntax.html#defining-methods)
 * [`Associated Functions`](https://doc.rust-lang.org/book/ch05-03-method-syntax.html#associated-functions)
 
-We will add impl blocks in `my_little_pony/src/lib.rs`
-```diff
+We will add impl blocks.
+
+```diff title="my_little_pony/src/lib.rs"
 #[sdk_method_bindgen]
 #[derive(BorshSerialize, BorshDeserialize)]
 struct MyLittlePony {
@@ -306,8 +302,7 @@ strong_pony.neigh();
 ### `set`
 Let us use the SDK methods to write arbitrary data to the contract state.
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 // The `contract_init` macro is required to convert the smart contract code
 // from idiomatic rust to a contract that is readable and executable in
 // ParallelChain Mainnet Fullnode.
@@ -325,8 +320,7 @@ We need to take the arguments to `set` as a byte string.
 
 ### `get`
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 // The `contract_init` macro is required to convert the smart contract code
 // from idiomatic rust to a contract that is readable and executable in
 // ParallelChain Mainnet Fullnode.
@@ -352,8 +346,7 @@ get_my_little_pony(&self, key: &[u8]) -> Option<MyLittlePony>
 
 We will modify the associated function `new()` to write to the contract state after initializing `MyLittlePony` struct.
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 impl MyLittlePony {
     
     fn new(tx: Transaction<MyLittlePony>, name: &String, age: u32, gender: Gender) -> Self {
@@ -378,8 +371,7 @@ impl MyLittlePony {
 
 We will modify the method `neigh()` to get from the contract state.
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 impl MyLittlePony {
     
     ...
@@ -405,11 +397,11 @@ impl MyLittlePony {
 ```
 
 ## Emit event
-You can emit events in `contract()` to understand how your smart contract works. Topic and Value can be primitive type or any custom data types. Please note that you will need [BorshSerialization](/smart_contract_sdk/sdk_and_writing_contract/#serialization-protocols) for custom data types.
+You can emit events in `contract()` to understand how your smart contract works. Topic and Value can be primitive type or any custom data types. Please note that you will need [BorshSerialization](sdk_tutorial.md#serialization-protocols) for custom data types.
 
-For now, for simplicity, we will use primitive type here so we do not need BorshSerialization.
-In `my_little_pony/src/lib.rs`
-```diff
+For now, for simplicity, we will use primitive type here. Therefore, we do not need BorshSerialization.
+
+```diff title="my_little_pony/src/lib.rs"
 // REPLACE ARGUMENT STRUCT WITH YOUR OWN IF ANY
 #[sdk_method_bindgen]
 #[derive(BorshSerialize, BorshDeserialize)]
@@ -437,10 +429,9 @@ The resulting message will appear in a successfully executed transaction's Event
 
 ## Change `contract()` signature to return a receipt
 
-In rust, you can always return some values in your function to provide feedback to users. You can return any primivite types, structs or even [`anyhow Result`](/smart_contract_sdk/sdk_and_writing_contract/#returning-a-result).
+In rust, you can always return some values in your function to provide feedback to users. You can return any primivite types, structs or even [`anyhow Result`](sdk_tutorial.md#returning-a-result).
 
-In `my_little_pony/src/lib.rs`
-```diff
+```diff title="my_little_pony/src/lib.rs"
 // The `contract_init` macro is required to convert the smart contract code
 // from idiomatic rust to a contract that is readable and executable in
 // ParallelChain Mainnet Fullnode.
@@ -460,29 +451,140 @@ In `my_little_pony/src/lib.rs`
 ```
 We are now returning a `Ok` Result with a `String`. This returns the string as a Receipt `return_value` from execution. 
 
+## Putting it all together
+
+Now that we have used all of the available tools from the SDK, let us check the source code.
+
+<details>
+  <summary>Click to see the whole source code of "my_little_pony"</summary>
+```rust title="my_little_pony/src/lib.rs" linenums="1"
+/*
+Copyright (c) 2022 ParallelChain Lab
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+use smart_contract::{
+    contract_init,
+    sdk_method_bindgen,
+    Transaction
+};
+
+use anyhow::Result;
+use borsh::{BorshDeserialize, BorshSerialize};
+
+// REPLACE ARGUMENT STRUCT WITH YOUR OWN IF ANY
+#[sdk_method_bindgen]
+#[derive(BorshSerialize, BorshDeserialize)]
+pub struct MyLittlePony {
+    pub name: String,
+    pub age: u32,
+    pub gender: Gender,
+}
+
+#[derive(BorshSerialize, BorshDeserialize, Clone)]
+pub enum Gender {
+    Female,
+    Male,
+}
+
+impl MyLittlePony {
+    
+    fn new(tx: &Transaction<MyLittlePony>, name: &String, age: u32, gender: &Gender) -> Self {
+        let little_pony = MyLittlePony {
+            name: name.to_owned(),
+            age,
+            gender: gender.to_owned(),
+        };
+
+        tx.set_my_little_pony(little_pony.name.as_bytes(), &little_pony);
+
+        little_pony
+
+    }
+
+    fn neigh(&self, tx: &Transaction<MyLittlePony>) {
+
+        match tx.get_my_little_pony(self.name.as_bytes()) {
+            Some(pony) => {
+                let topic: String = "Neigh Message".to_string();
+                let value: String = format!("Pony with name {} neighs at age: {}", self.name, pony.age);
+                tx.emit_event(topic.as_bytes(), value.as_bytes());
+            },
+            None => {
+                let topic: String = "No Pony".to_string();
+                let value: String = format!("Pony not found");
+                tx.emit_event(topic.as_bytes(), value.as_bytes());
+            }       
+        };
+
+    }
+}
+
+
+// The `contract_init` macro is required to convert the smart contract code
+// from idiomatic rust to a contract that is readable and executable in
+// ParallelChain Mainnet Fullnode.
+#[contract_init]
+pub fn contract(tx: Transaction<MyLittlePony>) -> Result<String> {
+    let pony_specification = &tx.arguments;
+    let new_pony = MyLittlePony::new(
+        &tx, 
+        &pony_specification.name, 
+        pony_specification.age, 
+        &pony_specification.gender
+    );
+
+    Ok(format!("Welcome pony, {}", &new_pony.name))
+```
+</details>
+
+There are some points to note and recap:
+
+* `contract_init` must be placed on top of the `contract()` entrypoint function. Without it, the contract will not be a ParallelChain Mainnet Smart Contract and compilation of the contract will fail.
+* `smart_contract::Transaction` is the imported SDK which we have been using to interact with `storage` in ParallelChain Mainnet.
+* `sdk_method_bindgen` provides custom methods to interact with `storage` for any struct such as `MyLittlePony`.
+* All structs and enums such as `MyLittlePony` and `Gender` that are intended to be used as inputs/outputs to the smart contract need to be serialized. The same is applicable to structs and enums that interact with `storage`. 
+* `emit_event` method is useful for printing some messages from the smart contract. 
+* return values are shown in receipts in a transaction.
+
 ## Compile contract
 After you walkthrough the above steps, your contract should be ready to compile. Building a smart contract is a process to generate a Web Assembly (WASM) binary that will be used to deploy.
 
-See [Building and deploying the contract](/smart_contract_sdk/build_deploy_contract/#building-the-contract).
+See [Building and deploying the contract](build_deploy_contract.md#building-the-contract).
 
 Please note that the generated WASM binary maybe large in file size. It is always good to optimize the WASM binary code size using our optimize tool in order to save money and achieve better performance. 
 
-See [Optimizing WASM binary for code size (optional)](/smart_contract_sdk/build_deploy_contract/#optimizing-wasm-binary-for-code-size-optional)
+See [Optimizing WASM binary for code size (optional)](build_deploy_contract.md#optimizing-wasm-binary-for-code-size-optional)
 
 ## Deploy Contract
 
 Now, you can publish your smart contract to public by deploying on ParallelChain Mainnet. A contract account will be created with an unique contract address. Whenever people submit transaction with this contract address, it will execcute the contract code that assioiated with this contract account.
 
-See [DeployC: Deploying your Smart Contract](/cli/real_world_walkthrough/#deployc-deploying-your-smart-contract)
+See [DeployC: Deploying your Smart Contract](../cli/tutorial.md#deployc-deploying-your-smart-contract)
 
 Please note that whenever there are changes or new function updates in your smart contract, you are required to re-deploy the smart contract and this would result in different contract address. In other words, each contract address is referring a particular version of your smart contract.
 
 ## Make calls to contract
 
-
 Finally, it is time to call your smart contract with the contract address. But before you can acutally submit a EtoC transaction, you need to prepare some informations first. Remember you defined the [argument struct](/smart_contract_sdk/zero_to_hero/#add-an-argument-struct) before, you need to prepare that argument and put it to data field in the transaction.
 
-See [Calling a Contract from an Externally Owned Account](/smart_contract_sdk/etoc_call/)
+See [Calling a Contract from an Externally Owned Account](etoc_call.md)
 
+## What is next?
 
+Congratulations, you now know how to write a simple smart contract. Feel free to be creative by modifying `my_little_pony` smart contract. 
+
+Some things that you can try are:
+
+* In `my_little_pony`, add a new field in `MyLittlePony` struct called action to allow functions to be called in the contract.
+* 
 

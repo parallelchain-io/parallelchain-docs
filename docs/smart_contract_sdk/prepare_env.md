@@ -46,7 +46,7 @@ This command will write a config.json file in `$HOME/.parallelchain/pchain_cli/c
 
 ## Generate an account
 
-See [Create a new Externally Owned Account (EOA)](/cli/real_world_walkthrough/#create-a-new-externally-owned-account-eoa)
+See [Create a new Externally Owned Account (EOA)](../cli/tutorial.md#create-a-new-externally-owned-account-eoa)
 
 ## Request for tokens from the faucet
 

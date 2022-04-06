@@ -2,10 +2,10 @@
 tags:
   - testnet 1.0
   - parallelchain light client
-  - walkthrough
+  - tutorial
 ---
 
-# Real World Walkthrough
+# Tutorial
 
 `Learning outcome`: _Run all four kinds of transactions and check its result using `pchain`._
 
@@ -18,7 +18,6 @@ There are three kinds of transactions in the testnet:
 * `EtoE`: EOA to EOA (Token transfers between EOAs)
 * `EtoC`:  EOA to Contract Account (Contract calls)
 * `DeployC`: Deploy Contract
-
 
 ## Create a new Externally Owned Account (EOA)
 
