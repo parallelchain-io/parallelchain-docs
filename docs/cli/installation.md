@@ -11,18 +11,41 @@ tags:
 
 ## For Windows 
 
-This section will use `PowerShell` as the command line utility to install ParallelChain Light Client. Open up `PowerShell` using the `run` keyboard shortcut. That is *Ctrl+R* and type in `powershell` to proceed. 
+Download the compressed zip file from [https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip)
 
-Download the binaries from [https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-cli_win_x64_v0.1.0.zip)
+Unzip the file to extract the executable `parallelchain-cli_win_x64_v0.1.0.exe`. It is suggested to rename the executable to `pchain.exe` so that it becomes easier to follow this guide:
 
-Unzip the compressed zip file by using the following `PowerShell` command. Make sure that you replace the two variables below with your own.
-* `<SOURCE_PATH>`: the directory where `parallelchain-cli_win_x64_v0.1.0.zip` is located.
-* `<DESTINATION_PATH>`: the directory you intend to install `pchain`. 
+![Screenshot](../screen/win_install_1.png)
+
+To open Command Prompt, type *WIN+R* and input `cmd`:
+
+![Screenshot](../screen/win_install_2.png)
+
+Head to the directory where `pchain.exe` is located via `cd`. For example, the executable is located at C:\Development:
+
+![Screenshot](../screen/win_install_3.png)
+
+Run the command `pchain.exe` to see if it launches:
+
+![Screenshot](../screen/win_install_4.png)
+
+
+### For Powershell User
+
+This section describes using `PowerShell` as the command line utility to install ParallelChain Light Client. 
+
+Open up `PowerShell` using the `run` keyboard shortcut. That is *WIN+R* and type in `powershell` to proceed. 
+
+Unzip the compressed zip file by `Expand-Archive`. Please specify the source path and destination path for your command parameters:
+
+-  `<SOURCE_PATH>`: the directory where `parallelchain-cli_win_x64_v0.1.0.zip` is located.
+-  `<DESTINATION_PATH>`: the directory you intend to install `pchain`. 
+
 ```PowerShell
 Expand-Archive -LiteralPath 'C:\<SOURCE_PATH>\parallelchain-cli_win_x64_v0.1.0.zip' -DestinationPath 'C:\<DESTINATION_PATH>\parallelchain-cli_win_x64_v0.1.0.exe'
 ```
 
-Switch the operating mode of `PowerShell` from a normal mode to administrator mode with this command:
+To switch the operating mode of `PowerShell` from a normal mode to administrator mode:
 ```PowerShell
 Start-Process powershell -Verb runAs
 ```
@@ -32,18 +55,18 @@ Head to the destination directory where `parallelchain-cli_win_x64_v0.1.0.exe` i
 Set-Location C:\<DESTINATION_PATH>\
 ```
 
-In the destination directory (`<DESTINATION_PATH>`), we need to rename the binary to `pchain` so that it is easier to follow this guide:
+In the destination directory (`<DESTINATION_PATH>`), it is suggested to rename the binary to `pchain` so that it becomes easier to follow this guide:
 ```PowerShell
 Rename-Item -Path 'parallelchain-cli_win_x64_v0.1.0.exe' -NewName 'pchain.exe'
 ```
 
-Type the command `pchain` to see if it launches.
+Run the command `pchain` to see if it launches.
 ```PowerShell
-./pchain.exe
+pchain.exe
 ```
 <details>
   <summary>To verify that the Light Client works</summary>
-    `pchain` is now an executable from anywhere on your system
+    pchain is now an executable from anywhere on your system
     ```bash
     verylight 0.1.0
     <Parallel Chain Lab>
@@ -55,22 +78,16 @@ Congratulations. You have successfully installed `pchain` and are ready to proce
 
 ## For Linux
 
-You can download the precompiled compressed binaries using the terminal command below:
+To download the precompiled compressed binaries using the terminal command:
 ```bash
 wget https://cms.parallelchain.io/parallelchain-cli_linux_v0.1.0.tar.xz
 ```
 
-After downloading the file `parallelchain-cli_linux_v0.1.0.tar.xz`, head to the directory where your binaries are located. 
-
-Type this command to extract and use the light client immediately. **The following two commands require privileged access; you can look at `Administrative Action in Linux` at the bottom of this section on allowing these types of actions.**
+To extract the client program, head to the directory where the downloaded file `parallelchain-cli_linux_v0.1.0.tar.xz` is located and extract via `sudo tar`:
 ```bash
 sudo tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz --directory /usr/bin 
 ```
-
-We need to rename the binary to `pchain` so that it is easier to follow this guide:
-```bash
-sudo mv /usr/bin/parallelchain-cli_linux_v0.1.0 /usr/bin/pchain
-```
+**`sudo` is for privileged access while `tar` is for file extraction. Please see further details below:**
 
 <details>
   <summary>Administrative Action in Linux</summary>
@@ -81,7 +98,12 @@ When you add a "sudo" keyword to the front of a command in linux, you need to en
 and press enter to continue with the operation.
 </details>
 
-Type the command `pchain` to see if it launches.
+To rename the client program to `pchain` so that it becomes easier to follow this guide:
+```bash
+sudo mv /usr/bin/parallelchain-cli_linux_v0.1.0 /usr/bin/pchain
+```
+
+Run the command `pchain` to see if it launches.
 ```bash
 pchain
 ```

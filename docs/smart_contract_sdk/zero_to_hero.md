@@ -585,6 +585,52 @@ Congratulations, you now know how to write a simple smart contract. Feel free to
 
 Some things that you can try are:
 
-* In `my_little_pony`, add a new field in `MyLittlePony` struct called action to allow functions to be called in the contract.
-* 
+* In `my_little_pony`, add a new field in `MyLittlePony` struct called action to allow functions to be called in the contract. An example is shown below:
 
+```diff
+#[sdk_method_bindgen]
+#[derive(BorshSerialize, BorshDeserialize)]
+pub struct MyLittlePony {
+     pub name: String,
+     pub age: u32,
+     pub gender: Gender,
++    pub action: PonyAction,
+}
+
++ #[derive(BorshSerialize, BorshDeserialize)]
++ pub enum PonyAction {
++   Neigh,
++   Kick,
++   Sleep,
++ }
+
+
+```
+* Use this enum to make calls to other functions within the smart contract. If we correlate our enum `PonyAction::Neigh` with the function `neigh()` in the smart contract, we can define several functions that are callable through the variants of `PonyAction`. An example of such correlation if we modify our source code is:
+```rust hl_lines="12 15-20"
+// The `contract_init` macro is required to convert the smart contract code
+// from idiomatic rust to a contract that is readable and executable in
+// ParallelChain Mainnet Fullnode.
+#[contract_init]
+pub fn contract(tx: Transaction<MyLittlePony>) -> Result<String> {
+    let pony_specification = &tx.arguments;
+    let new_pony = MyLittlePony::new(
+        &tx, 
+        &pony_specification.name, 
+        pony_specification.age, 
+        &pony_specification.gender,
+        &pony_specification.action,
+    );
+
+    // You can extract the specific action out of `PonyAction` to call specific functions in the smart contract.
+    // Do take note that as of `testnet1`, all functions are considered as public.
+    match new_pony.action {
+        PonyAction::Neigh => new_pony.neigh(),
+        // TODO: Feel free to add your other actions here.
+    }
+
+    Ok(format!("Welcome pony, {}", &new_pony.name))
+
+}
+```
+* In the previous point, we used enums and pattern matching to make other functions callable through the use of arguments, feel free to explore new ways to do so.

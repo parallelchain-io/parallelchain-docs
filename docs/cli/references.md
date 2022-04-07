@@ -15,6 +15,8 @@ You can always use the flag `--help` or `-h` as the last flag for any commands i
 pchain --help
 ```
 
+---
+
 ## **Launching `pchain`**
 
 |   Command                  |      Description                                        |
@@ -62,6 +64,7 @@ _Returns a success message indicating the target address set._
     ```
 </details>
 
+---
 
 ## Account
 
@@ -114,7 +117,7 @@ _Returns the account balance to the user._
     ```
 </details>
 
-###`Check nonce`
+### **Check nonce**
 
 The nonce is the number of valid transactions sent from a given address. Each time you send a transaction, the nonce increases by 1. 
 
@@ -135,6 +138,8 @@ _Returns the account nonce to the user._
     ```
 </details>
 
+---
+
 ## Transaction 
 
 |   Command                  |      Description                                        |
@@ -149,6 +154,18 @@ You can submit different kinds of transactions using `pchain submit tx`. The val
 * [Transfer Token](#transfer-token)
 * [Deploy Contract](#deploy-contract)
 * [Call a Contract](#call-a-contract)
+
+#### **Transfer token**
+
+See ["EtoE: Transferring Tokens from One Account to Another"](tutorial.md#etoe-transferring-tokens-from-one-account-to-another) for detailed steps.
+
+* `<FROM_ADDRESS>`: the source account address. It is usually your account address.
+* `<TO_ADDRESS>`: the destination account address. This address must be an Externally Owned Account(EOA).
+* `<VALUE>`: number in TXPLL. The token amount to transfer
+* `<GAS_LIMIT>`: Any token transfer between EOAs consumes a fixed amount of gas. We recommend setting this to 44,600.
+* `<DATA>`: no data is needed. Set this to `null`
+* `<FROM_ACCOUNT_NONCE>`: number. You can get the nonce by [`query command`](#check-nonce)
+* `<FROM_ACCOUNT_KEYPAIR>`: your account keypair  
 
 **Command**
 
@@ -177,37 +194,79 @@ _Returns a successful acknowledgment message from the testnet node, including th
     ```
 </details>
 
-##### Transfer token
-
-See ["EtoE: Transferring Tokens from One Account to Another"](tutorial.md#etoe-transferring-tokens-from-one-account-to-another) for detailed steps.
-
-* `from-address`: the source account address. It is usually your account address.
-* `to-address`: the destination account address. This address must be an Externally Owned Account(EOA).
-* `value`: number in TXPLL. The token amount to transfer
-* `gas-limit`: Any token transfer between EOAs consumes a fixed amount of gas. We recommend setting this to 44,600.
-* `data`: no data is needed. Set this to `null`
-* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
-* `keypair`: your account keypair  
-
 ##### Deploy contract
 See ["Building and deploying the contract"](../smart_contract_sdk/build_deploy_contract.md) for detailed steps.
 
-* `from-address`: the source account address
-* `to-address`: Set to `null`
-* `value`: Set to 0
-* `gas-limit`: It depends on the contract code size. We recommend setting the gas limit to at least _CODE\_SIZE * 105_
-* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
-* `keypair`: Your account keypair 
+* `<FROM_ADDRESS>`: the source account address
+* `<TO_ADDRESS>`: Set to `null`
+* `<VALUE>`: Set to 0
+* `<GAS_LIMIT>`: It depends on the contract code size. We recommend setting the gas limit to at least _CODE\_SIZE * 105_
+* `<FROM_ACCOUNT_NONCE>`: number. You can get the nonce by [`query command`](#check-nonce)
+* `<FROM_ACCOUNT_KEYPAIR>`: Your account keypair 
+
+**Command**
+
+```bash
+pchain submit tx \
+--from-address <FROM_ADDRESS> \
+--to-address <TO_ADDRESS> \
+--value <VALUE> \
+--tip <TIP> \
+--gas-limit <GAS_LIMIT> \
+--gas-price 1 \
+--data <DATA> \
+--nonce <FROM_ACCOUNT_NONCE> \
+--keypair <FROM_ACCOUNT_KEYPAIR>
+```
+
+**Returns**
+
+_Returns a successful acknowledgment message from the testnet node, including the transaction hash. Use this hash to verify if your transaction has succeeded. Please see the section on ["Query transaction"](#query-transaction) for details_
+<details>
+  <summary>Output</summary>
+    ```bash
+    Hash of tx: "EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1="
+    Status 200
+    Response "Your request has been received."
+    ```
+</details>
 
 ##### Call a contract
 See ["Calling a Contract from an Externally Owned Account](../smart_contract_sdk/etoc_call.md) for detailed steps.
 
-* `from-address`: the source account address
-* `to-address`: contract address
-* `value`: Set to 0
-* `gas-limit`: We recommend setting the gas limit to _at least 500000 gas_
-* `nonce`: number. You can get the nonce by [`query command`](#check-nonce)
-* `keypair`: your account keypair
+* `<FROM_ADDRESS>`: the source account address
+* `<TO_ADDRESS>`: contract address
+* `<VALUE>`: Set to 0
+* `<GAS_LIMIT>`: We recommend setting the gas limit to _at least 500000 gas_
+* `<FROM_ACCOUNT_NONCE>`: number. You can get the nonce by [`query command`](#check-nonce)
+* `<FROM_ACCOUNT_KEYPAIR>`: your account keypair
+
+**Command**
+
+```bash
+pchain submit tx \
+--from-address <FROM_ADDRESS> \
+--to-address <TO_ADDRESS> \
+--value <VALUE> \
+--tip <TIP> \
+--gas-limit <GAS_LIMIT> \
+--gas-price 1 \
+--data <DATA> \
+--nonce <FROM_ACCOUNT_NONCE> \
+--keypair <FROM_ACCOUNT_KEYPAIR>
+```
+
+**Returns**
+
+_Returns a successful acknowledgment message from the testnet node, including the transaction hash. Use this hash to verify if your transaction has succeeded. Please see the section on ["Query transaction"](#query-transaction) for details_
+<details>
+  <summary>Output</summary>
+    ```bash
+    Hash of tx: "EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1="
+    Status 200
+    Response "Your request has been received."
+    ```
+</details>
 
 ### **Query transaction**
 
@@ -242,6 +301,7 @@ _Returns the transaction details that correspond to the transaction hash._
     ```
 </details>
 
+---
 
 ## Block 
 |   Command                  |      Description                                        |
@@ -720,6 +780,8 @@ _Returns the block number from its hash_
     ```
 </details>
 
+---
+
 ## World state 
 |   Command                  |      Description                                        |
 | -------------------------- |-------------------------------------------------------- |
@@ -731,8 +793,8 @@ You can query data from the `world state` in a particular block.
 Where:
 
 * `<BLOCK_HASH>`: The block's hash for the query.
-* `<ADDRESS>`: It can be either an Externally Owned Account(EOA) or a Contract Account
-* `<KEY>`: The key in the world state.
+* `<ADDRESS>`: The address of contract account.
+* `<KEY>`: The key in the world state in format of base64 string.
 
 **Command**
 ```bash
@@ -745,12 +807,17 @@ pchain query state \
 **Returns**
 
 _Returns the world state of a particular block_
+
 <details>
   <summary>Example Output</summary>
+  The value is in format of base64 string. If key is not found (or not set before), it outputs empty string (decoded to empty array)
     ```bash
-    // COMING SOON
+    Your value "AAAAAA=="
+    Your value(decoded) [0, 0, 0, 0]
     ```
 </details>
+
+---
 
 ## Analyze
 |   Command                  |      Description                                        |
@@ -758,7 +825,7 @@ _Returns the world state of a particular block_
 | [`pchain analyze gas-per-block`](#gas-usage-per-block)  | Get the gas usage per block for a specified period|
 | [`pchain analyze mempool-size`](#mempool-size)  | Get mempool size for a specified period|
 
-###`Gas usage per block`
+### **Gas usage per block**
 You can get the gas usage of blocks for a specified period.
 
 * `<START_TIME>`: Start of the time window (_in unix timestamp formatting_)
@@ -777,11 +844,12 @@ pchain analyze gas-per-block \
 
 **Returns**
 
-_Returns the gas usage of a block_
+_Returns the gas usage of a block._
 <details>
   <summary>Example Output</summary>
+    The output array contains gas usage value representing period of &lt;WINDOW_SIZE&gt; seconds. The starting time for period is scheduled by every &lt;STEP_SIZE&gt; seconds. The lenght of the array varies depends on the input.
     ```bash
-    // COMING SOON
+    Your value [0, 0, 5057700, 44200, 44200, 44200, 44200]
     ```
 </details>
 
@@ -807,7 +875,8 @@ pchain analyze mempool-size \
 _Returns the mempool size for a specified time window_
 <details>
   <summary>Example Output</summary>
+    The lenght of the array varies depends on the input.
     ```bash
-    // COMING SOON
+    Your value [0, 0, 0, 0, 0, 0, 0]
     ```
 </details>
