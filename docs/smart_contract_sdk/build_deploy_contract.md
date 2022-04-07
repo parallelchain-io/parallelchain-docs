@@ -53,7 +53,10 @@ cargo build --target wasm32-unknown-unknown --release
 </details>
 
 ## **Optimizing WASM binary for code size (optional)**
-The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our `optimize_tool` in bash script. 
+
+The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our `optimize_tool` in bash script in Linux or terminal commands in Windows.
+
+### Linux and macOS
 
 We recommend that you use this optimization tool, otherwise you will not have enough tokens to run a contract. The faucet gives enough tokens to run contracts that have been built with the optimizer tool.
 
@@ -72,6 +75,26 @@ Run the script by providing your compiled contract file path.
 ./optimize.sh -f <file path>
 ```
 The output file `optimized-<ORIGINAL_FILENAME>.wasm` is generated under the same location of your script.
+
+### Windows 10 
+
+We recommend that you use this optimization commands, otherwise you will not have enough tokens to run a contract. The faucet gives enough tokens to run contracts that have been built with the optimized commands.
+
+In your terminal, type the following commands:
+```bash
+cd <file path>
+``` 
+```bash
+wasm-opt -Oz  <ORIGINAL_FILENAME>.wasm  --output temp-<ORIGINAL_FILENAME>.wasm
+``` 
+```bash
+wasm-snip temp-<ORIGINAL_FILENAME>.wasm --output temp2-<ORIGINAL_FILENAME>.wasm --snip-rust-fmt-code --snip-rust-panicking-code
+``` 
+```bash
+wasm-opt -Oz  temp2-<ORIGINAL_FILENAME>.wasm  --output  optimized-<ORIGINAL_FILENAME>.wasm
+``` 
+The output file `optimized-<ORIGINAL_FILENAME>.wasm` is generated under the same location of your terminal.
+
 
 ## Deploying the contract
 
