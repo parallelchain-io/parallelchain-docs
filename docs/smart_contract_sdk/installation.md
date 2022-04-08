@@ -14,7 +14,7 @@ This section will guide you in installing rust for your machine.
 
 We will require toolkits. The standard method is by `rustup`, which maintains dependencies and is a version manager for `cargo` and `rustc` (the rust compiler). 
 
-### Linux and macOS
+### Linux / macOS
 
 In your terminal, type the following command:
 ```bash

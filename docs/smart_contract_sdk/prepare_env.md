@@ -35,22 +35,11 @@ Therefore, when you use `pchain`, the same command applies to Windows, Linux and
 
 See ["ParallelChain Client Setup"](../cli/index.md#setup) to install `pchain` on your pc.
 
-## Pointing the light client to the testnet
-
-Type the command below to point the light client to the testnet:
-```bash
-pchain set config --target-address https://testnet1.digital-transaction.net
-``` 
-
-This command will write a config.json file in `$HOME/.parallelchain/pchain_cli/config.json`. It only needs to be executed once.
-
 ## Generate an account
 
 See [Create a new Externally Owned Account (EOA)](../cli/tutorial.md#create-a-new-externally-owned-account-eoa)
 
 ## Request for tokens from the faucet
-
-TODO: This should be removed and replaced with the testnet faucet page.
 
 In `testnet1`, you will need native tokens to pay the node for deploying and executing your smart contracts. 
 

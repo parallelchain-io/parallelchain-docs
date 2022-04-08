@@ -51,7 +51,7 @@ fn contract(tx: Transaction<String>)
 It requires a string as input value when calling from the client program `pchain`, which should be specified in the option `--data`:
 
 ```bash hl_lines="3 8"
-pchain submit tx \
+./pchain submit tx \
 --from-address <YOUR_ACCOUNT_ADDRESS> \
 --to-address <CONTRACT_ADDRESS> \
 --value 0 \
@@ -69,7 +69,7 @@ Where:
 * `<BASE64_ENCODED_ARGUMENT>` is the input value in format of encoded base64 string. For example, the string `hello world` could be encoded to **Borsh serialized** base64 encoded string `CwAAAGhlbGxvIHdvcmxk` which is the direct input to the option `--data`:
 
 ```bash hl_lines="6"
-pchain submit tx \
+./pchain submit tx \
 --from-address 2oQRJJZ62AQteFw632lGYUVeEiHOaNn8oqLf3Q89jDU= \
 --to-address Ou0NCikd0A0dohxMjMmpidnZqxQKww4vHV8o1vRBKpI= \
 --value 0 \

@@ -7,13 +7,45 @@ tags:
 
 # `pchain` References
 
+!!! Important
+    **We recommend that you store `pchain` in a directory of your choice so that it is easier to follow the commands in the reference.** 
+    
+    **For Linux/macOS users** - **For example, we created a folder in our home directory called parallelchain_client**:
+    ```bash
+    $ mkdir -p /home/my_user/parallelchain_client
+    $ cp pchain /home/my_user/parallelchain_client/
+    $ cd /home/my_user/parallelchain_client
+    $ ./pchain
+    ```
+
+    So from now on, when you see a command like this in linux/macOS. It means that `pchain` shall be executed from the directory you stored `pchain` in.
+    ```bash
+    ./pchain
+    ```
+
+    **For Windows users** - **Windows uses a different command structure compared to Linux and MacOS. All you need to do is to go to the directory where `pchain` is located. For example we have a command in `PowerShell` that shows this:**
+    ```PowerShell
+    PS> Set-Location C:Users\my_user\parallelchain_client
+    C:Users\my_user\parallelchain_client> pchain.exe
+    ```
+
+    So from now on, when you see a command like this in Windows. It means that `pchain` shall be executed from the directory you stored `pchain` in.
+    ```PowerShell
+    pchain.exe
+    ```
+
 ## Help
 You can always use the flag `--help` or `-h` as the last flag for any commands in the following sections to learn more about any built-in commands.
 
 **Command**
-```bash
-pchain --help
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain --help
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe --help
+    ```
 
 ---
 
@@ -29,9 +61,14 @@ pchain --help
 Checks the version of the light client installed on your machine.
 
 **Command**
-```bash
-pchain --version
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain --version
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe --version
+    ```
 
 **Returns**
 
@@ -50,9 +87,14 @@ _Returns the version number of the light client_
 Configures the light client to connect with our testnet:
 
 **Command**
-```bash
-pchain set config --target-address https://testnet1.digital-transaction.net
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain set config --target-address https://testnet1.digital-transaction.net
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe set config --target-address https://testnet1.digital-transaction.net
+    ```
 
 **Returns**
 
@@ -79,9 +121,14 @@ _Returns a success message indicating the target address set._
 Generates a set of ed25519_dalek compatible keys required for making transactions in the network. Keep these details in a safe place. You cannot retrieve the account details again.
 
 **Command**
-```bash
-pchain set key --generate
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain set key --generate
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe set key --generate
+    ```
 
 **Returns**
 
@@ -102,9 +149,14 @@ Checks the account balance by providing the account address.
 `<ACCOUNT_ADDRESS>` can be an Externally Owned Account (EOA) or Contract Account. See ["Create a New Externally Owned Account (EOA)"](tutorial.md#create-a-new-externally-owned-account-eoa) for account address details.
 
 **Command**
-```bash
-pchain query account balance --address <ACCOUNT_ADDRESS>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account balance --address <ACCOUNT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account balance --address <ACCOUNT_ADDRESS>
+    ```
 
 **Returns**
 
@@ -124,10 +176,14 @@ The nonce is the number of valid transactions sent from a given address. Each ti
 `<ACCOUNT_ADDRESS>` can be an Externally Owned Account (EOA) or Contract Account. See ["Create a New Externally Owned Account (EOA)"](tutorial.md#create-a-new-externally-owned-account-eoa) for account address details.
 
 **Command**
-```bash
-pchain query account nonce --address <ACCOUNT_ADDRESS>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account nonce --address <ACCOUNT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account nonce --address <ACCOUNT_ADDRESS>
+    ```
 **Returns**
 
 _Returns the account nonce to the user._
@@ -168,19 +224,32 @@ See ["EtoE: Transferring Tokens from One Account to Another"](tutorial.md#etoe-t
 * `<FROM_ACCOUNT_KEYPAIR>`: your account keypair  
 
 **Command**
-
-```bash
-pchain submit tx \
---from-address <FROM_ADDRESS> \
---to-address <TO_ADDRESS> \
---value <VALUE> \
---tip <TIP> \
---gas-limit <GAS_LIMIT> \
---gas-price 1 \
---data <DATA> \
---nonce <FROM_ACCOUNT_NONCE> \
---keypair <FROM_ACCOUNT_KEYPAIR>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
 
 **Returns**
 
@@ -206,18 +275,32 @@ See ["Building and deploying the contract"](../smart_contract_sdk/build_deploy_c
 
 **Command**
 
-```bash
-pchain submit tx \
---from-address <FROM_ADDRESS> \
---to-address <TO_ADDRESS> \
---value <VALUE> \
---tip <TIP> \
---gas-limit <GAS_LIMIT> \
---gas-price 1 \
---data <DATA> \
---nonce <FROM_ACCOUNT_NONCE> \
---keypair <FROM_ACCOUNT_KEYPAIR>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
 
 **Returns**
 
@@ -243,18 +326,32 @@ See ["Calling a Contract from an Externally Owned Account](../smart_contract_sdk
 
 **Command**
 
-```bash
-pchain submit tx \
---from-address <FROM_ADDRESS> \
---to-address <TO_ADDRESS> \
---value <VALUE> \
---tip <TIP> \
---gas-limit <GAS_LIMIT> \
---gas-price 1 \
---data <DATA> \
---nonce <FROM_ACCOUNT_NONCE> \
---keypair <FROM_ACCOUNT_KEYPAIR>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <FROM_ADDRESS> \
+    --to-address <TO_ADDRESS> \
+    --value <VALUE> \
+    --tip <TIP> \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <DATA> \
+    --nonce <FROM_ACCOUNT_NONCE> \
+    --keypair <FROM_ACCOUNT_KEYPAIR>
+    ```
 
 **Returns**
 
@@ -275,11 +372,14 @@ Checks the details of a transaction using a transaction hash that is obtained fr
 `<TRANSACTION_HASH>` is the hash obtained when you submit a transaction using `pchain`. See the return output in ["Submit Transaction"](#submit-transaction) for details.
 
 **Command**
-
-```bash
-pchain query tx --tx-hash <TRANSACTION_HASH>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query tx --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query tx --tx-hash <TRANSACTION_HASH>
+    ```
 **Returns**
 
 _Returns the transaction details that correspond to the transaction hash._
@@ -321,9 +421,14 @@ This command gets the details of a block through the transaction hash of one of 
 `<TRANSACTION_HASH>` is the hash obtained when you submit a transaction using `pchain`. See the return output in ["Submit Transaction"](#submit-transaction) for details.
 
 **Command**
-```bash
-pchain query block --tx-hash <TRANSACTION_HASH>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --tx-hash <TRANSACTION_HASH>
+    ```
 
 **Returns**
 
@@ -377,11 +482,14 @@ _Returns the details of a block queried through the transaction hash._
 ##### Latest block
 
 This command gets the details of the latest block in the blockchain.
-
-```bash
-pchain query block --latest
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --latest
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --latest
+    ```
 **Returns**
 
 _Returns the details of the latest block._
@@ -437,11 +545,14 @@ This command gets the details of a block through its block number.
 `<BLOCK_NUM>` refers to the number of blocks that have been created on the blockchain prior to this block. You can get the block number through this block's hash. See ["Query block number"](#query-block-number) on how to get the block number.
 
 **Command**
-
-```bash
-pchain query block --block-num <BLOCK_NUM>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --block-num <BLOCK_NUM>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --block-num <BLOCK_NUM>
+    ```
 **Returns**
 
 _Returns the block details from the block number_
@@ -594,11 +705,14 @@ This command gets the details of a block through its hash.
 </details>
 
 **Command**
-
-```bash
-pchain query block --block-hash <BLOCK_HASH>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --block-hash <BLOCK_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --block-hash <BLOCK_HASH>
+    ```
 **Returns**
 
 _Returns the block details from the block hash_
@@ -655,10 +769,14 @@ This command shows the information across a vector of blocks. It takes two param
 To find out how to get the `<BLOCK_HASH>`, see ["Query Single Block"](#query-single-block) and observe the output to get this value.
 
 **Command**
-```bash
-pchain query multi-blocks-query --block-hash <BLOCK_HASH> --size <SIZE>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query multi-blocks-query --block-hash <BLOCK_HASH> --size <SIZE>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query multi-blocks-query --block-hash <BLOCK_HASH> --size <SIZE>
+    ```
 **Returns**
 
 _Returns the vector of blocks and its corresponding details through a specified window_
@@ -765,10 +883,14 @@ This command gets the block number through the "**block hash**".
 To find out how to get the `<BLOCK_HASH>`, see ["Query Single Block"](#query-single-block) and observe the output to get this value.
 
 **Command**
-```bash
-pchain query block-num-query --block-hash <BLOCK_HASH>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block-num-query --block-hash <BLOCK_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block-num-query --block-hash <BLOCK_HASH>
+    ```
 **Returns**
 
 _Returns the block number from its hash_
@@ -797,13 +919,20 @@ Where:
 * `<KEY>`: The key in the world state in format of base64 string.
 
 **Command**
-```bash
-pchain query state \
---block-hash <BLOCK_HASH> \
---address <ADDRESS> \
---key <KEY>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain query state \
+    --block-hash <BLOCK_HASH> \
+    --address <ADDRESS> \
+    --key <KEY>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query state \
+    --block-hash <BLOCK_HASH> \
+    --address <ADDRESS> \
+    --key <KEY>
+    ```
 **Returns**
 
 _Returns the world state of a particular block_
@@ -834,13 +963,22 @@ You can get the gas usage of blocks for a specified period.
 * `<STEP_SIZE>`: The amount of time that moves between each window (_in seconds_)
 
 **Command**
-```bash
-pchain analyze gas-per-block \
---from-time <START_TIME> \
---to-time <END_TIME> \
---window-size <WINDOW_SIZE> \
---step-size <STEP_SIZE>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain analyze gas-per-block \
+    --from-time <START_TIME> \
+    --to-time <END_TIME> \
+    --window-size <WINDOW_SIZE> \
+    --step-size <STEP_SIZE>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe analyze gas-per-block \
+    --from-time <START_TIME> \
+    --to-time <END_TIME> \
+    --window-size <WINDOW_SIZE> \
+    --step-size <STEP_SIZE>
+    ```
 
 **Returns**
 
@@ -862,20 +1000,28 @@ You can get the mempool size for a specified period.
 * `<STEP_SIZE>`: The amount of time that moves between each window (_in seconds_)
 
 **Command**
-```bash
-pchain analyze mempool-size \
---from-time <START_TIME> \
---to-time <END_TIME> \
---window-size <WINDOW_SIZE> \
---step-size <STEP_SIZE>
-```
-
+=== "Linux / macOS"
+    ```bash
+    ./pchain analyze mempool-size \
+    --from-time <START_TIME> \
+    --to-time <END_TIME> \
+    --window-size <WINDOW_SIZE> \
+    --step-size <STEP_SIZE>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe analyze mempool-size \
+    --from-time <START_TIME> \
+    --to-time <END_TIME> \
+    --window-size <WINDOW_SIZE> \
+    --step-size <STEP_SIZE>
+    ```
 **Returns**
 
 _Returns the mempool size for a specified time window_
 <details>
   <summary>Example Output</summary>
-    The lenght of the array varies depends on the input.
+    The length of the array varies depends on the input.
     ```bash
     Your value [0, 0, 0, 0, 0, 0, 0]
     ```

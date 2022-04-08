@@ -18,3 +18,9 @@ If you are interested in ParallelChain Mainnet, welcome to join our [Official Te
 For sharing the smart contract code, address, or need help with creating smart contracts, please goes to [GitHub Discussions](https://github.com/parallelchain-io/parallelchain-sdk/discussions)
 
 If you have any issue related to the SDK abd smart contract, please goes to [GitHub issues](https://github.com/parallelchain-io/parallelchain-sdk/issues).
+
+## To Begin
+Feel free to look through our:
+
+* [ParallelChain Light Client Interface (`pchain`)](cli/index.md)
+* [SDK](smart_contract_sdk/index.md)

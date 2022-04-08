@@ -9,11 +9,91 @@ tags:
 # Building and deploying the contract
 
 ## Prerequisites
+
+### Node.js
+
+We require the latest LTS (Long Term Support) release of `Node.js` with its package manager `npm`. 
+
+=== "Linux"
+    In your terminal, use `nvm` (Node Version Manager) to quickly install a version of `Node.js`
+    ```bash 
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    ```
+
+    Reopen your terminal and check if `nvm` is working:
+    ```bash
+    nvm
+    ```
+    <details>
+    <summary>Output</summary>
+    ```bash
+    Node Version Manager (v0.39.1)
+
+    Note: <version> refers to any version-like string nvm understands. This includes:
+      - full or partial version numbers, starting with an optional "v" (0.10, v0.1.2, v1)
+      - default (built-in) aliases: node, stable, unstable, iojs, system
+      - custom aliases you define with `nvm alias foo`
+    ```
+    </details>
+
+    Type this command to install `v16.14.2` (latest LTS) of `Node.js`
+    ```bash
+    nvm install v16.14.2
+    ```
+
+    You can check if `Node.js` and `npm` are installed by typing 
+    ```bash
+    node --version && npm --version
+    ```
+    <details>
+    <summary>Output</summary>
+    ```bash
+    v16.14.2
+    8.5.0
+    ```
+    </details>
+
+=== "macOS"
+    Download from this link [https://nodejs.org/dist/v16.14.2/node-v16.14.2.pkg](https://nodejs.org/dist/v16.14.2/node-v16.14.2.pkg) and click to follow the installation instructions.
+
+    You can check if `Node.js` and `npm` are installed by typing the following command in your terminal:
+    ```bash
+    node --version && npm --version
+    ```
+    <details>
+    <summary>Output</summary>
+    ```bash
+    v16.14.2
+    8.5.0
+    ```
+    </details>
+
+=== "Windows"
+    Download from this link [https://nodejs.org/dist/v16.14.2/node-v16.14.2-x86.msi](https://nodejs.org/dist/v16.14.2/node-v16.14.2-x86.msi) and click to follow the installation instructions.
+
+    You can check if `Node.js` and `npm` are installed by typing the following command in your command prompt:
+    ```bash
+    node --version && npm --version
+    ```
+    <details>
+    <summary>Output</summary>
+    ```bash
+    v16.14.2
+    8.5.0
+    ```
+    </details>
+
+### Other requirements
 * `Rust` and `wasm32-unknown-unknown` are installed in your system. See ["installation"](./installation.md#linux-and-macos) on how to do this.
 * Ensure `pchain` is installed by running. See ["Setup ParallelChain Light Client"](prepare_env.md#setup-parallelchain-light-client).
-```shell
-pchain --version
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain --version
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe --version
+    ```
 * Install `wasm-opt` with npm (for code size optimization)
 ```bash
 npm i wasm-opt -g

@@ -17,9 +17,14 @@ Go to [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer
 
 ## Use ParallelChain Light Client (`pchain`)
 Query block information of your transaction with transaction hash.
-```bash
-pchain query block --tx-hash <TRANSACTION_HASH>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --tx-hash <TRANSACTION_HASH>
+    ```
 <details><summary>Block Information Example</summary>
 ```bash
 Your Block: Block {

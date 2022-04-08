@@ -29,9 +29,14 @@ In `testnet1`, accounts are divided into two types:
 These accounts are indistinguishable from one another. In future versions of the testnet, it is easy to distinguish between contract accounts and externally owned accounts. 
 
 To generate an account, type the following command below:
-```bash
-pchain set key --generate
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain set key --generate
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe set key --generate
+    ```
 
 This command generates a set of ed25519_dalek compatible keys. These are the keys required for making transactions in the network. Keep these details in a safe place. You cannot retrieve the account details again. An example is shown below:
 
@@ -48,9 +53,14 @@ Keypair: "V9MFJMnGcZwzJWNJUzAIKmhjQTl3MPq0BXuZZYbN7Wz/misQ24j+G1vC0DK77e3qtif3Sr
 You will require the keypair and public key to submit transactions within the testnet.
 
 You can check the account balance using the account address (public key).
-```bash
-pchain query account balance --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account balance --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account balance --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
+    ```
 <details><summary>Terminal Output</summary>
 ```bash
 Your value is: "0"
@@ -62,9 +72,14 @@ The balance of a new account is 0. Therefore, you need to request for tokens fro
 ## `EtoE`: Transferring Tokens from One Account to Another
 
 Before you transfer token to someone, you need to know his account address. In here, we just create another dummy account for our tutorial. You will only need the public key as the receiver address in EtoE transaction.
-```bash
-pchain set key --generate
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain set key --generate
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe set key --generate
+    ```
 <details><summary>Terminal Output</summary>
 ```bash
 Private Key: "0AgnYPHTrQ9gYywgyNOD2RtPuPvCRUcd78VBuVETiDQ="
@@ -74,14 +89,19 @@ Keypair: "0AgnYPHTrQ9gYywgyNOD2RtPuPvCRUcd78VBuVETiDRQUbs+QY467i12D2xiemUHWOXAKX
 </details>
 
 Check your account nonce. It is important to keep track of this number. You will need this number to submit transaction.
-```bash
-pchain query account nonce --address <YOUR_ACCOUNT_ADDRESS>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account nonce --address <YOUR_ACCOUNT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account nonce --address <YOUR_ACCOUNT_ADDRESS>
+    ```
 <details><summary>Click to view real world example</summary>
 
 Do not blindly copy the values in the real world example
 ```bash
-pchain query account nonce --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
+./pchain query account nonce --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
 ```
 </details>
 <details><summary>Terminal Output</summary>
@@ -91,25 +111,39 @@ Your value "0"
 </details>
 
 Transfer tokens from your account to the dummy acccount using `pchain`
-```bash
-pchain submit tx \
---from-address <FROM_ACCOUNT_ADDRESS> \
---to-address <DUMMY_ACCOUNT_ADDRESS> \
---value <AMOUNT_TO_TRANSFER> \
---tip 0 \
---gas-limit 50000 \
---gas-price 1 \
---data null \
---nonce <ACCOUNT_NONCE> \
---keypair <ACCOUNT_KEYPAIR>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <FROM_ACCOUNT_ADDRESS> \
+    --to-address <DUMMY_ACCOUNT_ADDRESS> \
+    --value <AMOUNT_TO_TRANSFER> \
+    --tip 0 \
+    --gas-limit 50000 \
+    --gas-price 1 \
+    --data null \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <FROM_ACCOUNT_ADDRESS> \
+    --to-address <DUMMY_ACCOUNT_ADDRESS> \
+    --value <AMOUNT_TO_TRANSFER> \
+    --tip 0 \
+    --gas-limit 50000 \
+    --gas-price 1 \
+    --data null \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
 The real world example code used will be denoted like this:
 
 <details><summary>Click to view real world example</summary>
 
 Do not blindly copy the values in the real world example
 ```bash
-pchain submit tx \
+./pchain submit tx \
 --from-address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs= \
 --to-address UFG7PkGOOu4tdg9sYnplB1jlwClwuHimirA3S/kOhVw= \
 --value 50 \
@@ -132,14 +166,19 @@ Response "Your request has been received."
 
 You can check the transaction 
 history with `transaction hash` using `pchain`, or check at [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer)
-```bash
-pchain query block --tx-hash <TRANSACTION_HASH>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --tx-hash <TRANSACTION_HASH>
+    ```
 <details><summary>Click to view real world example</summary>
 
 Do not blindly copy the values in the real world example
 ```bash
-pchain query block --tx-hash /dg7QxEUKDApdO/OuOufGewo1r6OO/XXLsFay65ozlg=
+./pchain query block --tx-hash /dg7QxEUKDApdO/OuOufGewo1r6OO/XXLsFay65ozlg=
 ```
 </details>
 <details><summary>Terminal Output</summary>
@@ -196,18 +235,32 @@ We will walk through the process of deploying your own smart contract. In this s
 Remember to get your latest account nonce before submitting transaction.
 
 Deploy the contract using `pchain`
-```bash
-pchain submit tx \
---from-address <FROM_ACCOUNT_ADDRESS> \
---to-address null \
---value 0 \
---tip 0 \
---gas-limit <GAS_LIMIT> \
---gas-price 1 \
---data <RELATIVE_PATH_TO_WASM_BINARIES> \
---nonce <ACCOUNT_NONCE> \
---keypair <ACCOUNT_KEYPAIR>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <FROM_ACCOUNT_ADDRESS> \
+    --to-address null \
+    --value 0 \
+    --tip 0 \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <RELATIVE_PATH_TO_WASM_BINARIES> \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <FROM_ACCOUNT_ADDRESS> \
+    --to-address null \
+    --value 0 \
+    --tip 0 \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <RELATIVE_PATH_TO_WASM_BINARIES> \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
 
 The real world example code used will be denoted like this:
 <details><summary>Click to view real world example of a DeployC transaction</summary>
@@ -240,13 +293,18 @@ Response "Your request has been received."
 </details>
 
 A smart contract is correctly deployed if you get a stream of bytes in the terminal through the `contract-code` flag.
-```bash
-pchain query account contract-code --address <CONTRACT_ADDRESS>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account contract-code --address <CONTRACT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account contract-code --address <CONTRACT_ADDRESS>
+    ```
 
 <details><summary>Click to view real world example to query a smart contract's code</summary>
 ```bash
-pchain query account contract-code --address Ns9DuNe8aS5QISfCyjEoAcZq20OVr2nKQTKsYGmo/Jw=
+./pchain query account contract-code --address Ns9DuNe8aS5QISfCyjEoAcZq20OVr2nKQTKsYGmo/Jw=
 ```
 </details>
 
@@ -258,12 +316,17 @@ Your value "AGFzbQEAAAABdRJgAn9/AX9gA39/fwF/YAJ/fwBgAX8Bf2ADf39/AGABfwBgBH9/f38A
 
 If there is no result from querying the smart contract code, your transaction might have failed with a specific status code. You can check the transaction 
 history with `transaction hash` using `pchain`, or check at [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer)
-```bash
-pchain query block --tx-hash <TRANSACTION_HASH>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --tx-hash <TRANSACTION_HASH>
+    ```
 <details><summary>Click to view real world example to query block</summary>
 ```bash
-pchain query block --tx-hash JOKxDTNqlMUjZ65DDxONrRkOjPOKqW3zO44F48SJOec=
+./pchain query block --tx-hash JOKxDTNqlMUjZ65DDxONrRkOjPOKqW3zO44F48SJOec=
 ```
 </details>
 <details><summary>Terminal Output (Warning: Very Long Code)</summary>
@@ -316,30 +379,54 @@ Please refer to ["Transaction Status Code"](../protocol/index.md#status-code) se
 ## `EtoC`: Making calls to your Smart Contract
 
 Please make sure your account has enough balance to pay for transactions. 
-```bash
-pchain query account balance --address <YOUR_ACCOUNT_ADDRESS>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account balance --address <YOUR_ACCOUNT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account balance --address <YOUR_ACCOUNT_ADDRESS>
+    ```
 
 Check your account nonce. 
-```bash
-pchain query account nonce --address <YOUR_ACCOUNT_ADDRESS>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query account nonce --address <YOUR_ACCOUNT_ADDRESS>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query account nonce --address <YOUR_ACCOUNT_ADDRESS>
+    ```
 
 Submit transaction with your account nonce and contract address. You should get the transaction hash if the command has succeeded.
 The gas limit is depended on the complexity of the smart contract. On average, it takes no more than 500000 gas to execute. You can always set a higher gas limit for safety.
+=== "Linux / macOS"
+    ```bash
+    ./pchain submit tx \
+    --from-address <YOUR_ACCOUT_ADDRESS> \
+    --to-address <CONTRACT_ADDRESS> \
+    --value 0 \
+    --tip 0 \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <BASE64_ENCODED_ARGUMENT> \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe submit tx \
+    --from-address <YOUR_ACCOUT_ADDRESS> \
+    --to-address <CONTRACT_ADDRESS> \
+    --value 0 \
+    --tip 0 \
+    --gas-limit <GAS_LIMIT> \
+    --gas-price 1 \
+    --data <BASE64_ENCODED_ARGUMENT> \
+    --nonce <ACCOUNT_NONCE> \
+    --keypair <ACCOUNT_KEYPAIR>
+    ```
 
-```bash
-pchain submit tx \
---from-address <YOUR_ACCOUT_ADDRESS> \
---to-address <CONTRACT_ADDRESS> \
---value 0 \
---tip 0 \
---gas-limit <GAS_LIMIT> \
---gas-price 1 \
---data <BASE64_ENCODED_ARGUMENT> \
---nonce <ACCOUNT_NONCE> \
---keypair <ACCOUNT_KEYPAIR>
-```
 <details><summary>Click to view real world example to call the smart contract</summary>
 ```bash
 ./pchain submit tx \
@@ -365,12 +452,17 @@ Response "Your request has been received."
 
 Check the transaction 
 history with `transaction hash` using `pchain`, or check at [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer)
-```bash
-pchain query block --tx-hash <TRANSACTION_HASH>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain query block --tx-hash <TRANSACTION_HASH>
+    ```
+=== "Windows"
+    ```PowerShell
+    pchain.exe query block --tx-hash <TRANSACTION_HASH>
+    ```
 <details><summary>Click to view real world example to query block</summary>
 ```bash
-pchain query block --tx-hash PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE=
+./pchain query block --tx-hash PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE=
 ```
 </details>
 <details><summary>Terminal Output</summary>
