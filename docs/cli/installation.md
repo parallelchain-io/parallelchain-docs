@@ -103,9 +103,14 @@ To download the precompiled compressed binaries, use:
     ```
 
 To extract the client program, head to the directory where the downloaded file `parallelchain-cli_linux_v0.1.0.tar.xz` or  `parallelchain-cli_mac_x86_v0.1.0.tar.xz` is located and extract via `tar`:
-```bash
-tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz 
-```
+=== "Linux"
+    ```bash
+    tar -xvf parallelchain-cli_linux_v0.1.0.tar.xz 
+    ```
+=== "macOS"
+    ```bash
+    tar -xvf parallelchain-cli_mac_x86_v0.1.0.tar.xz
+    ```
 
 Rename the client program to `pchain` so that it becomes easier to follow this guide:
 ```bash
