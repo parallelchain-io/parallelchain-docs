@@ -133,24 +133,35 @@ cargo build --target wasm32-unknown-unknown --release
 </details>
 
 ## **Optimizing WASM binary for code size (optional)**
-The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our `optimize_tool` in bash script. 
+The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our `optimize_tool` in bash script in Linux / macOS or batch scripts in Windows. 
 
-We recommend that you use this optimization tool, otherwise you will not have enough tokens to run a contract. The faucet gives enough tokens to run contracts that have been built with the optimizer tool.
+We recommend that you use this optimization tool, otherwise you will not have enough tokens to run a contract. The faucet gives enough tokens to run contracts that have been built with the optimizer tools.
 
-You can download the `optimize_tool` using terminal
-```bash
-wget https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.sh
-```
 
-Set up permissions on the script
-```bash
-chmod u+x optimize.sh
-```
 
-Run the script by providing your compiled contract file path.
-```bash
-./optimize.sh -f <file path>
-```
+=== "Linux / macOS"
+    To download the `optimize_tool` using terminal
+    ```bash
+    wget https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.sh
+    ```
+    Set up permissions on the script
+    ```bash
+    chmod u+x optimize.sh
+    ```
+
+    Run the script by providing your compiled contract file path.
+    ```bash
+    ./optimize.sh -f <file path>
+    ```
+
+=== "Windows"
+    Download the `optimize_tool` from the link [https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.bat](https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.bat).
+
+    Run the script by providing your compiled contract file path.
+    ```powershell
+    optimize.bat <file path>
+    ```
+
 The output file `optimized-<ORIGINAL_FILENAME>.wasm` is generated under the same location of your script.
 
 ## Deploying the contract
