@@ -1,7 +1,7 @@
 ---
 tags:
   - testnet 1.0
-  - parallelchain light client
+  - parallelchain very light client
 ---
 # Introduction
 
