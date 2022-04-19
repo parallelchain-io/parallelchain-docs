@@ -28,6 +28,17 @@ pub struct Transaction<A> {
     pub arguments: A,
 }
 ```
+**Fields**
+
+- `this_block_number`: block number of this transaction
+- `prev_block_hash`: hash of the previous block in the blockchain
+- `timestamp`: the time starts to execute the smart contract (in unix timestamp formatting)
+- `random_bytes`: calculated value reserved for future feature
+- `to_address`: destination address of the transaction 
+- `from_address`: source address of the transaction
+- `value`: transaction amount in TXPLL
+- `transaction_hash`: hash of this transaction
+- `arguments`: input arguments to the smart contract
 
 In addition to primitive types in rust, there are some special types specified in ParallelChain Mainnet protocol. These are:
 

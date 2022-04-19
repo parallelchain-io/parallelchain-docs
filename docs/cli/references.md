@@ -407,8 +407,8 @@ _Returns the transaction details that correspond to the transaction hash._
 |   Command                  |      Description                                        |
 | -------------------------- |-------------------------------------------------------- |
 | [`pchain query block`](#query-single-block) | Get information of a particular block (also for latest block)|
-| [`pchain query multi-blocks-query`](#query-multiple-block)    | Get multiple blocks information|
-| [`pchain query block-num-query`](#query-block-number)    | Get the block number with block hash |
+| [`pchain query multi-blocks`](#query-multiple-block)    | Get multiple blocks information|
+| [`pchain query block-num`](#query-block-number)    | Get the block number with block hash |
 
 You can query a single block or multiple block with the commands above. 
 
@@ -771,11 +771,11 @@ To find out how to get the `<BLOCK_HASH>`, see ["Query Single Block"](#query-sin
 **Command**
 === "Linux / macOS"
     ```bash
-    ./pchain query multi-blocks-query --block-hash <BLOCK_HASH> --size <SIZE>
+    ./pchain query multi-blocks --block-hash <BLOCK_HASH> --size <SIZE>
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe query multi-blocks-query --block-hash <BLOCK_HASH> --size <SIZE>
+    pchain.exe query multi-blocks --block-hash <BLOCK_HASH> --size <SIZE>
     ```
 **Returns**
 
@@ -885,11 +885,11 @@ To find out how to get the `<BLOCK_HASH>`, see ["Query Single Block"](#query-sin
 **Command**
 === "Linux / macOS"
     ```bash
-    ./pchain query block-num-query --block-hash <BLOCK_HASH>
+    ./pchain query block-num --block-hash <BLOCK_HASH>
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe query block-num-query --block-hash <BLOCK_HASH>
+    pchain.exe query block-num --block-hash <BLOCK_HASH>
     ```
 **Returns**
 
