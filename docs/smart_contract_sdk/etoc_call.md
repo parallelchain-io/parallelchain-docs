@@ -60,7 +60,7 @@ It requires a string as input value when calling from the client program `pchain
 --gas-price 1 \
 --data <BASE64_ENCODED_ARGUMENT> \
 --nonce <YOUR_ACCOUNT_NONCE> \
---keypair <YOUR_ACCOUNT_KEYPAIR>
+--path_to_keypair_json <PATH_TO_KEYPAIR>
 ```
 
 Where:
@@ -78,7 +78,7 @@ Where:
 --gas-price 1 \
 --data CwAAAGhlbGxvIHdvcmxk \
 --nonce 1 \
---keypair GzUaTtMz2pJkGDWGj9PeXQC0+P5ne2kX/pIyzTOKCuLahBEklnrYBC14XDrfaUZhRV4SIc5o2fyiot/dDz2MNQ==
+--path_to_keypair_json $HOME/usr/keypair.json
 ```
 _Please note the gas limit specified in `--gas-limit` should be at least 500000 gas for EtoC transaction._
 

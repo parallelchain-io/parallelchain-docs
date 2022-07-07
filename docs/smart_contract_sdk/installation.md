@@ -1,16 +1,24 @@
 ---
 tags:
-  - testnet 1.0
+  - testnet 2.0
   - rust 
 ---
 
-# Getting Started
+# Install SDK
 
-`Learning outcome`: _Rust installed on your system with `wasm32-unknown-unknown` toolchain._
 
-This section will guide you in installing rust for your machine. 
+## Introduction
+---
+
+ParallelChain Mainnet Smart Contract Development Kit (SDK) is an open-source rust crate that lets anyone build smart contracts easily. The SDK consists of methods and macros that allow you to interact with the blockchain from the smart contract. We provide some smart contract templates so that you can launch a new smart contract out of the box. 
+
+We provide a hosted testnet blockchain called ParallelChain Mainnet that is a Turing complete smart contract platform. We will explain how to connect to this testnet in a later section. Anyone can upload their smart contracts to the testnet and share their contract address with others using our "light client".
+
+This documentation is for both novice and advanced users alike. We have extra guides and explanations if you are unclear about some sections of the guide. The next section summarizes the topics covered in the SDK guide.
+
 
 ## Install Rust
+---
 
 We will require toolkits. The standard method is by `rustup`, which maintains dependencies and is a version manager for `cargo` and `rustc` (the rust compiler). 
 

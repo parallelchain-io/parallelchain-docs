@@ -4,24 +4,39 @@ repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
 copyright: ParallelChain Lab 2022
 nav:
-  - Home: index.md
-  - ParallelChain Smart Contract Development Kit (SDK): 
-    - smart_contract_sdk/index.md
-    - Installation: smart_contract_sdk/installation.md
+  - ParallelChain F: index.md
+  - Concepts:
+    - Accounts: concepts/accounts.md
+    - Block: concepts/block.md
+    - Transaction and Receipt: concepts/transaction.md
+    - TXPLL: concepts/txpll.md
+    - Mempool: concepts/mempool.md
+    - Smart Contract: concepts/smartcontract.md
+    - Gas: concepts/gas.md
+  - Getting Started:
+    - Installation: getting_started/installation.md
+    - Prepare Environment: getting_started/prepare_env.md
+    - Create Account: getting_started/create_account.md
+    - Transfer Tokens (EtoE): getting_started/transfer_token.md
+    - Deploy Contract (DeployC): getting_started/deploy_contract.md
+    - Call Contract (EtoC): getting_started/call_contract.md
+    - Transaction Parameters: getting_started/tx_params.md
+    - Status Code: getting_started/status_code.md
+    - Contract Publishing Service: getting_started/contract_publish.md
+  - Smart Contract Development:
+    - Install SDK: smart_contract_sdk/installation.md
     - Prepare Environment: smart_contract_sdk/prepare_env.md
-    - My First Contract: smart_contract_sdk/my_first_contract.md
-    - Tutorial - Using The SDK: smart_contract_sdk/sdk_tutorial.md
-    - Building and Deploying the Contract: smart_contract_sdk/build_deploy_contract.md
-    - Calling a Contract from an Externally Owned Account: smart_contract_sdk/etoc_call.md
-    - Creating a Smart Contract from Scratch: smart_contract_sdk/zero_to_hero.md
-    - SDK References: smart_contract_sdk/references.md
-  - Transaction Receipt and Status: protocol/index.md
-  - Faucet: faucet/index.md
-  - ParallelChain Light Client: 
-    - cli/index.md
-    - Installation: cli/installation.md
-    - Tutorial: cli/tutorial.md
-    - Light Client References: cli/references.md
+    - Develop Contract: smart_contract_sdk/develop_contract.md
+    - Build Contract: smart_contract_sdk/build_contract.md
+    - Token Standard - PRFC-1: smart_contract_sdk/PRFC1.md
+    - Token Standard - PRFC-2: smart_contract_sdk/PRFC2.md
+    - Advance: 
+      - Read/Write of World-State: smart_contract_sdk/advance/rw_world_state.md
+      - Parameters from blockchain and transaction: smart_contract_sdk/advance/params.md
+      - Entrypoints: smart_contract_sdk/advance/entrypoints.md
+      - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
+      - Internal Transaction: smart_contract_sdk/advance/internal_transaction.md
+      - Precompiles: smart_contract_sdk/advance/precompiles.md
 extra_css:
   - stylesheets/extra.css
 theme: 

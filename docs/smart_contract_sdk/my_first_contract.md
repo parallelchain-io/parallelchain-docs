@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 1.0
+  - testnet 2.0
   - parallelchain sdk
 ---
 
@@ -93,7 +93,7 @@ Deploy the contract with your account nonce. You should get the contract address
     --gas-price 1 \
     --data <PATH_TO_WASM_BINARIES> \
     --nonce <ACCOUNT_NONCE> \
-    --keypair <ACCOUNT_KEYPAIR>
+    --path_to_keypair_json <PATH_TO_KEYPAIR>
     ```
 === "Windows"
     ```PowerShell
@@ -106,7 +106,7 @@ Deploy the contract with your account nonce. You should get the contract address
     --gas-price 1 \
     --data <PATH_TO_WASM_BINARIES> \
     --nonce <ACCOUNT_NONCE> \
-    --keypair <ACCOUNT_KEYPAIR>
+    --path_to_keypair_json <PATH_TO_KEYPAIR>
     ```
 Get the status of the contract by querying the smart contract code. A smart contract is correctly deployed if you get a stream of bytes in the terminal.
 === "Linux / macOS"
