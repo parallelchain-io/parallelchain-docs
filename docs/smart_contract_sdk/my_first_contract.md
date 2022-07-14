@@ -6,7 +6,7 @@ tags:
 
 # My First Contract
 
-`Learning outcome`: _Download, build and deploy `my_first_contract` onto ParallelChain `testnet1`_
+`Learning outcome`: _Download, build and deploy `my_first_contract` onto ParallelChain `testnet2`_
 
 ## Prerequisites
 * Rust is installed in your system. See ["installation"](installation.md#linux-and-macos) on how to do this.
@@ -25,7 +25,9 @@ Download the smart contract examples respository at [https://github.com/parallel
 
 After this folder is downloaded, enter into `my_first_contract` directory.
 
-Build `my_first_contract` contract using Cargo. Please refer to ["Building and Deploying the Contract"](build_deploy_contract.md) session for detailed steps. The build process will generate a Web Assembly (WASM) binary at `target/wasm32-unknown-unknown/release` of your workspace. The workspace is where the source code for `my_first_contract` is located. 
+Build `my_first_contract` contract using `pchain_compile`. Please refer to ["Building and Deploying the Contract"](build_deploy_contract.md) session for detailed steps. The build process will generate an optimized Web Assembly (WASM) binary on your current path if no destination path is provided to the CLI 
+by the name of <PACKAGE_NAME>.wasm where `PACKAGE_NAME` refers to the package name specified on your Cargo manifest. The user is free to use any other toolchain like Cargo as well to build the smart contract 
+but for verification of the contract deployment through the ["Contract Publishing Service"](../getting_started/contract_publish.md), the use of `pchain_compile` is highly recommended.
 
 <details>
   <summary>Click to see the output file for my_first_contract:</summary>
@@ -34,7 +36,7 @@ Build `my_first_contract` contract using Cargo. Please refer to ["Building and D
     cd my_first_contract/
     ```
 
-    1. Go to the output folder of "my_first_contract"
+    1. If the destination path for `pchain_compile` is set to the output path within "my_first_contract" directory, you can navigate there as follows
     ```bash
     cd target/wasm32-unknown-unknown/release
     ```
@@ -45,8 +47,6 @@ Build `my_first_contract` contract using Cargo. Please refer to ["Building and D
     my_first_contract.wasm
     ```
 </details>
-
-The generated WASM binary has a large file size, which leads to higher gas costs for deployment and contract calls. You can compress and optimize the WASM binary through our [`optimze_tool`](https://raw.githubusercontent.com/parallelchain-io/example-smart-contracts/main/optimize.sh). 
 
 
 See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract)
@@ -118,4 +118,4 @@ Get the status of the contract by querying the smart contract code. A smart cont
     pchain.exe query account contract-code --address <CONTRACT_ADDRESS>
     ```
 
-Congratulations, you have successfully downloaded and deployed your first contract on `testnet1`. The next section will describe in detail the structure of a ParallelChain Mainnet Smart Contract.
+Congratulations, you have successfully downloaded and deployed your first contract on `testnet2`. The next section will describe in detail the structure of a ParallelChain Mainnet Smart Contract.

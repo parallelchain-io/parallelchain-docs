@@ -5,105 +5,7 @@ tags:
   - smart contract
 ---
 
-# Build Contract
-
-## Prerequisites
----
-
-### Node.js
-
-We require the latest LTS (Long Term Support) release of `Node.js` with its package manager `npm`. 
-
-=== "Linux"
-    In your terminal, use `nvm` (Node Version Manager) to quickly install a version of `Node.js`
-    ```bash 
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    ```
-
-    Reopen your terminal and check if `nvm` is working:
-    ```bash
-    nvm
-    ```
-    <details>
-    <summary>Output</summary>
-    ```bash
-    Node Version Manager (v0.39.1)
-
-    Note: <version> refers to any version-like string nvm understands. This includes:
-      - full or partial version numbers, starting with an optional "v" (0.10, v0.1.2, v1)
-      - default (built-in) aliases: node, stable, unstable, iojs, system
-      - custom aliases you define with `nvm alias foo`
-    ```
-    </details>
-
-    Type this command to install `v16.14.2` (latest LTS) of `Node.js`
-    ```bash
-    nvm install v16.14.2
-    ```
-
-    You can check if `Node.js` and `npm` are installed by typing 
-    ```bash
-    node --version && npm --version
-    ```
-    <details>
-    <summary>Output</summary>
-    ```bash
-    v16.14.2
-    8.5.0
-    ```
-    </details>
-
-=== "macOS"
-    Download from this link [https://nodejs.org/dist/v16.14.2/node-v16.14.2.pkg](https://nodejs.org/dist/v16.14.2/node-v16.14.2.pkg) and click to follow the installation instructions.
-
-    You can check if `Node.js` and `npm` are installed by typing the following command in your terminal:
-    ```bash
-    node --version && npm --version
-    ```
-    <details>
-    <summary>Output</summary>
-    ```bash
-    v16.14.2
-    8.5.0
-    ```
-    </details>
-
-=== "Windows"
-    Download from this link [https://nodejs.org/dist/v16.14.2/node-v16.14.2-x86.msi](https://nodejs.org/dist/v16.14.2/node-v16.14.2-x86.msi) and click to follow the installation instructions.
-
-    You can check if `Node.js` and `npm` are installed by typing the following command in your command prompt:
-    ```bash
-    node --version && npm --version
-    ```
-    <details>
-    <summary>Output</summary>
-    ```bash
-    v16.14.2
-    8.5.0
-    ```
-    </details>
-
-### Other requirements
-* `Rust` and `wasm32-unknown-unknown` are installed in your system. See ["installation"](../smart_contract_sdk/installation.md/#install-rust) on how to do this.
-* Ensure `pchain` is installed by running. See ["Setup ParallelChain Light Client"](../getting_started/installation.md).
-=== "Linux / macOS"
-    ```bash
-    ./pchain --version
-    ```
-=== "Windows"
-    ```PowerShell
-    pchain.exe --version
-    ```
-* Install `wasm-opt` with npm (for code size optimization)
-```bash
-npm i wasm-opt -g
-```
-* Install `wasm-snip` with Cargo (for code size optimization)
-```bash
-cargo install wasm-snip
-```
-
-## Building the contract with 'pchain_compile'
+# Building the contract with 'pchain_compile'
 ---
 
 **pchain_compile** is a CLI build tool for smart contract developers to build their source code to WASM binaries for deployment on 
@@ -124,12 +26,12 @@ The WASM binary generated from a generic cargo build process has the following d
 
 The pre-requisites needed to run `pchain_compile`, the description of the its build toolchain, the CLI arguments and some usage examples are provided in the following sections. 
 
-### Pre-Requisites
+## Pre-Requisites
 
 `pchain_compile` builds the source code in a docker environment. To know more about Docker and to install it you may refer to the instructions 
   provided [here](https://docs.docker.com/get-docker/).
 
-### Toolchain
+## Toolchain
 The components described in the table below constitute the build toolchain for smart contract deployment on ParallelChain F. The toolchain is a docker image hosted on a public DockerHub repository of ParallelChain F see [here](https://hub.docker.com/r/parallelchainlab/pchain_compile),which is pulled in when **pchain_compile** is executed and removed at the end of the lifetime of the program. 
      
 |Toolchain Component | Version | Utility
@@ -139,7 +41,7 @@ wasm-snip   | 0.4.0 | WASM utility which removes functions within the wasm file 
 wasm-opt     | 109  | WASM utility to load WebAssembly in text format and run Binaryen IR passes to optimize its size. For more information on Binaryen IR see [here](http://webassembly.github.io/binaryen/). |
 
 
-### Description 
+## Description 
 
 *  Arguments
 
@@ -162,7 +64,7 @@ wasm-opt     | 109  | WASM utility to load WebAssembly in text format and run Bi
       -  If "." is passed to the destination field the **destination** path will be set to the current working directory. 
 
 
-### Steps 
+## Steps 
 To run `pchain_compile` after installing prerequisites in the following section.
 
    1. In Linux, give permission to run the executable. 
@@ -174,7 +76,7 @@ To run `pchain_compile` after installing prerequisites in the following section.
    2. The format of the command on Linux is shown as follows.
       `./pchain_compile --source <MANIFEST_PATH> --destination  <DESTINATION_PATH>`
 
-### Example 
+## Example 
 The following is a real life example of how `pchain_compile` can be used where some source code is kept with a manifest file on a path
 `<MANIFEST_PATH>` in two different OS platforms.
 
@@ -211,6 +113,19 @@ pchain_compile.exe  build \
 
 Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<DESTINATION_PATH>).
 ```
+
+## Download **pchain_compile**
+
+'pchain_compile' supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from the 
+following links below.
+
+=== "Linux / macOS"
+
+For Linux / macOS users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_linux_v1.0.tar.xz)
+
+=== "Windows"
+
+For Windows users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_win_v1.0.zip)
 
 
 ## Deploy Contract
