@@ -55,9 +55,9 @@ wasm-opt     | 109  | WASM utility to load WebAssembly in text format and run Bi
       -  The path to the Cargo.toml package of the smart contract code directory. 
       -  This is a *mandatory* field.
       -  `pchain_compile` supports both absolute and relative paths to your smart contract code directory. 
-      -  If "." is passed to the source field the path will be set to the current working. directory. 
+      -  If "." is passed to the source field the path will be set to the current working directory. 
    2. **destination**
-      -  The path where the resulting WASM smart contract with the name <package_name>.wasm will be stored. package_name 
+      -  The path where the resulting WASM smart contract with the name <package_name>.wasm will be stored. `package_name` 
          is the name of the package denoted in the manifest file of the source code directory. 
       -  This is an *optional* field. `pchain_compile` saves the generated wasm file to the **source** path if this flag is not supplied.
       -  If **destination** path is relative, `pchain_compile` interprets the corresponding absolute path and displays it with the WASM Binary filename after the build process is complete. 
@@ -74,24 +74,24 @@ To run `pchain_compile` after installing prerequisites in the following section.
       For Windows there is no need for this step.
       
    2. The format of the command on Linux is shown as follows.
-      `./pchain_compile --source <MANIFEST_PATH> --destination  <DESTINATION_PATH>`
+      `./pchain_compile build --source <PATH_TO_YOUR_CONTRACT> --destination  <DESTINATION_PATH>`
 
 ## Example 
 The following is a real life example of how `pchain_compile` can be used where some source code is kept with a manifest file on a path
-`<MANIFEST_PATH>` in two different OS platforms.
+`<PATH_TO_YOUR_CONTRACT>` in two different OS platforms.
 
 === "Linux / macOS"
 
 ```
 ./pchain_compile  build \
---source <MANIFEST_PATH> 
+--source <PATH_TO_YOUR_CONTRACT> 
 
-Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<MANIFEST_PATH>).
+Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<PATH_TO_YOUR_CONTRACT>).
 ```
      
 ```
 ./pchain_compile  build \
---source <MANIFEST_PATH> \
+--source <PATH_TO_YOUR_CONTRACT> \
 --destination <DESTINATION_PATH>
 
 Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<DESTINATION_PATH>).
@@ -101,9 +101,9 @@ Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm
 
 ```
 pchain_compile.exe  build \
---source <MANIFEST_PATH> 
+--source <PATH_TO_YOUR_CONTRACT> 
 
-Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<MANIFEST_PATH>).
+Output: Finished compiling. ParallelChain F smart contract (<MANIFEST_NAME>.wasm) is saved at (<PATH_TO_YOUR_CONTRACT>).
 ```
 
 ```
@@ -121,11 +121,11 @@ following links below.
 
 === "Linux / macOS"
 
-For Linux / macOS users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_linux_v1.0.tar.xz)
+For Linux / macOS users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_linux_v1.1.tar.xz)
 
 === "Windows"
 
-For Windows users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_win_v1.0.zip)
+For Windows users can download `pchain_compile` from [here](https://cms.parallelchain.io/pchain_compile_win_v1.1.zip)
 
 
 ## Deploy Contract
