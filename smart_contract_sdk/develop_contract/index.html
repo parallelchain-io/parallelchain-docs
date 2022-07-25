@@ -1,0 +1,1443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.parallelchain.io/smart_contract_sdk/develop_contract/">
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>Develop Contract - ParallelChain® Mainnet Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#develop-contract" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ParallelChain® Mainnet Documentation" class="md-header__button md-logo" aria-label="ParallelChain® Mainnet Documentation" data-md-component="logo">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ParallelChain® Mainnet Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Develop Contract
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/parallelchain-io/parallelchain-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    parallelchain-io/parallelchain-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ParallelChain® Mainnet Documentation" class="md-nav__button md-logo" aria-label="ParallelChain® Mainnet Documentation" data-md-component="logo">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    ParallelChain® Mainnet Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/parallelchain-io/parallelchain-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    parallelchain-io/parallelchain-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        ParallelChain F
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/accounts/" class="md-nav__link">
+        Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/block/" class="md-nav__link">
+        Block
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/transaction/" class="md-nav__link">
+        Transaction and Receipt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/txpll/" class="md-nav__link">
+        TXPLL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/mempool/" class="md-nav__link">
+        Mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/smartcontract/" class="md-nav__link">
+        Smart Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/gas/" class="md-nav__link">
+        Gas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/prepare_env/" class="md-nav__link">
+        Prepare Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/create_account/" class="md-nav__link">
+        Create Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/transfer_token/" class="md-nav__link">
+        Transfer Tokens (EtoE)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/deploy_contract/" class="md-nav__link">
+        Deploy Contract (DeployC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/call_contract/" class="md-nav__link">
+        Call Contract (EtoC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/tx_params/" class="md-nav__link">
+        Transaction Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/status_code/" class="md-nav__link">
+        Status Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/contract_publish/" class="md-nav__link">
+        Contract Publishing Service
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Smart Contract Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contract Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contract Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Install SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prepare_env/" class="md-nav__link">
+        Prepare Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Develop Contract
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Develop Contract
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background-information" class="md-nav__link">
+    Background Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-development-kit" class="md-nav__link">
+    Smart Contract Development Kit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-programming-model" class="md-nav__link">
+    Smart Contract Programming Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-contract-entrypoint-method" class="md-nav__link">
+    Define Contract Entrypoint Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-storage" class="md-nav__link">
+    Contract Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-metadata" class="md-nav__link">
+    Contract Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-arguments" class="md-nav__link">
+    Input Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    Return Value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-functions" class="md-nav__link">
+    Basic functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transactionset" class="md-nav__link">
+    Transaction::set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionget" class="md-nav__link">
+    Transaction::get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionemit_event" class="md-nav__link">
+    Transaction::emit_event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionreturn_value" class="md-nav__link">
+    Transaction::return_value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_contract/" class="md-nav__link">
+        Build Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PRFC1/" class="md-nav__link">
+        Token Standard - PRFC-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PRFC2/" class="md-nav__link">
+        Token Standard - PRFC-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Advance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Advance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/rw_world_state/" class="md-nav__link">
+        Read/Write of World-State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/params/" class="md-nav__link">
+        Parameters from blockchain and transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/entrypoints/" class="md-nav__link">
+        Entrypoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/cross_contract/" class="md-nav__link">
+        Cross Contract Call
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/internal_transaction/" class="md-nav__link">
+        Internal Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/precompiles/" class="md-nav__link">
+        Precompiles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background-information" class="md-nav__link">
+    Background Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-development-kit" class="md-nav__link">
+    Smart Contract Development Kit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-programming-model" class="md-nav__link">
+    Smart Contract Programming Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-contract-entrypoint-method" class="md-nav__link">
+    Define Contract Entrypoint Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-storage" class="md-nav__link">
+    Contract Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-metadata" class="md-nav__link">
+    Contract Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-arguments" class="md-nav__link">
+    Input Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-value" class="md-nav__link">
+    Return Value
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-functions" class="md-nav__link">
+    Basic functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transactionset" class="md-nav__link">
+    Transaction::set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionget" class="md-nav__link">
+    Transaction::get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionemit_event" class="md-nav__link">
+    Transaction::emit_event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transactionreturn_value" class="md-nav__link">
+    Transaction::return_value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/parallelchain-io/parallelchain-docs/edit/master/docs/smart_contract_sdk/develop_contract.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+  <nav class="md-tags" >
+    
+      
+        <a href="../../tags/#testnet-20" class="md-tag">
+          testnet 2.0
+        </a>
+      
+    
+      
+        <a href="../../tags/#parallelchain-sdk" class="md-tag">
+          parallelchain sdk
+        </a>
+      
+    
+      
+        <a href="../../tags/#smart-contract" class="md-tag">
+          smart contract
+        </a>
+      
+    
+      
+        <a href="../../tags/#rust" class="md-tag">
+          rust
+        </a>
+      
+    
+  </nav>
+
+
+
+<h1 id="develop-contract">Develop Contract</h1>
+<h2 id="background-information">Background Information</h2>
+<hr />
+<p>Before we dive deep into the structure of a contract and the SDK's semantics, we require some background information about the semantics enforced by ParallelChain Mainnet. The full capabilities of ParallelChain Mainnet continue to grow with active developers 
+and a growing community. Let us see how smart contracts are called and processed by a node in the form of transactions.</p>
+<p>First, the ParallelChain Light Client (<code>pchain</code>) will submit a list of transactions when making a smart contract call to the validating node using Proprietary serialization scheme <a href="https://github.com/parallelchain-io/parallelchain-protocol-types">pchain-types</a>. The node's mempool will process 
+the list of transactions and check for validity and correctness. </p>
+<p>This validation check ensures that the transactions are:</p>
+<ul>
+<li>correctly formatted </li>
+<li>signed by an account with enough gas fees to pay for the transactions</li>
+</ul>
+<p>Therefore, transactions that fail the validation check may be included in a block. Future updates to ParallelChain Mainnet will address this issue. The transactions are then packed (typically every 5 seconds) in a block and sent to the execution engine in the 
+node to execute the transactions. </p>
+<p>The executor will call <code>wasmer</code> (Web Assembly Engine) which provides an isolated context to perform the execution. This enables the smart contract code to read the current state of the blockchain and interact with it. However, the execution results are temporarily 
+stored and subject to further checks before the block may be committed or rolled back on error. </p>
+<p><code>wasmer</code> also computes the gas fees through a metering module. The metering module in <code>wasmer</code> is reponsible for limiting the execution to the amount of gas paid for by the <code>value/tip</code>. Each transaction returns a result in the form of receipts along with event
+logs. The receipts, events, transactions and block itself will contain its own hash (or merkle proof) which is included in the same block.</p>
+<h2 id="smart-contract-development-kit">Smart Contract Development Kit</h2>
+<hr />
+<p>Smart Contract can be created by using <a href="https://github.com/parallelchain-io/parallelchain-sdk">ParallelChain SDK</a>. Example contract can be found in <a href="https://github.com/parallelchain-io/example-smart-contracts">example-smart-contracts</a>.</p>
+<p>A ParallelChain Mainnet Smart Contract is a rust crate that imports the SDK. It uses the SDK's features to interact with the blockchain. The folder structure of a typical ParallelChain
+Mainnet Smart Contract looks like this:
+<div class="highlight"><pre><span></span><code>my_first_contract
+├── src/
+│   └── lib.rs <span class="c1"># The main source code of your smart contract.  </span>
+└── Cargo.toml <span class="c1"># You import your packages and the SDK here</span>
+</code></pre></div></p>
+<p>For more information on rust's crate system, see <a href="https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html?highlight=crate#packages-and-crates">Rust Book Chapter 7: Packages and Crates</a></p>
+<p>Please specify the dependency in <code>Cargo.toml</code> for using SDK by fetching from <a href="https://crates.io/">crates.io</a> or repository in Github.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Crates.io</label><label for="__tabbed_1_2">Github</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span><span class="w"></span>
+<span class="n">pchain</span><span class="o">-</span><span class="n">sdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.2.0&quot;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span><span class="w"></span>
+<span class="n">pchain</span><span class="o">-</span><span class="n">sdk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://github.com/parallelchain-io/parallelchain-sdk&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="smart-contract-programming-model">Smart Contract Programming Model</h2>
+<hr />
+<p>ParallelChain considers smart contract as a <code>struct</code> in <code>rust</code> programming language. A <code>struct</code> can have methods which are created by implementing <code>impl</code> for it. Hence, those methods are called entrypoint methods because they are the bodies of contract execution.</p>
+<ul>
+<li><strong>Entrypoint</strong>: a starting point of contract execution. There are few kinds of entrypoints:<ul>
+<li><strong>Init</strong>: entrypoint method that could be called during contract deployment transaction.</li>
+<li><strong>Actions</strong>: entrypoint method that is called in EtoC transaction.</li>
+<li><strong>Views</strong>: entrypoint method that is limited to executing read-only operaions</li>
+</ul>
+</li>
+<li><strong>Contract MetaData</strong>: descriptive string to describe the entrypoint methods inside a contract.</li>
+<li><strong>Contract Storage</strong>: data pool that is accessible to the contract. It is represented as a key-value storage in world-state.</li>
+</ul>
+<h2 id="define-contract-entrypoint-method">Define Contract Entrypoint Method</h2>
+<hr />
+<p>ParallelChain Mainnet recogizes the entrypoint methods <code>init</code>, <code>actions</code> and <code>views</code>. In <code>rust</code> code, they are specified with method name and keyword <code>extern "C"</code> under macro <code>#[no_mangle]</code>. For example, </p>
+<div class="highlight"><pre><span></span><code><span class="cp">#[no_mangle]</span><span class="w"></span>
+<span class="k">pub</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="k">fn</span> <span class="nf">actions</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="o">..</span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>ParallelChain SDK provides macros <code>contract</code> and <code>action</code> to provide better development experience. The below code illustrates a very simple contract to start with.</p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">smart_contract</span>::<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#[contract]</span><span class="w"></span>
+<span class="k">struct</span> <span class="nc">MyContract</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="cp">#[contract]</span><span class="w"></span>
+<span class="k">impl</span><span class="w"> </span><span class="n">MyContract</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="cp">#[action]</span><span class="w"></span>
+<span class="w">  </span><span class="k">fn</span> <span class="nf">hello_world</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>The first macro <code>contract</code> on <code>struct</code> declares <a href="#contract-storage">Contract Storage</a> for the contract.</p>
+<p>The second macro <code>contract</code> on <code>impl</code> declares the entrypoint methods that can be executed. Only methods with macros <code>init</code>, <code>action</code> and <code>view</code> are recognized as entrypoint methods. Otherwise, methods are not visible to ParallelChain mainnet blockchain.</p>
+<p>Hence, the above example code creates an entrypoint to execute the method <code>hello_world</code> when the contract is called by specifying the method name as <code>hello_world</code>. It is possible to define more than one <code>action</code> and <code>view</code> methods (See <a href="../advance/entrypoints/">Entrypoints</a>).</p>
+<h2 id="contract-storage">Contract Storage</h2>
+<hr />
+<p>Contract can perform set and get of data to its own world-state just like an object can access and modify its own fields in common programming languages.
+The concept is applied here to provide a structure that is familiar to contract developers. The macro <code>#[contract]</code> applied to a struct will create getter and setter methods for the fields inside.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#[contract]</span><span class="w"></span>
+<span class="k">struct</span> <span class="nc">MyContract</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">data</span>: <span class="kt">i32</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>In the body of smart contract, it can access the data and update it without explicity calling pchain_sdk::Transaction::get and pchain_sdk::Transaction::set, take care of name of the key and arguments parsing.
+In this model,</p>
+<ul>
+<li>Key is an index in u8 integer format (hence, the maximum number of fields is 256). The above example, the key will be [0x0]. The order of intex is as same as the order of fields defined in the struct.</li>
+<li>Value are <a href="https://crates.io/crates/borsh">borsh-serializable</a> and <a href="https://crates.io/crates/borsh">borsh-deserializable</a></li>
+<li>Value is primitive types (i8, u8, i16, u16, i32, u32, i64, u64, i128, u128, usize, String, bool, Vec<T> where T is a primitive type)</li>
+</ul>
+<h2 id="contract-metadata">Contract Metadata</h2>
+<hr />
+<p>Contract MetaData is descriptive information about the contract's entrypoint methods. It is represented as a trait of the contract.
+Example:
+<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">trait</span><span class="w"> </span><span class="n">HelloContract</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">hello</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">hello_from</span><span class="p">(</span><span class="n">name</span>:<span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">u32</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<p>Smart contract developers can share or even publish this information to the public so that others can interact with the contract in a proper way.
+To enable this feature in contract, add keyword "meta" as attribute to the contract macro.</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#[contract(meta)]</span><span class="w"></span>
+<span class="k">impl</span><span class="w"> </span><span class="n">MyContract</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">..</span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+Under the hood, SDK generates a static slice variable <strong>contract_metadata</strong> terminated by character '\0'. Its data resides in the memory section of the wasm code, which can be recognized by ParallelChain mainnet nodes.</p>
+<h2 id="input-arguments">Input Arguments</h2>
+<hr />
+<p>In section <a href="../../getting_started/call_contract/">Call Contract (EtoC)</a>, the <code>data</code> field is vector of bytes composited of leading 4 bytes as format version number and the serialized bytes by using <a href="https://crates.io/crates/pchain-types">pchain-types</a> on a struct <code>CallData</code>.</p>
+<div class="highlight"><pre><span></span><code>[format version (4 bytes)][raw content (bytes)]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">CallData</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="sd">/// function name of contract with entrypoint methods. Empty string indicates the contract without entrypoint methods</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">method_name</span><span class="w"> </span>:<span class="nb">String</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="sd">/// arguments to function (entrypoint method)</span>
+<span class="w">    </span><span class="sd">/// In contract with entrypoint methods, the arguments should be deserialized to vector of Vec&lt;u8&gt; and then pass as function arguments</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">arguments</span><span class="w"> </span>:<span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>If the name of the entrypoint method is "hello", the value of field <code>method_name</code> should set to <code>"hello".to_string()</code>.</p>
+<p>The field <code>arguments</code> is <a href="https://crates.io/crates/borsh">Borsh</a> serialized bytes on <code>Vev&lt;Vec&lt;u8&gt;&gt;</code> where it is vector of bytes. The "bytes" are also Borst serialized from the input argument of the method according to its data type.</p>
+<p>For example,
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">entrypoint_1</span><span class="p">(</span><span class="n">data</span>: <span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>:<span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">..</span><span class="p">.</span><span class="w"></span>
+</code></pre></div></p>
+<p>The first "bytes" in <code>Vec&lt;Vec&lt;u8&gt;&gt;</code> is borsh serialized <code>i32</code> while the second "bytes" is borsh serialized <code>String</code>.</p>
+<p>The simple <code>rust</code> program illustrates how to construct input arguments.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// The expected name of entrypoint method</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">method_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;entrypoint_1&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// The input arguments to method entrypoint_1(data: i32, name :String)</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span>: <span class="kt">i32</span> <span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span> <span class="o">=</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// First 4 bytes for format version</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">version_bs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u32</span><span class="p">).</span><span class="n">to_le_bytes</span><span class="p">().</span><span class="n">to_vec</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">vec_arguments</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// For first argument `data`</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">args_bs</span>:<span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="n">serialize</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">args_bs</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">vec_arguments</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">args_bs</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// For second argument `name`</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">args_bs</span>:<span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w"> </span>
+<span class="w">    </span><span class="n">name</span><span class="p">.</span><span class="n">serialize</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">args_bs</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">vec_arguments</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">args_bs</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Make CallData::arguments</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">arguments_bs</span><span class="w"> </span>:<span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w"></span>
+<span class="w">    </span><span class="n">vec_arguments</span><span class="p">.</span><span class="n">serialize</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">arguments_bs</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Create CallData</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">call_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CallData</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">method_name</span>: <span class="nc">method_name</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">arguments</span>: <span class="nc">arguments_bs</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Serialize by pchain-types</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">call_data_bs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CallData</span>::<span class="n">serialize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">call_data</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// the transaction data</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">tx_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">version_bs</span><span class="p">,</span><span class="w"> </span><span class="n">call_data_bs</span><span class="p">].</span><span class="n">concat</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Encode into Base64 data for submitting transaction</span>
+<span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">base64</span>::<span class="n">encode</span><span class="p">(</span><span class="n">tx_data</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;AAAAAAwAAAAYAAAAZW50cnlwb2ludF8xAgAAAAQAAAB7AAAACAAAAAQAAABuYW1l&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>As a result, the field <code>data</code> is set to "AAAAAAwAAAAYAAAAZW50cnlwb2ludF8xAgAAAAQAAAB7AAAACAAAAAQAAABuYW1l" when submitting transaction:</p>
+<div class="highlight"><pre><span></span><code>pchain submit tx \
+--from-address &lt;YOUR_ACCOUT_ADDRESS&gt; \
+...
+--data AAAAAAwAAAAYAAAAZW50cnlwb2ludF8xAgAAAAQAAAB7AAAACAAAAAQAAABuYW1l \
+...
+</code></pre></div>
+<h2 id="return-value">Return Value</h2>
+<hr />
+<p>The return value from a contract call is in format of <code>Vec&lt;u8&gt;</code>. It is borsh-seralizable so that it is up to developer to design the response data structure.</p>
+<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Callback</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">return_val</span><span class="w"> </span>:<span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">u8</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="basic-functions">Basic functions</h2>
+<hr />
+<h3 id="transactionset">Transaction::set</h3>
+<p>The SDK provides a method called set which allows you to interact with Storage. This is a low level method which deals with raw byte strings. </p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a_key_in_storage&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">value</span>: <span class="kt">u32</span> <span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="w"></span>
+<span class="n">Transaction</span>::<span class="n">set</span><span class="p">(</span><span class="o">&amp;</span><span class="n">key</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">.</span><span class="n">to_be_bytes</span><span class="p">());</span><span class="w"></span>
+</code></pre></div></p>
+<p>The <code>set</code> method takes in two arguments, which must be raw byte strings (&amp;[u8]). The first argument is the key that you intend to write to the Storage. The second argument is the value in the key-value pair that is converted into byte string. </p>
+<h3 id="transactionget">Transaction::get</h3>
+<p>The <code>get</code> method queries the State. It is analogous to reading a database. This is a low level method which deals with raw byte strings.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a_key_in_storage&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="n">Transaction</span>::<span class="n">get</span><span class="p">(</span><span class="o">&amp;</span><span class="n">key</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">());</span><span class="w"></span>
+</code></pre></div></p>
+<p>The get method takes in one argument, the key in Storage. This key also references a byte string (&amp;[u8]). The return type for the get method is an <code>Option</code>. If the key contains a value, the value can be obtained from the <a href="#contract-storage">Contract Storage</a>. Otherwise if the <code>Option</code> is not handled properly, <code>wasmer</code> runtime will throw an error and there will be a Receipt indicating a runtime error (see <a href="../../getting_started/status_code/">Status Code</a>).</p>
+<h3 id="transactionemit_event">Transaction::emit_event</h3>
+<p>The <code>emit_event</code> method emits events from the smart contract. This is very useful if you wish to understand what is going on throughout the execution of your smart contract.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">topic</span>: <span class="nb">String</span> <span class="o">=</span><span class="w"> </span><span class="s">&quot;Terminator Message&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="n">value</span>: <span class="nb">String</span> <span class="o">=</span><span class="w"> </span><span class="s">&quot;Hasta La Vista, Baby!&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="n">Transaction</span>::<span class="n">emit_event</span><span class="p">(</span><span class="n">topic</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">(),</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">());</span><span class="w"></span>
+</code></pre></div></p>
+<p>The resulting message will appear in a successfully executed transaction's Events field.</p>
+<h3 id="transactionreturn_value">Transaction::return_value</h3>
+<p>The <code>return_value</code> method save value as return value in the Transaction Receipt.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">my_return_value</span>: <span class="nb">String</span> <span class="o">=</span><span class="w"> </span><span class="s">&quot;I&#39;ll be back&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span><span class="w"></span>
+<span class="n">Transaction</span>::<span class="n">return_value</span><span class="p">(</span><span class="n">my_return_value</span><span class="p">.</span><span class="n">as_bytes</span><span class="p">().</span><span class="n">to_vec</span><span class="p">());</span><span class="w"></span>
+</code></pre></div></p>
+<p>The return value will appear as part of a successfully executed transaction's <a href="../../concepts/transaction/">Receipts</a> field.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../prepare_env/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prepare Environment" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Prepare Environment
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../build_contract/" class="md-footer__link md-footer__link--next" aria-label="Next: Build Contract" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Build Contract
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ParallelChain Lab 2022
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+    
+  </body>
+</html>

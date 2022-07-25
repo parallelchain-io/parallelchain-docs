@@ -1,0 +1,2415 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.parallelchain.io/getting_started/references/">
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>References - ParallelChain® Mainnet Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pchain-references" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ParallelChain® Mainnet Documentation" class="md-header__button md-logo" aria-label="ParallelChain® Mainnet Documentation" data-md-component="logo">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ParallelChain® Mainnet Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              References
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/parallelchain-io/parallelchain-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    parallelchain-io/parallelchain-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ParallelChain® Mainnet Documentation" class="md-nav__button md-logo" aria-label="ParallelChain® Mainnet Documentation" data-md-component="logo">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    ParallelChain® Mainnet Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/parallelchain-io/parallelchain-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    parallelchain-io/parallelchain-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        ParallelChain F
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/accounts/" class="md-nav__link">
+        Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/block/" class="md-nav__link">
+        Block
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/transaction/" class="md-nav__link">
+        Transaction and Receipt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/txpll/" class="md-nav__link">
+        TXPLL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/mempool/" class="md-nav__link">
+        Mempool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/smartcontract/" class="md-nav__link">
+        Smart Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/gas/" class="md-nav__link">
+        Gas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prepare_env/" class="md-nav__link">
+        Prepare Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_account/" class="md-nav__link">
+        Create Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer_token/" class="md-nav__link">
+        Transfer Tokens (EtoE)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_contract/" class="md-nav__link">
+        Deploy Contract (DeployC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../call_contract/" class="md-nav__link">
+        Call Contract (EtoC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_params/" class="md-nav__link">
+        Transaction Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status_code/" class="md-nav__link">
+        Status Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contract_publish/" class="md-nav__link">
+        Contract Publishing Service
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Smart Contract Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Smart Contract Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contract Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/installation/" class="md-nav__link">
+        Install SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/prepare_env/" class="md-nav__link">
+        Prepare Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/develop_contract/" class="md-nav__link">
+        Develop Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/build_contract/" class="md-nav__link">
+        Build Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/PRFC1/" class="md-nav__link">
+        Token Standard - PRFC-1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/PRFC2/" class="md-nav__link">
+        Token Standard - PRFC-2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_4_7" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Advance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Advance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/rw_world_state/" class="md-nav__link">
+        Read/Write of World-State
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/params/" class="md-nav__link">
+        Parameters from blockchain and transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/entrypoints/" class="md-nav__link">
+        Entrypoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/cross_contract/" class="md-nav__link">
+        Cross Contract Call
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/internal_transaction/" class="md-nav__link">
+        Internal Transaction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../smart_contract_sdk/advance/precompiles/" class="md-nav__link">
+        Precompiles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-pair" class="md-nav__link">
+    Key Pair
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto" class="md-nav__link">
+    Crypto
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-key-pair" class="md-nav__link">
+    Generate Key Pair
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sign" class="md-nav__link">
+    Sign
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+    <nav class="md-nav" aria-label="Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-creation" class="md-nav__link">
+    Account creation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-balance" class="md-nav__link">
+    Check balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-nonce" class="md-nav__link">
+    Check nonce
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction" class="md-nav__link">
+    Transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submit-transaction" class="md-nav__link">
+    Submit transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Submit transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer-token" class="md-nav__link">
+    Transfer token
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-contract" class="md-nav__link">
+    Deploy contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-a-contract" class="md-nav__link">
+    Call a contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-transaction" class="md-nav__link">
+    Query transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block" class="md-nav__link">
+    Block
+  </a>
+  
+    <nav class="md-nav" aria-label="Block">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-single-block" class="md-nav__link">
+    Query single block
+  </a>
+  
+    <nav class="md-nav" aria-label="Query single block">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-transaction-hash" class="md-nav__link">
+    By Transaction hash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latest-block" class="md-nav__link">
+    Latest block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-block-number" class="md-nav__link">
+    By Block number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-block-hash" class="md-nav__link">
+    By Block hash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-multiple-block" class="md-nav__link">
+    Query multiple block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-block-number" class="md-nav__link">
+    Query block number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world-state" class="md-nav__link">
+    World state
+  </a>
+  
+    <nav class="md-nav" aria-label="World state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-the-state" class="md-nav__link">
+    Query the state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    Analyze
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyze">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gas-usage-per-block" class="md-nav__link">
+    Gas usage per block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mempool-size" class="md-nav__link">
+    Mempool size
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/parallelchain-io/parallelchain-docs/edit/master/docs/getting_started/references.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  
+
+  <nav class="md-tags" >
+    
+      
+        <a href="../../tags/#testnet-20" class="md-tag">
+          testnet 2.0
+        </a>
+      
+    
+      
+        <a href="../../tags/#parallelchain-light-client" class="md-tag">
+          parallelchain light client
+        </a>
+      
+    
+      
+        <a href="../../tags/#commands" class="md-tag">
+          commands
+        </a>
+      
+    
+  </nav>
+
+
+
+<p>TODO</p>
+<ul>
+<li>Update to latest content</li>
+<li>Add steps to create contract call data</li>
+</ul>
+<h1 id="pchain-references"><code>pchain</code> References</h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>We recommend that you store <code>pchain</code> in a directory of your choice so that it is easier to follow the commands in the reference.</strong> </p>
+<p><strong>For Linux/macOS users</strong> - <strong>For example, we created a folder in our home directory called parallelchain_client</strong>:
+<div class="highlight"><pre><span></span><code>$ mkdir -p /home/my_user/parallelchain_client
+$ cp pchain /home/my_user/parallelchain_client/
+$ <span class="nb">cd</span> /home/my_user/parallelchain_client
+$ ./pchain
+</code></pre></div></p>
+<p>So from now on, when you see a command like this in linux/macOS. It means that <code>pchain</code> shall be executed from the directory you stored <code>pchain</code> in.
+<div class="highlight"><pre><span></span><code>./pchain
+</code></pre></div></p>
+<p><strong>For Windows users</strong> - <strong>Windows uses a different command structure compared to Linux and MacOS. All you need to do is to go to the directory where <code>pchain</code> is located. For example we have a command in <code>PowerShell</code> that shows this:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">PS</span><span class="p">&gt;</span> <span class="nb">Set-Location</span> <span class="n">C</span><span class="p">:</span><span class="n">Users</span><span class="p">\</span><span class="n">my_user</span><span class="p">\</span><span class="n">parallelchain_client</span>
+<span class="n">C</span><span class="p">:</span><span class="n">Users</span><span class="p">\</span><span class="n">my_user</span><span class="p">\</span><span class="n">parallelchain_client</span><span class="p">&gt;</span> <span class="n">pchain</span><span class="p">.</span><span class="n">exe</span>
+</code></pre></div></p>
+<p>So from now on, when you see a command like this in Windows. It means that <code>pchain</code> shall be executed from the directory you stored <code>pchain</code> in.
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span>
+</code></pre></div></p>
+</div>
+<h2 id="help">Help</h2>
+<hr />
+<p>You can always use the flag <code>--help</code> or <code>-h</code> as the last flag for any commands in the following sections to learn more about any built-in commands.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux / macOS</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain --help
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="p">-</span><span class="n">-help</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="setup"><strong>Setup</strong></h2>
+<hr />
+<p>Set up configuration variables necessary for VeryLight's operation.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#help"><code>pchain</code></a></td>
+<td>Check the usage of the light client</td>
+</tr>
+<tr>
+<td><a href="#networking"><code>pchain setup networking</code></a></td>
+<td>Configure the IP address of the ParallelChain F Fullnode that VeryLight sends Transactions and queries to.</td>
+</tr>
+<tr>
+<td><a href="#key-pair"><code>pchain setup key-pair</code></a></td>
+<td>Register an Ed25519 KeyPair for VeryLight to use to sign Transactions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="networking"><strong>Networking</strong></h3>
+<p>Configure the IP address of the ParallelChain F Fullnode that VeryLight sends Transactions and queries to.</p>
+<p><strong>Command</strong></p>
+<ul>
+<li><code>&lt;TARGET_URL&gt;</code>: Configure the URL of the ParallelChain F Fullnode that VeryLight sends Transactions and queries to. (Standard API)</li>
+<li><code>&lt;RICH_API_URL&gt;</code>: Configure the URL of the ParallelChain F Fullnode that VeryLight sends rich queries. (Rich API)</li>
+<li><code>ANALYTICS_API_URL&gt;</code>: Configure the URL of the ParallelChain F Fullnode that VeryLight sends analytics queries (Analytics API)</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux / macOS</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain setup networking 
+    --target_url https://testnet1.digital-transaction.net
+    --rich_api_url https://testnet1.digital-transaction.net/api
+    --analytics_api_url https://testnet1.digital-transaction.net/analytics
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">setup</span> <span class="n">networking</span> <span class="p">-</span><span class="n">-target-address</span> <span class="n">https</span><span class="p">://</span><span class="n">testnet1</span><span class="p">.</span><span class="n">digital-transaction</span><span class="p">.</span><span class="n">net</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a success message indicating the target address set.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>target_url set.
+rich_api_url set.
+analytics_api_url set.
+</code></pre></div>
+</details>
+
+<h3 id="key-pair"><strong>Key Pair</strong></h3>
+<p>Register an Ed25519 KeyPair for VeryLight to use to sign Transactions.</p>
+<ul>
+<li><code>&lt;KEYPAIR_JSON_PATH&gt;</code>: Absolute path to a 'keypair.json' file. You can generate this file using the Crypto command. Read VeryLight's repository README for the file format.</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux / macOS</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain setup key-pair --keypair_json_path &lt;KEYPAIR_JSON_PATH&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">setup</span> <span class="n">key-pair</span> <span class="p">-</span><span class="n">-keypair_json_path</span> <span class="p">&lt;</span><span class="n">KEYPAIR_JSON_PATH</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a success message indicating the keypair json path set.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>keypair_json_path set.
+</code></pre></div>
+</details>
+
+<h2 id="crypto">Crypto</h2>
+<hr />
+<p>Cryptographic tools for generating key pair and signature.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#generate-key-pair"><code>pchain crypto generate-key-pair</code></a></td>
+<td>Generate keypair for account creation</td>
+</tr>
+<tr>
+<td><a href="#sign"><code>pchain crypto sign</code></a></td>
+<td>Sign a message using VeryLight's registered KeyPair.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generate-key-pair"><strong>Generate Key Pair</strong></h3>
+<p>Register an Ed25519 KeyPair for VeryLight to use to sign Transactions.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux / macOS</label><label for="__tabbed_4_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain crypto generate-key-pair
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">crypto</span> <span class="n">generate-key-pair</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a success message indicating the keypair json has been saved.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>keypair.json saved <span class="k">in</span> current directory.
+</code></pre></div>
+</details>
+
+<h3 id="sign"><strong>Sign</strong></h3>
+<p>Sign a message using VeryLight's registered KeyPair. (If you've not registered a KeyPair, use the
+Setup command). This prints out the resulting ciphertext in Base64 encoding</p>
+<ul>
+<li><code>&lt;MESSAGE&gt;</code>: A message to sign, encoded in Base64.</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux / macOS</label><label for="__tabbed_5_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain crypto sign --message &lt;MESSAGE&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">crypto</span> <span class="n">sign</span> <span class="p">-</span><span class="n">-message</span> <span class="p">&lt;</span><span class="n">MESSAGE</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a success message indicating the keypair json has been saved.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Message: AAAAAAoAAAAEAAAAbmV4dF9lcG9jaAAAAAA
+Ciphertest: AAAAAA0AAAAnAAAAZGVwb3NpdF9tb25leQIAAAATAAAADwAAAGJhbmsgYWNjb3VudCBpZAgAAAACAAAAAAAAAA
+</code></pre></div>
+</details>
+
+<h2 id="query">Query</h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#check-balance"><code>pchain query account</code></a></td>
+<td>Query information related to Accounts.</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query blocks</code></a></td>
+<td>Query information related to Blocks. Search the blocks either by block number, block hash or tx hash.</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query latest-block</code></a></td>
+<td>Query the latest block.</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query networking</code></a></td>
+<td>Query VeryLight's network configuration.</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query state</code></a></td>
+<td>Query Keys in the World State of Contract Accounts.</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query tx</code></a></td>
+<td>Check account nonce</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query latest-tx-num</code></a></td>
+<td>Check account nonce</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query txs</code></a></td>
+<td>Check account nonce</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query tx-proof</code></a></td>
+<td>Check account nonce</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query receipt-proof</code></a></td>
+<td>Check account nonce</td>
+</tr>
+<tr>
+<td><a href="#check-nonce"><code>pchain query mempoolsize</code></a></td>
+<td>Check account nonce</td>
+</tr>
+</tbody>
+</table>
+<h3 id="account-creation"><strong>Account creation</strong></h3>
+<p>Generates a set of ed25519_dalek compatible keys required for making transactions in the network. Keep these details in a safe place. You cannot retrieve the account details again.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux / macOS</label><label for="__tabbed_6_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain <span class="nb">set</span> key --generate
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="nb">set </span><span class="n">key</span> <span class="p">-</span><span class="n">-generate</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a private key, public key and keypair to the user.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Private Key: <span class="s2">&quot;YcJhQgEX/yY0/kKBwd7M3fyVRZ1DCaqrwfZSgxpqc1l=&quot;</span>
+Public Key: <span class="s2">&quot;xNkAWN4XS/ejYtB9EwDbxzvKmWhuiJoLbpO1kleBKzd=&quot;</span>
+Keypair: <span class="s2">&quot;YcJhQgEX/yY0/kKBwd7M3fyVRZ1DCaqrwfZSgxpqc1nE2QAY3hdL96Ni0H0TANvHO8qZaG6Imgtuk7WSV4ErNA==&quot;</span>
+</code></pre></div>
+</details>
+
+<h3 id="check-balance"><strong>Check balance</strong></h3>
+<p>Checks the account balance by providing the account address.</p>
+<p><code>&lt;ACCOUNT_ADDRESS&gt;</code> can be an Externally Owned Account (EOA) or Contract Account. See <a href="tutorial.md#create-a-new-externally-owned-account-eoa">"Create a New Externally Owned Account (EOA)"</a> for account address details.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux / macOS</label><label for="__tabbed_7_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query account balance --address &lt;ACCOUNT_ADDRESS&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">account</span> <span class="n">balance</span> <span class="p">-</span><span class="n">-address</span> <span class="p">&lt;</span><span class="n">ACCOUNT_ADDRESS</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the account balance to the user.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Your value <span class="s2">&quot;22475000&quot;</span>
+Your value<span class="o">(</span>decoded<span class="o">)</span> <span class="o">[</span><span class="m">219</span>, <span class="m">110</span>, <span class="m">59</span>, <span class="m">231</span>, <span class="m">77</span>, <span class="m">52</span><span class="o">]</span>
+</code></pre></div>
+</details>
+
+<h3 id="check-nonce"><strong>Check nonce</strong></h3>
+<p>The nonce is the number of valid transactions sent from a given address. Each time you send a transaction, the nonce increases by 1. </p>
+<p><code>&lt;ACCOUNT_ADDRESS&gt;</code> can be an Externally Owned Account (EOA) or Contract Account. See <a href="tutorial.md#create-a-new-externally-owned-account-eoa">"Create a New Externally Owned Account (EOA)"</a> for account address details.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux / macOS</label><label for="__tabbed_8_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query account nonce --address &lt;ACCOUNT_ADDRESS&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">account</span> <span class="n">nonce</span> <span class="p">-</span><span class="n">-address</span> <span class="p">&lt;</span><span class="n">ACCOUNT_ADDRESS</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the account nonce to the user.</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Your value is: <span class="s2">&quot;0&quot;</span>
+</code></pre></div>
+</details>
+
+<hr />
+<h2 id="transaction">Transaction</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#submit-transaction"><code>pchain submit tx</code></a></td>
+<td>Submit transactions to ParallelChain Blockchain</td>
+</tr>
+<tr>
+<td><a href="#query-transaction"><code>pchain query tx</code></a></td>
+<td>Get executed transaction information with transaction hash</td>
+</tr>
+</tbody>
+</table>
+<h3 id="submit-transaction"><strong>Submit transaction</strong></h3>
+<p>You can submit different kinds of transactions using <code>pchain submit tx</code>. The value in each field varies based on its usage. All arguments are required, and the testnet node returns the same acknowledgment message. See the points below on configuring each argument based on your usage:</p>
+<ul>
+<li><a href="#transfer-token">Transfer Token</a></li>
+<li><a href="#deploy-contract">Deploy Contract</a></li>
+<li><a href="#call-a-contract">Call a Contract</a></li>
+</ul>
+<h4 id="transfer-token"><strong>Transfer token</strong></h4>
+<p>See <a href="tutorial.md#etoe-transferring-tokens-from-one-account-to-another">"EtoE: Transferring Tokens from One Account to Another"</a> for detailed steps.</p>
+<ul>
+<li><code>&lt;FROM_ADDRESS&gt;</code>: the source account address. It is usually your account address.</li>
+<li><code>&lt;TO_ADDRESS&gt;</code>: the destination account address. This address must be an Externally Owned Account(EOA).</li>
+<li><code>&lt;VALUE&gt;</code>: number in TXPLL. The token amount to transfer</li>
+<li><code>&lt;GAS_LIMIT&gt;</code>: Any token transfer between EOAs consumes a fixed amount of gas. We recommend setting this to 44,600.</li>
+<li><code>&lt;DATA&gt;</code>: no data is needed. Set this to <code>null</code></li>
+<li><code>&lt;FROM_ACCOUNT_NONCE&gt;</code>: number. You can get the nonce by <a href="#check-nonce"><code>query command</code></a></li>
+<li><code>&lt;FROM_ACCOUNT_KEYPAIR&gt;</code>: your account keypair  </li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Linux / macOS</label><label for="__tabbed_9_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain submit tx <span class="se">\</span>
+--from-address &lt;FROM_ADDRESS&gt; <span class="se">\</span>
+--to-address &lt;TO_ADDRESS&gt; <span class="se">\</span>
+--value &lt;VALUE&gt; <span class="se">\</span>
+--tip &lt;TIP&gt; <span class="se">\</span>
+--gas-limit &lt;GAS_LIMIT&gt; <span class="se">\</span>
+--gas-price <span class="m">1</span> <span class="se">\</span>
+--data &lt;DATA&gt; <span class="se">\</span>
+--nonce &lt;FROM_ACCOUNT_NONCE&gt; <span class="se">\</span>
+--path-to-keypair-json &lt;FROM_ACCOUNT_KEYPAIR&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">submit</span> <span class="n">tx</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-from-address</span> <span class="p">&lt;</span><span class="n">FROM_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-to-address</span> <span class="p">&lt;</span><span class="n">TO_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-value</span> <span class="p">&lt;</span><span class="n">VALUE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-tip</span> <span class="p">&lt;</span><span class="n">TIP</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-limit</span> <span class="p">&lt;</span><span class="n">GAS_LIMIT</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-price</span> <span class="n">1</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-data</span> <span class="p">&lt;</span><span class="n">DATA</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-nonce</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_NONCE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-path-to-keypair-json</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_KEYPAIR</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a successful acknowledgment message from the testnet node, including the transaction hash. Use this hash to verify if your transaction has succeeded. Please see the section on <a href="#query-transaction">"Query transaction"</a> for details</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Hash of tx: <span class="s2">&quot;EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1=&quot;</span>
+Status <span class="m">200</span>
+Response <span class="s2">&quot;Your request has been received.&quot;</span>
+</code></pre></div>
+</details>
+
+<h5 id="deploy-contract">Deploy contract</h5>
+<p>See <a href="../smart_contract_sdk/build_deploy_contract.md">"Building and deploying the contract"</a> for detailed steps.</p>
+<ul>
+<li><code>&lt;FROM_ADDRESS&gt;</code>: the source account address</li>
+<li><code>&lt;TO_ADDRESS&gt;</code>: Set to <code>null</code></li>
+<li><code>&lt;VALUE&gt;</code>: Set to 0</li>
+<li><code>&lt;GAS_LIMIT&gt;</code>: It depends on the contract code size. We recommend setting the gas limit to at least <em>CODE_SIZE * 105</em></li>
+<li><code>&lt;FROM_ACCOUNT_NONCE&gt;</code>: number. You can get the nonce by <a href="#check-nonce"><code>query command</code></a></li>
+<li><code>&lt;FROM_ACCOUNT_KEYPAIR&gt;</code>: Your account keypair </li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Linux / macOS</label><label for="__tabbed_10_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain submit tx <span class="se">\</span>
+--from-address &lt;FROM_ADDRESS&gt; <span class="se">\</span>
+--to-address &lt;TO_ADDRESS&gt; <span class="se">\</span>
+--value &lt;VALUE&gt; <span class="se">\</span>
+--tip &lt;TIP&gt; <span class="se">\</span>
+--gas-limit &lt;GAS_LIMIT&gt; <span class="se">\</span>
+--gas-price <span class="m">1</span> <span class="se">\</span>
+--data &lt;DATA&gt; <span class="se">\</span>
+--nonce &lt;FROM_ACCOUNT_NONCE&gt; <span class="se">\</span>
+--path-to-keypair-json &lt;FROM_ACCOUNT_KEYPAIR&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">submit</span> <span class="n">tx</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-from-address</span> <span class="p">&lt;</span><span class="n">FROM_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-to-address</span> <span class="p">&lt;</span><span class="n">TO_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-value</span> <span class="p">&lt;</span><span class="n">VALUE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-tip</span> <span class="p">&lt;</span><span class="n">TIP</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-limit</span> <span class="p">&lt;</span><span class="n">GAS_LIMIT</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-price</span> <span class="n">1</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-data</span> <span class="p">&lt;</span><span class="n">DATA</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-nonce</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_NONCE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-path-to-keypair-json</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_KEYPAIR</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a successful acknowledgment message from the testnet node, including the transaction hash. Use this hash to verify if your transaction has succeeded. Please see the section on <a href="#query-transaction">"Query transaction"</a> for details</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Hash of tx: <span class="s2">&quot;EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1=&quot;</span>
+Status <span class="m">200</span>
+Response <span class="s2">&quot;Your request has been received.&quot;</span>
+</code></pre></div>
+</details>
+
+<h5 id="call-a-contract">Call a contract</h5>
+<p>See <a href="../../smart_contract_sdk/etoc_call/">"Calling a Contract from an Externally Owned Account</a> for detailed steps.</p>
+<ul>
+<li><code>&lt;FROM_ADDRESS&gt;</code>: the source account address</li>
+<li><code>&lt;TO_ADDRESS&gt;</code>: contract address</li>
+<li><code>&lt;VALUE&gt;</code>: Set to 0</li>
+<li><code>&lt;GAS_LIMIT&gt;</code>: We recommend setting the gas limit to <em>at least 500000 gas</em></li>
+<li><code>&lt;FROM_ACCOUNT_NONCE&gt;</code>: number. You can get the nonce by <a href="#check-nonce"><code>query command</code></a></li>
+<li><code>&lt;FROM_ACCOUNT_KEYPAIR&gt;</code>: your account keypair</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Linux / macOS</label><label for="__tabbed_11_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain submit tx <span class="se">\</span>
+--from-address &lt;FROM_ADDRESS&gt; <span class="se">\</span>
+--to-address &lt;TO_ADDRESS&gt; <span class="se">\</span>
+--value &lt;VALUE&gt; <span class="se">\</span>
+--tip &lt;TIP&gt; <span class="se">\</span>
+--gas-limit &lt;GAS_LIMIT&gt; <span class="se">\</span>
+--gas-price <span class="m">1</span> <span class="se">\</span>
+--data &lt;DATA&gt; <span class="se">\</span>
+--nonce &lt;FROM_ACCOUNT_NONCE&gt; <span class="se">\</span>
+--path-to-keypair-json &lt;FROM_ACCOUNT_KEYPAIR&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">submit</span> <span class="n">tx</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-from-address</span> <span class="p">&lt;</span><span class="n">FROM_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-to-address</span> <span class="p">&lt;</span><span class="n">TO_ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-value</span> <span class="p">&lt;</span><span class="n">VALUE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-tip</span> <span class="p">&lt;</span><span class="n">TIP</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-limit</span> <span class="p">&lt;</span><span class="n">GAS_LIMIT</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-gas-price</span> <span class="n">1</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-data</span> <span class="p">&lt;</span><span class="n">DATA</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-nonce</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_NONCE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-path-to-keypair-json</span> <span class="p">&lt;</span><span class="n">FROM_ACCOUNT_KEYPAIR</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns a successful acknowledgment message from the testnet node, including the transaction hash. Use this hash to verify if your transaction has succeeded. Please see the section on <a href="#query-transaction">"Query transaction"</a> for details</em></p>
+<details>
+  <summary>Output</summary>
+    <div class="highlight"><pre><span></span><code>Hash of tx: <span class="s2">&quot;EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1=&quot;</span>
+Status <span class="m">200</span>
+Response <span class="s2">&quot;Your request has been received.&quot;</span>
+</code></pre></div>
+</details>
+
+<h3 id="query-transaction"><strong>Query transaction</strong></h3>
+<p>Checks the details of a transaction using a transaction hash that is obtained from submitting a transaction.</p>
+<p><code>&lt;TRANSACTION_HASH&gt;</code> is the hash obtained when you submit a transaction using <code>pchain</code>. See the return output in <a href="#submit-transaction">"Submit Transaction"</a> for details.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Linux / macOS</label><label for="__tabbed_12_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query tx --tx-hash &lt;TRANSACTION_HASH&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">tx</span> <span class="p">-</span><span class="n">-tx-hash</span> <span class="p">&lt;</span><span class="n">TRANSACTION_HASH</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the transaction details that correspond to the transaction hash.</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Tx Transaction <span class="o">{</span>
+    from_address: <span class="s2">&quot;xNkAWN4XS/ejYtB9EwDbxzvKmWhuiJoLbpO1kleBKzd=&quot;</span>,
+    to_address: <span class="s2">&quot;bvxhscIRoJvmu2JQrJyTakMBufl1ogN4py84rtZl7sA=&quot;</span>,
+    value: <span class="m">0</span>,
+    tip: <span class="m">0</span>,
+    gas_limit: <span class="m">44600</span>,
+    gas_price: <span class="m">1</span>,
+    data: <span class="s2">&quot;&quot;</span>,
+    n_txs_on_chain_from_address: <span class="m">0</span>,
+    hash: <span class="s2">&quot;EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1=&quot;</span>,
+    signature: <span class="s2">&quot;KRqJUE66qPFwnWOfMsUc9xO4q9ZFNrA8OILKS7dqQiVaaWmQda4pD7BgTr9cnz7R9p9ZvdSpWLze8skGpW97BS==&quot;</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<hr />
+<h2 id="block">Block</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#query-single-block"><code>pchain query block</code></a></td>
+<td>Get information of a particular block (also for latest block)</td>
+</tr>
+<tr>
+<td><a href="#query-multiple-block"><code>pchain query multi-blocks</code></a></td>
+<td>Get multiple blocks information</td>
+</tr>
+<tr>
+<td><a href="#query-block-number"><code>pchain query block-num</code></a></td>
+<td>Get the block number with block hash</td>
+</tr>
+</tbody>
+</table>
+<p>You can query a single block or multiple block with the commands above. </p>
+<h3 id="query-single-block"><strong>Query single block</strong></h3>
+<h5 id="by-transaction-hash">By Transaction hash</h5>
+<p>This command gets the details of a block through the transaction hash of one of its transactions.</p>
+<p><code>&lt;TRANSACTION_HASH&gt;</code> is the hash obtained when you submit a transaction using <code>pchain</code>. See the return output in <a href="#submit-transaction">"Submit Transaction"</a> for details.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Linux / macOS</label><label for="__tabbed_13_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query block --tx-hash &lt;TRANSACTION_HASH&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">block</span> <span class="p">-</span><span class="n">-tx-hash</span> <span class="p">&lt;</span><span class="n">TRANSACTION_HASH</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the details of a block queried through the transaction hash.</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Block: Block <span class="o">{</span>
+    header: BlockHeader <span class="o">{</span>
+        blockchain_id: <span class="m">0</span>,
+        block_version_number: <span class="m">0</span>,
+        timestamp: <span class="m">1649218702</span>,
+        prev_block_hash: <span class="s2">&quot;dhl8rTmp/UcHuPzbWC/EbCw+Eih9RwQiQ8qdriprf8Y=&quot;</span>,
+        this_block_hash: <span class="s2">&quot;rhIBT39sJY2/OxLTT5xtsMVNtpNIt2gLBSIUGUlzrD0=&quot;</span>,
+        txs_hash: <span class="s2">&quot;ATPVmMIWakFFXecV7yb/7C6MQHynabdPP4XLQM5/tFA=&quot;</span>,
+        state_hash: <span class="s2">&quot;NxkH4DwL6WnX45DL9JnmnOTwwMX2IlUENErBL6zA3PA=&quot;</span>,
+        events_hash: <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;</span>,
+        receipts_hash: <span class="s2">&quot;7LFJwDJBsD+fu7kivOXukaW0eGkzeBiJk/zhOeKFRLA=&quot;</span>,
+        proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+        signature: <span class="s2">&quot;s2GBl2UxzUNE/2QZ1scB/Y6TSRDLrmG8v5XiaBRzQlpaK0RiLBLjeJurMOU97aBFoUr/8cxg0h3Q/p2I5WvyBg==&quot;</span>,
+    <span class="o">}</span>,
+    transactions: <span class="o">[</span>
+        Transaction <span class="o">{</span>
+            from_address: <span class="s2">&quot;xNkAWN4XS/ejYtB9EwDbxzvKmWhuiJoLbpO1kleBKzd=&quot;</span>,
+            to_address: <span class="s2">&quot;bvxhscIRoJvmu2JQrJyTakMBufl1ogN4py84rtZl7sA=&quot;</span>,
+            value: <span class="m">0</span>,
+            tip: <span class="m">0</span>,
+            gas_limit: <span class="m">44600</span>,
+            gas_price: <span class="m">1</span>,
+            data: <span class="s2">&quot;&quot;</span>,
+            n_txs_on_chain_from_address: <span class="m">0</span>,
+            hash: <span class="s2">&quot;EB9nbVTRFZwxr3tVYmQI8fjawWxW/F0KVe6B1shWGr1=&quot;</span>,
+            signature: <span class="s2">&quot;KRqJUE66qPFwnWOfMsUc9xO4q9ZFNrA8OILKS7dqQiVaaWmQda4pD7BgTr9cnz7R9p9ZvdSpWLze8skGpW97BS==&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    events: <span class="o">[]</span>,
+    receipts: <span class="o">[</span>
+        Receipt <span class="o">{</span>
+            status_code: <span class="o">[</span>
+                <span class="m">0</span>,
+            <span class="o">]</span>,
+            gas_consumed: <span class="m">44200</span>,
+            return_value: <span class="o">[]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<h5 id="latest-block">Latest block</h5>
+<p>This command gets the details of the latest block in the blockchain.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Linux / macOS</label><label for="__tabbed_14_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query block --latest
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">block</span> <span class="p">-</span><span class="n">-latest</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the details of the latest block.</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Block: Block <span class="o">{</span>
+    header: BlockHeader <span class="o">{</span>
+        blockchain_id: <span class="m">0</span>,
+        block_version_number: <span class="m">0</span>,
+        timestamp: <span class="m">1649220017</span>,
+        prev_block_hash: <span class="s2">&quot;VBIVWsTFi5wAqGnvhG6p/bsJbTUSl2nWpzxEF8eQFF8=&quot;</span>,
+        this_block_hash: <span class="s2">&quot;RV9VhZvGyb0Z/7DF2FfYcdBq/yvsU1epxHEs9eNSYZA=&quot;</span>,
+        txs_hash: <span class="s2">&quot;sFNt1JOrs5geUJoghAtg/Jjy9+iGbtfKwQFWT+wmRc8=&quot;</span>,
+        state_hash: <span class="s2">&quot;vDCOmj0cwqLhgMPJkBbH6quJhpXRtnVxH1Mt7SZohmk=&quot;</span>,
+        events_hash: <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;</span>,
+        receipts_hash: <span class="s2">&quot;dV7J+1GeOXqicQV0VKnYa29PxYvYrlPsJ58eb5LHAnM=&quot;</span>,
+        proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+        signature: <span class="s2">&quot;ZHtEkGe17u/9aEgSY9M6CR2oKxUC6AS40UvbzhrW3G61BHE70uW7NN7tkQy0nGYrPPS8z0bIBMs2E2/rGbCUAg==&quot;</span>,
+    <span class="o">}</span>,
+    transactions: <span class="o">[</span>
+        Transaction <span class="o">{</span>
+            from_address: <span class="s2">&quot;Jw0yNqmQrHR9fQi5BpJu/wa1W3+nc1y3KzMh/XFax/A=&quot;</span>,
+            to_address: <span class="s2">&quot;3FCI7oThxiSkHJfM4wiQsWl2h1tthwoAsSjcngon4Lo=&quot;</span>,
+            value: <span class="m">0</span>,
+            tip: <span class="m">0</span>,
+            gas_limit: <span class="m">20000000</span>,
+            gas_price: <span class="m">1</span>,
+            data: <span class="s2">&quot;DAAAAEhhcnJ5IFBvdHRlcigAAAAB&quot;</span>,
+            n_txs_on_chain_from_address: <span class="m">1</span>,
+            hash: <span class="s2">&quot;58B1swFyHMCxfxL71pEN/flKpi5KISQOaf90rNPVsmE=&quot;</span>,
+            signature: <span class="s2">&quot;ZZe4VD5PJ31Q4v02lYqvfHfEktUw7UDvusdwgEstp93YT6x8H1Q/PFHrlTlh5KvGy1tUKziPIWs/Lx/Kvj++AA==&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    events: <span class="o">[]</span>,
+    receipts: <span class="o">[</span>
+        Receipt <span class="o">{</span>
+            status_code: <span class="o">[</span>
+                <span class="m">0</span>,
+            <span class="o">]</span>,
+            gas_consumed: <span class="m">46400</span>,
+            return_value: <span class="o">[]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<h5 id="by-block-number">By Block number</h5>
+<p>This command gets the details of a block through its block number.</p>
+<p><code>&lt;BLOCK_NUM&gt;</code> refers to the number of blocks that have been created on the blockchain prior to this block. You can get the block number through this block's hash. See <a href="#query-block-number">"Query block number"</a> on how to get the block number.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Linux / macOS</label><label for="__tabbed_15_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query block --block-num &lt;BLOCK_NUM&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">block</span> <span class="p">-</span><span class="n">-block-num</span> <span class="p">&lt;</span><span class="n">BLOCK_NUM</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the block details from the block number</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Block: Block <span class="o">{</span>
+    header: BlockHeader <span class="o">{</span>
+        blockchain_id: <span class="m">0</span>,
+        block_version_number: <span class="m">0</span>,
+        timestamp: <span class="m">1649219200</span>,
+        prev_block_hash: <span class="s2">&quot;jn2bJYTwDUi4mXj1TZwbdX38BiDBvjQeDgb0txguCfs=&quot;</span>,
+        this_block_hash: <span class="s2">&quot;8CG5Eqp3B/YMxzKyYWpWnD5XbXhPqXfp08vGOnZ8X1k=&quot;</span>,
+        txs_hash: <span class="s2">&quot;nETcvllPoZTJ2jN3F6VqxCJongWEuR8whaPq0DgYadk=&quot;</span>,
+        state_hash: <span class="s2">&quot;dSK/08ya1OM9k4pSQxOgv6rezedW/oePleRDFY9wcVc=&quot;</span>,
+        events_hash: <span class="s2">&quot;gJhGqqv5TFxM/oZ6Zv3jEDfA0nOHw1hEr70r8SPALQ4=&quot;</span>,
+        receipts_hash: <span class="s2">&quot;lr9Pg2qK6eAFQFl8elYtE+J1vaiUAgnI/l/HKYumvuY=&quot;</span>,
+        proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+        signature: <span class="s2">&quot;H8slMvVxBlATz1euYrQNYcSg0Yo8LQyOYC5LWPgUMMkSgyjk0JExVRDoj26iWIjTEtbDTw6K9aHvVVqz4MFLBw==&quot;</span>,
+    <span class="o">}</span>,
+    transactions: <span class="o">[</span>
+        Transaction <span class="o">{</span>
+            from_address: <span class="s2">&quot;2oQRJJZ62AQteFw632lGYUVeEiHOaNn8oqLf3Q89jDU=&quot;</span>,
+            to_address: <span class="s2">&quot;yWBrd5PVuF9f9P7mD2tjRihf8AGRFXeRB8lk20PqRIk=&quot;</span>,
+            value: <span class="m">0</span>,
+            tip: <span class="m">0</span>,
+            gas_limit: <span class="m">200000000</span>,
+            gas_price: <span class="m">1</span>,
+            data: <span class="s2">&quot;CwAAAGhlbGxvIHdvcmxk&quot;</span>,
+            n_txs_on_chain_from_address: <span class="m">13</span>,
+            hash: <span class="s2">&quot;f22B5G1Bzz0JzwRC92Ftzy829xGRBWwu/nlDmiDM7l0=&quot;</span>,
+            signature: <span class="s2">&quot;W7OKwBWGZuROkdLLzNIPSjbZa8sFJ4SdICOgkzG2lw2Qm6yedSxGUnCUb6POOfPQMaE95h+7l3CPL2GAMQo1BQ==&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    events: <span class="o">[</span>
+        Event <span class="o">{</span>
+            topic: <span class="s2">&quot;my_first_contract: START&quot;</span>,
+            value: <span class="s2">&quot;The smart contract received an argument of: \&quot;hello world\&quot;&quot;</span>,
+        <span class="o">}</span>,
+        Event <span class="o">{</span>
+            topic: <span class="s2">&quot;system: &quot;</span>,
+            value: <span class="s2">&quot;total memory: 0\nused memory: 0\ntotal swap: 0\nused swap: 0\n\nSystem name: None\nSystem kernel version: None\n System OS version: None\nSystem host name:None\nnumber of processors: 0&quot;</span>,
+        <span class="o">}</span>,
+        Event <span class="o">{</span>
+            topic: <span class="s2">&quot;total memory&quot;</span>,
+            value: <span class="s2">&quot;0&quot;</span>,
+        <span class="o">}</span>,
+        Event <span class="o">{</span>
+            topic: <span class="s2">&quot;my_first_contract: END&quot;</span>,
+            value: <span class="s2">&quot;Completed Call&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    receipts: <span class="o">[</span>
+        Receipt <span class="o">{</span>
+            status_code: <span class="o">[</span>
+                <span class="m">0</span>,
+            <span class="o">]</span>,
+            gas_consumed: <span class="m">195017</span>,
+            return_value: <span class="o">[</span>
+                <span class="m">84</span>,
+                <span class="m">104</span>,
+                <span class="m">101</span>,
+                <span class="m">32</span>,
+                <span class="m">108</span>,
+                <span class="m">101</span>,
+                <span class="m">110</span>,
+                <span class="m">103</span>,
+                <span class="m">116</span>,
+                <span class="m">104</span>,
+                <span class="m">32</span>,
+                <span class="m">111</span>,
+                <span class="m">102</span>,
+                <span class="m">32</span>,
+                <span class="m">116</span>,
+                <span class="m">104</span>,
+                <span class="m">101</span>,
+                <span class="m">32</span>,
+                <span class="m">97</span>,
+                <span class="m">114</span>,
+                <span class="m">103</span>,
+                <span class="m">117</span>,
+                <span class="m">109</span>,
+                <span class="m">101</span>,
+                <span class="m">110</span>,
+                <span class="m">116</span>,
+                <span class="m">32</span>,
+                <span class="m">105</span>,
+                <span class="m">115</span>,
+                <span class="m">58</span>,
+                <span class="m">32</span>,
+                <span class="m">49</span>,
+                <span class="m">49</span>,
+            <span class="o">]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<h5 id="by-block-hash">By Block hash</h5>
+<p>This command gets the details of a block through its hash.</p>
+<p><code>&lt;BLOCK_HASH&gt;</code> refers to the block's hash before it was signed and committed onto the blockchain. You can get this value by using the previous commands for querying a block and inspecting the field <code>this_block_hash</code> in the output to get the block hash.</p>
+<details>
+  <summary>Click to see where to find "this_block_hash" which is highlighted in the output.</summary>
+    <div class="highlight"><pre><span></span><code>Your Block: Block <span class="o">{</span>
+    header: BlockHeader <span class="o">{</span>
+        blockchain_id: <span class="m">0</span>,
+        block_version_number: <span class="m">0</span>,
+        timestamp: <span class="m">1649220017</span>,
+        prev_block_hash: <span class="s2">&quot;VBIVWsTFi5wAqGnvhG6p/bsJbTUSl2nWpzxEF8eQFF8=&quot;</span>,
+<span class="hll">        this_block_hash: <span class="s2">&quot;RV9VhZvGyb0Z/7DF2FfYcdBq/yvsU1epxHEs9eNSYZA=&quot;</span>,
+</span>        txs_hash: <span class="s2">&quot;sFNt1JOrs5geUJoghAtg/Jjy9+iGbtfKwQFWT+wmRc8=&quot;</span>,
+        state_hash: <span class="s2">&quot;vDCOmj0cwqLhgMPJkBbH6quJhpXRtnVxH1Mt7SZohmk=&quot;</span>,
+        events_hash: <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;</span>,
+        receipts_hash: <span class="s2">&quot;dV7J+1GeOXqicQV0VKnYa29PxYvYrlPsJ58eb5LHAnM=&quot;</span>,
+        proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+        signature: <span class="s2">&quot;ZHtEkGe17u/9aEgSY9M6CR2oKxUC6AS40UvbzhrW3G61BHE70uW7NN7tkQy0nGYrPPS8z0bIBMs2E2/rGbCUAg==&quot;</span>,
+    <span class="o">}</span>,
+    transactions: <span class="o">[</span>
+        Transaction <span class="o">{</span>
+            from_address: <span class="s2">&quot;Jw0yNqmQrHR9fQi5BpJu/wa1W3+nc1y3KzMh/XFax/A=&quot;</span>,
+            to_address: <span class="s2">&quot;3FCI7oThxiSkHJfM4wiQsWl2h1tthwoAsSjcngon4Lo=&quot;</span>,
+            value: <span class="m">0</span>,
+            tip: <span class="m">0</span>,
+            gas_limit: <span class="m">20000000</span>,
+            gas_price: <span class="m">1</span>,
+            data: <span class="s2">&quot;DAAAAEhhcnJ5IFBvdHRlcigAAAAB&quot;</span>,
+            n_txs_on_chain_from_address: <span class="m">1</span>,
+            hash: <span class="s2">&quot;58B1swFyHMCxfxL71pEN/flKpi5KISQOaf90rNPVsmE=&quot;</span>,
+            signature: <span class="s2">&quot;ZZe4VD5PJ31Q4v02lYqvfHfEktUw7UDvusdwgEstp93YT6x8H1Q/PFHrlTlh5KvGy1tUKziPIWs/Lx/Kvj++AA==&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    events: <span class="o">[]</span>,
+    receipts: <span class="o">[</span>
+        Receipt <span class="o">{</span>
+            status_code: <span class="o">[</span>
+                <span class="m">0</span>,
+            <span class="o">]</span>,
+            gas_consumed: <span class="m">46400</span>,
+            return_value: <span class="o">[]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Linux / macOS</label><label for="__tabbed_16_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query block --block-hash &lt;BLOCK_HASH&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">block</span> <span class="p">-</span><span class="n">-block-hash</span> <span class="p">&lt;</span><span class="n">BLOCK_HASH</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the block details from the block hash</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Block: Block <span class="o">{</span>
+    header: BlockHeader <span class="o">{</span>
+        blockchain_id: <span class="m">0</span>,
+        block_version_number: <span class="m">0</span>,
+        timestamp: <span class="m">1649220017</span>,
+        prev_block_hash: <span class="s2">&quot;VBIVWsTFi5wAqGnvhG6p/bsJbTUSl2nWpzxEF8eQFF8=&quot;</span>,
+        this_block_hash: <span class="s2">&quot;RV9VhZvGyb0Z/7DF2FfYcdBq/yvsU1epxHEs9eNSYZA=&quot;</span>,
+        txs_hash: <span class="s2">&quot;sFNt1JOrs5geUJoghAtg/Jjy9+iGbtfKwQFWT+wmRc8=&quot;</span>,
+        state_hash: <span class="s2">&quot;vDCOmj0cwqLhgMPJkBbH6quJhpXRtnVxH1Mt7SZohmk=&quot;</span>,
+        events_hash: <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;</span>,
+        receipts_hash: <span class="s2">&quot;dV7J+1GeOXqicQV0VKnYa29PxYvYrlPsJ58eb5LHAnM=&quot;</span>,
+        proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+        signature: <span class="s2">&quot;ZHtEkGe17u/9aEgSY9M6CR2oKxUC6AS40UvbzhrW3G61BHE70uW7NN7tkQy0nGYrPPS8z0bIBMs2E2/rGbCUAg==&quot;</span>,
+    <span class="o">}</span>,
+    transactions: <span class="o">[</span>
+        Transaction <span class="o">{</span>
+            from_address: <span class="s2">&quot;Jw0yNqmQrHR9fQi5BpJu/wa1W3+nc1y3KzMh/XFax/A=&quot;</span>,
+            to_address: <span class="s2">&quot;3FCI7oThxiSkHJfM4wiQsWl2h1tthwoAsSjcngon4Lo=&quot;</span>,
+            value: <span class="m">0</span>,
+            tip: <span class="m">0</span>,
+            gas_limit: <span class="m">20000000</span>,
+            gas_price: <span class="m">1</span>,
+            data: <span class="s2">&quot;DAAAAEhhcnJ5IFBvdHRlcigAAAAB&quot;</span>,
+            n_txs_on_chain_from_address: <span class="m">1</span>,
+            hash: <span class="s2">&quot;58B1swFyHMCxfxL71pEN/flKpi5KISQOaf90rNPVsmE=&quot;</span>,
+            signature: <span class="s2">&quot;ZZe4VD5PJ31Q4v02lYqvfHfEktUw7UDvusdwgEstp93YT6x8H1Q/PFHrlTlh5KvGy1tUKziPIWs/Lx/Kvj++AA==&quot;</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+    events: <span class="o">[]</span>,
+    receipts: <span class="o">[</span>
+        Receipt <span class="o">{</span>
+            status_code: <span class="o">[</span>
+                <span class="m">0</span>,
+            <span class="o">]</span>,
+            gas_consumed: <span class="m">46400</span>,
+            return_value: <span class="o">[]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<h3 id="query-multiple-block"><strong>Query multiple block</strong></h3>
+<p>This command shows the information across a vector of blocks. It takes two parameters that are the "<strong>block hash of starting block</strong>" and the "<strong>query window size</strong>"; denoted in the command as <code>&lt;BLOCK_HASH&gt;</code> and <code>&lt;SIZE&gt;</code> respectively.</p>
+<p>To find out how to get the <code>&lt;BLOCK_HASH&gt;</code>, see <a href="#query-single-block">"Query Single Block"</a> and observe the output to get this value.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Linux / macOS</label><label for="__tabbed_17_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query multi-blocks --block-hash &lt;BLOCK_HASH&gt; --size &lt;SIZE&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">multi-blocks</span> <span class="p">-</span><span class="n">-block-hash</span> <span class="p">&lt;</span><span class="n">BLOCK_HASH</span><span class="p">&gt;</span> <span class="p">-</span><span class="n">-size</span> <span class="p">&lt;</span><span class="n">SIZE</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the vector of blocks and its corresponding details through a specified window</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your Blocks: Blocks <span class="o">{</span>
+    blocks: <span class="o">[</span>
+        Block <span class="o">{</span>
+            header: BlockHeader <span class="o">{</span>
+                blockchain_id: <span class="m">0</span>,
+                block_version_number: <span class="m">0</span>,
+                timestamp: <span class="m">1649219932</span>,
+                prev_block_hash: <span class="s2">&quot;8CG5Eqp3B/YMxzKyYWpWnD5XbXhPqXfp08vGOnZ8X1k=&quot;</span>,
+                this_block_hash: <span class="s2">&quot;VBIVWsTFi5wAqGnvhG6p/bsJbTUSl2nWpzxEF8eQFF8=&quot;</span>,
+                txs_hash: <span class="s2">&quot;nETcvllPoZTJ2jN3F6VqxCJongWEuR8whaPq0DgYadk=&quot;</span>,
+                state_hash: <span class="s2">&quot;dSK/08ya1OM9k4pSQxOgv6rezedW/oePleRDFY9wcVc=&quot;</span>,
+                events_hash: <span class="s2">&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=&quot;</span>,
+                receipts_hash: <span class="s2">&quot;/8yo5dgqHzr9eheXOX11s74gCyllvRGn6C+rHAYNen8=&quot;</span>,
+                proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+                signature: <span class="s2">&quot;43lh60w3Pje/zVnmVkIVhcbGEVnGJWGeVK835pEOjSVrLy14HhhGaBW87gtR4ZXuoRQ3DtRKw1QpdrS6qNxhCw==&quot;</span>,
+            <span class="o">}</span>,
+            transactions: <span class="o">[]</span>,
+            events: <span class="o">[]</span>,
+            receipts: <span class="o">[</span>
+                Receipt <span class="o">{</span>
+                    status_code: <span class="o">[</span>
+                        <span class="m">5</span>,
+                    <span class="o">]</span>,
+                    gas_consumed: <span class="m">0</span>,
+                    return_value: <span class="o">[]</span>,
+                <span class="o">}</span>,
+            <span class="o">]</span>,
+        <span class="o">}</span>,
+        Block <span class="o">{</span>
+            header: BlockHeader <span class="o">{</span>
+                blockchain_id: <span class="m">0</span>,
+                block_version_number: <span class="m">0</span>,
+                timestamp: <span class="m">1649219200</span>,
+                prev_block_hash: <span class="s2">&quot;jn2bJYTwDUi4mXj1TZwbdX38BiDBvjQeDgb0txguCfs=&quot;</span>,
+                this_block_hash: <span class="s2">&quot;8CG5Eqp3B/YMxzKyYWpWnD5XbXhPqXfp08vGOnZ8X1k=&quot;</span>,
+                txs_hash: <span class="s2">&quot;nETcvllPoZTJ2jN3F6VqxCJongWEuR8whaPq0DgYadk=&quot;</span>,
+                state_hash: <span class="s2">&quot;dSK/08ya1OM9k4pSQxOgv6rezedW/oePleRDFY9wcVc=&quot;</span>,
+                events_hash: <span class="s2">&quot;gJhGqqv5TFxM/oZ6Zv3jEDfA0nOHw1hEr70r8SPALQ4=&quot;</span>,
+                receipts_hash: <span class="s2">&quot;lr9Pg2qK6eAFQFl8elYtE+J1vaiUAgnI/l/HKYumvuY=&quot;</span>,
+                proposer_public_key: <span class="s2">&quot;+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=&quot;</span>,
+                signature: <span class="s2">&quot;H8slMvVxBlATz1euYrQNYcSg0Yo8LQyOYC5LWPgUMMkSgyjk0JExVRDoj26iWIjTEtbDTw6K9aHvVVqz4MFLBw==&quot;</span>,
+            <span class="o">}</span>,
+            transactions: <span class="o">[]</span>,
+            events: <span class="o">[]</span>,
+            receipts: <span class="o">[</span>
+                Receipt <span class="o">{</span>
+                    status_code: <span class="o">[</span>
+                        <span class="m">0</span>,
+                    <span class="o">]</span>,
+                    gas_consumed: <span class="m">195017</span>,
+                    return_value: <span class="o">[</span>
+                        <span class="m">84</span>,
+                        <span class="m">104</span>,
+                        <span class="m">101</span>,
+                        <span class="m">32</span>,
+                        <span class="m">108</span>,
+                        <span class="m">101</span>,
+                        <span class="m">110</span>,
+                        <span class="m">103</span>,
+                        <span class="m">116</span>,
+                        <span class="m">104</span>,
+                        <span class="m">32</span>,
+                        <span class="m">111</span>,
+                        <span class="m">102</span>,
+                        <span class="m">32</span>,
+                        <span class="m">116</span>,
+                        <span class="m">104</span>,
+                        <span class="m">101</span>,
+                        <span class="m">32</span>,
+                        <span class="m">97</span>,
+                        <span class="m">114</span>,
+                        <span class="m">103</span>,
+                        <span class="m">117</span>,
+                        <span class="m">109</span>,
+                        <span class="m">101</span>,
+                        <span class="m">110</span>,
+                        <span class="m">116</span>,
+                        <span class="m">32</span>,
+                        <span class="m">105</span>,
+                        <span class="m">115</span>,
+                        <span class="m">58</span>,
+                        <span class="m">32</span>,
+                        <span class="m">49</span>,
+                        <span class="m">49</span>,
+                    <span class="o">]</span>,
+                <span class="o">}</span>,
+            <span class="o">]</span>,
+        <span class="o">}</span>,
+    <span class="o">]</span>,
+<span class="o">}</span>
+</code></pre></div>
+</details>
+
+<h3 id="query-block-number"><strong>Query block number</strong></h3>
+<p>This command gets the block number through the "<strong>block hash</strong>".</p>
+<p>To find out how to get the <code>&lt;BLOCK_HASH&gt;</code>, see <a href="#query-single-block">"Query Single Block"</a> and observe the output to get this value.</p>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Linux / macOS</label><label for="__tabbed_18_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query block-num --block-hash &lt;BLOCK_HASH&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="nb">block-num</span> <span class="p">-</span><span class="n">-block-hash</span> <span class="p">&lt;</span><span class="n">BLOCK_HASH</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the block number from its hash</em></p>
+<details>
+  <summary>Example Output</summary>
+    <div class="highlight"><pre><span></span><code>Your value <span class="s2">&quot;9127&quot;</span>
+Your value<span class="o">(</span>decoded<span class="o">)</span> <span class="o">[</span><span class="m">247</span>, <span class="m">93</span>, <span class="m">187</span><span class="o">]</span>
+</code></pre></div>
+</details>
+
+<hr />
+<h2 id="world-state">World state</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#query-the-state"><code>pchain query state</code></a></td>
+<td>Get data from world state with provided key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-the-state"><strong>Query the state</strong></h3>
+<p>You can query data from the <code>world state</code> in a particular block.</p>
+<p>Where:</p>
+<ul>
+<li><code>&lt;BLOCK_HASH&gt;</code>: The block's hash for the query.</li>
+<li><code>&lt;ADDRESS&gt;</code>: The address of contract account.</li>
+<li><code>&lt;KEY&gt;</code>: The key in the world state in format of base64 string.</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Linux / macOS</label><label for="__tabbed_19_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain query state <span class="se">\</span>
+--block-hash &lt;BLOCK_HASH&gt; <span class="se">\</span>
+--address &lt;ADDRESS&gt; <span class="se">\</span>
+--key &lt;KEY&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">query</span> <span class="n">state</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-block-hash</span> <span class="p">&lt;</span><span class="n">BLOCK_HASH</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-address</span> <span class="p">&lt;</span><span class="n">ADDRESS</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-key</span> <span class="p">&lt;</span><span class="n">KEY</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the world state of a particular block</em></p>
+<details>
+  <summary>Example Output</summary>
+  The value is in format of base64 string. If key is not found (or not set before), it outputs empty string (decoded to empty array)
+    <div class="highlight"><pre><span></span><code>Your value <span class="s2">&quot;AAAAAA==&quot;</span>
+Your value<span class="o">(</span>decoded<span class="o">)</span> <span class="o">[</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">]</span>
+</code></pre></div>
+</details>
+
+<hr />
+<h2 id="analyze">Analyze</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#gas-usage-per-block"><code>pchain analyze gas-per-block</code></a></td>
+<td>Get the gas usage per block for a specified period</td>
+</tr>
+<tr>
+<td><a href="#mempool-size"><code>pchain analyze mempool-size</code></a></td>
+<td>Get mempool size for a specified period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gas-usage-per-block"><strong>Gas usage per block</strong></h3>
+<p>You can get the gas usage of blocks for a specified period.</p>
+<ul>
+<li><code>&lt;START_TIME&gt;</code>: Start of the time window (<em>in unix timestamp formatting</em>)</li>
+<li><code>&lt;END_TIME&gt;</code>: End of the time window (<em>in unix timestamp formatting</em>)</li>
+<li><code>&lt;WINDOW_SIZE&gt;</code>:  Specified period of analysis. (<em>in seconds</em>)</li>
+<li><code>&lt;STEP_SIZE&gt;</code>: The amount of time that moves between each window (<em>in seconds</em>)</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Linux / macOS</label><label for="__tabbed_20_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain analyze gas-per-block <span class="se">\</span>
+--from-time &lt;START_TIME&gt; <span class="se">\</span>
+--to-time &lt;END_TIME&gt; <span class="se">\</span>
+--window-size &lt;WINDOW_SIZE&gt; <span class="se">\</span>
+--step-size &lt;STEP_SIZE&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">analyze</span> <span class="n">gas-per-block</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-from-time</span> <span class="p">&lt;</span><span class="n">START_TIME</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-to-time</span> <span class="p">&lt;</span><span class="n">END_TIME</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-window-size</span> <span class="p">&lt;</span><span class="n">WINDOW_SIZE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-step-size</span> <span class="p">&lt;</span><span class="n">STEP_SIZE</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the gas usage of a block.</em></p>
+<details>
+  <summary>Example Output</summary>
+    The output array contains gas usage value representing period of &lt;WINDOW_SIZE&gt; seconds. The starting time for period is scheduled by every &lt;STEP_SIZE&gt; seconds. The lenght of the array varies depends on the input.
+    <div class="highlight"><pre><span></span><code>Your value <span class="o">[</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">5057700</span>, <span class="m">44200</span>, <span class="m">44200</span>, <span class="m">44200</span>, <span class="m">44200</span><span class="o">]</span>
+</code></pre></div>
+</details>
+
+<h3 id="mempool-size"><code>Mempool size</code></h3>
+<p>You can get the mempool size for a specified period.</p>
+<ul>
+<li><code>&lt;START_TIME&gt;</code>: Start of the time window (<em>in unix timestamp formatting</em>)</li>
+<li><code>&lt;END_TIME&gt;</code>: End of the time window (<em>in unix timestamp formatting</em>)</li>
+<li><code>&lt;WINDOW_SIZE&gt;</code>:  Specified period of analysis. (<em>in seconds</em>)</li>
+<li><code>&lt;STEP_SIZE&gt;</code>: The amount of time that moves between each window (<em>in seconds</em>)</li>
+</ul>
+<p><strong>Command</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Linux / macOS</label><label for="__tabbed_21_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>./pchain analyze mempool-size <span class="se">\</span>
+--from-time &lt;START_TIME&gt; <span class="se">\</span>
+--to-time &lt;END_TIME&gt; <span class="se">\</span>
+--window-size &lt;WINDOW_SIZE&gt; <span class="se">\</span>
+--step-size &lt;STEP_SIZE&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">pchain</span><span class="p">.</span><span class="n">exe</span> <span class="n">analyze</span> <span class="n">mempool-size</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-from-time</span> <span class="p">&lt;</span><span class="n">START_TIME</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-to-time</span> <span class="p">&lt;</span><span class="n">END_TIME</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-window-size</span> <span class="p">&lt;</span><span class="n">WINDOW_SIZE</span><span class="p">&gt;</span> <span class="p">\</span>
+<span class="p">-</span><span class="n">-step-size</span> <span class="p">&lt;</span><span class="n">STEP_SIZE</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Returns</strong></p>
+<p><em>Returns the mempool size for a specified time window</em></p>
+<details>
+  <summary>Example Output</summary>
+    The length of the array varies depends on the input.
+    <div class="highlight"><pre><span></span><code>Your value <span class="o">[</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">]</span>
+</code></pre></div>
+</details>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ParallelChain Lab 2022
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+    
+  </body>
+</html>
