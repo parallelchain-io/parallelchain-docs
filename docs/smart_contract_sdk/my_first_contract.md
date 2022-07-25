@@ -25,7 +25,7 @@ Download the smart contract examples respository at [https://github.com/parallel
 
 After this folder is downloaded, enter into `my_first_contract` directory.
 
-Build `my_first_contract` contract using `pchain_compile`. Please refer to ["Building and Deploying the Contract"](build_deploy_contract.md) session for detailed steps. The build process will generate an optimized Web Assembly (WASM) binary on your current path if no destination path is provided to the CLI 
+Build `my_first_contract` contract using `pchain_compile`. Please refer to ["Building and Deploying the Contract"](build_contract.md) session for detailed steps. The build process will generate an optimized Web Assembly (WASM) binary on your current path if no destination path is provided to the CLI 
 by the name of <PACKAGE_NAME>.wasm where `PACKAGE_NAME` refers to the package name specified on your Cargo manifest. The user is free to use any other toolchain like Cargo as well to build the smart contract 
 but for verification of the contract deployment through the ["Contract Publishing Service"](../getting_started/contract_publish.md), the use of `pchain_compile` is highly recommended.
 
@@ -49,8 +49,8 @@ but for verification of the contract deployment through the ["Contract Publishin
 </details>
 
 
-See ["Building and Deploying the Contract"](/smart_contract_sdk/build_deploy_contract)
-on how to achieve this. However, please note that the `optimize_tool` may lead to breaking changes in more complex code. Future updates in `testnet1` will focus on handling these issues.
+See ["Building and Deploying the Contract"](build_contract.md)
+on how to achieve this. However, please note that the `optimize_tool` may lead to breaking changes in more complex code. Future updates in `testnet2` will focus on handling these issues.
 
 ## Deploying the contract
 
