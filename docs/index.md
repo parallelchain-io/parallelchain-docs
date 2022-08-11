@@ -7,7 +7,7 @@ tags:
 
 ---
 
-ParallelChain Mainnet is a breakthrough layer-1 smart contract platform with a unique delegated-proof-of-stake system designed to power an accountable, democratic, ever-growing blockchain ecosystem. Check out [the whitepaper](https://www.parallelchain.io/parallelchain/mainnet) to know more about our design backgroup and goals.
+ParallelChain Mainnet is a breakthrough layer-1 smart contract platform with a unique delegated-proof-of-stake system designed to power an accountable, democratic, ever-growing blockchain ecosystem. 
 
 The purpose of this documentation is to provide a full explanation of our rust SDK and Light Client (pchain) for developers to write and run smart contracts on ParallelChain Mainnet. You can link to our Testnet 2.0 to and try out the features now.
 
