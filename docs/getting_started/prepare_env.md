@@ -15,14 +15,14 @@ If the link above is working, type the command below to configure `pchain` to co
     ```bash
     ./pchain set config 
       --target-url https://node1.digital-transaction.net 
-      --rich-api-url https://node1.digital-transaction.net/api 
+      --rich-api-url https://node1.digital-transaction.net:33356 
       --analytics-api-url https://node1.digital-transaction.net/analytics
     ```
 === "Windows"
     ```PowerShell
     pchain.exe set config 
       --target-url https://node1.digital-transaction.net 
-      --rich-api-url https://node1.digital-transaction.net/api 
+      --rich-api-url https://node1.digital-transaction.net:33356 
       --analytics-api-url https://node1.digital-transaction.net/analytics
     ```
 
@@ -32,5 +32,3 @@ This command will write a config.json file in `$HOME/.parallelchain/pchain_cli/c
 To verify that our testnet is live and running, please make sure that the following URL is working by clicking on the link below:
 
 * [https://node1.digital-transaction.net](https://node1.digital-transaction.net) 
-* [https://node1.digital-transaction.net/api](https://node1.digital-transaction.net/api)
-* [https://node1.digital-transaction.net/analytics](https://node1.digital-transaction.net/analytics)  

@@ -17,7 +17,7 @@ Throughout the section [Getting Started](installation.md), we will describe how 
 ## For Windows 
 ---
 
-Download the compressed zip file from [https://cms.parallelchain.io/parallelchain-very-light_win_v0.1.0.zip](https://cms.parallelchain.io/parallelchain-very-light_win_v0.1.0.zip)
+Download the compressed zip file from [https://cms.parallelchain.io/parallelchain-very-light_win_v0.2.0.zip](https://cms.parallelchain.io/parallelchain-very-light_win_v0.2.0.zip)
 
 Unzip the file to extract the executable `pchain.exe`. 
 
@@ -43,11 +43,11 @@ Open up `PowerShell` using the `run` keyboard shortcut. That is *WIN+R* and type
 
 Unzip the compressed zip file by `Expand-Archive`. Please specify the source path and destination path for your command parameters:
 
--  `<SOURCE_PATH>`: the directory where `parallelchain-very-light_win_v0.1.0.zip` is located.
+-  `<SOURCE_PATH>`: the directory where `parallelchain-very-light_win_v0.2.0.zip` is located.
 -  `<DESTINATION_PATH>`: the directory you intend to install `pchain`. 
 
 ```PowerShell
-Expand-Archive -LiteralPath 'C:\<SOURCE_PATH>\parallelchain-very-light_win_v0.1.0.zip' -DestinationPath 'C:\<DESTINATION_PATH>\parallelchain-very-light_win_v0.1.0.exe'
+Expand-Archive -LiteralPath 'C:\<SOURCE_PATH>\parallelchain-very-light_win_v0.2.0.zip' -DestinationPath 'C:\<DESTINATION_PATH>\parallelchain-very-light_win_v0.2.0.exe'
 ```
 
 To switch the operating mode of `PowerShell` from a normal mode to administrator mode:
@@ -55,14 +55,14 @@ To switch the operating mode of `PowerShell` from a normal mode to administrator
 Start-Process powershell -Verb runAs
 ```
 
-Head to the destination directory where `parallelchain-very-light_win_v0.1.0.exe` is extracted:
+Head to the destination directory where `parallelchain-very-light_win_v0.2.0.exe` is extracted:
 ```PowerShell
 Set-Location C:\<DESTINATION_PATH>\
 ```
 
 In the destination directory (`<DESTINATION_PATH>`), it is suggested to rename the binary to `pchain` so that it becomes easier to follow this guide:
 ```PowerShell
-Rename-Item -Path 'parallelchain-very-light_win_v0.1.0.exe' -NewName 'pchain.exe'
+Rename-Item -Path 'parallelchain-very-light_win_v0.2.0.exe' -NewName 'pchain.exe'
 ```
 
 Run the command `pchain` to see if it launches.
@@ -73,7 +73,7 @@ pchain.exe
   <summary>To verify that the Light Client works</summary>
     pchain is now an executable from anywhere on your system
     ```bash
-    verylight 0.1.0
+    verylight 0.2.0
     <Parallel Chain Lab>
     Parallel Chain Mainnet verylight
     ```
@@ -100,26 +100,26 @@ To download the precompiled compressed binaries, use:
 
 === "Linux"
     ```bash
-    wget https://cms.parallelchain.io/parallelchain-very-light_linux_v0.1.0.tar.xz
+    wget https://cms.parallelchain.io/parallelchain-very-light_linux_v0.2.0.tar.xz
     ```
 === "macOS"
     ```bash
-    curl -O https://cms.parallelchain.io/parallelchain-very-light_mac_x86_v0.1.0.tar.xz
+    curl -O https://cms.parallelchain.io/parallelchain-very-light_mac_x86_v0.2.0.tar.xz
     ```
 
-To extract the client program, head to the directory where the downloaded file `parallelchain-very-light_linux_v0.1.0.tar.xz` or  `parallelchain-very-light_mac_x86_v0.1.0.tar.xz` is located and extract via `tar`:
+To extract the client program, head to the directory where the downloaded file `parallelchain-very-light_linux_v0.2.0.tar.xz` or  `parallelchain-very-light_mac_x86_v0.2.0.tar.xz` is located and extract via `tar`:
 === "Linux"
     ```bash
-    tar -xvf parallelchain-very-light_linux_v0.1.0.tar.xz 
+    tar -xvf parallelchain-very-light_linux_v0.2.0.tar.xz 
     ```
 === "macOS"
     ```bash
-    tar -xvf parallelchain-very-light_mac_x86_v0.1.0.tar.xz
+    tar -xvf parallelchain-very-light_mac_x86_v0.2.0.tar.xz
     ```
 
 Rename the client program to `pchain` so that it becomes easier to follow this guide:
 ```bash
-mv parallelchain-very-light_linux_v0.1.0 pchain
+mv parallelchain-very-light_linux_v0.2.0 pchain
 ```
 
 Run the command `pchain` to see if it launches.
@@ -149,7 +149,7 @@ Run the command `pchain` to see if it launches.
 <details>
   <summary>To verify that the Light Client works</summary>
     ```bash
-    verylight 0.1.0
+    verylight 0.2.0
     <Parallel Chain Lab>
     Parallel Chain Mainnet verylight
     ```
