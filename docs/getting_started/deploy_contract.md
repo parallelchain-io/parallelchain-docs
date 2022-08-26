@@ -25,7 +25,7 @@ Deploy the contract using `pchain`
     --gas-price 1 \
     --data <RELATIVE_PATH_TO_WASM_BINARIES> \
     --nonce <ACCOUNT_NONCE> \
-    --path_to_keypair_json <ACCOUNT_KEYPAIR>
+    --path-to-keypair-json <ACCOUNT_KEYPAIR>
     ```
 === "Windows"
     ```PowerShell
@@ -38,7 +38,7 @@ Deploy the contract using `pchain`
     --gas-price 1 \
     --data <RELATIVE_PATH_TO_WASM_BINARIES> \
     --nonce <ACCOUNT_NONCE> \
-    --path_to_keypair_json <PATH_TO_KEYPAIR>
+    --path-to-keypair-json <PATH_TO_KEYPAIR>
     ```
 
 The real world example code used will be denoted like this:
@@ -54,7 +54,7 @@ Do not blindly copy the values in the real world example
 --gas-price 1 \
 --data "../wasm32-unknown-unknown/release/minified-bank.wasm" \
 --nonce 1 \
---path_to_keypair_json ../keypair.json
+--path-to-keypair-json ../keypair.json
 ```
 </details>
 
@@ -74,7 +74,7 @@ Submit Transaction {
   "data": "../wasm32-unknown-unknown/release/minified-bank.wasm",
   "deploy_args": "",
   "nonce": 1,
-  "path_to_keypair_json": "../keypair.json"
+  "path-to-keypair-json": "../keypair.json"
 }
 Status 202
 Response "Transaction added to mempool."
@@ -195,7 +195,7 @@ The method takes a string as argument. It can be specfied in the field `<DEPLOY_
 --data "../wasm32-unknown-unknown/release/minified-bank.wasm" \
 --deploy-args AAAAAAAAAAARAAAAAQAAAAkAAAAFAAAAYWxpY2U
 --nonce 1 \
---path_to_keypair_json ../keypair.json
+--path-to-keypair-json ../keypair.json
 ```
 
 `<DEPLOY_ARGS>` is base64 urlencoded string. Light client also provides tool to parse a json file to required input string. 
