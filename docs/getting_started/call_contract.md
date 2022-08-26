@@ -172,7 +172,7 @@ The method takes a string as argument. It can be specfied in the field `<Data>` 
 --gas-price 1 \
 --data AAAAAAoAAAARAAAAaGVsbG9fZnJvbQEAAAAJAAAABQAAAGFsaWNl \ 
 --nonce 1 \
---path_to_keypair_json ../keypair.json
+--path-to-keypair-json ../keypair.json
 ```
 
 `<DEPLOY_ARGS>` is base64 urlencoded string. Light client also provides tool to parse a json file to required input string. 
