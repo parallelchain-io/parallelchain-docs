@@ -3,6 +3,8 @@ site_url: https://docs.parallelchain.io
 repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
 copyright: ParallelChain Lab 2022
+extra:
+  homepage: https://www.parallelchain.io/
 nav:
   - ParallelChain F: index.md
   - Concepts:
@@ -41,6 +43,7 @@ extra_css:
   - stylesheets/extra.css
 theme: 
   name: material
+  custom_dir: overrides
   features:
     - navigation.expand
     - navigation.indexes
