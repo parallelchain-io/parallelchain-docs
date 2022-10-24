@@ -36,7 +36,7 @@ The components described in the table below constitute the build toolchain for s
      
 |Toolchain Component | Version | Utility
 |:---                |:---  | :--- |
-rustc                | 1.59.0 (9d1b2106e 2022-02-23) | Compiler for Rust. |
+rustc                | 1.63.0 (fd9c4297c 2022-07-01) | Compiler for Rust. |
 wasm-snip   | 0.4.0 | WASM utility which removes functions within the wasm file that are neither transitively called by helper methords or are never be called at runtime. |   
 wasm-opt     | 109  | WASM utility to load WebAssembly in text format and run Binaryen IR passes to optimize its size. For more information on Binaryen IR see [here](http://webassembly.github.io/binaryen/). |
 
