@@ -1,11 +1,10 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - gas
 ---
 
 # Gas
----
 
 **Gas**: Gas is a representation of cost incurred by computational resources per transaction. ParallelChain F assigns a cost to every transaction through gas metering. 
 
@@ -15,7 +14,7 @@ Gas costs are divided into two components:
 - The storage costs in bytes required to store/update data in the world state.
 - The compute costs for precompile functions used by developers to deploy smart contracts on ParallelChain F.
 
-WASM supports a total of 513 opcodes which aid sequential, vectorized, memory, logical operations and exception handling. ParallelChain F ecosystem categorizes these opcodes on basis of their operations. Some opcode families induce non-determinism when executed. These are identified and disallowed in the ParallelChain F ecosystem with the help of a custom middleware. 
+WASM supports over 500 opcodes which aid sequential, vectorized, memory, logical operations and exception handling. ParallelChain F ecosystem categorizes these opcodes on basis of their operations. Some opcode families induce non-determinism when executed. These are identified and disallowed in the ParallelChain F ecosystem with the help of a custom middleware. 
 
 ## WASM Opcode Categories
 ---
@@ -40,171 +39,75 @@ A subset of these opcodes are known to induce non-determinism when executed.Thes
 
 Gas fees for each WASM opcode family are defined in terms of the total latency of the corresponding x86-64 Assembly Instructions, each opcode is translated into. For defining latency of each x86-64 Assembly Instruction, we refer to one specific CPU model from Coffee Lake Refresh, Intel's 9th Generation microprocessor family (family: 06, model: 9E). These costs have been tabulated below.
 
-   **Constants**
-    
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   I32Const  |0|
-   I64Const  |0|
+**Constants**
 
-   **Type parameteric operators**
+| Opcodes | Gas Cost |
+|:--- |:--- |
+I32Const  |0|
+I64Const  |0|
+
+**Type parameteric operators**
+
+| Opcodes | Gas Cost | 
+|:--- |:--- |
+Drop |2| 
+Select |3|
+
+**Flow control**
+
+| Opcodes | Gas Cost |
+|:--- |:--- |
+Nop, Unreachable, Else, Loop, If  |0| 
+Br, BrTable, Call, CallIndirect, Return |2|
+BrIf |3|
   
-   | Opcode | Gas Cost | 
-   |:--- |:--- |
-   Drop |2| 
-   Select |3|
+**Registers**
 
-   **Flow control**
+| Opcodes | Gas Cost |
+|:--- |:--- |
+GlobalGet, GlobalSet, LocalGet, LocalSet  |3|
   
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   Nop |0|
-   Unreachable |0|
-   Else |0|
-   Loop  |0|
-   If  |0| 
-   Br |2|
-   BrTable |2| 
-   Call |2| 
-   CallIndirect |2|
-   Return |2|
-   BrIf |3|
-     
-   **Registers**
-    
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   GlobalGet  |3|
-   GlobalSet |3|
-   LocalGet  |3|
-   LocalSet  |3|
-      
-   **Reference Types**
-    
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   RefIsNull |2| 
-   RefFunc |2|
-   RefNull |2| 
-   ReturnCall |2| 
-   ReturnCallIndirect |2| 
-      
-   **Exception Handling**
-    
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   CatchAll |2| 
-   Throw |2| 
-   Rethrow |2| 
-   Delegate |2|
+**Reference Types**
 
-   **Bulk Memory Operations**
-    
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   ElemDrop  |1|
-   DataDrop  |1|
-   TableInit |2| 
-   MemoryCopy |3|
-   MemoryFill |3|
-   TableCopy  |3| 
-   TableFill  |3| 
+| Opcodes | Gas Cost |
+|:--- |:--- |
+RefIsNull, RefFunc, RefNull, ReturnCall, ReturnCallIndirect |2| 
+  
+**Exception Handling**
 
-   **Memory Operations**
-   
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   I32Load |3|
-   I64Load |3|
-   I32Store |3|
-   I64Store |3|
-   I32Store8 |3| 
-   I32Store16 |3|
-   I32Load8S |3|
-   I32Load8U |3|
-   I32Load16S |3|
-   I32Load16U |3|
-   I64Load8S |3| 
-   I64Load8U |3|
-   I64Load16S |3|
-   I64Load16U |3|
-   I64Load32S |3|
-   I64Load32U |3|
-   I64Store8 |3|
-   I64Store16 |3|
-   I64Store32 |3|   
+| Opcodes | Gas Cost |
+|:--- |:--- |
+CatchAll, Throw, Rethrow, Delegate |2|
 
-   **32 and 64-bit Integer Arithmetic Operations**
-   
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   I32Add|1|
-   I32Sub|1|
-   I64Add|1|
-   I64Sub|1|
-   I64LtS|1| 
-   I64LtU|1| 
-   I64GtS|1| 
-   I64GtU|1| 
-   I64LeS|1|
-   I64LeU|1|
-   I64GeS|1| 
-   I64GeU|1| 
-   I32Eqz|1|
-   I32Eq|1|
-   I32Ne|1|
-   I32LtS|1| 
-   I32LtU|1|
-   I32GtS|1|
-   I32GtU|1|
-   I32LeS|1|
-   I32LeU|1|
-   I32GeS|1|
-   I32GeU|1|
-   I64Eqz|1|
-   I64Eq|1|
-   I64Ne|1|
-   I32And|1|
-   I32Or|1|
-   I32Xor|1|
-   I64And|1|
-   I64Or|1|
-   I64Xor|1|
-   I32Shl |2|
-   I32ShrU |2| 
-   I32ShrS |2|
-   I32Rotl |2|
-   I32Rotr |2| 
-   I64Shl |2|
-   I64ShrU |2|
-   I64ShrS |2|
-   I64Rotl |2|
-   I64Rotr  |2|
-   I32Mul |3| 
-   I64Mul |3|
-   I32DivS |80|
-   I32DivU |80|
-   I32RemS |80| 
-   I32RemU |80| 
-   I64DivS |80| 
-   I64DivU |80| 
-   I64RemS |80| 
-   I64RemU |80|
-   I32Clz |105| 
-   I64Clz |105|
-      
-   **Type Casting & Truncation Operations**
-   
-   | Opcode | Gas Cost |
-   |:--- |:--- |
-   I32WrapI64 |3|
-   I32Extend8S |3| 
-   I32Extend16S |3|
-   I64ExtendI32S |3|  
-   I64ExtendI32U |3| 
-   I64Extend8S |3| 
-   I64Extend16S |3| 
-   I64Extend32S |3| 
+**Bulk Memory Operations**
+
+| Opcodes | Gas Cost |
+|:--- |:--- |
+ElemDrop, DataDrop  |1|
+TableInit |2| 
+MemoryCopy, MemoryFill, TableCopy, TableFill  |3| 
+
+**Memory Operations**
+
+| Opcodes | Gas Cost |
+|:--- |:--- |
+|I32Load, I64Load, I32Store, I64Store, I32Store8, I32Store16, I32Load8S, I32Load8U, I32Load16S, I32Load16U, I64Load8S, I64Load8U, I64Load16S, I64Load16U, I64Load32S, I64Load32U, I64Store8, I64Store16, I64Store32 |3|   
+
+**32 and 64-bit Integer Arithmetic Operations**
+
+| Opcodes | Gas Cost |
+|:--- |:--- |
+|I32Add, I32Sub, I64Add, I64Sub, I64LtS, I64LtU, I64GtS, I64GtU, I64LeS, I64LeU, I64GeS, I64GeU, I32Eqz, I32Eq, I32Ne, I32LtS, I32LtU, I32GtS, I32GtU, I32LeS, I32LeU, I32GeS, I32GeU, I64Eqz, I64Eq, I64Ne, I32And, I32Or, I32Xor, I64And, I64Or, I64Xor, |1|
+|I32Shl, I32ShrU, I32ShrS, I32Rotl, I32Rotr, I64Shl, I64ShrU, I64ShrS, I64Rotl, I64Rotr,  |2|
+|I32Mul, I64Mul |3|
+|I32DivS, I32DivU, I32RemS, I32RemU, I64DivS, I64DivU, I64RemS, I64RemU |80|
+|I32Clz, I64Clz |105|
+  
+**Type Casting & Truncation Operations**
+
+| Opcodes | Gas Cost |
+|:--- |:--- |
+|I32WrapI64, I32Extend8S, I32Extend16S, I64ExtendI32S, I64ExtendI32U, I64Extend8S, I64Extend16S, I64Extend32S |3| 
 
 
 ## Storage Gas Costs

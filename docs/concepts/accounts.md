@@ -1,13 +1,13 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
 ---
 
 # Accounts
 
 **Account** is the basic identity of an agent on the blockchain. An account is identified by its address. 
 
-In `testnet 2.0`, accounts are divided into two types:
+In `testnet 3`, accounts are divided into two types:
 
 - __Externally Owned Accounts (EOA)__: the address of EOA is public key of the keypair which is `ed25519_dalek` compatible.
 - __Contract Accounts__: contract account is created from contract deployment. The address is hash of the concatenation of a contract's bytecode and the deployer's address (which can itself be a smart contract) and nonce of the EOA that deploys the contract.

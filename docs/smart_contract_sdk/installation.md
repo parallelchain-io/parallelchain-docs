@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - rust 
 ---
 
@@ -26,7 +26,9 @@ We will require toolkits. The standard method is by `rustup`, which maintains de
 
 In your terminal, type the following command:
 ```bash
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source "$HOME/.cargo/env"
+rustup default 1.63
 ``` 
 Restart your terminal session to get access to `cargo`.  
 

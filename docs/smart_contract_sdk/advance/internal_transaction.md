@@ -1,30 +1,26 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - parallelchain sdk
   - smart contract
   - internal transaction
 ---
 
-# Internal Transaction
+# Transferring Balance
 
-Internal Transaction refers to transfer of tokens from a contract to another address. 
+`pchain_sdk::pay` transfers balance from the Contract Account to another Account and returns the balance of the recipient after the transfer.
 
-- Tokens being transferred are from the Contract instead of an External Owned Account.
-- Gas is consumed in External Owned Account.
-- No transaction receipt.
-- Balance is adjusted only after success of the entire transaction.
 
-SDK provides function `Transaction::pay` to transfer tokens from contract to another address.
+See the example smart contract "ContractProxy" in [chapter_3](https://github.com/parallelchain-io/example-smart-contracts) of repository of Parallelchain Lab.
 
-See the example smart contract [contract_proxy](https://github.com/parallelchain-io/example-smart-contracts):
 ```rust
 /// ### Lesson 4:
 /// use method pay() to send tokens from this contract balance to specific address.
 #[action]
 fn send_tokens(value :u64){
-    Transaction::pay(
-        smart_contract::decode_contract_address("b12EJf3vd+UESLj4ZCBVSOqruUAgseQ6zVa3RW2Jcqg=".to_string()),
+    let contract_address = pchain_types::Base64URL::decode("-jUt6jrEfMRD1JM9n6_yAASl2cwsc4tg1Bqp07gvQpU").unwrap().try_into().unwrap();
+    pchain_sdk::pay(
+        contract_address,
         value
     );
 }

@@ -1,7 +1,7 @@
 ---
 tags:
-  - testnet 2.0
-  - parallelchain light client
+  - testnet 3
+  - parallelchain client
   - transaction
 ---
 
@@ -9,117 +9,130 @@ tags:
 
 ---
 
-## Call Contract by using Light Client
+## Call Contract by using Client
 
 Submit transaction with your account nonce and contract address. You should get the transaction hash if the command has succeeded.
 The gas limit is depended on the complexity of the smart contract. On average, it takes no more than 500000 gas to execute. You can always set a higher gas limit for safety.
 === "Linux / macOS"
     ```bash
-    ./pchain submit tx \
-    --from-address <YOUR_ACCOUT_ADDRESS> \
+    ./pchain_client submit tx \
     --to-address <CONTRACT_ADDRESS> \
     --value 0 \
     --tip 0 \
     --gas-limit <GAS_LIMIT> \
     --gas-price 1 \
     --data <BASE64_ENCODED_ARGUMENT> \
-    --nonce <ACCOUNT_NONCE> \
-    --path-to-keypair-json <ACCOUNT_KEYPAIR>
+    --nonce 1 \
+    --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe submit tx \
-    --from-address <YOUR_ACCOUT_ADDRESS> \
+    pchain_client.exe submit tx \
     --to-address <CONTRACT_ADDRESS> \
     --value 0 \
     --tip 0 \
     --gas-limit <GAS_LIMIT> \
     --gas-price 1 \
     --data <BASE64_ENCODED_ARGUMENT> \
-    --nonce <ACCOUNT_NONCE> \
-    --path-to-keypair-json <ACCOUNT_KEYPAIR>
+    --nonce 1 \
+    --keypair-name <KEYPAIR_NAME>
     ```
 
 <details><summary>Click to view real world example to call the smart contract</summary>
 ```bash
-./pchain submit tx \
---from-address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs= \
---to-address Ns9DuNe8aS5QISfCyjEoAcZq20OVr2nKQTKsYGmo/Jw= \
+./pchain_client submit tx \
+--to-address OZpYmAk7LEDh6pND1hRhul66vSWOYBHTyedsBXezJ40 \
 --value 0 \
 --tip 0 \
---gas-limit 1000000 \
+--gas-limit 10000000 \
 --gas-price 1 \
 --data AwAAAEFsaQQAAABCYWJhCgAAAGpIRDIzVmtCaXkBECcAAAAAAAAA \
---nonce 2 \
---path-to-keypair-json ./keypair.json
+--nonce 12 \
+--keypair-name user
 ```
 </details>
 <details><summary>Terminal Output</summary>
 ```bash
-Hash of tx: "PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE="
-Status 200
-Response "Your request has been received."
+Signature of tx: "aC7xyBatLpvkuRrVnBQ813aOprOXrT9_Gl2s5g-HOE6ihBvU8Cnx2mqRg3SbYMcDCmeRSnFk1uir8rYLthxWAw"
+Hash of tx: "m6ef1Ipm3d8yxs2LrBnwwOh8retD8gW5k69O_hcFRM4"
+Submit Transaction {
+  "to_address": "OZpYmAk7LEDh6pND1hRhul66vSWOYBHTyedsBXezJ40",
+  "value": 0,
+  "tip": 0,
+  "gas_limit": 10000000,
+  "gas_price": 1,
+  "data": "AwAAAEFsaQQAAABCYWJhCgAAAGpIRDIzVmtCaXkBECcAAAAAAAAA",
+  "deploy_args": "",
+  "nonce": 12,
+  "keypair_name": "user"
+}
+Status 202
+Response "Transaction added to mempool."
 ```
-"Status 200" is a HTTP response status codes. It implies that your transaction request was successfully sent to our node to process. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a> for details.
+"Status 202" is a HTTP response status codes. It implies that your transaction request was successfully sent to our node to process. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">here</a> for details.
 </details>
 
 Check the transaction 
-history with `transaction hash` using `pchain`, or check at [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer)
+history with `transaction hash` using `pchain_client`, or check at [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer)
 === "Linux / macOS"
     ```bash
-    ./pchain query blocks --tx-hash <TRANSACTION_HASH> --size 1
+    ./pchain_client query blocks --tx-hash <TRANSACTION_HASH> --limit 1 --order desc
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe query blocks --tx-hash <TRANSACTION_HASH> --size 1
+    pchain_client.exe query blocks --tx-hash <TRANSACTION_HASH> --limit 1 --order desc
     ```
 <details><summary>Click to view real world example to query block</summary>
 ```bash
-./pchain query blocks --tx-hash PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE= --size 1
+./pchain_client query blocks --tx-hash PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE= --limit 1 --order desc
 ```
 </details>
 <details><summary>Terminal Output</summary>
 ```bash
-Your Block: Block {
+Your Block: Block {    
     header: BlockHeader {
-        blockchain_id: 0,
-        block_version_number: 0,
-        timestamp: 1648713238,
-        prev_block_hash: "4d31WnmCFNyRCPUn15ejDvpYu7Ctt/GbnLyRnVeYqCk=",
-        this_block_hash: "uibwQtGyEwVRGi+afoOXDrgAN2ZIOwkGDR5m9+J4gco=",
-        txs_hash: "jhmR5Uts2EHxIElDXvV4bUThqiA9R+s1966E2QK+bC8=",
-        state_hash: "nyQ3Uje/RQcX7f1+xvoM90jpUdJjBYeTava6RiaNp3k=",
-        receipts_hash: "lSrEkgBqDciO//fAYcVmN+C1itdY15wUaZR+OEF7Pg4=",
-        proposer_public_key: "+kGldjWdZhTKKiHu47PlkqbasPEuSXaLkl13rBb0NpI=",
-        signature: "v0RuefGM6z8tgamsv7OiN8LHHLYhwRhRWWyuEXWDsOe4jwORzxVm4VqW7Izyr3b/lcZjp/beH4fOkdBNgspzDQ==",
+        app_id: 0,
+        block_hash: "hLEzWEpiRiFNsdTYDn7k7M42lftxW2+/q9wut25Sq0U=",
+        height: 12,
+        justify: QuorumCertificate {
+            view_number: 12,
+            block_hash: "Kc6VA_V4hsuucMAxF9cPOHQD75jL2Raaa5KZHpO47sM",
+            sigs: SignatureSet {
+                signatures: [
+                    Some("JVrGUj_gK8zWieushZcoIVAgMr7WLQ5PeW4TGo6WftI"),
+                    Some("YESSKvjZvHI9MH_RMMLsqrSBoHZ_56OA5IMsCwpu8lQ"),
+                    Some("q7r9YDzfaolm1TtCwfMGaBPSJgUwOXGHmdEQsfLR7dw")
+                ],
+                count_some: 3
+            }
+        },
+        data_hash: 7LFJwDJBsD+fu7kivOXukaW0eGkzeBiJk/zhOeKFRLA=,
+        version_number: 0,
+        timestamp: 1648711616,
+        txs_hash: "D5OpkQZY8g3OMyxDKLLGVFBSb4d/pO92n3SAqshyCCA=",
+        state_hash: "xChhGxck++VDr/MfObhQ/9aX4StDld7Dh7PUBPFxtFk=",
+        receipts_hash: "uDZkMCNxR4DZM8LjFi6dKcY-dysl9BnLqefiz0balRk",
     },
     transactions: [
         Transaction {
-            from_address: "/5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=",
-            to_address: "Ns9DuNe8aS5QISfCyjEoAcZq20OVr2nKQTKsYGmo/Jw=",
+            from_address: "LOUZDKy2cF7PfqVQ45oBR07ofHEe8LHxjsKKs22tHC4",
+            to_address: "OZpYmAk7LEDh6pND1hRhul66vSWOYBHTyedsBXezJ40",
             value: 0,
             tip: 0,
-            gas_limit: 1000000,
+            gas_limit: 10000000,
             gas_price: 1,
-            data: "AwAAAEFsaQQAAABCYWJhCgAAAGpIRDIzVmtCaXkBECcAAAAAAAAA",
-            n_txs_on_chain_from_address: 2,
-            hash: "PWWBPzaKfRLDSSmL5iGvxhRnF7BcXmhIlBO9vI4AKFE=",
-            signature: "0zNUv41i8KOKkcl1ug5RwSujVUBMmyA0zZgMv9Ttm5mLgTYkvneI2nZhKyZf3Secmo8hgVeeYWKBB9lmLjd4Cg==",
+            data: "",
+            n_txs_on_chain_from_address: 12,
+            hash: "m6ef1Ipm3d8yxs2LrBnwwOh8retD8gW5k69O_hcFRM4",
+            signature: "aC7xyBatLpvkuRrVnBQ813aOprOXrT9_Gl2s5g-HOE6ihBvU8Cnx2mqRg3SbYMcDCmeRSnFk1uir8rYLthxWAw",
         },
     ],
     receipts: [
         Receipt {
-            status_code: [
-                0,
-            ],
-            gas_consumed: 170377,
+            status_code: 0,
+            gas_consumed: 44200,
             return_value: [],
-            events: [
-                Event {
-                    topic: "bank_account: Open",
-                    value: "Successfully opened \n            account for Ali, Baba \n            with account_id: jHD23VkBiy",
-                },
-            ]
+            events: [],
         },
     ],
 }
@@ -145,14 +158,14 @@ Please refer to ["Status Code"](./params_status_code.md) section for details.
 
 ## Call Contract with arguments
 
-ParallelChain Light Client supports calling a contract entrypoint method with arguments. Light client supports including submitting arguments along with the making EtoC transaction.
+ParallelChain Client supports calling a contract entrypoint method with arguments. Client supports including submitting arguments along with the making EtoC transaction.
 
 Take below `action` method as example:
 
 ```rust
     #[action]
     fn hello_from(name :String) -> u32 {
-        Transaction::emit_event(
+        pchain_sdk::emit_event(
             "topic: Hello From".as_bytes(), 
             format!("Hello, Contract. From: {}", name).as_bytes()
         );
@@ -163,19 +176,18 @@ Take below `action` method as example:
 The method takes a string as argument. It can be specfied in the field `<Data>` when submitting transaction.
 
 ```bash
-./pchain submit tx \
---from-address 3_AI1h9ODjUJnKALkFmcxzfFXAVjDuMqgN8hwd03c3g \
---to-address null \
+./pchain_client submit tx \
+--to-address OZpYmAk7LEDh6pND1hRhul66vSWOYBHTyedsBXezJ40 \
 --value 0 \
 --tip 0 \
 --gas-limit 10000000 \
 --gas-price 1 \
---data AAAAAAoAAAARAAAAaGVsbG9fZnJvbQEAAAAJAAAABQAAAGFsaWNl \ 
+--data AAAAAAoAAAARAAAAaGVsbG9fZnJvbQEAAAAJAAAABQAAAGFsaWNl \
 --nonce 1 \
---path-to-keypair-json ../keypair.json
+--keypair-name user
 ```
 
-`<DEPLOY_ARGS>` is base64 urlencoded string. Light client also provides tool to parse a json file to required input string. 
+`<DATA>` is base64 urlencoded string. Client also provides tool to parse a json file to required input string. 
 
 ```bash
 ./pchain parse calldata --json-file ./call_data.json 
@@ -198,16 +210,16 @@ The json file consists of two fields: `method_name` and `arguments`.
 
 ## Response from Contract 
 
-ParallelChain Light Client supports parsing [Callback](../smart_contract_sdk/develop_contract.md#return-value) data which is the return value from entrypoint method.
+ParallelChain Client supports parsing [CallResult](../smart_contract_sdk/develop_contract.md#return-value) data which is the return value from entrypoint method.
 
 In the above [Example](#call-contract-with-arguments), the method return data as `u32` integer. The return value from `submit tx` can be found in `receipt`, which is in bytes format. The base64 urlencoded representation is `BAAAAAUAAAA`.
 
 
-Light Client needs input field `data-type` to correctly parse the `Callback` data structure.
+Client needs input field `data-type` to correctly parse the `CallResult` data structure.
 
 
 ```bash
-pchain parse callback --value BAAAAAUAAAA --data-type u32
+pchain_client parse call-result --value BAAAAAUAAAA --data-type u32
 ```
 
 <details><summary>Terminal Output</summary>

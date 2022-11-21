@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
 ---
 
 # Mempool
@@ -11,7 +11,7 @@ tags:
 **Mempool**: A broad term which can refer to:
 
 - A component of validating and full nodes which accepts not-yet-finalized transactions for future inclusion in a block (only validating nodes can produce new blocks).
-- The fuzzy set of not-yet-finalized transactions included in the network's individual mempools. This set is fuzzy because individual mempools are unlikely to consistent at any given time due to network delays and and partitions.
+- The fuzzy set of not-yet-finalized transactions included in the network's individual mempools. This set is fuzzy because individual mempools are unlikely to be consistent at any given time due to network delays and partitions.
 
 ## How does mempool work?
 ---

@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - parallelchain sdk
   - smart contract
   - precompiles

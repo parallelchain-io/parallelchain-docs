@@ -1,7 +1,8 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - parallelchain sdk
+  - parallelchain compile
   - smart contract
 ---
 
@@ -131,4 +132,4 @@ For Windows users can download `pchain_compile` from [here](https://cms.parallel
 ## Deploy Contract
 ---
 
-Contract deployment requires using `pchain` program. Please see ["Deploy Contract (DeployC)"](../../getting_started/deploy_contract)
+Contract deployment requires using `pchain_client` program. Please see ["Deploy Contract (DeployC)"](../../getting_started/deploy_contract)

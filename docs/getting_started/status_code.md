@@ -1,7 +1,7 @@
 ---
 tags:
-  - testnet 2.0
-  - parallelchain light client
+  - testnet 3
+  - parallelchain client
   - status code
 ---
 

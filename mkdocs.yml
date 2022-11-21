@@ -33,11 +33,12 @@ nav:
     - Token Standard - PRFC-1: smart_contract_sdk/PRFC1.md
     - Token Standard - PRFC-2: smart_contract_sdk/PRFC2.md
     - Advance: 
-      - Read/Write of World-State: smart_contract_sdk/advance/rw_world_state.md
-      - Parameters from blockchain and transaction: smart_contract_sdk/advance/params.md
-      - Entrypoints: smart_contract_sdk/advance/entrypoints.md
+      - Contract Methods: smart_contract_sdk/advance/entrypoints.md
+      - Contract Storage: smart_contract_sdk/advance/rw_world_state.md
+      - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
       - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
-      - Internal Transaction: smart_contract_sdk/advance/internal_transaction.md
+      - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
+      - Contract Metadata: smart_contract_sdk/advance/contract_metadata.md
       - Precompiles: smart_contract_sdk/advance/precompiles.md
 extra_css:
   - stylesheets/extra.css

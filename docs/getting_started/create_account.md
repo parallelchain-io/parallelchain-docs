@@ -1,7 +1,7 @@
 ---
 tags:
-  - testnet 2.0
-  - parallelchain light client
+  - testnet 3
+  - parallelchain client
   - account
 ---
 
@@ -13,11 +13,11 @@ tags:
 To create an account, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain crypto generate-key-pair
+    ./pchain_client crypto generate-key-pair --name <account name>
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe crypto generate-key-pair
+    pchain_client.exe crypto generate-key-pair --name <account name>
     ```
 
 This command generates a set of ed25519_dalek compatible keys. A keypair file in json format is generated in currect directory. These are the keys required for making transactions in the network. Keep these details in a safe place. You cannot retrieve the account details again. An example is shown below:
@@ -26,7 +26,7 @@ This command generates a set of ed25519_dalek compatible keys. A keypair file in
 
 <details><summary>Terminal Output</summary>
 ```bash
-keypair.json saved in current directory.
+Public Address of your keypair is Dks4-TqCIUA_gLw6RraY2Uokl3wuXBF1_PUjSS8MwF8
 ```
 </details>
 
@@ -35,15 +35,15 @@ You will need the keypair and public key to submit transactions within the testn
 You can check the account balance using the account address (public key).
 === "Linux / macOS"
     ```bash
-    ./pchain query account balance --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
+    ./pchain_client query account balance --address Dks4-TqCIUA_gLw6RraY2Uokl3wuXBF1_PUjSS8MwF8
     ```
 === "Windows"
     ```PowerShell
-    pchain.exe query account balance --address /5orENuI/htbwtAyu+3t6rYn90q3vly1yVdosBHuNSs=
+    pchain_client.exe query account balance --address Dks4-TqCIUA_gLw6RraY2Uokl3wuXBF1_PUjSS8MwF8
     ```
 <details><summary>Terminal Output</summary>
 ```bash
-0
+Your value: 0
 ```
 </details>
 
@@ -58,21 +58,12 @@ It is recommended to access the [ParallelChain Testnet Explorer](https://testnet
 You can also use `curl` command to make a token request in command prompt.
 
 ```bash
-curl -X POST -F 'address=<YOUR_PUBLIC_KEY>' https://testnet2.digital-transaction.net/faucet
+curl -X POST -F 'address=<YOUR_PUBLIC_KEY>' https://tn3service02.digital-transaction.net/faucet
 ```
 
-You can check for the new balance of your account using `pchain` or `curl`
+The faucet service submits transaction to transfer amount to the requesting address. `pchain_client` outputs the transaction hash as a Base64URL encoded string if success.
 
+<details><summary>Terminal Output</summary>
 ```bash
-curl --get https://node1.digital-transaction.net/account/<YOUR_PUBLIC_KEY>/balance?proof=?
+v9AFgNlgJdcA9LRIyGucfCNGmRKH3e6qpKwR1k7XWl8
 ```
-
-or using `pchain`
-=== "Linux / macOS"
-    ```bash
-    ./pchain query account balance --address <YOUR_PUBLIC_KEY>
-    ```
-=== "Windows"
-    ```PowerShell
-    pchain.exe query account balance --address <YOUR_PUBLIC_KEY>
-    ```

@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
 ---
 
 # Smart Contract
@@ -8,12 +8,13 @@ tags:
 ## What is Smart Contract?
 ---
 
-Smart contract is a program that runs on blockchain. In Parallelchain F, smart contract is an executable WASM binary and it resides in the blockchain as an account which also own its address, balance and nonce. External-owned account can make a transaction with smart contract as transaction data, which is the deployment process. A valid smart contract contains an entrypoint that can be executed when an account makes a transaction to its address. 
+Contracts are the run-time programmability mechanism of ParallelChain F networks. They allow users (Account owners) to implement arbitrary logic in a global, decentralized, and Byzantine Fault Tolerant replicated state machine to support their most business-critical applications.
 
-**Entrypoint**: A starting point of contract execution.
-
+Theoretically, any WebAssembly (WASM) module that implements the Contract ABI Subprotocol can be deployed onto a ParallelChain F blockchain. Practically, however, all developers (except perhaps those who like to experiment, or that would like to stretch the limits of the system) will want to use the types and macros in this pchain-sdk to write a Contract in Rust, and the commands in pchain-compile to compile the Rust source code into WASM bytecode that can be included in a Deploy Transaction.
 
 ## Smart Contract Programming Model
 ---
 
-`Rust` is the primitive programing language to create a smart contract. Parallelchain F Smart Contract SDK considers the contract as a `struct` that stores fields as data in world-state, and its `impl` consists of methods representing entrypoints that can be executed.
+The Contract Programming Model is inspired by Object-Oriented Programming (OOP). In the Model, a Contract can be thought of as a `Rust` `struct` that controls access to persistent Storage. Accounts interact with Contracts by making EtoC Transactions calling its public methods, or just Methods for short. The following two sections elaborate on the two essential concepts of programming with the Contract Programming Model: Contract Methods, and Contract Storage.
+
+See [Develop Contract](../smart_contract_sdk/develop_contract.md)

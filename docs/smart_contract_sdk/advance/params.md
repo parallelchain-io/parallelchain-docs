@@ -1,6 +1,6 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - parallelchain sdk
   - smart contract
   - transaction
@@ -8,24 +8,51 @@ tags:
 ---
 
 
-# Parameters from blockchain and transaction
+# Accessing information about the Blockchain
 
-Contract execution is triggered by [EtoC](../../getting_started/call_contract.md) transaction to blockchain. The contract being executed can obtain information from this transaction, and also the blockchain during execution. The information can obtained and save to the struct `Transaction` by instantiation.
+Contract Methods can be written to not only depend on call arguments and the contract's storage, but also on information about the Blockchain, e.g., the previous block hash, or the identity of the External Account that originated the EtoC Transaction. 
+
+Functions for getting information about the Transaction that triggered a Contract call and information about the larger Blockchain in general are defined in `pchain_sdk::transaction` and `pchain_sdk::blockchain` respectively. Internally, these functions are thin wrappers around functions defined in the Imports Set of the Contract ABI.
+
+
+
+## Parameters from blockchain and transaction
+
+Contract execution is triggered by [EtoC](../../getting_started/call_contract.md) transaction to blockchain. The contract being executed can obtain information from this transaction, and also the blockchain during execution. The information can obtained by calling API methods in `pchain_sdk`.
 
 Example:
 ```rust
-let tx = Transaction::new();
+// Get the timestamp of this block
+let timestamp = pchain_sdk::blockchain::timestamp();
 ```
 
-The struct `Transaction` consists of fields:
+Related APIs in `pchain_sdk::blockchain`:
 
-|name| type| Description|
-|:---|:---|:---|
-|`this_block_number`| u64 | Block number of this block |
-|`prev_block_number`| 32 bytes | Block hash of the previous block |
-|`timestamp`| u32 | Unix timestamp |
-|`to_address`| 32 bytes | Address of a recipient |
-|`from_address`| 32 bytes | Address of a sender |
-|`value`| u64 | Amount of tokens to be send to the smart contract address |
-|`transaction_hash`| 32 bytes | Hash of a transaction's signature. The transaction hashes of other transactions included in a block are used to obtain the Merkle root hash of a block. |
-|`arguments`| variable-length data | Transaction data as arguments to this contract call. See [Input Arguments](../develop_contract.md) |
+```rust
+/// Get the `number` field of the Block that contains the Transaction which triggered this Contract call. 
+fn block_number() -> Vec<u8>;
+/// Get the `prev_hash` field of the Block that contains the Transaction which triggered this Contract call.
+fn prev_hash() -> Vec<u8>;
+/// Get the `timestamp` field of the Block that contains the Transaction which triggered this Contract call.
+fn timestamp() -> u32;
+/// Get the `random_bytes` field of the Block that contains the Transaction which triggered this Contract call.
+fn random_bytes() -> Vec<u8>;
+```
+
+Related APIs in `pchain_sdk::transaction`:
+
+```rust
+/// Get from address of invoking transaction
+fn from_address() -> [u8;32];
+/// Get to address of invoking transaction
+fn to_address() -> [u8;32];
+/// Get value of invoking transaction
+fn value() -> u64;
+/// Get nonce of invoking transaction
+fn sequence_number() -> u64;
+/// Get transaction hash of invoking transaction
+fn hash() -> [u8;32];
+/// get input data/arguments for entrypoint
+fn data() -> Vec<u8>;
+```
+

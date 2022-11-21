@@ -1,102 +1,85 @@
 ---
 tags:
-  - testnet 2.0
+  - testnet 3
   - parallelchain sdk
   - smart contract
-  - entrypoints
+  - contract methods
 ---
 
-# Entrypoints
+In Parallelchain F Smart Contract Programming Model, there are three kinds of Methods, each corresponding to an 'Entrypoint' in the Contract ABI Subprotocol.
 
-The section [Develop Contract](../develop_contract.md) describes various type entrypoint methods: `init`, `action` and `view`.
+1. **Action Methods**: can mutate Contract Storage. Can only be called through an on-chain, EtoC Transaction.
+2. **View Methods**: can read, but not mutate Contract Storage. Can be called through the 'Contract View' endpoint of the Standard HTTP API, as well as through on-chain EtoC Transactions.
+3. **Init Methods**: if defined on a Contract, is called *once* during the Contract's Deploy Transaction. In OOP lingo, this can be thought of as the 'constructor' of a Contract.
 
-Here is to illustrate the details by example smart contracts [my_bank](https://github.com/parallelchain-io/example-smart-contracts) and [my_little_pony](https://github.com/parallelchain-io/example-smart-contracts)
+In order to produce to appropriate Contract ABI Exports Set bindings that ultimately allow Methods to be called from the outside world, you must write Method definitions inside an `impl Contract` statement marked with the `#[contract_methods]` macro, as illustrated in the following examples.
 
-## Init
----
 
-Init entrypoint method is optional in the contract. It is enabled if the contract defines a constructor in contract Impl.
-
-```rust
-  /// ### Lesson 4:
-  /// This method is `init` method that will be execution during contract deployment process
-  #[init]
-  fn new(name: String, age: u32 ) {
-      Transaction::emit_event(
-          "Init Contract".to_string().as_bytes(),
-          format!("{} at age{} was born.", name, age).as_bytes()
-      );
-      MyLittlePony {
-          name,
-          age,
-          gender: Gender { 
-              name: String::default(), 
-              description: String::default()
-          }
-      }.set(); // this setter applies to all fields in whole struct
-  }
-```
-
-The init entrypoint methods are recognized in the same way of actions entrypoint methods except that
-
-- macro init is applied on the method
-- must be associate method (no recevier, i.e. self, as method argument)
-- there should be only one init entrypoint method
-
-## Action
----
-
-Action entrypoint method is __required__ in a contract as it defines the body of execution of a contract. The methods enjoy full power of operations (mutatble and immutable) in the blockchain.
+### Action Methods
 
 ```rust
-/// ### Lesson 2:
-/// The macro `contract` generates entrypoint methods that can be called in transaction
-#[contract]
-impl MyBank {
+#[contract_methods(meta)]
+impl PrinceTheDog {
 
-    /// entrypoint method "open_account"
     #[action]
-    fn open_account( ...
-
-    /// entrypoint method "query_account_balance"
-    #[action]
-    fn query_account_balance( ...
-
-    /// entrypoint method "withdraw_money"
-    #[action]
-    fn withdraw_money( ...
-
+    pub fn eat_food(&mut self, food: DogFood) -> Poop {
+        ...
+    }
+}
 ```
 
-Multiple action entrypoint methods can be defined so that contract caller can choose specific function of a contract in easy way.
+Actions Methods may mutate Contract Storage. Note however, that (as specified in the Transaction Subprotocol) mutations to Contract Storage made in an EtoC Transaction only get applied if the Transaction is Successful (e.g., the Transaction must exit with sufficient gas, must have not panicked during execution, etc.).
 
+A function is callable as an Action Method if and only if:
+1. It is marked using the `#[action]` macro.
+2. It takes a `&mut` receiver in its argument list.
+3. Its (zero or more) other arguments implement `BorshDeserialize`.
+4. Its return value implements `BorshSerialize`, or it does not have a return value.
 
-## View
-
-View entrypoint is optional in the contract. It is enabled by applying macro `view` on a method inside contract impl.
+### View Methods
 
 ```rust
-  /// ### Lesson 8:
-  /// View entrypoint method provides cost-free execution of a contract.
-  /// View methods are limited by allowing only execution of getting world-state data.
-  #[view]
-  fn age() -> u32 {
-      Self::get_age()
-      // This will cause panic:
-      // Self::set_name("my name".to_string())
-  }
+#[contract_methods(meta)]
+impl PrinceTheDog {
+
+    #[view]
+    pub fn nicknames(&self) -> Vec<String> {
+        ...
+    }
+}
 ```
 
-The view entrypoint methods are recognized in the same way of actions entrypoint methods except that
+View Methods have a consistent read-view into Contract Storage. The special thing about View Methods is that they may be called without incurring gas using the Contract View endpoint of the Standard HTTP API. Note however that calling them as part of a Contract Internal Transaction, does incur gas at normal rates.
 
-- macro view is applied on the method
-- must be associate method (no recevier, i.e. self, as method argument)
+A function is callable as a View Method if and only if:
+1. It is marked using the `#[view]` macro.
+2. It takes a `&self` receiver in its argument list.
+3. Its (zero or more) other arguments implement `BorshDeserialize`.
+4. Its return value implements `BorshSerialize`, or it does not have a return value. 
 
-__note__:
+### Init Methods
 
-Execution a View entrypoint is supposed to be an immutable operation. View method is limited by allowing using only basic functions: 
+```rust
+#[contract_methods(meta)]
+impl PrinceTheDog {
 
-- Transaction::get
-- Transaction::return_value
+    #[init]
+    fn init(dog_shelter: DogShelter) {
+        PrinceTheDog {
+            ...
+        }.set()
+    }
+```
 
-It will cause panic if other functions (e.g. Transaction::set) are included in view entrypoint method. 
+The purpose of an Init Method is to initialize a Contract's Storage. A Contract can have zero or one Init Methods defined on it. An Init Method has full access to Contract Storage, just like an Action Method, but unlike an Action Method, it may not take `self` (or borrows of `self`) in its arguments list. The init method should call `.set` on your Contract struct.
+
+A function is callable as an Init Method if and only if: 
+1. It is marked using the `#[init]` macro.
+2. It does not take `self` or its borrows in its arguments list.
+3. Its (zero or more) arguments implement `BorshDeserialize`.
+
+### Accepting parameters and returning values
+
+Some of the code snippets provided as examples in this document depict Contract Methods that take in function arguments (besides a borrow of the Contract struct) and/or return a value. In order for a Contract to receive arguments from and return values to the 'outside world' (callers), both Contract and caller need to agree on a serialization format.
+
+`pchain-sdk` expects callers to serialize Method arguments using the [borsh](https://github.com/near/borsh) serialization standard, and generates code to serialize values into borsh for inclusion in a Transaction's Receipt, or transmission over the wire as part of the response for the Contract View endpoint of the Standard HTTP API. To be precise, EtoC Transactions specify the Contract Method to call and provide the arguments for the call by including a borsh-serialized `CallData` struct in its `data` field, and contracts include a borsh-serialized `CallResult` struct. The former type is defined in `pchain-types`, while the latter is defined in `pchain-sdk`. In the future, we plan to move both into the SDK. 
