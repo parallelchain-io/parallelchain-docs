@@ -15,7 +15,7 @@ The purpose of this documentation is to provide a full explanation of our rust S
 
 ---
 
-If you are interested in ParallelChain Mainnet, join our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.com/invite/HEXudvzDW6) to reach out to us.
+If you are interested in ParallelChain Mainnet, join our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.gg/parallelchain) to reach out to us.
 
 For sharing the smart contract code, address, or any help with creating smart contracts, please go to [GitHub Discussions](https://github.com/parallelchain-io/parallelchain-sdk/discussions)
 
