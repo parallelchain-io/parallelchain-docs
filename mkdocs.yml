@@ -6,40 +6,97 @@ copyright: ParallelChain Lab 2022
 extra:
   homepage: https://www.parallelchain.io/
 nav:
-  - ParallelChain F: index.md
+  - Introduction:
+    - Welcome to the ParallelChain Mainnet Documentation: index.md
+    - What is ParallelChain?: introduction/what_parallelchain.md
+    - Why Build on ParallelChain?: introduction/why_parallelchain.md
+    - XPLL:
+      - What is XPLL?: introduction/xpll/what_is_xpll.md
+      - How to get XPLL?: introduction/xpll/how_to_get.md
   - Concepts:
-    - Accounts: concepts/accounts.md
+    - Account: concepts/account.md
     - Block: concepts/block.md
-    - Transaction and Receipt: concepts/transaction.md
-    - TXPLL: concepts/txpll.md
+    - Transaction, Command and Receipt: concepts/transaction.md
+    - Epoch: concepts/epoch.md
+    - Consensus: concepts/consensus.md
+    - Gas: concepts/gas.md
     - Mempool: concepts/mempool.md
     - Smart Contract: concepts/smartcontract.md
-    - Gas: concepts/gas.md
+    - Staking:
+      - What is staking?: concepts/staking/what_is_staking.md
+      - How does staking work?: concepts/staking/how_does_staking_work.md
+      - Validators: concepts/staking/validator.md
+      - Delegators: concepts/staking/delegator.md
+      # - Block reward: concepts/staking/block_reward.md
+      - FAQ: concepts/staking/faq.md
+    - Storage: concepts/storage.md
+    - Explorer: concepts/explorer.md
+    - Wallet: concepts/wallet.md
+    - Mainnet: concepts/mainnet.md
+    - Testnet: concepts/testnet.md
+  # - Architecture:
+  #   - Reading Data from ParallelChain
+  #   - Writing Data to ParallelChain
+  #   - Interacting with Account and Wallet
+  - Running Nodes:
+    - Hardware & Software Requirements: running_nodes/requirement.md
+    - Running a Node: running_nodes/running_node.md
+  # - ParallelChain Core Contracts
+  #   - Fungible Token Contract
+  #   - Non-Fungible Token Contract
+  #   - Staking Contract
+  #   - Epoch Contract
   - Getting Started:
     - Installation: getting_started/installation.md
     - Prepare Environment: getting_started/prepare_env.md
     - Create Account: getting_started/create_account.md
-    - Transfer Tokens (EtoE): getting_started/transfer_token.md
-    - Deploy Contract (DeployC): getting_started/deploy_contract.md
-    - Call Contract (EtoC): getting_started/call_contract.md
-    - Transaction Parameters: getting_started/tx_params.md
-    - Status Code: getting_started/status_code.md
-    - Contract Publishing Service: getting_started/contract_publish.md
+    - Transfer Tokens: getting_started/transfer.md
+    - Staking: getting_started/staking.md
   - Smart Contract Development:
+    - Introduction: smart_contract_sdk/introduction.md
+    #   - What is Smart Contract on ParallelChain?
+    #   - Advantages of ParallelChain Smart Contracts
+    #   - ParallelChain Smart Contract Language
     - Install SDK: smart_contract_sdk/installation.md
     - Prepare Environment: smart_contract_sdk/prepare_env.md
     - Develop Contract: smart_contract_sdk/develop_contract.md
     - Build Contract: smart_contract_sdk/build_contract.md
     - Token Standard - PRFC-1: smart_contract_sdk/PRFC1.md
     - Token Standard - PRFC-2: smart_contract_sdk/PRFC2.md
+    - Token Standard - PRFC-3: smart_contract_sdk/PRFC3.md
+    - Tutorial:
+      - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
+      - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
+      - Chapter 3: smart_contract_sdk/tutorial/chapter_3.md
+      - Chapter 4: smart_contract_sdk/tutorial/chapter_4.md
+      - Chapter 5: smart_contract_sdk/tutorial/chapter_5.md
+      - Chapter 6: smart_contract_sdk/tutorial/chapter_6.md
     - Advance: 
       - Contract Methods: smart_contract_sdk/advance/entrypoints.md
-      - Contract Storage: smart_contract_sdk/advance/rw_world_state.md
+      - Contract Storage: smart_contract_sdk/advance/contract_storage.md
       - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
       - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
       - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
-      - Contract Metadata: smart_contract_sdk/advance/contract_metadata.md
-      - Precompiles: smart_contract_sdk/advance/precompiles.md
+      - Crypto: smart_contract_sdk/advance/crypto.md
+      - Staking in Contract: smart_contract_sdk/advance/staking.md
+  #   - Deploy Contract:
+  # - DApp Development:
+  #   #need help
+  - Tooling:
+    - ParallelChain RPC API:
+      - Introduction: toolings/rpc/introduction.md
+      - Transaction-related RPC: toolings/rpc/transaction_rpc.md
+      - Block-related RPC: toolings/rpc/block_rpc.md
+      - State-related RPC: toolings/rpc/state_rpc.md
+    # - pchain-client-rust: toolings/pchain_client_rust.md
+    - pchain-client: 
+      - Introduction: toolings/pchain_cli/introduction.md
+      - Install and Setup: toolings/pchain_cli/install_and_setup.md
+      - Manage Account: toolings/pchain_cli/manage_account.md
+      - Create Transaction: toolings/pchain_cli/transaction.md
+      - Query: toolings/pchain_cli/query.md
+      - Smart Contract: toolings/pchain_cli/smart_contract.md
+
 extra_css:
   - stylesheets/extra.css
 theme: 
@@ -50,6 +107,7 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.top
+    - content.code.copy
   logo: img/parallelchain-logo.svg
   favicon: img/favicon.png
   icon:

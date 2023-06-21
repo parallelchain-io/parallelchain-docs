@@ -1,22 +1,28 @@
 ---
 tags:
-  - testnet 3
+  - ParallelChain 
 ---
 
-## What is ParallelChain Mainnet?
 
----
+This documentation website aims to provide you with a comprehensive understanding of the ParallelChain Mainnet ecosystem, including its architecture, programming model, and tools.
 
-ParallelChain Mainnet is a breakthrough layer-1 smart contract platform with a unique delegated-proof-of-stake system designed to power an accountable, democratic, ever-growing blockchain ecosystem. 
+The content of this guide covers topics ranging from setting up your development environment to building, deploying and verifying smart contracts on the ParallelChain Mainnet network.
 
-The purpose of this documentation is to provide a full explanation of our rust SDK and Client (pchain_client) for developers to write and run smart contracts on ParallelChain Mainnet. You can link to our Testnet 3 to and try out the features now.
+In this guide, you will learn:
+
+- Basics of ParallelChain Mainnet architecture and programming model
+- Basic concepts and terms encountered in ParallelChain Mainnet
+- How to use tools provided by ParallelChain, including `pchain-client`, `pchain-sdk` etc
+- How to set up a development environment
+- How to deploy smart contracts and interact with them using the command-line interface and SDK
+
+Whether you are a seasoned blockchain developer or just getting started with smart contract development, our Web Guide provides all the resources you need to start building on the ParallelChain Mainnet network.
+
+**Let's get started!**
 
 ## Contact us
-
 ---
 
 If you are interested in ParallelChain Mainnet, join our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.gg/parallelchain) to reach out to us.
 
-For sharing the smart contract code, address, or any help with creating smart contracts, please go to [GitHub Discussions](https://github.com/parallelchain-io/parallelchain-sdk/discussions)
-
-If you have any issues related to the SDK or smart contract, please go to [GitHub issues](https://github.com/parallelchain-io/parallelchain-sdk/issues).
+reach out on us from our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.gg/parallelchain). 

@@ -1,49 +1,32 @@
 ---
 tags:
-  - testnet 3
-  - parallelchain sdk
+  - mainnet
+  - testnet
   - explorer
 ---
 
 # Prepare Environment
 
-In this section, you need the tools and environment to develop and run smart contracts. You can utilize our testnet to deploy and make contract calls. 
+In this section, you need the tools and environment to develop and run smart contracts. You can utilize our Mainnet to deploy and make contract calls. You may consider testing your transaction on Testnet before doing it on Mainnet.
 
-## Verify that the testnet is live
+## Checking the Network
 ---
 
-To verify that our testnet is live and running, please make sure that the following URLs are working:
+You can check the **mainnet** network by viewing the Explorer website:
 
-* [https://node-t3-1.digital-transaction.net](https://node-t3-1.digital-transaction.net) 
-* [https://node-t3-2.digital-transaction.net](https://node-t3-2.digital-transaction.net) 
-* [https://node-t3-3.digital-transaction.net](https://node-t3-3.digital-transaction.net) 
-* [https://node-t3-4.digital-transaction.net](https://node-t3-4.digital-transaction.net) 
-* [https://service-t3.digital-transaction.net/rich_api](https://service-t3.digital-transaction.net/rich_api) 
-* [https://service-t3.digital-transaction.net/analytics_api](https://service-t3.digital-transaction.net/analytics_api) 
-* [https://testnet.parallelchain.io/explorer](https://testnet.parallelchain.io/explorer) 
+* [ParallelChain Mainnet Explorer](https://explorer.parallelchain.io/explorer) 
 
-The ParallelChain Mainnet native tokens are called `TXPLL`.
+The explorer can explore transactions, addresses, information about the network, and blocks.
 
-## Testnet Explorer
----
+To verify that **testnet node** is alive:
 
-You can see the status of your transactions and whether they are added to the block here
-- [ParallelChain Testnet Explorer](https://testnet.parallelchain.io/explorer) 
+<!-- * [http://testnet4-node01.parallelchain.io:40000/](http://testnet4-node01.parallelchain.io:40000/)  -->
+* Testnet URL will be available soon.
 
-The testnet explorer can explore transactions, addresses, analytics (performance of `testnet`), and blocks. Alternatively, you can use ParallelChain Client (called `pchain_client`) to interact with the `testnet` node.
+You can use ParallelChain Client (called `pchain_client`) to interact with the `testnet` node.
 
 ## Setup ParallelChain Client 
 ---
+Before we start developing the smart contracts, the `pchain_client` executable needs to be configured.
 
-In this section, we will configure the `pchain_client` executable. We will assume that `pchain_client` runs on both Windows and Linux/MacOs as we have guides on setting up the Light Client for these platforms. 
-
-Therefore, when you use `pchain_client`, the same command applies to Windows, Linux and MacOS command line interface.
-
-See ["Installation"](../getting_started/installation.md) to install `pchain_client` on your pc.
-
-## Generate an account and receive tokens
----
-
-See [Create Account](../getting_started/create_account.md)
-
-Congratulations, you have enough balance for writing and deploying a smart contract.
+If you are not yet familiar with `pchain_client`, See [Getting Started](../getting_started/installation.md) to install `pchain_client` and learn about basic functionalities before proceeding with smart contract development.

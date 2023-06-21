@@ -1,40 +1,96 @@
 ---
 tags:
-  - testnet 3
-  - parallelchain client
-  - tutorial
+  - pchain-client
+  - mainnet
+  - testnet
+  - explorer
 ---
 
-# Prepare Environment
+## Setting environmental variables
 
-After installation of `pchain_client`, update testnet addresses to program configuration in order to communicate with the testnet. 
+Specify the location for storing your config and keypair by setting the environmental variable `$PCHAIN_CLI_HOME`.
 
+Always remember the location that you set, if you forget the location, it means you forget where your keypair is being placed.
 
-If the link above is working, type the command below to configure `pchain_client` to communicate with the testnet (in this example, we use node1):
+!!! Tips
+    For security reasons, you may want to set environmental **temporarily**, so that after you close the terminal session, it will forget the keypair location.
+
+The following command will set the environmental variable **temporarily**:
+
 === "Linux / macOS"
     ```bash
-    ./pchain_client setup networking 
-      --standard-api-url https://node-t3-1.digital-transaction.net 
-      --rich-api-url https://service-t3.digital-transaction.net/rich_api 
-      --analytics-api-url https://service-t3.digital-transaction.net/analytics_api
+    export PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    ```
+=== "Windows PowerShell"
+    ```PowerShell
+    $Env:PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    ```
+=== "Windows Command Prompt"
+    ```PowerShell
+    # No parentheses required
+    set PCHAIN_CLI_HOME=<PATH_TO_CONFIG>
+    ```
+
+For convenience reasons, you may alternatively want to set environmental **permanently**. Even in that case, we still suggest you remember the storage location.
+
+The following command will set the environmental variable **permanently**:
+
+=== "Linux / macOS"
+    ```bash
+    ##########################################################
+    ## Append this line to $Home/.bashrc and $Home/.profile ##
+    ##########################################################
+    export PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    ```
+=== "Windows (restart shell to pick up change)"
+    ```PowerShell
+    setx PCHAIN_CLI_HOME "<PATH_TO_CONFIG>"
+    ```
+
+## Creating Password
+
+For the first time to use `pchain_client`, you need to create your password for using it. The terminal should prompt you as follows:
+
+```text
+First time using ParallelChain Client CLI. Please set up a password to protect your keypairs.
+Your password: 
+```
+
+This password is only used by the CLI, and **NOT** associated with the blockchain. It is used for encryption and decryption of your keypairs so that the keypairs are stored in your computer more securely.
+
+## Setting endpoint interacting with Parallelchain
+
+After installation of `pchain_client`, you had to update the Mainnet / Testnet endpoint to communicate with the Mainnet / Testnet. 
+
+=== "Linux / macOS"
+    ```bash
+    ./pchain_client config setup --url https://pchain-main-rpc.parallelchain.io
+
+    # for testnet (xx range from 01 to 10)
+    ./pchain_client config setup --url <Testnet URL will be available soon.>
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe setup config 
-      --standard-api-url https://node-t3-1.digital-transaction.net 
-      --rich-api-url https://service-t3.digital-transaction.net/rich_api 
-      --analytics-api-url https://service-t3.digital-transaction.net/analytics_api
+    pchain_client.exe config setup --url https://pchain-main-rpc.parallelchain.io
+
+    # for testnet (xx range from 01 to 10)
+    pchain_client.exe config setup --url <Testnet URL will be available soon.>
     ```
 
-This command will write a config.json file in `$HOME/.parallelchain/pchain_cli/config.json`. It only needs to be executed once.
+This command will write a `config.toml` file in the folder specified by the environment variable `PCHAIN_CLI_HOME`. It only needs to be executed once.
 
+Now you can start the journey to play around with `pchain_client`, but there is still one thing you had to put in mind first.
 
-To verify that our testnet is live and running, please make sure that the following URL is working by clicking on the link below:
+!!! Tips
+    Normally you can always use `space` as a separator, to separate the flag and option passed. Just like what you had done in the setup config.
 
-* [https://node-t3-1.digital-transaction.net](https://node-t3-1.digital-transaction.net) 
-* [https://node-t3-2.digital-transaction.net](https://node-t3-2.digital-transaction.net) 
-* [https://node-t3-3.digital-transaction.net](https://node-t3-3.digital-transaction.net) 
-* [https://node-t3-4.digital-transaction.net](https://node-t3-4.digital-transaction.net) 
-* [https://service-t3.digital-transaction.net/rich_api](https://service-t3.digital-transaction.net/rich_api) 
-* [https://service-t3.digital-transaction.net/analytics_api](https://service-t3.digital-transaction.net/analytics_api) 
-* [https://testnet.parallelchain.io/explorer](https://testnet.parallelchain.io/explorer) 
+    But if your value input begins with `-`, the easiest way to input such value is by `=` instead of `space` as a seperator.
+
+    === "Linux / macOS"
+        ```bash
+        # Compare with ./pchain_client query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
+        ./pchain_client query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
+        ```
+    === "Windows"
+        ```PowerShell
+        pchain_client.exe query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
