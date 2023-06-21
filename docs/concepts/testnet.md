@@ -19,7 +19,8 @@ Both Mainnet and Testnet are accessible through Explorer.
 Similar to accessing the Mainnet, you can access and interact with the Testnet with:
 
 - the command-line tool `pchain-client`. *For a more detailed explanation, please refer to the [Getting started](../getting_started/prepare_env.md#setting-endpoint-interacting-with-parallelchain) section to setup the `pchain-client` for Testnet.*
-- Access from [ParallelChain Explorer](https://mainnet-explorer-ccmdyyfoe-parallelchain-lab.vercel.app/explorer/transactions?limit=10&page=3&latestTxNum=&network=Testnet).
+<!-- - Access from [ParallelChain Explorer](https://mainnet-explorer-ccmdyyfoe-parallelchain-lab.vercel.app/explorer/transactions?limit=10&page=3&latestTxNum=&network=Testnet). -->
+- [ParallelChain Explorer]. The link for Testnet Explorer will be available soon.
 
 ## Generating a Testnet Account
 ---
@@ -38,4 +39,5 @@ The faucet service of our Testnet issues free testing tokens to users to test th
 - **ParallelChain Client (pchain-client)**:
 *Please refer to the [Create Account](../getting_started/create_account.md#request-for-tokens-from-faucet-testnet) part for detailed information.*
 - **ParallelChain Explorer Faucet**.
-Requesting Faucet for tokens is available on [Explorer Faucet](https://faucet-software-dtl-parallelchain-lab.vercel.app), please follow the instructions to proceed.
+<!-- Requesting Faucet for tokens is available on [Explorer Faucet](https://faucet-software-dtl-parallelchain-lab.vercel.app), please follow the instructions to proceed. -->
+Our Exploer Faucet service will be released soon.

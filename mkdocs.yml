@@ -2,7 +2,7 @@ site_name: ParallelChain® Mainnet Documentation
 site_url: https://docs.parallelchain.io
 repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
-copyright: ParallelChain Lab 2022
+copyright: ParallelChain Lab 2023
 extra:
   homepage: https://www.parallelchain.io/
 nav:

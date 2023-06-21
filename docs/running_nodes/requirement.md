@@ -7,7 +7,7 @@ tags:
 
 ## Hardware Requirements
 ---
-ToDo
+Available soon.
 
 ## Software Requirements
 ---
