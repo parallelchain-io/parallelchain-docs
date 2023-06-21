@@ -5,7 +5,7 @@ tags:
   - Network Transaction
 ---
 
-The staking process consists of several Staking Commands. Each command usually works with each other to serve a particular purpose. It is recommended to read paragraph [How does staking work](../concepts/staking.md#how-does-staking-work) before trying out the commands which are described on this page.
+The staking process consists of several Staking Commands. Each command usually works with each other to serve a particular purpose. It is recommended to read paragraph [How does staking work](../concepts/staking/how_does_staking_work.md#how-does-staking-work) before trying out the commands which are described on this page.
 
 This page guides you to create staking transactions by using the CLI. The CLI creates a JSON file which can be used to submit the staking transaction in the same way as [submitting transfer transaction](./transfer.md#submitting-transaction).
 

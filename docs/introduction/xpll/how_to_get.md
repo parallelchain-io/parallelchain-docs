@@ -11,7 +11,7 @@ There are several ways to obtain XPLLs, the native tokens of ParallelChain.
 ---
 Users can stake XPLL with the network validators to help secure the blockchain and earn rewards in the meantime. Staking is a process of locking up a certain amount of XPLL for a period of time in the process of validating transactions, adding new blocks, etc. Therefore, users will be rewarded with additional XPLL for contributing to the security and integrity of the network.
 
-To learn more about staking, read [Staking](../../concepts/staking.md).
+To learn more about staking, read [Staking](../../concepts/staking/what_is_staking.md).
 
 
 
