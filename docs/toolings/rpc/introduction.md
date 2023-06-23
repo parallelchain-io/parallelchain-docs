@@ -13,7 +13,8 @@ We spell out the general properties of the API, and then list the available RPCs
 For readability, we categorize RPCs into [transaction-related RPCs](./transaction_rpc.md), [block-related RPCs](./block_rpc.md), and [state-related RPCs](./state_rpc.md).
 
 
-## General properties
+## General Properties
+---
 
 1. Procedures are reachable over HTTP at a URL suffixed by the procedure’s name.
 2. All HTTP requests should be **POST**.

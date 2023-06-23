@@ -4,7 +4,8 @@
 | --- | ----- | ---- | --- | --- |
 | 2   | Non-Fungible Token Standard | ParallelChain Lab | 3 | May 10th, 2023 | 
 
-## Summary 
+## Summary
+---
   
 ParallelChain Request for Comments 2 defines a standard interface for non-fungible tokens implemented as ParallelChain smart contracts. "Non-Fungible Tokens" or NFTs is taken here to have the same meaning as in Ethereum's ERC-721, namely a set of transferable entities on a blockchain with identification metadata unique to its creator. For example, a deed for a plot of land is a non-fungible token, since a deed identifies a singular, unique plot of land (i.e., no two deeds identifies the same plot of land).
 
@@ -13,6 +14,7 @@ A standard contract interface for non-fungible tokens allows more seamless inter
 The 'Required Calls' section lists the set of methods that all smart contracts that want to be PRFC 2-compliant must implement, as well as the behavior that each defined method must exhibit. Required behavior involves emitting certain events. These are also listed and described.
 
 ## Glossary
+---
 
 **Collection**: A set of Tokens with shared properties. A single PRFC 2-implementing contract represents a single Collection. For example, 'CryptoKitties' is a Collection, whilst a single CryptoKitty is a Token.  
 
@@ -24,7 +26,8 @@ The 'Required Calls' section lists the set of methods that all smart contracts t
 
 **Exclusive Spender**: An exclusive spender is an account that is approved to transfer *all* tokens owned by the owner. An account can be made an Exclusive Spender either through a single call to `set_exclusive_spender` (preferred), or multiple calls to `set_spender`. Exclusive spender is originally set to be the owner if not specified. 
 
-## Required types
+## Required Types
+---
 
 Token Identifier is a String.
 
@@ -60,6 +63,7 @@ struct Token {
 ```
 
 ## Required Views 
+---
 
 The following uses syntax from Rust (version 1.59.0).
 
@@ -117,7 +121,8 @@ Returns public address of exclusive spender of `for_address`.
 
 Returns `None` if exclusive spender is not specified.
 
-## Required Calls 
+## Required Calls
+--- 
 
 ### transfer
 
@@ -172,6 +177,7 @@ Gives the account identified by `spender_address` the right to transfer *all* to
 Log `SetExclusiveSpender` must be triggered if `set_exclusive_spender` is successful.
      
 ## Required Logs
+---
 
 In this section, `++` denotes bytes concatenation.
 

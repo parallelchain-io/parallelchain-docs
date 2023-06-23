@@ -6,7 +6,8 @@ tags:
   - explorer
 ---
 
-## Setting environmental variables
+## Setting Environmental Variables
+---
 
 Specify the location for storing your config and keypair by setting the environmental variable `$PCHAIN_CLI_HOME`.
 
@@ -48,6 +49,7 @@ The following command will set the environmental variable **permanently**:
     ```
 
 ## Creating Password
+---
 
 For the first time to use `pchain_client`, you need to create your password for using it. The terminal should prompt you as follows:
 
@@ -58,7 +60,8 @@ Your password:
 
 This password is only used by the CLI, and **NOT** associated with the blockchain. It is used for encryption and decryption of your keypairs so that the keypairs are stored in your computer more securely.
 
-## Setting endpoint interacting with Parallelchain
+## Setting Endpoint Interacting with Parallelchain
+---
 
 After installation of `pchain_client`, you had to update the Mainnet / Testnet endpoint to communicate with the Mainnet / Testnet. 
 

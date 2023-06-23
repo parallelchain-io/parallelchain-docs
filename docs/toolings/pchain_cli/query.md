@@ -8,11 +8,13 @@ tags:
 
 
 ## Query
+---
+
 `pchain_client` allows you to query different data from the ParallelChain, not just Transaction or Account related information, but also details of Validators and Stake Pool in ParallelChain network. 
 
 Use `pchain_client query --help` to check the full list available to query.
 
-### Check Account related information
+### Check Account Related Information
 To check Externally Owned Accounts (EOA) information such as balance and nonce, your account address (public key) is always needed.
 
 Command:
@@ -28,7 +30,7 @@ Command:
 pchain_client query contract --address <ADDRESS>
 ```
 
-### Get Transaction with receipt
+### Get Transaction with Receipt
 In [Submit Transaction to ParallelChain](./transaction.md#submit-transaction-to-parallelchain) section, after you successfully make transaction on ParallelChain, you should receive the transaction hash (tx_hash) in the response. This hash is the identity of your transaction. You can always retrieve the transaction details with receipt by the transaction hash.
 
 Command:

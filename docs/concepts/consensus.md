@@ -28,6 +28,7 @@ properties that HotStuff-rs has are:
    state, and pacemaker: you write the app, and we handle the replication.
 
 ## Terminology
+---
  
 - **App**: user code which implements the App trait. This can be any business logic that can be expressed
   as a deterministic state machine, i.e., a pure function of kind: `(Blockchain, App State, Validator Set, Block) ->
@@ -44,6 +45,7 @@ properties that HotStuff-rs has are:
   blockchain.
 
 ## The HotStuff Consensus Protocol
+---
 
 HotStuff works by building a 'BlockTree': a directed acyclic graph of Blocks. Block is a structure with a `data` field which applications are free to populate with arbitrary byte-arrays. In consensus algorithm literature, we typically talk of consensus algorithms as maintaining state machines that change their internal states in response to commands, hence the choice of terminology.
 
@@ -61,7 +63,8 @@ The choice of third confirmation to define commitment--as opposed to first or se
 HotStuff is the first consensus algorithm with a simple leader-replacement algorithm that does not have a 'wait-for-N seconds' step and thus can make progress as fast as network latency allows.
 
 
-## Getting started
+## Getting Started
+---
 
 If you're trying to learn about HotStuff-rs by reading the source code or Cargo docs, we recommend starting from
 the [replica](https://github.com/parallelchain-io/hotstuff_rs/blob/master/src/replica.rs) module. This is the entry point of user code into this library.

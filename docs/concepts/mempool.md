@@ -6,7 +6,7 @@ tags:
 
 # Mempool
 
-## What is mempool?
+## What is Mempool?
 ---
 
 A **mempool** is a component of the blockchain network that keeps transactions that have not yet been added to a block. It can refer to two things:
@@ -14,7 +14,7 @@ A **mempool** is a component of the blockchain network that keeps transactions t
 - The mempool of validating nodes and fullnodes, which accepts pending transactions for future inclusion in a block. (Only validating nodes can create new blocks.)
 - The set of not-yet-confirmed transactions that are stored in the individual mempools of nodes in the network. This set can vary between nodes due to network delays and partitions.
 
-## How does mempool work?
+## How does Mempool Work?
 ---
 
 When a transaction is submitted to the blockchain network, it is first sent to the mempool where it waits to be executed. The mempool acts like a queue, storing the pending transactions and arranging them to be executed by block producers. Transactions are prioritized based on how much the sender is willing to pay for network resources, which is indicated in a field called `Max Base Fee Per Gas` within the transaction. The higher the fee, the higher the priority of the transaction.

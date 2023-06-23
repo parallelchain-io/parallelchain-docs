@@ -32,6 +32,6 @@ There are three kinds of accounts, and they differ in how they trigger state cha
 
 See section [Account](account.md) for more information about different types of accounts.
 
-## System state
+## System State
 ---
 The system state stores system-level information to sync and communicate with other nodes in the blockchain. This part is non-accessible to the public and triggers state changes by consensus protocol.

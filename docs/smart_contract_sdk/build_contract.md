@@ -5,7 +5,7 @@ tags:
   - Smart Contract
 ---
 
-# Building the contract with 'pchain_compile'
+# Building the Contract with 'pchain_compile'
 
 **pchain_compile** is a CLI build tool for smart contract developers to build their source code to WASM binaries for deployment on 
 ParallelChain Mainnet. 

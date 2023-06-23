@@ -4,7 +4,8 @@
 | --- | ----- | ---- | --- | --- |
 | 3   | Lockup and Vesting Standard | ParallelChain Lab | 1 | May 2nd, 2023 | 
 
-## Summary 
+## Summary
+---
   
 ParallelChain Request for Comments 3 defines a standard interface for XPLL's lockup and vesting. Lockup and vesting are applied to maintain the value and stability of XPLL. Lockup refers to a period in which the XPLLs are locked and cannot be transferred or sold, while vesting refers to a process of releasing the locked XPLLs gradually over a period of time, at regular intervals. This ensures that the XPLLs are distributed in a controlled and predictable manner, as well as incentivising long-term holding of XPLLs, which can ultimately benefit the development and success of ParallelChain Lab's projects.
 
@@ -13,6 +14,8 @@ To encourage staking in the network, staking functionalities are provided in the
 The "Required Calls" section lists the set of methods that all smart contracts that want to be PRFC 3-compliant must implement, as well as the behaviour that each defined method must exhibit.
 
 ## Glossary
+---
+
 **token_owner**: The address to which the XPLLs in this contract will be transferred after being claimed.
 
 **initial_token_amount**: Total amount of XPLLs (in Grays) that were locked in this lockup contract initially.
@@ -29,48 +32,44 @@ There are five possible phases in the vesting schedule:
 
 
 ## Lockup and Vesting Schedule
+---
+
 There are different lockup and vesting schedules which can be categorized as follows:
 
 - Type 1 : A certain percentage of tokens are released on day 1, and is followed by daily vesting over a period of time (30, 90, 150, 180, 240 days) starting from day 2. For example:
-<center> 
 
- Unlock on day 1 | Daily vesting starting on day 2
- :---:           | :---: |
- 25%             | 30 days
 
-</center> 
+ |Unlock on day 1 | Daily vesting starting on day 2
+ |:---:           | :---: |
+ |25%             | 30 days
+
 
 
 - Type 2: A certain percentage of tokens are released on day 1. The rest of the tokens will be locked for a period of time (30, 90,180 days) and start daily vesting after the locked period is over. For example: 
 
-<center> 
+| Unlock on day 1 | Locked period starting on day 2 | Daily vesting after locked is over
+| :---:           | :---:                           | :---: |
+| 2%              | 180 days                        | 720 days
 
- Unlock on day 1 | Locked period starting on day 2 | Daily vesting after locked is over
- :---:           | :---:                           | :---: |
- 2%              | 180 days                        | 720 days
-
-</center>
 
 - Type 3: All tokens are locked for a period of time (240, 300, 360 days). All the tokens will vest over a period of time (300, 330, 360 days), once every 30 days.
 
-<center> 
+| Locked period  | Monthly vesting after Locked is over
+| :---:          | :---: |
+| 240 days       | 300 days 
 
- Locked period  | Monthly vesting after Locked is over
- :---:          | :---: |
- 240 days       | 300 days 
-</center>
 
 
  - Type 4: All tokens are vested over a period of time (540, 630, 720 days), once every 30 days. There is no initial unlocked tokens or lockup period for this type.
 
-<center> 
 
- Monthly vesting period |
- :---:          | 
- 240 days       |  
-</center>
+| Monthly vesting period |
+| :---:          | 
+| 540 days       |  
+
 
 ## Require Types
+---
 
 The types alias used in the specification.
 
@@ -92,6 +91,7 @@ enum Phase {
 ```
 
 ## Required Views
+---
 
 ### overview
 
@@ -149,6 +149,7 @@ fn balance_in_deposit() -> u64
 Returns the number of locked XPLLs (in Grays) that are deposited in a pool.
 
 ## Required Calls (General)
+---
 
 ### init
 

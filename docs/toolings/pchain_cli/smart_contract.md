@@ -7,6 +7,8 @@ tags:
 
 
 ## Smart Contract 
+---
+
 Smart contracts are computer programs that are stored on a blockchain. You need to provide some necessary information such as contract address, method name, and arguments in order to invoke method of the contract.
 
 ### Retrieve Contract Address
@@ -19,7 +21,7 @@ Command:
 pchain_client parse contract-address --address <ADDRESS> --nonce <NONCE>
 ```
 
-### Prepare Contract method arguments file
+### Prepare Contract Method Arguments File
 When you make a contract call that modifies or views state, the contract method may expect arguments. You need to provide arguments by JSON file(.json) with `transaction create call` or `query view` commands.
 
 Example:

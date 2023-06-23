@@ -22,7 +22,7 @@ We will demonstrate how the above network commands can be created and sent to
 the network through the use of a smart contract. We will use the contract, `MyPool` 
 to guide you through the steps of creating a stake in a pool with the network commands.
 
-#### lib.rs: define a struct
+### lib.rs: define a struct
 ```rust
 use pchain_sdk::{
     call, contract, contract_methods
@@ -40,7 +40,7 @@ pub struct MyPool {
 We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. However, as mentioned in previous chapters, it will be initialized to 0 upon deployment. Therefore, we have to add an init function to initialize the address
 to the values we specified.
 
-#### lib.rs: initialise struct
+### lib.rs: initialise struct
 ```rust
 #[contract_methods]
 impl MyPool {
@@ -67,7 +67,7 @@ sufficient balance to the contract for the operation.
 To check if the deposit is successful, you can check the deposit using `pchain-client` with the following command:
 > ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
 
-#### lib.rs: successful network command
+### lib.rs: successful network command
 ```rust
     #[call]
     fn create_deposit(balance: u64, auto_stake_rewards: bool) {
@@ -79,7 +79,7 @@ It was mentioned above that the `defer` call will only take place after a succes
 
 Check the deposit again using `pchain-client`, the deposit balance in the pool should remain unchanged.
 
-#### lib.rs: failed network command
+### lib.rs: failed network command
 
 ```rust
     #[call]
@@ -99,7 +99,7 @@ In the method `stake_deposit()`, we should be expecting that the `return_values`
 balance of the contract. However, since there is a defer network command in the method call, the `return_values`
 will be overwritten by the return value from the `pchain_sdk::network::defer_staking_deposit()` command.
 
-#### lib.rs: overwriting return value
+### lib.rs: overwriting return value
 ```rust
     #[call]
     fn stake_deposit(max_amount: u64) -> u64{
@@ -116,7 +116,7 @@ we put the commands for unstaking and withdrawing deposits in the same function.
 Both the commands will be executed after the success of the transaction, and in the order they were called
 in the method call. After invoking this method call, the stake of the deposit should have been successfully withdrawn.
 
-#### lib.rs: multiple network commands
+### lib.rs: multiple network commands
 ```rust
     #[call]
     fn multiple_defer(max_amount: u64) {

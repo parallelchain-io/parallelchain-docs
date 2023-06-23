@@ -6,7 +6,7 @@ tags:
 
 # Epoch
 
-**Epoch** is a protocol-defined period for measuring performance of operators on the blockchain network. 
+**Epoch** is a protocol-defined period for measuring the performance of operators on the blockchain network. 
 
 The primary purpose of epochs in a blockchain is to facilitate various network functionalities and maintain consensus among network participants by defining a common reference point, which could be utilized to validate transactions. During one epoch, there would be block creation and block addition to the blockchain.
 
@@ -18,7 +18,7 @@ In the ParallelChain Mainnet ecosystem, an `epoch` is defined by a predetermined
     
 - Replacing Previous Validator Set with Current Validator Set
 - Replacing Current Validator Set with Next Validator Set
-- Returning Next Validator Set for next leader selection
+- Returning Next Validator Set for the next leader selection
 
 Epoch transition ensures that only one set of validators is active on the blockchain network at any given time, which makes the information on the blockchain tamper-proof.
 

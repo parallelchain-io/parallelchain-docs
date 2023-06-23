@@ -7,14 +7,10 @@ tags:
 
 # Cross Contract Call
 
-The SDK includes two functions to make Contract-to-Contract calls: `call` and `call_untyped`.
-
-They do the obvious: the former calls a method in a specified Contract with the given arguments.
-
-Here is to illustrate the details by example smart contract "ContractProxy".
+The SDK includes two functions to make Contract-to-Contract calls: `call` and `call_untyped`, the former calls a method in a specified Contract with the given arguments. Here is to illustrate the details by example of smart contract "ContractProxy".
 
 
-## Call Contract by using Trait
+## Call Contract by Using Trait
 ---
 
 SDK provides developer-friendly ways to call another contract by using macro `use_contract`. The address of the contract is specified inside the attribute list in the macro. 
@@ -45,7 +41,7 @@ fn grow_up() {
 }
 ```
 
-## Call Contract by using function
+## Call Contract by Using Function
 ---
 
 Cross-contract calls can also be simply made by using the function `pchain_sdk::call` or `pchain_sdk::call_untyped`.

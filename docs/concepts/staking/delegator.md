@@ -6,7 +6,6 @@ tags:
 ---
 
 # Delegator
----
 
 In a delegated proof-of-stake (DPoS) blockchain network, a delegator is a participant who delegates their tokens holdings to a staking pool to participate in the network's consensus process. Delegators do not validate transactions or create new blocks themselves, but they can participate in the network's consensus process by proxy through a pool.
 

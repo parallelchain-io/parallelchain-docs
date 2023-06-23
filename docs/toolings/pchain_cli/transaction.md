@@ -7,6 +7,8 @@ tags:
 
 
 ## Transaction 
+---
+
 A transaction is a digitally signed instruction that tells the ParallelChain state machine to execute a sequence of commands. There are different kinds of [Commands](https://docs.rs/pchain-types/0.4.3/pchain_types/blockchain/enum.Command.html) in ParallelChain protocol. 
 
 `pchain_client` accepts transaction in json format. This section will demonstrate how to prepare your transaction file and submit it with your account keys.
@@ -34,7 +36,7 @@ Here are some CLI subcommands to indicate corresponding Protocol Transaction Com
 |            | update-settings | Update settings of an existing Pool                   |
 |            | delete          | Delete an existing Pool in the network account        |
 
-#### Create new Transaction File
+### Create New Transaction File
 `Transaction` in ParallelChain protocol specifies a set of parameters included in the instruction. You don't need to provide all parameters, some of them would be computed and filled in automatically when you submit the transaction.
 
 ```sh
@@ -79,7 +81,7 @@ pchain_client transaction create \
     --cbi-version 0
 ```
 
-#### Append Command to existing file
+### Append Command to Existing File
 As explained in the beginning of [Transaction](#transaction) section, Transaction in ParallelChain protocol accepts sequence of commands. But you may find that `transaction create` in previous section only support a single Command in Transaction. 
 
 If you want to support multiple Commands, use the following command with the [subcommand](#prepare-transaction-file). This appends a `Command` element to the back of the command array in Transaction. Please note that commands in array will be executed in sequential order.

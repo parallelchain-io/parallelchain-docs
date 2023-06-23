@@ -6,14 +6,14 @@ tags:
 ---
 
 
-# Accessing information about the Blockchain
+# Accessing Information about the Blockchain
 
 Contract Methods can be written not only depending on call arguments and the contract's storage, but also on information about the Blockchain, e.g., the previous block hash, or the identity of the External Account that originated the Call Transaction. 
 
 Functions for getting information about the Transaction that triggered a Contract call and information about the larger Blockchain, in general, are defined in `pchain_sdk::transaction` and `pchain_sdk::blockchain` respectively. Internally, these functions are thin wrappers around functions defined in the Imports Set of the Contract ABI.
 
 
-## Parameters from blockchain and transaction
+## Parameters from Blockchain and Transaction
 ---
 
 Contract execution is triggered by a Call Transaction to the blockchain. The contract being executed can obtain information from this transaction, and also the blockchain during execution. The information can be obtained by calling API methods in `pchain_sdk`.

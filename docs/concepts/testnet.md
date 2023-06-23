@@ -13,14 +13,14 @@ To ensure the new features in ParallelChain Mainnet have what it takes to surviv
 The current testnet iteration delivers on Byzantine Fault Tolerant (BFT) consensus, the cornerstone of security in ParallelChain's proof-of-stake network. Besides this, Testnet 4 delivers big leaps in the contract SDK and developer experience, as well as a web Wallet.
 Both Mainnet and Testnet are accessible through Explorer.
 
-## How to access
+## How to Access
 ---
 
 Similar to accessing the Mainnet, you can access and interact with the Testnet with:
 
 - the command-line tool `pchain-client`. *For a more detailed explanation, please refer to the [Getting started](../getting_started/prepare_env.md#setting-endpoint-interacting-with-parallelchain) section to setup the `pchain-client` for Testnet.*
 <!-- - Access from [ParallelChain Explorer](https://mainnet-explorer-ccmdyyfoe-parallelchain-lab.vercel.app/explorer/transactions?limit=10&page=3&latestTxNum=&network=Testnet). -->
-- [ParallelChain Explorer]. The link for Testnet Explorer will be available soon.
+- ParallelChain Explorer. The link for Testnet Explorer will be available soon.
 
 ## Generating a Testnet Account
 ---

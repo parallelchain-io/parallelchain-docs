@@ -6,7 +6,7 @@ tags:
 
 # Staking
 
-## What is staking?
+## What is Staking?
 ---
 
 **Staking** is a process of holding a cryptocurrency or token as a way to support the operations of a blockchain network. It involves locking up a certain amount of tokens for a period of time to participate in the process of validating transactions, adding new blocks to the chain, and maintaining the security and integrity of the network.

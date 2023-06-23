@@ -7,6 +7,7 @@ tags:
 # ParallelChain RPC API
 
 ## State RPCs
+---
 
 State RPCs return multiple entities in the world state in a single response. This allows clients to get a consistent snapshot of the world state in a single call.
 
@@ -167,7 +168,8 @@ struct ViewResponse {
 
 ---
 
-## Types referenced in state RPC responses
+## Types Referenced in State RPC Responses
+---
 
 ### Account-related types
 ```rust

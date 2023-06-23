@@ -7,7 +7,9 @@ tags:
 
 # Install and Setup
 
-### Installation
+## Installation
+---
+
 `pchain_client` is an available tool for users on Unix/Linux, MacOS, and Windows operating systems. Simply download the pre-built binary corresponding to your platform and install the `pchain_client`.
 
 Here are the simple steps to install `pchain_client`:
@@ -19,7 +21,9 @@ Here are the simple steps to install `pchain_client`:
 **NOTE:**
 If this is your first time using `pchain_client`, you need to setup `$PCHAIN_CLI_HOME` in environment variables to specify the home path. See more [here](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/).
 
-### Running pchain_client
+## Running pchain_client
+---
+
 Upon first use of `pchain_client`, you will be prompted to set up a password to protect your account keypairs. Please note that this password can be different from the password you used in ParallelChain Explorer. Alternatively, you can skip the password protection by simply pressing Enter.
 
 ```sh
@@ -31,7 +35,9 @@ You will be required to enter your password twice. If your password is set succe
 The password is not sent and saved anywhere. You won't be able to recover the password if you lose it. Please keep your password safe. You will be required to provide this password to submit transactions and manage keypairs later.
 
 
-### Prepare Environment
+## Prepare Environment
+---
+
 Before you can submit transactions or query information on ParallelChain, you need to setup your own choice of ParallelChain RPC API provider URL.
 
 ```sh

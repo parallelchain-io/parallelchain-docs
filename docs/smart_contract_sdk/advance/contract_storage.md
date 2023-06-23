@@ -29,7 +29,8 @@ struct DogToy {
 }
 ```
 
-### Accessing Storage
+## Accessing Storage
+---
 
 SDK provides functions to access Storage by read-write operations. The function `get_network_state` is particularly used to get the state from the Network Account of the blockchain.
 

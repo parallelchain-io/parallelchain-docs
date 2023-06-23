@@ -39,8 +39,8 @@ nav:
   #   - Writing Data to ParallelChain
   #   - Interacting with Account and Wallet
   # - Running Nodes:
-  #  - Hardware & Software Requirements: running_nodes/requirement.md
-  #  - Running a Node: running_nodes/running_node.md
+  #   - Hardware & Software Requirements: running_nodes/requirement.md
+  #   - Running a Node: running_nodes/running_node.md
   # - ParallelChain Core Contracts
   #   - Fungible Token Contract
   #   - Non-Fungible Token Contract

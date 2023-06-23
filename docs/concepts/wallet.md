@@ -5,7 +5,6 @@ tags:
 ---
 
 # Wallet
----
 
 A crypto wallet is a software program that stores private and public keys. It enable users to interact with blockchain networks by sending and receiving digital currency, as well as monitoring their balance. Crypto wallets can be used to manage different types of digital assets, including cryptocurrencies and non-fungible tokens (NFTs). There are different types of crypto wallets, like software wallets, hardware wallets, and paper wallets, each with its own set of features and benefits.
 

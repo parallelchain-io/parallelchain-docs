@@ -23,7 +23,7 @@ Recall that we have a deployed contract called `MyLittlePony` that consists of t
 `self_introduction()`, `grow_up()`, and `change_person()`. We are going to use `grow_up()` in 
 `ContractProxy`, so we can comment out the rest of them. 
 
-#### lib.rs: define a trait
+### lib.rs: define a trait
 ```rust
 use pchain_sdk::{
     use_contract, call, contract, contract_methods
@@ -44,7 +44,7 @@ can be simply calling associate methods according to the defined method in the t
 `grow_up()` is to simply do `my_little_pony::grow_up(0)`.
 
 
-#### lib.rs: use_contract macro
+### lib.rs: use_contract macro
 ```rust
 #[contract]
 pub struct ContractProxy {}
@@ -65,7 +65,7 @@ The above example has shown how we can use the `use_contract` macro to do cross-
 to use `pchain_sdk::call_untyped()` to do so. We pass the contract address as an argument so that the contract
 address does not need to be hard-coded in the contract.
 
-#### lib.rs: pchain_sdk::call_untyped()
+### lib.rs: pchain_sdk::call_untyped()
 ```rust
 #[call]
 fn grow_up_2(address: String) {
@@ -81,7 +81,7 @@ fn grow_up_2(address: String) {
 
 ---
 
-#### lib.rs: transfer contract balance
+### lib.rs: transfer contract balance
 Except by calling the entrypoint methods from `MyLittlePony`, we can also transfer the balance from the 
 contract to a specific address by `pchain_sdk::transfer()`.
 

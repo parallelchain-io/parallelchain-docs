@@ -21,7 +21,7 @@ In this chapter, we are going to demonstrate the functionality of collections pr
 We create the `MyCollections` struct which includes all these collection structures.
 
 
-#### lib.rs
+### lib.rs
 ```rust
 use pchain_sdk::{
     contract, contract_methods, call, Cacher, collections::{Vector, FastMap, IterableMap}

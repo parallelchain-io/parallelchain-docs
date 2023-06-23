@@ -19,7 +19,7 @@ The key to be stored is an u8 integer ordered by the index of the fields.
 In this chapter, we first create a struct, `MyLittlePony`, that consists of `name`, `age`, and `gender`. In this case, `name` has key [0] while `age` has key [1].
 
 
-#### lib.rs: define MyLittlePony
+### lib.rs: define MyLittlePony
 ```rust
 use pchain_sdk::{
     contract, contract_methods, call, contract_field
@@ -37,7 +37,7 @@ Next, we need to declare the `Gender` struct, which is the type of the `gender` 
 struct in the contract struct, we need the `contract_field` macro to access the key-value pair in canonical format.
 For instance, `name` in `Gender` struct has a key [2][0] in the contract `MyLittlePony`.
 
-#### lib.rs: define Gender
+### lib.rs: define Gender
 ```rust
 #[contract_field]
 struct Gender {
@@ -60,7 +60,7 @@ Firstly, `self_introduction()` uses receiver `&self` to load all data before exe
 All data will be loaded to the receiver self from the world state. Therefore, we can have access to all the 
 fields in the contract, including the fields in the `Gender` struct.
 
-#### lib.rs: load data with &self
+### lib.rs: load data with &self
 ```rust
 #[contract_methods]
 impl MyLittlePony {
@@ -80,7 +80,7 @@ because there is only one key-value pair in the world state to be mutated.
 Instead of passing `&self` as an argument, simply do `Self::get_<field_name>()` to obtain value and 
 `Self::set_<field_name>()` to store updated value.
 
-#### lib.rs: getter and setter
+### lib.rs: getter and setter
 ```rust
 #[call]
 fn grow_up() {
@@ -93,7 +93,7 @@ Lastly, we want to change our little pony, so we use a mutable receiver `&mut se
 executing this method, then store all data after execution. However, we should be cautious when using
 a mutable receiver as it is expensive to load and store since it mutates all key-value pairs in the world state.
 
-#### lib.rs: load data with a mutable receiver
+### lib.rs: load data with a mutable receiver
 ```rust
 #[call]
 fn change_pony(&mut self, name: String, age: u32, gender_name: String, description: String) {

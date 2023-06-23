@@ -15,7 +15,7 @@ macro provided by Parallelchain Mainnet Smart Contract SDK.
 
 `bank_account.rs` defined the `BankAccount` data struct which consists of four fields, `first_name`, `last_name`, `account_id`, and `amount`. All these fields will be initialized to 0 or empty upon deployment.
 
-#### bank_account.rs: define data struct
+### bank_account.rs: define data struct
 
 ```rust
 use borsh::{BorshDeserialize, BorshSerialize};
@@ -48,7 +48,7 @@ deserialize the result and return an `Option`.
 `set_bank_account()` stores the given key-value pair in the storage using 
 `pchain_sdk::storage::set()`.
 
-#### bank_account.rs: accessing storage
+### bank_account.rs: accessing storage
 ```rust
 pub fn get_bank_account(key: &[u8]) -> Option<BankAccount> {
     match storage::get(key) {
@@ -74,7 +74,7 @@ pub fn set_bank_account(key: &[u8], value: &BankAccount) {
 Lastly, add the impl of `BankAccount` which includes two methods that perform the actions
 of deposit and withdrawal.
 
-#### bank_account.rs: impl methods
+### bank_account.rs: impl methods
 ```rust
 impl BankAccount {
     pub fn deposit_to_balance(&mut self, amount_to_add: u64) {
@@ -100,7 +100,7 @@ only one field, `num_of_account`, indicating the number of accounts associated w
 section, the key of `num_of_account` in the storage will be [0] according to its index.
 
 
-#### lib.rs: define contract struct
+### lib.rs: define contract struct
 
 ```rust
 
@@ -126,7 +126,7 @@ In `open_account()`, we initialize an instance of `BankAccount`, and store it in
 After storing the newly generated account into storage, we have to update the `num_of_account`. Therefore, we obtain the value of the field by doing `MyBank::get_num_of_account()`, like how we get the fields of our pony in Chapter 2. Similarly, store the updated
 value by calling `MyBank::set_num_of_account()`.
  
-#### lib.rs: open a new account
+### lib.rs: open a new account
 ```rust
 #[contract_methods]
 impl MyBank {
@@ -190,7 +190,7 @@ By calling `bank_account::get_bank_account()` with a given `account_id`, `Option
 `None` is returned, the account does not exist; otherwise, we will be able to obtain the balance of the account by 
 accessing the value of the field `amount`.
 
-#### lib.rs: query account balance
+### lib.rs: query account balance
 ```rust
 #[call]
 fn query_account_balance(account_id: String) {
@@ -218,7 +218,7 @@ fn query_account_balance(account_id: String) {
 Lastly, finish up the functionalities of the bank by completing the implementation of `withdraw_money()` and 
 `deposit_money` using the methods mentioned in all previous sections.
 
-#### lib.rs: withdrawal and deposit
+### lib.rs: withdrawal and deposit
 ```rust
 #[call]
 fn withdraw_money(account_id: String, amount_to_withdraw: u64) {

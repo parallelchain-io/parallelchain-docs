@@ -7,7 +7,7 @@ tags:
 # Staking
 
 
-## How does staking work?
+## How does Staking Work?
 ---
 
 In this staking process, there are two main actors: **pool operators** and **owner**. A pool operator can create, update, and destroy pools. An owner can deposit their cryptocurrency into a pool, top-up their deposit, withdraw their deposit, and set the amount they want to stake in the pool. However, they cannot stake more than the amount they have deposited.

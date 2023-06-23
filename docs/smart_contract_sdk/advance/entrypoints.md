@@ -7,7 +7,8 @@ tags:
 
 In ParallelChain Smart Contract Programming Model, a contract is like a `Rust` `struct` that controls access to persistent storage. Accounts can interact with contracts by submitting transactions that include a call command to invoke methods of the contract. These methods are sometimes called just "methods" for short.
 
-### Methods
+## Methods
+---
 
 The model defines Contract Methods as methods with the `#[call]` macro. Each of these corresponds to a method that can be called via a Call Command in the CBI Subprotocol. To allow methods to be called from the outside world, you must write method definitions within an `impl Contract` statement marked with the `#[contract_methods]` macro. The following example illustrates this:
 
@@ -30,7 +31,8 @@ The `#[call]` macro is added above the function declaration.
 Its arguments (if any) implement `BorshDeserialize`.
 Its return value (if any) implements `BorshSerialize`.
 
-### Accepting parameters and returning values
+## Accepting Parameters and Returning Values
+---
 
 Some of the code snippets provided in this document show Contract Methods that accept arguments (in addition to borrow of the Contract struct) and/or return a value. To enable a contract to receive arguments from and return values to callers, both the contract and the caller need to agree on a serialization format.
 

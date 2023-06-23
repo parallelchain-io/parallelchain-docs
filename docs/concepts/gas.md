@@ -19,7 +19,7 @@ There are different categories of gas cost in the ParallelChain Mainnet ecosyste
 
 Details about gas can be found in [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Gas.md).
 
-## How are Gas Fees calculated?
+## How are Gas Fees Calculated?
 ---
 
 **Gas Fee** here refers to the amount that is paid with the account's balance for the gas consumed in transaction execution. It can be generalized by the following equation:

@@ -11,6 +11,8 @@ tags:
 For a detailed description of all available commands, execute `pchain_client --help`. 
 
 ## Usage 
+---
+
 ```terminal
 ParallelChain Client CLI 0.4.3
 <ParallelChain Lab>
@@ -35,6 +37,8 @@ SUBCOMMANDS:
 ```
 
 ## Why pchain_client
+---
+
 `pchain_client` allows you to query data from the ParallelChain, submit transactions, and more, all at the comfort of your command line.
 Check out the examples below for details or see the full list of commands. The following document walks through the CLI's essential workflows. 
 
@@ -50,7 +54,9 @@ If you are lost at any step, you can always type `pchain_client --help`.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-## Common use cases
+## Common Use Cases
+---
+
 - [Install and Setup](https://github.com/parallelchain-io/pchain-client-cli#install-and-setup)
   - [Installation](https://github.com/parallelchain-io/pchain-client-cli#installation)
   - [Running pchain_client](https://github.com/parallelchain-io/pchain-client-cli#running-pchain_client)
@@ -72,7 +78,8 @@ If you are lost at any step, you can always type `pchain_client --help`.
   - [Retrieve contract address](https://github.com/parallelchain-io/pchain-client-cli#retrieve-contract-address)
   - [Prepare contract method arguments file](https://github.com/parallelchain-io/pchain-client-cli#prepare-contract-method-arguments-file)
 
-## Opening an issue
+## Opening an Issue
+---
 
 Open an issue in [GitHub](https://github.com/parallelchain-io/pchain-client-cli/issues) if you:
 

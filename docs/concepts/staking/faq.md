@@ -34,7 +34,7 @@ You can withdraw the rewards you have earned from staking by unstaking them to y
 ---
 
 #### Can I move my staked XPLL to another validator?
-Yes, you can. You will need to unstake your XPLL tokens, withdraw them to the Token Deposit, then back to your wallet. You can then transfer those tokens to a Token Deposit with another validator before staking your tokens with them. Please refer to the sections above to move your XPLL to another validator.
+Yes, you can. You will need to unstake your XPLL tokens, withdraw them to the Token Deposit, and then back to your wallet. You can then transfer those tokens to a Token Deposit with another validator before staking your tokens with them. Please refer to the sections above to move your XPLL to another validator.
 
 ---
 
@@ -54,5 +54,5 @@ Depends on the setting of your stake. Your staking rewards will not be automatic
 ---
 
 #### Is there any locking period?
-There is no locking period to stake your XPLL tokens, but the staking duration is measured by epochs. If you stake and unstake within the same epoch, the waiting time is considerably shorter. If the staking and unstaking are not within the same epoch, you will need to wait at least for another two epochs before unstaking.
+There is no locking period to stake your XPLL tokens, but the staking duration is measured by epochs. If you stake and unstake within the same epoch, the waiting time is considerably shorter. If the staking and unstaking are not within the same epoch, you will need to wait for at least another two epochs before unstaking.
 
