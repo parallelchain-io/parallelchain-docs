@@ -82,11 +82,11 @@ You will be asked to input your password to export the keypair. The keypair will
 To add your keypair, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys add --public-key <PUBLIC_KEY> --private-key <PRIAVATE_KEY> --name <NAME>
+    ./pchain_client keys add --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe keys add --public-key <PUBLIC_KEY> --private-key <PRIAVATE_KEY> --name <NAME>
+    pchain_client.exe keys add --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
     ```
 
 You will be asked to input your password to add the new keypair.
@@ -94,31 +94,4 @@ You will be asked to input your password to add the new keypair.
 ## Request for tokens from Faucet (Testnet)
 ---
 
-Right now, you have your keypair (account) to associate with the blockchain. But the account should have an empty balance. You can use the command `curl` to make a token request in the command line.
-
-<!-- ```bash
-curl --location --request POST 'https://testnet4-service01.digital-transaction.net/faucet/request_tokens' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{"address":"<YOUR_ADDRESS>"}'
-``` -->
-
-```bash
-curl --location --request POST <TESTNET_REQUEST_TOKEN_URL> \
-    --header 'Content-Type: application/json' \
-    --data-raw '{"address":"<YOUR_ADDRESS>"}'
-```
-
-> **Note:** TESTNET_REQUEST_TOKEN_RUL will be released soon.
-
-If your request is successfully submitted, it outputs success message:
-
-```text
-"Your token transfer request has been submitted to the queue. It will be processed shortly. Please check your wallet for updated balance in a few minutes."
-```
-
-The token request can only be made once every 30 minutes. You will receive a message if you request again within the time:
-```text
-"You have requested tokens within the last 30 minutes. Please try again later."
-```
-
-The faucet service transfers some tokens to the requesting addresses in the batch. Therefore, it can take up to a few minutes for you to receive your tokens depending on how full is the buffer of requests.
+Right now, you have your keypair (account) to associate with the blockchain. But the account should have an empty balance. You can now request tokens from [Faucet Service](https://faucet.parallelchain.io).

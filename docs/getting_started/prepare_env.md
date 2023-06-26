@@ -67,17 +67,17 @@ After installation of `pchain_client`, you had to update the Mainnet / Testnet e
 
 === "Linux / macOS"
     ```bash
+    # Mainnet
     ./pchain_client config setup --url https://pchain-main-rpc.parallelchain.io
-
-    # for testnet (xx range from 01 to 10)
-    ./pchain_client config setup --url <Testnet URL will be available soon.>
+    # Testnet
+    ./pchain_client config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
 === "Windows"
     ```PowerShell
+    # Mainnet
     pchain_client.exe config setup --url https://pchain-main-rpc.parallelchain.io
-
-    # for testnet (xx range from 01 to 10)
-    pchain_client.exe config setup --url <Testnet URL will be available soon.>
+    # Testnet
+    pchain_client.exe config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
 
 This command will write a `config.toml` file in the folder specified by the environment variable `PCHAIN_CLI_HOME`. It only needs to be executed once.
@@ -87,7 +87,7 @@ Now you can start the journey to play around with `pchain_client`, but there is 
 !!! Tips
     Normally you can always use `space` as a separator, to separate the flag and option passed. Just like what you had done in the setup config.
 
-    But if your value input begins with `-`, the easiest way to input such value is by `=` instead of `space` as a seperator.
+    But if your value input begins with `-`, the easiest way to input such value is by `=` instead of `space` as a separator.
 
     === "Linux / macOS"
         ```bash

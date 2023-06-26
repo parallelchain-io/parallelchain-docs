@@ -20,8 +20,7 @@ The explorer can explore transactions, addresses, information about the network,
 
 To verify that **testnet node** is alive:
 
-<!-- * [http://testnet4-node01.parallelchain.io:40000/](http://testnet4-node01.parallelchain.io:40000/)  -->
-* Testnet URL will be available soon.
+* [https://pchain-test-rpc02.parallelchain.io](https://pchain-test-rpc02.parallelchain.io)
 
 You can use ParallelChain Client (called `pchain_client`) to interact with the `testnet` node.
 
