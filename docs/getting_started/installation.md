@@ -5,7 +5,7 @@ tags:
 
 # Installation
 
-ParallelChain client (`pchain_client`) is a command-line tool that allows you to connect and interact with the ParallelChain Mainnet. `pchain_client` supports both Windows and Linux/macOS. In this tutorial, we will provide you with step-by-step instructions on how to install and use `pchain_client` to transfer tokens, deploy smart contracts, and call contracts.
+ParallelChain client (`pchain_client`) is a command-line tool that allows you to connect and interact with the ParallelChain Mainnet / Testnet. `pchain_client` supports both Windows and Linux/macOS. In this tutorial, we will provide you with step-by-step instructions on how to install and use `pchain_client` to transfer tokens, deploy smart contracts, and call contracts.
 
 ## Installation Instructions
 ---

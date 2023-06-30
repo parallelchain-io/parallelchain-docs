@@ -5,6 +5,10 @@
   --md-primary-fg-color--dark:  #FE6E00;
 }
 
+.md-tabs {
+  background-color: #c05503;
+}
+
 /* devanagari */
 @font-face {
   font-family: 'Poppins';

@@ -7,6 +7,8 @@ tags:
   - faucet
 ---
 
+The guide will walk you through the steps to generate and manage your Mainnet / Testnet account by using `pchain_client`. Alternatively, you can generate account by using [ParallelChain Explorer](https://explorer.parallelchain.io). *Please refer to the [Explorer Account Tutorial](https://parallelchain.io/company/newsroom/explorer-account-tutorial)*.
+
 ## Generating Keypair
 ---
 
@@ -93,5 +95,7 @@ You will be asked to input your password to add the new keypair.
 
 ## Request for tokens from Faucet (Testnet)
 ---
+
+The Faucet Service of our Testnet issues free testing tokens to users to test the blockchain network on Testnet. 
 
 Right now, you have your keypair (account) to associate with the blockchain. But the account should have an empty balance. You can now request tokens from [Faucet Service](https://faucet.parallelchain.io).

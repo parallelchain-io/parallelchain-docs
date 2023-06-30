@@ -1,13 +1,11 @@
-site_name: ParallelChain® Mainnet Documentation
+site_name: ParallelChain Mainnet Documentation
 site_url: https://docs.parallelchain.io
 repo_name: parallelchain-io/parallelchain-docs
 repo_url: https://github.com/parallelchain-io/parallelchain-docs
 copyright: ParallelChain Lab 2023
-extra:
-  homepage: https://www.parallelchain.io/
+
 nav:
   - Introduction:
-    - Welcome to the ParallelChain Mainnet Documentation: index.md
     - What is ParallelChain?: introduction/what_parallelchain.md
     - Why Build on ParallelChain?: introduction/why_parallelchain.md
     - XPLL:
@@ -22,6 +20,7 @@ nav:
     - Gas: concepts/gas.md
     - Mempool: concepts/mempool.md
     - Smart Contract: concepts/smartcontract.md
+    - PRFC: concepts/PRFC.md
     - Staking:
       - What is staking?: concepts/staking/what_is_staking.md
       - How does staking work?: concepts/staking/how_does_staking_work.md
@@ -61,9 +60,6 @@ nav:
     - Prepare Environment: smart_contract_sdk/prepare_env.md
     - Develop Contract: smart_contract_sdk/develop_contract.md
     - Build Contract: smart_contract_sdk/build_contract.md
-    - Token Standard - PRFC-1: smart_contract_sdk/PRFC1.md
-    - Token Standard - PRFC-2: smart_contract_sdk/PRFC2.md
-    - Token Standard - PRFC-3: smart_contract_sdk/PRFC3.md
     - Tutorial:
       - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
       - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
@@ -103,7 +99,6 @@ theme:
   name: material
   custom_dir: overrides
   features:
-    - navigation.expand
     - navigation.indexes
     - navigation.instant
     - navigation.top

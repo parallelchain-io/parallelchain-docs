@@ -3,6 +3,7 @@ tags:
   - ParallelChain 
 ---
 
+# Welcome to the ParallelChain Mainnet Documentation
 
 This documentation website aims to provide you with a comprehensive understanding of the ParallelChain Mainnet ecosystem, including its architecture, programming model, and tools.
 

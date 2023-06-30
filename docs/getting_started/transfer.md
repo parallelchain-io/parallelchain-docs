@@ -5,7 +5,7 @@ tags:
   - testnet
 ---
 
-This guide will walk you through the process of transferring tokens on ParallelChain Mainnet.
+This guide will walk you through the process of transferring tokens on ParallelChain Mainnet / Testnet.
 
 ## Creating Transaction with a Transfer Command
 ---

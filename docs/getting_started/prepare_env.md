@@ -9,7 +9,7 @@ tags:
 ## Setting Environmental Variables
 ---
 
-Specify the location for storing your config and keypair by setting the environmental variable `$PCHAIN_CLI_HOME`.
+Specify the location for storing your config and keypair by setting the environmental variable `PCHAIN_CLI_HOME`.
 
 Always remember the location that you set, if you forget the location, it means you forget where your keypair is being placed.
 
@@ -68,14 +68,14 @@ After installation of `pchain_client`, you had to update the Mainnet / Testnet e
 === "Linux / macOS"
     ```bash
     # Mainnet
-    ./pchain_client config setup --url https://pchain-main-rpc.parallelchain.io
+    ./pchain_client config setup --url https://pchain-main-rpc02.parallelchain.io
     # Testnet
     ./pchain_client config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
 === "Windows"
     ```PowerShell
     # Mainnet
-    pchain_client.exe config setup --url https://pchain-main-rpc.parallelchain.io
+    pchain_client.exe config setup --url https://pchain-main-rpc02.parallelchain.io
     # Testnet
     pchain_client.exe config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
