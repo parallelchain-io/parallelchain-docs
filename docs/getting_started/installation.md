@@ -12,30 +12,30 @@ ParallelChain client (`pchain_client`) is a command-line tool that allows you to
 
 ### Windows 
 
-1. Download the latest release as a compressed file from Assets of ParallelChain Lab's GitHub [release page](https://github.com/parallelchain-io/pchain-client-cli).
+1. Download the latest release as a compressed file from Assets of ParallelChain Lab's GitHub [release page](https://github.com/parallelchain-io/pchain-client-cli/releases).
 2. Unzip the file to extract the executable `pchain_client.exe`.
 3. Open Command Prompt by pressing *WIN+R* and typing `cmd`.
 4. Navigate to the directory where `pchain_client.exe` is located using the `cd` command. For example, if the executable is located at `C:\Development`, type `cd C:\Development`.
-5. Follow the instructions in section [Prepare Environment](prepare_env.md) to get ready for interacting with the blockchain.
+5. Follow the instructions in Section [Prepare Environment](prepare_env.md) to get ready for interacting with the blockchain.
 
 ### Linux / macOS
 
 The installation process for Linux and macOS is similar. To install pchain_client:
 
-1. Download the latest release as a compressed file from Assets of ParallelChain Lab's GitHub [release page](https://github.com/parallelchain-io/pchain-client-cli).
+1. Download the latest release as a compressed file from Assets of ParallelChain Lab's GitHub [release page](https://github.com/parallelchain-io/pchain-client-cli/releases).
 
 2. Head to the directory where the downloaded file is located and extract it using `tar`. For example:
 
     === "Linux"
         ```bash
-        tar -xvf parallelchain-client_v0.4.0_linux.tar.xz
+        tar -xvf pchain_client_linux_v0.4.3.tar.gz 
         ```
     === "macOS"
         ```bash
-        tar -xvf parallelchain-client_v0.4.0_mac.tar.xz
+        tar -xvf pchain_client_mac_v0.4.3.tar.gz 
         ```
 
-3. Follow the instructions in section [Prepare Environment](prepare_env.md) to get ready for interacting with the blockchain.
+3. Follow the instructions in Section [Prepare Environment](prepare_env.md) to get ready for interacting with the blockchain.
 
 
 !!! Tips
