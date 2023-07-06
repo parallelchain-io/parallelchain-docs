@@ -63,7 +63,7 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
     deposit top-up \
     --operator <OPERATOR_ADDRESS> \
-    --balance <BALANCE>
+    --amount <AMOUNT>
     ```
 === "Windows"
     ```PowerShell
@@ -74,7 +74,7 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \ 
     deposit top-up \
     --operator <OPERATOR_ADDRESS> \
-    --balance <BALANCE>
+    --amount <AMOUNT>
     ```
 
 ### Toggling `auto-stake-reward`
