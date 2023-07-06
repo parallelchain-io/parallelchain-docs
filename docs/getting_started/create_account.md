@@ -84,14 +84,14 @@ You will be asked to input your password to export the keypair. The keypair will
 To add your keypair, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys add --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
+    ./pchain_client keys import --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe keys add --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
+    pchain_client.exe keys import --public-key <PUBLIC_KEY> --private-key <PRIVATE_KEY> --name <NAME>
     ```
 
-You will be asked to input your password to add the new keypair.
+You will be asked to input your password to import the new keypair.
 
 ## Request for tokens from Faucet (Testnet)
 ---
