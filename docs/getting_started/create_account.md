@@ -79,7 +79,7 @@ To secure your keypair and money, you must export it and save it somewhere secur
 
 You will be asked to input your password to export the keypair. The keypair will be saved in the current directory, in JSON format, with the same name as the keypair itself.
 
-## Adding Keypair
+## Importing Keypair
 
 To add your keypair, type the following command below:
 === "Linux / macOS"
