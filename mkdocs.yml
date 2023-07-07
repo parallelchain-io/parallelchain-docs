@@ -60,6 +60,8 @@ nav:
     - Prepare Environment: smart_contract_sdk/prepare_env.md
     - Develop Contract: smart_contract_sdk/develop_contract.md
     - Build Contract: smart_contract_sdk/build_contract.md
+    - Deploy Contract: smart_contract_sdk/deploy_contract.md
+    - Call Contract: smart_contract_sdk/call_contract.md
     - Tutorial:
       - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
       - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
@@ -75,7 +77,6 @@ nav:
       - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
       - Crypto: smart_contract_sdk/advance/crypto.md
       - Staking in Contract: smart_contract_sdk/advance/staking.md
-  #   - Deploy Contract:
   # - DApp Development:
   #   #need help
   - Tooling:

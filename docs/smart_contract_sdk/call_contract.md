@@ -22,17 +22,17 @@ Suppose you already deployed a contract that contains a `call` method as follows
     }
 ```
 
-To invoke this contract in the blockchain by using `pchain_client`, you can prepare a JSON file that contains list of arguments and matches with the `call` method. For example, this `call` method takes a string argument. Then, the content of the JSON file should be as follows:
+To invoke this contract in the blockchain by using `pchain_client`, you can prepare a JSON file that contains a list of arguments and matches with the `call` method. For example, this `call` method takes a string argument. Then, the content of the JSON file should be as follows:
 
 ```json
 {
     "arguments": [
-        {"argument_type":"String", "argument_value": "alice"}
+        {"argument_type":"String", "argument_value": "Alice"}
     ]
 }
 ```
 
-This JSON file will be used in subcommand `call` as mentioned the subsequent sections in this page.
+This JSON file will be used in the subcommand `call` as mentioned in the subsequent sections on this page.
 
 ## Calling Contract
 ---
@@ -68,9 +68,9 @@ Here is the command to call a contract:
     --amount <AMOUNT_TO_CONTRACT> \
     ```
 
-The gas limit required for the transaction depends on the complexity of the smart contract. For safety reasons, you can always set a higher gas limit. You can also test contract call on testnet to reassure.
+The gas limit required for the transaction depends on the complexity of the smart contract. For safety reasons, you can always set a higher gas limit. You can also test contract calls on testnet to reassure.
 
-Then you can submit the transaction in the same way as [submitting transfer transaction](./transfer.md#submitting-transaction).
+Then you can submit the transaction in the same way as [submitting transfer transaction](../getting_started/transfer.md#submitting-transaction).
 
 To query the resulting receipt of the transaction, 
 
@@ -88,7 +88,7 @@ The commands stored in `transaction` and command receipts in `receipt` are follo
 ## Parse Call Result
 ---
 
-To parse the response from the contract method, represented in field named `return value` , which is in `CallResult` format, you can use the `parse call-result` command in ParallelChain Client.
+To parse the response from the contract method, represented in the field named `return value` , which is in `CallResult` format, you can use the `parse call-result` command in ParallelChain Client.
 
 For example, if the contract method returns a u32 integer, the `return value` is "BAAAAAUAAAA" you can parse the `CallResult` data structure using the `--data-type u32` flag:
 

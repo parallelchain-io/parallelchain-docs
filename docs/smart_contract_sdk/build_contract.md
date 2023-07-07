@@ -29,7 +29,3 @@ The WASM binary generated from a generic cargo build process has the following d
 
 `pchain_compile` supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from Assets of ParallelChain Lab's Git Hub [release page](https://github.com/parallelchain-io/pchain-compile).
 
-## Deploying Contract
----
-
-Contract deployment requires using the `pchain_client` program. Please see ["Deploy Contract"](../../getting_started/deploy_contract)
