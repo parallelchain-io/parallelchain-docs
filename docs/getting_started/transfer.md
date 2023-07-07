@@ -50,7 +50,7 @@ Next, to transfer tokens from your account to someone else's account using `pcha
     --amount <AMOUNT_TO_TRANSFER>
     ```
 
-A file with the name `tx.json` will be saved in the current directory. If you want to store the transaction file in your preferred location, you need to provide the `destination` flag and specify the path with your preferred file name and JSON extension.
+A file with the name `tx.json` will be saved in the current directory if the `destination` flag is not specified. If you want to store the transaction file in your preferred location, specify the path with your preferred file name and JSON extension under the `destination` flag.
 
 Please note that `max-base-fee-per-gas` had to be at least 8.
 
@@ -60,8 +60,7 @@ Make sure to replace
 - `<GAS_LIMIT>` with the gas limit of the transaction;
 - `<MAX_BASE_FEE_PER_GAS>` with the maximum base fee you want to pay;
 - `<PRIORITY_FEE_PER_GAS>` with the priority fee you want to pay;
-- `<DESTINATION>` with your transaction file destination, with the file name and extension;
-- `<RECEIVER_ACCOUNT_ADDRESS>` with the recipient's account address;
+- `<RECIPIENT_ADDRESS>` with the recipient's account address;
 - `<AMOUNT_TO_TRANSFER>` with the number of tokens you want to transfer;
 
 ## Submitting Transaction

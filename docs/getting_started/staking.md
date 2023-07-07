@@ -24,7 +24,7 @@ First, before you stake, you have to lock up (stake) some balance tied to an ope
     deposit create \
     --operator <OPERATOR_ADDRESS> \
     --balance <BALANCE> \
-    --auto-stake-reward
+    --auto-stake-rewards
     ```
 === "Windows"
     ```PowerShell
@@ -36,14 +36,14 @@ First, before you stake, you have to lock up (stake) some balance tied to an ope
     deposit create \
     --operator <OPERATOR_ADDRESS> \
     --balance <BALANCE> \
-    --auto-stake-reward
+    --auto-stake-rewards
     ```
-The last flag for `auto-stake-reward` is optional. By default, it is false. It indicates whether your rewards should be staked to the Pool in each epoch.
+The last flag for `auto-stake-rewards` is optional. By default, it is false. It indicates whether your rewards should be staked to the Pool in each epoch.
 
 After you create a deposit, you can do follows:
 
 - Top-up the amount of the deposit
-- Update deposit settings (i.e. toggling `auto-stake-reward`)
+- Update deposit settings (i.e. toggling `auto-stake-rewards`)
 - Stake deposit to the pool
 - Withdraw the deposit
 
@@ -77,10 +77,10 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
     --amount <AMOUNT>
     ```
 
-### Toggling `auto-stake-reward`
+### Toggling `auto-stake-rewards`
 ---
 
-You specified the flag `auto-stake-reward` when you created the Deposit. You can change the value of this flag by submitting another transaction using the CLI subcommand `deposit update-settings`.
+You specified the flag `auto-stake-rewards` when you created the Deposit. You can change the value of this flag by submitting another transaction using the CLI subcommand `deposit update-settings`.
 
 === "Linux / macOS"
     ```bash
@@ -91,7 +91,7 @@ You specified the flag `auto-stake-reward` when you created the Deposit. You can
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
     deposit update-settings \
     --operator <OPERATOR_ADDRESS> \
-    --auto-stake-reward
+    --auto-stake-rewards
     ```
 === "Windows"
     ```PowerShell
@@ -102,7 +102,7 @@ You specified the flag `auto-stake-reward` when you created the Deposit. You can
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \ 
     deposit update-settings \
     --operator <OPERATOR_ADDRESS> \
-    --auto-stake-reward
+    --auto-stake-rewards
     ```
 
 ## Staking and Unstaking

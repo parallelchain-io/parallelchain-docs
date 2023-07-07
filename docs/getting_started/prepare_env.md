@@ -83,17 +83,3 @@ After installation of `pchain_client`, you had to update the Mainnet / Testnet e
 This command will write a `config.toml` file in the folder specified by the environment variable `PCHAIN_CLI_HOME`. It only needs to be executed once.
 
 Now you can start the journey to play around with `pchain_client`, but there is still one thing you had to put in mind first.
-
-!!! Tips
-    Normally you can always use `space` as a separator, to separate the flag and option passed. Just like what you had done in the setup config.
-
-    But if your value input begins with `-`, the easiest way to input such value is by `=` instead of `space` as a separator.
-
-    === "Linux / macOS"
-        ```bash
-        # Compare with ./pchain_client query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
-        ./pchain_client query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
-        ```
-    === "Windows"
-        ```PowerShell
-        pchain_client.exe query nonce --address=-az3igx5zALeZzOPE7yQwDiHlOEtqTsj7ALoeLAVkNw
