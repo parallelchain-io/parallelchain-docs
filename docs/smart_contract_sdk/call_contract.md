@@ -9,7 +9,7 @@ tags:
 ## Preparing Contract Method Arguments
 ---
 
-Suppose you already deployed a contract that contains a `call` method as follows:
+Suppose you have already deployed a contract that contains a `call` method as follows:
 
 ```rust
     #[call]

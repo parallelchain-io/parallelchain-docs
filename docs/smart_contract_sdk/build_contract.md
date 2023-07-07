@@ -27,5 +27,5 @@ The WASM binary generated from a generic cargo build process has the following d
 ## Downloading **pchain_compile**
 ---
 
-`pchain_compile` supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from Assets of ParallelChain Lab's Git Hub [release page](https://github.com/parallelchain-io/pchain-compile).
+`pchain_compile` supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from Assets of ParallelChain Lab's Git Hub [release page](https://github.com/parallelchain-io/pchain-compile/releases/tag/v0.4.0).
 
