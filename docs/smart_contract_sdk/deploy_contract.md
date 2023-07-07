@@ -19,7 +19,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
     deploy \
-    --contract-code <CONTRACT_FILE_PATH_WITH_FILE_NAME> \
+    --contract-code <WASM_BINARY_PATH> \
     --cbi-version <CBI_VERSION> 
     ```
 === "Windows"
@@ -30,7 +30,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \ 
     deploy \
-    --contract-code <CONTRACT_FILE_PATH_WITH_FILE_NAME> \
+    --contract-code <WASM_BINARY_PATH> \
     --cbi-version <CBI_VERSION> 
     ```
 

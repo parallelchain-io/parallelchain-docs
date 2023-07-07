@@ -51,7 +51,7 @@ Here is the command to call a contract:
     call \
     --target <CONTRACT_ADDRESS> \   
     --method <contract_METHOD> \
-    --argument <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
+    --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
     --amount <AMOUNT_TO_CONTRACT> \
     ```
 === "Windows"
@@ -64,7 +64,7 @@ Here is the command to call a contract:
     call \
     --target <CONTRACT_ADDRESS> \   
     --method <contract_METHOD> \
-    --argument <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
+    --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
     --amount <AMOUNT_TO_CONTRACT> \
     ```
 
