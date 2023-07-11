@@ -24,6 +24,4 @@ Whether you are a seasoned blockchain developer or just getting started with sma
 ## Contact us
 ---
 
-If you are interested in ParallelChain Mainnet, join our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.gg/parallelchain) to reach out to us.
-
-reach out on us from our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.gg/parallelchain). 
+If you are interested in ParallelChain Mainnet, reach out on us from our [Official Telegram Group](https://t.me/parallelchainofficial) or [Discord channel](https://discord.com/invite/parallelchainofficial). 
