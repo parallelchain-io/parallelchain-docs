@@ -27,7 +27,12 @@ The WASM binary generated from a generic cargo build process has the following d
 ## Downloading **pchain_compile**
 ---
 
-`pchain_compile` supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from Assets of ParallelChain Lab's Git Hub [release page](https://github.com/parallelchain-io/pchain-compile/releases/tag/v0.4.0).
+`pchain_compile` supports Linux, macOS and Windows. Depending on the operating system, they can be downloaded from Assets of ParallelChain Lab's Git Hub [release page](https://github.com/parallelchain-io/pchain-compile/releases).
+
+The binary can also be installed and built by executing the following commands:
+```
+cargo install pchain_compile
+```
 
 !!! Pre-Requisites
     `pchain_compile` builds the source code in a docker environment. To know more about Docker and install it, refer to the [official instructions](https://docs.docker.com/engine/install/).
