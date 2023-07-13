@@ -53,4 +53,10 @@ In order to build a `WASM` binary of the smart contract, run the following comma
     ./pchain_compile.exe build --source <PATH_TO_SMART_CONTRACT_CODE>
     ```
 
+If you installed `pchain_compile` with `cargo install`, you can simply run:
+
+```
+pchain_compile build --source <PATH_TO_SMART_CONTRACT_CODE>
+```
+
 A `.wasm` file will be generated in the current directory. It will be needed for the [next section](./deploy_contract.md).

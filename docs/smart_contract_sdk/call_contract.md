@@ -27,7 +27,7 @@ To invoke this contract in the blockchain by using `pchain_client`, you can prep
 ```json
 {
     "arguments": [
-        {"argument_type":"String", "argument_value": "Alice"}
+        {"argument_type":"String", "argument_value": "\"Alice\""}
     ]
 }
 ```
