@@ -9,7 +9,7 @@ tags:
 ## Setting Environmental Variables
 ---
 
-Specify the location for storing your config and keypair by setting the environmental variable `PCHAIN_CLI_HOME`.
+Specify the location of the directory for storing your config and keypair by setting the environmental variable `PCHAIN_CLI_HOME`. 
 
 Always remember the location that you set, if you forget the location, it means you forget where your keypair is being placed.
 
@@ -20,16 +20,19 @@ The following command will set the environmental variable **temporarily**:
 
 === "Linux / macOS"
     ```bash
-    export PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    # For example, "/home/user/pchain_cli_home"
+    export PCHAIN_CLI_HOME="<PATH_TO_DIRECTORY>"
     ```
 === "Windows PowerShell"
     ```PowerShell
-    $Env:PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    # For example, "C:\Users\user\pchain_cli_home"
+    $Env:PCHAIN_CLI_HOME="<PATH_TO_DIRECTORY>"
     ```
 === "Windows Command Prompt"
     ```PowerShell
+    # For example, C:\Users\user\pchain_cli_home
     # No parentheses required
-    set PCHAIN_CLI_HOME=<PATH_TO_CONFIG>
+    set PCHAIN_CLI_HOME=<PATH_TO_DIRECTORY>
     ```
 
 For convenience reasons, you may alternatively want to set environmental **permanently**. Even in that case, we still suggest you remember the storage location.
@@ -41,11 +44,11 @@ The following command will set the environmental variable **permanently**:
     ##########################################################
     ## Append this line to $Home/.bashrc and $Home/.profile ##
     ##########################################################
-    export PCHAIN_CLI_HOME="<PATH_TO_CONFIG>"
+    export PCHAIN_CLI_HOME="<PATH_TO_DIRECTORY>"
     ```
 === "Windows (restart shell to pick up change)"
     ```PowerShell
-    setx PCHAIN_CLI_HOME "<PATH_TO_CONFIG>"
+    setx PCHAIN_CLI_HOME "<PATH_TO_DIRECTORY>"
     ```
 
 ## Creating Password
