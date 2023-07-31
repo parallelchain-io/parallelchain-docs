@@ -44,28 +44,28 @@ Here is the command to call a contract:
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
-    --nonce <NONCE> \ 
+    --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
     call \
-    --target <CONTRACT_ADDRESS> \   
+    --target <CONTRACT_ADDRESS> \
     --method <contract_METHOD> \
     --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
     --amount <AMOUNT_TO_CONTRACT> \
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe transaction create \
-    --nonce <NONCE> \ 
-    --gas-limit <GAS_LIMIT> \
-    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
-    call \
-    --target <CONTRACT_ADDRESS> \   
-    --method <contract_METHOD> \
-    --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
-    --amount <AMOUNT_TO_CONTRACT> \
+    ./pchain_client.exe transaction create `
+    --nonce <NONCE> `
+    --gas-limit <GAS_LIMIT> `
+    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
+    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
+    call `
+    --target <CONTRACT_ADDRESS> `
+    --method <contract_METHOD> `
+    --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME> `
+    --amount <AMOUNT_TO_CONTRACT>
     ```
 
 The gas limit required for the transaction depends on the complexity of the smart contract. For safety reasons, you can always set a higher gas limit. You can also test contract calls on testnet to reassure.
@@ -80,7 +80,7 @@ To query the resulting receipt of the transaction,
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe query tx --hash <TRANSACTION_HASH>
+    ./pchain_client.exe query tx --hash <TRANSACTION_HASH>
     ```
 
 The commands stored in `transaction` and command receipts in `receipt` are following the same order. That means you can always find the corresponding transaction from a command receipt.
@@ -98,7 +98,7 @@ For example, if the contract method returns a u32 integer, the `return value` is
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe parse call-result --value BAAAAAUAAAA --data-type u32
+    ./pchain_client.exe parse call-result --value BAAAAAUAAAA --data-type u32
     ```
 
 The output will be the parsed value of the `CallResult`, which in this case is `4`. For more details, you can use the `help` command to see the usage of the tool or take a look at the example `argument,json`.

@@ -78,9 +78,9 @@ After installation of `pchain_client`, you had to update the Mainnet / Testnet e
 === "Windows"
     ```PowerShell
     # Mainnet
-    pchain_client.exe config setup --url https://pchain-main-rpc02.parallelchain.io
+    ./pchain_client.exe config setup --url https://pchain-main-rpc02.parallelchain.io
     # Testnet
-    pchain_client.exe config setup --url https://pchain-test-rpc02.parallelchain.io
+    ./pchain_client.exe config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
 
 This command will write a `config.toml` file in the folder specified by the environment variable `PCHAIN_CLI_HOME`. It only needs to be executed once.

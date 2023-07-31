@@ -18,7 +18,7 @@ To create a transaction, you first need to know the `nonce` of your account, whi
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe query nonce --address <YOUR_ACCOUNT_ADDRESS>
+    ./pchain_client.exe query nonce --address <YOUR_ACCOUNT_ADDRESS>
     ```
 When you run this command, you'll see the output of your account's `nonce` value, like this:
 ```bash
@@ -30,7 +30,7 @@ Next, to transfer tokens from your account to someone else's account using `pcha
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
-    --nonce <NONCE> \ 
+    --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
@@ -40,13 +40,13 @@ Next, to transfer tokens from your account to someone else's account using `pcha
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe transaction create \
-    --nonce <NONCE> \ 
-    --gas-limit <GAS_LIMIT> \
-    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \ 
-    transfer \
-    --recipient <RECIPIENT_ADDRESS> \
+    ./pchain_client.exe transaction create `
+    --nonce <NONCE> `
+    --gas-limit <GAS_LIMIT> `
+    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
+    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
+    transfer `
+    --recipient <RECIPIENT_ADDRESS> `
     --amount <AMOUNT_TO_TRANSFER>
     ```
 
@@ -89,7 +89,7 @@ You can check the transaction status using `pchain_client` with the following co
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe query tx --hash <TRANSACTION_HASH>
+    ./pchain_client.exe query tx --hash <TRANSACTION_HASH>
     ```
 
 Make sure to replace `<TRANSACTION_HASH>` with the transaction hash that you want to check.
@@ -109,10 +109,10 @@ You may append an extra transfer transaction with `pchain_client`. After creatin
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe transaction append \
-    --file <PATH_TO_TRANSACTION_FILE>
-    transfer \
-    --recipient <RECIPIENT_ADDRESS> \
+    ./pchain_client.exe transaction append `
+    --file <PATH_TO_TRANSACTION_FILE> `
+    transfer `
+    --recipient <RECIPIENT_ADDRESS> `
     --amount <AMOUNT_TO_TRANSFER>
     ```
 
