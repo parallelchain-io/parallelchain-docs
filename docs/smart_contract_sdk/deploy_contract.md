@@ -14,7 +14,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create
-    --nonce <NONCE> \ 
+    --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
     --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
@@ -24,11 +24,11 @@ You can deploy the contract using the pchain_client command line tool. You shoul
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe transaction create
-    --nonce <NONCE> \ 
+    ./pchain_client.exe transaction create
+    --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \ 
+    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
     deploy \
     --contract-code <WASM_BINARY_PATH> \
     --cbi-version <CBI_VERSION> 
@@ -48,5 +48,5 @@ If you want to store the contract file in your preferred location, you need to p
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe query contract --address <CONTRACT_ADDRESS>
+    ./pchain_client.exe query contract --address <CONTRACT_ADDRESS>
     ```

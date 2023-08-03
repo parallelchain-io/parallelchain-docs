@@ -19,7 +19,7 @@ To create an account, type the following command below:
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe keys create --name <NAME>
+    ./pchain_client.exe keys create --name <NAME>
     ```
 
 You will be asked to input your password to save the new keypair.
@@ -52,7 +52,7 @@ You can check the account balance using the account address (public key).
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe query balance --address <PUBLIC_KEY>
+    ./pchain_client.exe query balance --address <PUBLIC_KEY>
     ```
 <details><summary>Terminal Output</summary>
 ```bash
@@ -74,7 +74,7 @@ To secure your keypair and money, you must export it and save it somewhere secur
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe keys export --name <NAME>
+    ./pchain_client.exe keys export --name <NAME>
     ```
 
 You will be asked to input your password to export the keypair. The keypair will be saved in the current directory, in JSON format, with the same name as the keypair itself.
@@ -88,7 +88,7 @@ To add your keypair, type the following command below:
     ```
 === "Windows"
     ```PowerShell
-    pchain_client.exe keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
+    ./pchain_client.exe keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
     ```
 
 You will be asked to input your password to import the new keypair.
