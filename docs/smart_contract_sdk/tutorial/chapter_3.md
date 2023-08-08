@@ -48,6 +48,15 @@ deserialize the result and return an `Option`.
 `set_bank_account()` stores the given key-value pair in the storage using 
 `pchain_sdk::storage::set()`.
 
+
+We are using **BorshDeserialize** and **BorshSerialize** in the above code, so remember to update
+the Cargo.toml by adding the **borsh** crate. We need the **base64** crate for encoding the account_id
+too. Therefore, add the following two lines under the dependencies section in Cargo.toml:
+
+- base64 = "0.13"
+- borsh = "=0.10.2"
+
+
 ### bank_account.rs: accessing storage
 ```rust
 pub fn get_bank_account(key: &[u8]) -> Option<BankAccount> {
