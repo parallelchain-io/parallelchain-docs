@@ -28,12 +28,6 @@ The following command will set the environmental variable **temporarily**:
     # For example, "C:\Users\user\pchain_cli_home"
     $Env:PCHAIN_CLI_HOME="<PATH_TO_DIRECTORY>"
     ```
-=== "Windows Command Prompt"
-    ```PowerShell
-    # For example, C:\Users\user\pchain_cli_home
-    # No parentheses required
-    set PCHAIN_CLI_HOME=<PATH_TO_DIRECTORY>
-    ```
 
 For convenience reasons, you may alternatively want to set environmental **permanently**. Even in that case, we still suggest you remember the storage location.
 

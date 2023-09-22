@@ -14,7 +14,7 @@ ParallelChain client (`pchain_client`) is a command-line tool that allows you to
 
 1. Download the latest release as a compressed file from Assets of ParallelChain Lab's GitHub [release page](https://github.com/parallelchain-io/pchain-client-cli/releases).
 2. Unzip the file to extract the executable `pchain_client.exe`.
-3. Open Command Prompt by pressing *WIN+R* and typing `cmd`.
+3. Open Powershell by pressing *WIN+R* and typing `powershell`.
 4. Navigate to the directory where `pchain_client.exe` is located using the `cd` command. For example, if the executable is located at `C:\Development`, type `cd C:\Development`.
 5. Follow the instructions in Section [Prepare Environment](prepare_env.md) to get ready for interacting with the blockchain.
 
