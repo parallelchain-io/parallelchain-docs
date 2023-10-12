@@ -93,6 +93,8 @@ nav:
       - Create Transaction: toolings/pchain_cli/transaction.md
       - Query: toolings/pchain_cli/query.md
       - Smart Contract: toolings/pchain_cli/smart_contract.md
+  - Wallet Browser Extension:
+    - Extension Provider API: wallet_browser_extension/provider.md
 
 extra_css:
   - stylesheets/extra.css
