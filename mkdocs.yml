@@ -94,7 +94,14 @@ nav:
       - Query: toolings/pchain_cli/query.md
       - Smart Contract: toolings/pchain_cli/smart_contract.md
   - Wallet Browser Extension:
-    - Extension Provider API: wallet_browser_extension/provider.md
+    - Introduction: wallet_browser_extension/intro.md
+    - Extension Provider API: 
+      - Introduction: wallet_browser_extension/provider/intro.md
+      - Definition: wallet_browser_extension/provider/definition.md
+      - API Documentation: wallet_browser_extension/provider/api_documentation.md
+      - Error: wallet_browser_extension/provider/error.md
+      - Event: wallet_browser_extension/provider/event.md
+      - Permission: wallet_browser_extension/provider/permission.md
 
 extra_css:
   - stylesheets/extra.css
