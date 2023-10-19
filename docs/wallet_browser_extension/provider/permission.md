@@ -32,3 +32,15 @@ interface Permission {
 - The caveats array represents the specific restrictions applied to the permitted method.
 - The type of a `Caveat` is a string, and the `value` is an arbitrary JSON value.
 - The value of a `Caveat` is only meaningful in the context of the type of the `Caveat`.
+
+## Request Permission
+
+Request permission to access the user's accounts.
+
+Check out the API documentation [Request Permissions](./api_documentation.md#request-permission) for details.
+
+## Get Permissions
+
+Get all permissions granted to the wallet.
+
+Check out the API documentation for [Get Permissions](./api_documentation.md#get-permissions) for details.

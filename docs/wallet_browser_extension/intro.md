@@ -26,19 +26,31 @@ It allows your DApp to interact with your DApp users' XPLL accounts and make sma
 
 #### Chrome
 
-1. Chrome users can only install an approved extension via Chrome Web Store.
-   For the time being, download the `parallelchain_wallet_extension-0.0.1-chromium.zip` file.
+##### Chrome Web Store
+
+Chrome users can install extension via Chrome Web Store.
+
+##### Manual Installation
+
+1. Download the `parallelchain_wallet_extension-0.0.1-chromium.zip` file.
 2. Unzip it into a folder.
-3. Follow the instructions here to load your extension and load the folder when prompted.
-   https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+3. Follow the [instructions here][1] to load your extension and load the folder when prompted.
+
+[1]: https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
 #### Firefox
 
-1. Firefox users can only install an extension that has been verified and "signed" by Mozilla.
-   For the time being, download the `parallelchain_wallet_extension-0.0.1-firefox.zip` file.
+##### Firefox Add-ons
+
+Firefox users can install extension via Firefox Add-ons.
+
+##### Manual Installation
+
+1. Download the `parallelchain_wallet_extension-0.0.1-firefox.zip` file.
 2. Unzip it into a folder.
-3. Follow the instructions here to load your extension and load the `manifest.json` in the folder when prompted.
-   https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
+3. Follow the [instructions here][2] to load your extension and load the `manifest.json` in the folder when prompted.
+
+[2]: https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
 
 ## FAQ
 

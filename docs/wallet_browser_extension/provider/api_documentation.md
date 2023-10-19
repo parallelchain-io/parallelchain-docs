@@ -48,6 +48,79 @@ To improve the developer experience,
 the provider also implemented a list of helper functions,
 which helps the user simplify the RPC method call.
 
+## Request Permission
+
+Request [permission][4] to access the user's accounts.
+
+!!! warning
+    The request causes a popup to appear.
+    You should only request permissions in response to a direct user action, such as a button click.
+
+!!! failure
+    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+
+```ts
+interface Permission {
+  id: string;
+  invoker: string;
+  parent_capability: string;
+  caveats: {
+    type: string;
+    value?: unknown;
+  }[];
+  created_at: number;
+}
+interface RequestPermissionRequest {
+  method: "request_permissions";
+}
+type RequestedPermissionResult = Permission;
+```
+
+=== "RPC"
+    ```js
+    window.xpll.request({
+      method: "request_permissions";
+    });
+    ```
+
+=== "Helper Function"
+    ```js
+    window.xpll.requestPermissions();
+    ```
+
+## Get Permissions
+
+Get all permissions granted to the wallet.
+
+```ts
+interface Permission {
+  id: string;
+  invoker: string;
+  parent_capability: string;
+  caveats: {
+    type: string;
+    value?: unknown;
+  }[];
+  created_at: number;
+}
+interface GetPermissionsRequest {
+  method: "get_permissions";
+}
+type GetPermissionsResult = Permission[];
+```
+
+=== "RPC"
+    ```js
+    window.xpll.request({
+      method: "get_permissions";
+    });
+    ```
+
+=== "Helper Function"
+    ```js
+    window.xpll.getPermissions();
+    ```
+
 ## Get Accounts
 
 Get the list of [addresses][3] for the accounts owned by the user.
@@ -64,8 +137,6 @@ interface GetAccountsRequest {
 
 type GetAccountsResult = string[];
 ```
-
-### Example of usage
 
 === "RPC"
     ```js
@@ -95,8 +166,6 @@ interface GetActiveAccountRequest {
 type GetActiveAccountResult = string | undefined;
 ```
 
-### Example of usage
-
 === "RPC"
     ```js
     window.xpll.request({
@@ -124,8 +193,6 @@ interface GetActiveAccountBalanceRequest {
 }
 type GetActiveAccountBalanceResult = string;
 ```
-
-### Example of usage
 
 === "RPC"
     ```js
@@ -181,8 +248,6 @@ interface TransactionSummary {
 type GetActiveAcconutLatestTransactionsResult = TransactionSummary[];
 ```
 
-### Example of usage
-
 === "RPC"
     ```js
     window.xpll.request({
@@ -213,8 +278,6 @@ interface GetCurrentNetworkRequest {
 type GetCurrentNetworkResult = string | undefined;
 ```
 
-### Example of usage
-
 === "RPC"
     ```js
     window.xpll.request({
@@ -225,83 +288,6 @@ type GetCurrentNetworkResult = string | undefined;
 === "Helper Function"
     ```js
     window.xpll.getCurrentNetwork();
-    ```
-
-## Request Permission
-
-Request [permission][4] to access the user's accounts.
-
-!!! warning
-    The request causes a popup to appear.
-    You should only request permissions in response to a direct user action, such as a button click.
-
-!!! failure
-    If user reject the request, the `User Rejected Request 4001` error will be thrown.
-
-```ts
-interface Permission {
-  id: string;
-  invoker: string;
-  parent_capability: string;
-  caveats: {
-    type: string;
-    value?: unknown;
-  }[];
-  created_at: number;
-}
-interface RequestPermissionRequest {
-  method: "request_permissions";
-}
-type RequestedPermissionResult = Permission;
-```
-
-### Example of usage
-
-=== "RPC"
-    ```js
-    window.xpll.request({
-      method: "request_permissions";
-    });
-    ```
-
-=== "Helper Function"
-    ```js
-    window.xpll.requestPermissions();
-    ```
-
-## Get Permissions
-
-Get all permissions granted to the wallet.
-
-```ts
-interface Permission {
-  id: string;
-  invoker: string;
-  parent_capability: string;
-  caveats: {
-    type: string;
-    value?: unknown;
-  }[];
-  created_at: number;
-}
-interface GetPermissionsRequest {
-  method: "get_permissions";
-}
-type GetPermissionsResult = Permission[];
-```
-
-### Example of usage
-
-=== "RPC"
-    ```js
-    window.xpll.request({
-      method: "get_permissions";
-    });
-    ```
-
-=== "Helper Function"
-    ```js
-    window.xpll.getPermissions();
     ```
 
 ## Send Token
@@ -340,8 +326,6 @@ interface SendTokenRequest {
 }
 export type SendTokenResult = string; // transaction hash
 ```
-
-### Example of usage
 
 === "RPC"
     ```js
@@ -411,8 +395,6 @@ interface CallContractRequest {
 }
 export type CallContractResult = string; // transaction hash
 ```
-
-### Example of usage
 
 === "RPC"
     ```js
