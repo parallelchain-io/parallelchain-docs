@@ -90,7 +90,7 @@ type RequestedPermissionResult = Permission;
 
 ## Get Permissions
 
-Get all permissions granted to the wallet.
+Returns all permissions that has been granted to the wallet.
 
 ```ts
 interface Permission {
@@ -371,6 +371,110 @@ return the transaction hash if the request is successful.
     The request causes a popup to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
+### Arguments Serialization
+
+The arguments of the contract's method should be serialized as [Uint8Array][6]
+before passing to the `call_contract` method.
+
+The primitive types are serialized based on [Borsh binary serialization format][7],
+we can using the library [borsh-js][10] to help us serialize the arguments.
+
+The address is base64 encoded string, 
+for more details about base64 serialization, please check [MDN][9].
+
+The option type is also based on [Borsh binary serialization format][7],
+for instance, the `Option<PublicAddress>` is serialized as:
+
+```js
+const address = 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs'; 
+const addressBytes = new TextEncoder().encode(address); // PublicAddress
+const optionBytes = new Uint8Array([1, ...addressBytes]); // Option<PublicAddress>
+```
+
+The following example shows how to serialize the arguments,
+Assume that you want to call the [transfer_from][8] method 
+of the `mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8` PRFC1 contract.
+
+```js
+import * as borsh from 'borsh';
+
+// PublicAddress
+const fromAddress = 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY';
+// Option<PublicAddress>
+const toAddress = 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs'; 
+// u64
+const value = '0.001'; 
+
+// helper functions for serialization
+const base64ToBytes = (text) => new TextEncoder().encode(text);
+const option = (bytes) => new Uint8Array([1, ...bytes]);
+
+window.xpll.request({
+    method: 'call_contract',
+    params: {
+        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        method: 'transfer_from',
+        args: [
+            base64ToBytes(fromAddress),
+            option(base64ToBytes(toAddress)),
+            borsh.serialize('u64', value),
+        ],
+    }
+});
+```
+
+Sometimes, it's hard to serialize the arguments by yourself,
+so the provider also provides a handy way to help you serialize the arguments,
+by passing the arguments as an array of objects mentioned below.
+
+```ts
+interface UintArgument {
+    type: 'u8' | 'u16' | 'u32' | 'u64' | 'u128';
+    value: string | number;
+}
+
+interface IntArgument {
+    type: 'i8' | 'i16' | 'i32' | 'i64' | 'i128';
+    value: string | number;
+}
+
+interface FloatArgument {
+    type: 'f32' | 'f64';
+    value: string | number;
+}
+
+interface BoolArgument {
+    type: 'bool';
+    value: boolean;
+}
+
+interface StringArgument {
+    type: 'string';
+    value: string;
+}
+interface Base64Argument {
+    type: 'base64';
+    value: string;
+}
+```
+
+The following example shows how to serialize the arguments,
+
+```js
+window.xpll.request({
+    method: 'call_contract',
+    params: {
+        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        method: 'transfer_from',
+        args: [
+            { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
+            { type: 'base64', value: 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs' },
+            { type: 'u64', value: '0.001' }
+        ],
+    }
+});
+```
+
 ```ts
 interface CallContractRequest {
   method: "call_contract";
@@ -399,27 +503,29 @@ export type CallContractResult = string; // transaction hash
 === "RPC"
     ```js
     window.xpll.request({
-      method: "call_contract",
-      params: {
-        address: "5-2azL_uWn26A46pJ4OoY-Aqlov5w8tL4vqhbetX9gE",
-        method: "transfer",
-        args: [
-          { type: "address", value: "FOg6_UOmsPRs4KOECp3G2UoSS1sUQQH8NSgNa_IkQ_8" },
-          { type: "amount", value: "1" },
-        ],
-      },
+        method: 'call_contract',
+        params: {
+            address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+            method: 'transfer_from',
+            args: [
+                { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
+                { type: 'base64', value: 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs' },
+                { type: 'u64', value: '0.001' }
+            ],
+        }
     });
     ```
 
 === "Helper Function"
     ```js
     window.xpll.callContract({
-      address: "5-2azL_uWn26A46pJ4OoY-Aqlov5w8tL4vqhbetX9gE",
-      method: "transfer",
-      args: [
-        { type: "address", value: "FOg6_UOmsPRs4KOECp3G2UoSS1sUQQH8NSgNa_IkQ_8" },
-        { type: "amount", value: "1" },
-      ],
+        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        method: "transfer_from",
+        args: [
+            { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
+            { type: 'base64', value: 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs' },
+            { type: 'u64', value: '0.001' }
+        ],
     });
     ```
 
@@ -428,3 +534,9 @@ export type CallContractResult = string; // transaction hash
 [3]: ./definition.md#address
 [4]: ./permission.md
 [5]: /introduction/xpll/what_is_xpll/#denomination
+[6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
+[7]: https://borsh.io/
+[8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
+[9]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
+[10]: https://github.com/near/borsh-js
+
