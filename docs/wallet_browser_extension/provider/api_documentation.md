@@ -352,7 +352,7 @@ export type SendTokenResult = string; // transaction hash
 
 ## Call Contract
 
-Transfer tokens to another account,
+Call the method except the view method of the contract,
 return the transaction hash if the request is successful.
 
 ### Params
