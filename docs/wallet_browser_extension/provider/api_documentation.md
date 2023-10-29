@@ -371,6 +371,10 @@ return the transaction hash if the request is successful.
     The request causes a popup to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
+
+!!! failure
+    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+
 ### Arguments Serialization
 
 The arguments of the contract's method should be serialized as [Uint8Array][6]
@@ -529,11 +533,58 @@ export type CallContractResult = string; // transaction hash
     });
     ```
 
+## Watch Asset
+
+Allow developer to suggest a token for the user’s wallet to track.
+
+### Params
+
+- `type`: The type string is the commonly accepted name of the interface implemented by the asset’s contract, e.g. PRFC1.
+- `address`: The [address][3] of the contract.
+
+!!! warning
+    The request causes a popup to appear.
+    You should only request permissions in response to a direct user action, such as a button click.
+
+!!! failure
+    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+
+
+```ts
+interface WatchAssetRequest {
+    method: "watch_asset";
+    params: {
+        type: "PRFC1";
+        address: string;
+    };
+}
+type WatchAssetResult = boolean;
+```
+
+=== "RPC"
+    ```js
+    window.xpll.request({
+        method: 'watch_asset',
+        params: {
+            type: 'PRFC1',
+            address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw'
+        }
+    });
+    ```
+
+=== "Helper Function"
+    ```js
+    window.xpll.watchAsset({
+        type: 'PRFC1',
+        address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw'
+    });
+    ```
+
 [1]: ./definition.md#remote-procedure-call-rpc
 [2]: ./error.md
 [3]: ./definition.md#address
 [4]: ./permission.md
-[5]: /introduction/xpll/what_is_xpll/#denomination
+[5]: ../../introduction/xpll/what_is_xpll.md#denomination
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 [7]: https://borsh.io/
 [8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
