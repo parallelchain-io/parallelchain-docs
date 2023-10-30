@@ -192,7 +192,7 @@ Your Deposit can be increased due to reward distribution in each epoch. If you w
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client transaction create
+    ./pchain_client transaction create \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
