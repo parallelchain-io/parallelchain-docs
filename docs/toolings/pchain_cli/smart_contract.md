@@ -17,9 +17,15 @@ After you deploy the contract in a transaction, you should receive the contract 
 You need to provide the account address and nonce when deploying the contract.
 
 Command:
-```sh
-pchain_client parse contract-address --address <ADDRESS> --nonce <NONCE>
-```
+
+=== "Linux / macOS"
+    ```bash
+    ./pchain_client parse contract-address --address <ADDRESS> --nonce <NONCE>
+    ```
+=== "Windows PowerShell"
+    ```PowerShell
+    ./pchain_client.exe parse contract-address --address <ADDRESS> --nonce <NONCE>
+    ```
 
 ### Prepare Contract Method Arguments File
 When you make a contract call that modifies or views state, the contract method may expect arguments. You need to provide arguments by JSON file(.json) with `transaction create call` or `query view` commands.

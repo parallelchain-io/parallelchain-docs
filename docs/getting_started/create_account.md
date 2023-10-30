@@ -17,7 +17,7 @@ To create an account, type the following command below:
     ```bash
     ./pchain_client keys create --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys create --name <NAME>
     ```
@@ -30,7 +30,7 @@ This command generates a set of ed25519_dalek-compatible keys. A keypair file in
     ```bash
     ./pchain_client keys list
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys list
     ```
@@ -50,7 +50,7 @@ You can check the account balance using the account address (public key).
     ```bash
     ./pchain_client query balance --address <PUBLIC_KEY>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe query balance --address <PUBLIC_KEY>
     ```
@@ -72,7 +72,7 @@ To secure your keypair and money, you must export it and save it somewhere secur
     ```bash
     ./pchain_client keys export --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys export --name <NAME>
     ```
@@ -86,7 +86,7 @@ To add your keypair, type the following command below:
     ```bash
     ./pchain_client keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
     ```
