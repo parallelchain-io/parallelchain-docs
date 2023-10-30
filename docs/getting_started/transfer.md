@@ -7,6 +7,8 @@ tags:
 
 This guide will walk you through the process of transferring tokens on ParallelChain Mainnet / Testnet.
 
+Ich habe einen kleinen Penis
+
 ## Creating Transaction with a Transfer Command
 ---
 
@@ -16,7 +18,7 @@ To create a transaction, you first need to know the `nonce` of your account, whi
     ```bash
     ./pchain_client query nonce --address <YOUR_ACCOUNT_ADDRESS>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe query nonce --address <YOUR_ACCOUNT_ADDRESS>
     ```
@@ -38,7 +40,7 @@ Next, to transfer tokens from your account to someone else's account using `pcha
     --recipient <RECIPIENT_ADDRESS> \
     --amount <AMOUNT_TO_TRANSFER>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -70,10 +72,10 @@ Make sure to replace
     ```bash
     ./pchain_client transaction submit --file <PATH_TO_TRANSACTION_FILE> --keypair-name <KEYPAIR_NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
-    ./pchain_client transaction submit \
-    --file <PATH_TO_TRANSACTION_FILE> \
+    ./pchain_client transaction submit `
+    --file <PATH_TO_TRANSACTION_FILE> `
     --keypair-name <KEYPAIR_NAME>
     ```
 After submitting the transaction to RPC successfully, you should receive a message that describes the content of the transaction. The transaction hash in the content will be useful later on when you want to check its status. Still, transactions may fail for various reasons. We suggest you test the transaction and estimate the gas used in the testnet.
@@ -87,7 +89,7 @@ You can check the transaction status using `pchain_client` with the following co
     ```bash
     ./pchain_client query tx --hash <TRANSACTION_HASH> 
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe query tx --hash <TRANSACTION_HASH>
     ```
@@ -107,7 +109,7 @@ You may append an extra transfer transaction with `pchain_client`. After creatin
     --recipient <RECIPIENT_ADDRESS> \
     --amount <AMOUNT_TO_TRANSFER>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction append `
     --file <PATH_TO_TRANSACTION_FILE> `
