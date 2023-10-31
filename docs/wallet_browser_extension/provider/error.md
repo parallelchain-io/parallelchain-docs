@@ -20,9 +20,8 @@ interface XPLLProviderRpcError extends Error {
 ```
 
 !!! tip
-The `XPLLProviderRpcError` is inherited from native [`Error`][error] object.
-Since Error is a serializable object,
-so it can be cloned with [structuredClone()][structuredClone] or copied between [Workers][worker] using [postMessage()][postMessage].
+`XPLLProviderRpcError` is inherited from the native [`Error`][error] object.
+Since `Error` is a serializable object, it can be cloned with [structuredClone()][structuredClone] or copied between [Workers][worker] using [postMessage()][postMessage].
 
 ## Provider Errors
 

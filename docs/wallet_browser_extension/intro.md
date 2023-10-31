@@ -1,20 +1,19 @@
 # ParallelChain Wallet Extension
 
-ParallelChain Wallet Extension is an extension for managing your XPLL and integrating your DApp.
-It allows your DApp to interact with your DApp users' XPLL accounts and make smart contract calls through the extension.
+ParallelChain Wallet Extension is a browser extension that allows you to integrate your [dapp](./definition.md#provider) ( with [ParallelChain Wallet](../concepts/wallet.md).
 
-## Features
+This enables your dapp to interact with your dapp users' XPLL accounts, to:
 
-- Browser extension
-  - Sending transactions
-  - Staking
-  - Triggering confirmation for smart contract or send token calls
-- [ParallelChain wallet provider API](./provider/intro.md)
+- Send [transactions](../concepts/transaction.md#transaction)
+  - [Stake](../concepts/staking/what_is_staking.md) XPLL
+- Trigger confirmation for [smart contract](../concepts/smartcontract.md) calls 
+
+Start by reading about the [ParallelChain Wallet Provider API](./provider/intro.md).
 
 ## Supported Platforms
 
-- Chrome Browser (Minimum version: Chrome 57)
-- Firefox Browser (Minimum version: Firefox 57.0)
+- Chrome browser (Minimum version: Chrome 57)
+- Firefox browser (Minimum version: Firefox 57.0)
 
 ## Getting Started
 
@@ -28,13 +27,13 @@ It allows your DApp to interact with your DApp users' XPLL accounts and make sma
 
 ##### Chrome Web Store
 
-Chrome users can install extension via Chrome Web Store.
+Chrome users can install the extension via the Chrome Web Store.
 
 ##### Manual Installation
 
-1. Download the `parallelchain_wallet_extension-0.0.1-chromium.zip` file.
-2. Unzip it into a folder.
-3. Follow the [instructions here][1] to load your extension and load the folder when prompted.
+1. Download `parallelchain_wallet_extension-0.0.1-chromium.zip`.
+2. Unzip the file into a folder.
+3. Follow the [instructions here][1] to load the extension. Load the folder when prompted.
 
 [1]: https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
@@ -42,23 +41,22 @@ Chrome users can install extension via Chrome Web Store.
 
 ##### Firefox Add-ons
 
-Firefox users can install extension via Firefox Add-ons.
+Firefox users can install the extension via Firefox Add-ons.
 
 ##### Manual Installation
 
-1. Download the `parallelchain_wallet_extension-0.0.1-firefox.zip` file.
-2. Unzip it into a folder.
-3. Follow the [instructions here][2] to load your extension and load the `manifest.json` in the folder when prompted.
+1. Download `parallelchain_wallet_extension-0.0.1-firefox.zip`.
+2. Unzip the file into a folder.
+3. Follow the [instructions here][2] to load the extension. Load `manifest.json` in the folder when prompted.
 
 [2]: https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
 
 ## FAQ
 
-### After installing the extension, I am still not able to access `window.xpll` in my browser or DApp.
+### After installing the extension, I am still not able to access `window.xpll` in my browser or dapp.
 
-Try refreshing the webpage and make sure the website is a valid http or https website.
-Restricted sites like `chrome://extensions/` or `about:debugging` would not be able to access the injected API.
+Try refreshing the webpage and make sure the website is a valid http or https website. Restricted sites like `chrome://extensions/` or `about:debugging` will not be able to access the injected API.
 
-### After pressing the extension icon, nothing happens.
+### After clicking the extension icon, nothing happens.
 
-If this is your first time setting up the wallet, a separate notification window will appear. The notification window may appear on other screens if you are using multiple screens.
+If this is your first time setting up the wallet, a separate notification window will appear. If you are using multiple screens, check if the notification window has appeared on another screen.

@@ -7,7 +7,7 @@ tags:
 
 # Events
 
-The provider be implemented per the Node.js [EventEmitter][eventemitter] API
+The Provider will be implemented per the Node.js [EventEmitter][eventemitter] API
 with the following event handling methods:
 
 - `on`
@@ -23,9 +23,9 @@ with the following event handling methods:
 function handleActiveAccountChanged(accountAddress) {
   // handle active account
 }
-// subscript the activeAccountChanged event
+// subscribe the activeAccountChanged event
 window.xpll.on("activeAccountChanged", handleActiveAccountChanged);
-// unsubscript the activeAccountChanged event
+// unsubscribe the activeAccountChanged event
 window.xpll.off("activeAccountChanged", handleActiveAccountChanged);
 ```
 
@@ -42,7 +42,7 @@ interface ProviderMessage {
 
 ## Network Changed
 
-If the network which the Provider is connected was changed,
+If the network that the Provider is connected to is changed,
    the Provider will emit the event named `networkChanged` with value `network_id: string`.
 
 ```ts
@@ -54,7 +54,7 @@ interface NetworkChangedEvent {
 
 ## Active Account Changed
 
-If the current active account was changed,
+If the current active account is changed,
 the Provider will emit the event named `activeAccountChanged` with value `account_address: string`.
 
 ```ts
@@ -65,7 +65,7 @@ interface ActiveAccountChangedEvent {
 ```
 
 !!! warning
-    The `activeAccountChanged` event only fired after permission has been granted.
-    Please check [Permission][permission] for more detail.
+    The `activeAccountChanged` event will only fire after permission has been granted.
+    Please check [Permissions][permission] for more details.
 
 [permission]: ./permission.md

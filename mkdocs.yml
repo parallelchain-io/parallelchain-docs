@@ -95,9 +95,9 @@ nav:
       - Smart Contract: toolings/pchain_cli/smart_contract.md
   - Wallet Browser Extension:
     - Introduction: wallet_browser_extension/intro.md
+    - Definition: wallet_browser_extension/definition.md
     - Extension Provider API: 
       - Introduction: wallet_browser_extension/provider/intro.md
-      - Definition: wallet_browser_extension/provider/definition.md
       - Error: wallet_browser_extension/provider/error.md
       - Event: wallet_browser_extension/provider/event.md
       - Permission: wallet_browser_extension/provider/permission.md

@@ -5,10 +5,9 @@ tags:
   - provider API
 ---
 
-# Permission
+# Permissions
 
-Wallets are responsible for mediating interactions between untrusted applications
-and users’ keys through appropriate user consent.
+Wallets mediate interactions between untrusted applications and users’ keys by requesting and getting user permissions.
 
 ## Permission Type
 
@@ -41,6 +40,6 @@ Check out the API documentation [Request Permissions](./api_documentation.md#req
 
 ## Get Permissions
 
-Returns all permissions that has been granted to the wallet.
+Return all permissions that have been granted to the wallet.
 
 Check out the API documentation for [Get Permissions](./api_documentation.md#get-permissions) for details.

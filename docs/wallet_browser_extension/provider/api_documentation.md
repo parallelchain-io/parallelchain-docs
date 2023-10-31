@@ -11,7 +11,7 @@ tags:
 
 ### isXPLL
 
-This property is true if the user has extension installed.
+This property is true if the user has the extension installed.
 
 ```js
 window.xpll.isXPLL; // => true
@@ -19,7 +19,7 @@ window.xpll.isXPLL; // => true
 
 ## Request
 
-The request method is intended as a transport- and protocol-agnostic wrapper function for [Remote Procedure Calls (RPCs)][1]
+The request method is intended as a transport- and protocol-agnostic wrapper function for [Remote Procedure Calls (RPCs)][1].
 
 If resolved, the Promise will resolve with a result per the RPC method’s specification.
 If the returned Promise rejects,
@@ -39,14 +39,14 @@ request(data: RequestArguments): Promise<Result>;
 
 ### Parameters
 
-- `method`: Method indicates which RPC method to call.
-- `params`: Parameters is an optional array or object of arguments to pass with the RPC.
+- `method`: Indicates which RPC method to call
+- `params`: An optional array or object of arguments to pass with the RPC
 
 ### Helper Functions
 
 To improve the developer experience,
-the provider also implemented a list of helper functions,
-which helps the user simplify the RPC method call.
+the Provider also implements a list of helper functions,
+which helps you simplify the RPC method call.
 
 ## Request Permission
 
@@ -54,10 +54,10 @@ Request [permission][4] to access the user's accounts.
 
 !!! warning
     The request causes a popup to appear.
-    You should only request permissions in response to a direct user action, such as a button click.
+    You should only request permission in response to a direct user action, such as a button click.
 
 !!! failure
-    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+    If the user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
 ```ts
 interface Permission {
@@ -90,7 +90,7 @@ type RequestedPermissionResult = Permission;
 
 ## Get Permissions
 
-Returns all permissions that has been granted to the wallet.
+Return all permissions that have been granted to the wallet.
 
 ```ts
 interface Permission {
@@ -127,7 +127,7 @@ Get the list of [addresses][3] for the accounts owned by the user.
 
 !!! warning
     The `get_accounts` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
-    Please check [Permission][4] for more detail.
+    Please check [Permissions][4] for more detail.
 
 
 ```ts
@@ -152,7 +152,7 @@ type GetAccountsResult = string[];
 
 ## Get Active Account
 
-get the currently active account's [address][3],
+Get the [address][3] of the currently active account;
 return `undefined` if the user still needs to register.
 
 !!! warning
@@ -180,7 +180,7 @@ type GetActiveAccountResult = string | undefined;
 
 ## Get Active Account Balance
 
-Returns the balance of the active account in the smallest unit (e.g. [Gray][5]) of the token.
+Return the balance of the active account in the smallest unit (e.g. [Gray][5]) of the token.
 
 !!! warning
     The `get_active_account_balance` should have permission granted; otherwise,
@@ -206,9 +206,9 @@ type GetActiveAccountBalanceResult = string;
     window.xpll.getActiveAccountBalance();
     ```
 
-## Get Active Acconut Latest Transactions
+## Get Active Account Latest Transactions
 
-Returns the latest transactions of the active account.
+Return the latest transactions of the active account.
 
 ### Params
 
@@ -221,7 +221,7 @@ Returns the latest transactions of the active account.
     Please check [Permission][4] for more detail.
 
 ```ts
-interface GetActiveAcconutLatestTransactionsRequest {
+interface GetActiveAccountLatestTransactionsRequest {
   method: "get_active_account_latest_transactions";
   params?: {
     limit?: number;
@@ -245,7 +245,7 @@ interface TransactionSummary {
   timestamp: number;
   tx_gas_consumption: string;
 }
-type GetActiveAcconutLatestTransactionsResult = TransactionSummary[];
+type GetActiveAccountLatestTransactionsResult = TransactionSummary[];
 ```
 
 === "RPC"
@@ -261,7 +261,7 @@ type GetActiveAcconutLatestTransactionsResult = TransactionSummary[];
 
 === "Helper Function"
     ```js
-    window.xpll.getActiveAcconutLatestTransactions({
+    window.xpll.getActiveAccountLatestTransactions({
       limit: 1,
       order: "desc",
     });
@@ -269,7 +269,7 @@ type GetActiveAcconutLatestTransactionsResult = TransactionSummary[];
 
 ## Get Current Network
 
-Returns the current network.
+Return the current network.
 
 ```ts
 interface GetCurrentNetworkRequest {
@@ -292,7 +292,7 @@ type GetCurrentNetworkResult = string | undefined;
 
 ## Send Token
 
-Transfer tokens to another account, return the transaction hash if the request is successful.
+Transfer tokens to another account; return the transaction hash if the request is successful.
 
 ### Params
 
@@ -310,7 +310,7 @@ Transfer tokens to another account, return the transaction hash if the request i
     You should only request permissions in response to a direct user action, such as a button click.
 
 !!! failure
-    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+    If user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
 ```ts
 interface SendTokenRequest {
@@ -352,7 +352,7 @@ export type SendTokenResult = string; // transaction hash
 
 ## Call Contract
 
-Call the method except the view method of the contract,
+Call the method except the view method of the contract;
 return the transaction hash if the request is successful.
 
 ### Params
@@ -371,23 +371,18 @@ return the transaction hash if the request is successful.
     The request causes a popup to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
-
-!!! failure
-    If user reject the request, the `User Rejected Request 4001` error will be thrown.
-
 ### Arguments Serialization
 
 The arguments of the contract's method should be serialized as [Uint8Array][6]
 before passing to the `call_contract` method.
 
-The primitive types are serialized based on [Borsh binary serialization format][7],
-we can using the library [borsh-js][10] to help us serialize the arguments.
+The primitive types are serialized based on [Borsh binary serialization format][7]. You can use the library [borsh-js][10] to help you serialize the arguments.
 
-The address is base64 encoded string, 
-for more details about base64 serialization, please check [MDN][9].
+The address is base64 encoded string. 
+For more details about base64 serialization, please check [MDN][9].
 
-The option type is also based on [Borsh binary serialization format][7],
-for instance, the `Option<PublicAddress>` is serialized as:
+The option type is also based on [Borsh binary serialization format][7]. 
+For instance, `Option<PublicAddress>` is serialized as:
 
 ```js
 const address = 'ggYKJ-RGIfs2YVzAW2W5KV39NpPSUIzabo7m0dSC_Hs'; 
@@ -395,7 +390,8 @@ const addressBytes = new TextEncoder().encode(address); // PublicAddress
 const optionBytes = new Uint8Array([1, ...addressBytes]); // Option<PublicAddress>
 ```
 
-The following example shows how to serialize the arguments,
+The following example shows how to serialize the arguments:
+
 Assume that you want to call the [transfer_from][8] method 
 of the `mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8` PRFC1 contract.
 
@@ -427,9 +423,8 @@ window.xpll.request({
 });
 ```
 
-Sometimes, it's hard to serialize the arguments by yourself,
-so the provider also provides a handy way to help you serialize the arguments,
-by passing the arguments as an array of objects mentioned below.
+Sometimes, it's hard to serialize the arguments by yourself. So, the Provider also provides a handy way to help you serialize the arguments:
+by passing the arguments as an array of objects, as seen below.
 
 ```ts
 interface UintArgument {
@@ -462,7 +457,7 @@ interface Base64Argument {
 }
 ```
 
-The following example shows how to serialize the arguments,
+The following example shows how to serialize the arguments:
 
 ```js
 window.xpll.request({
@@ -535,7 +530,7 @@ export type CallContractResult = string; // transaction hash
 
 ## Watch Asset
 
-Allow developer to suggest a token for the user’s wallet to track.
+Allow the developer to suggest a token for the user’s wallet to track.
 
 ### Params
 
@@ -547,7 +542,7 @@ Allow developer to suggest a token for the user’s wallet to track.
     You should only request permissions in response to a direct user action, such as a button click.
 
 !!! failure
-    If user reject the request, the `User Rejected Request 4001` error will be thrown.
+    If the user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
 
 ```ts
@@ -580,9 +575,9 @@ type WatchAssetResult = boolean;
     });
     ```
 
-[1]: ./definition.md#remote-procedure-call-rpc
+[1]: ../definition.md#remote-procedure-call-rpc
 [2]: ./error.md
-[3]: ./definition.md#address
+[3]: ../definition.md#address
 [4]: ./permission.md
 [5]: ../../introduction/xpll/what_is_xpll.md#denomination
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
