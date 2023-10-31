@@ -530,7 +530,7 @@ export type CallContractResult = string; // transaction hash
 
 ## Watch Asset
 
-Allow the developer to suggest a token for the user’s wallet to track.
+Allows developers to request a specified asset be tracked in the wallet.
 
 ### Params
 

@@ -5,7 +5,7 @@ tags:
   - provider API
 ---
 
-# Definition
+# Definitions
 
 ## Dapp
 
@@ -31,4 +31,5 @@ that is to be processed by a Provider, its Wallet, or its Client.
 
 ## Address
 
-An address is a base64 encoded string representation of a public key.
+An address is a base64 encoded string representation of a public key.  
+It is used to identify users in the network.
