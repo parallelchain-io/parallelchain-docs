@@ -1,6 +1,6 @@
 # ParallelChain Wallet Extension
 
-ParallelChain Wallet Extension is a browser extension that allows you to integrate your [dapp](./definition.md#provider) ( with [ParallelChain Wallet](../concepts/wallet.md).
+ParallelChain Wallet Extension is a browser extension that allows you to integrate your [dapp](./definition.md#provider) with [ParallelChain Wallet](../concepts/wallet.md).
 
 This enables your dapp to interact with your dapp users' XPLL accounts, to:
 

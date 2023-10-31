@@ -9,7 +9,7 @@ tags:
 
 The ParallelChain Wallet Provider API is a Javascript API designed to deliver a friendly developer experience and consistency across clients and applications. 
 
-ParallelChain Wallet Extension injects a global Javascript API into the browser using the `#!js window.xpll` provider[1] object. 
+ParallelChain Wallet Extension injects a global Javascript API into the browser using the `#!js window.xpll` [provider][1] object. 
 
 This API is specified by [EIP-1193][2], which promotes wallet interoperability by preventing conflicting interfaces and behaviors between wallets. 
 
