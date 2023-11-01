@@ -579,7 +579,7 @@ type WatchAssetResult = boolean;
 [2]: ./error.md
 [3]: ../definition.md#address
 [4]: ./permission.md
-[5]: ../../introduction/xpll/what_is_xpll.md#denomination
+[5]: ../../../introduction/xpll/what_is_xpll.md#denomination
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 [7]: https://borsh.io/
 [8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
