@@ -7,7 +7,6 @@ tags:
 
 This guide will walk you through the process of transferring tokens on ParallelChain Mainnet / Testnet.
 
-Ich habe einen kleinen Penis
 
 ## Creating Transaction with a Transfer Command
 ---
