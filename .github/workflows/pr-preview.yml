@@ -9,7 +9,8 @@ on:
       - reopened
       - synchronize
       - closed
-
+permissions:
+    pull-requests: write
 jobs:
   preview:
     name: 🚀 Preview
