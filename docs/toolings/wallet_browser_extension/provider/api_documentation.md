@@ -152,7 +152,7 @@ type GetAccountsResult = string[];
 
 ## Get Active Account
 
-Get the [address][3] of the currently active account;
+Get the [address][3] of the currently [active account][12];  
 return `undefined` if the user still needs to register.
 
 !!! warning
@@ -180,7 +180,7 @@ type GetActiveAccountResult = string | undefined;
 
 ## Get Active Account Balance
 
-Return the balance of the active account in the smallest unit (e.g. [Gray][5]) of the token.
+Return the balance of the [active account][12] in the smallest unit (e.g. [Gray][5]) of the token.
 
 !!! warning
     The `get_active_account_balance` should have permission granted; otherwise,
@@ -208,7 +208,7 @@ type GetActiveAccountBalanceResult = string;
 
 ## Get Active Account Latest Transactions
 
-Return the latest transactions of the active account.
+Return the latest transactions of the [active account][12].
 
 ### Params
 
@@ -590,3 +590,4 @@ type WatchAssetResult = boolean;
 [9]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
 [10]: https://github.com/near/borsh-js
 [11]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md
+[12]: ../definition.md#active-account

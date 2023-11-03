@@ -31,5 +31,11 @@ that is to be processed by a Provider, its Wallet, or its Client.
 
 ## Address
 
-An address is a base64 encoded string representation of a public key.  
+An address is a [base64url][1] encoded string representation of a public key.
 It is used to identify users in the network.
+
+## Active Account
+
+An active account is an account that is currently selected by the user in the wallet.
+
+[1]: https://datatracker.ietf.org/doc/html/rfc4648#section-5
