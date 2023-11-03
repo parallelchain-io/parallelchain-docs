@@ -312,6 +312,10 @@ Transfer tokens to another account; return the transaction hash if the request i
 !!! failure
     If user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
+!!! tip
+    The Send Token is only for XPLL transfers.
+    If you want to transfer the [PRFC1 token][11], we should use [Call Contract](#call-contract) instead.
+
 ```ts
 interface SendTokenRequest {
   method: "send_token";
@@ -393,7 +397,7 @@ const optionBytes = new Uint8Array([1, ...addressBytes]); // Option<PublicAddres
 The following example shows how to serialize the arguments:
 
 Assume that you want to call the [transfer_from][8] method 
-of the `mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8` PRFC1 contract.
+of the `mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8` [PRFC1 contract][11].
 
 ```js
 import * as borsh from 'borsh';
@@ -534,7 +538,7 @@ Allows developers to request a specified asset be tracked in the wallet.
 
 ### Params
 
-- `type`: The type string is the commonly accepted name of the interface implemented by the asset’s contract, e.g. PRFC1.
+- `type`: The type string is the commonly accepted name of the interface implemented by the asset’s contract, e.g. [PRFC1][11].
 - `address`: The [address][3] of the contract.
 
 !!! warning
@@ -585,4 +589,4 @@ type WatchAssetResult = boolean;
 [8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
 [9]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
 [10]: https://github.com/near/borsh-js
-
+[11]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md
