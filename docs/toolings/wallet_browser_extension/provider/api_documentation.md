@@ -397,7 +397,7 @@ const optionBytes = new Uint8Array([1, ...addressBytes]); // Option<PublicAddres
 The following example shows how to serialize the arguments:
 
 Assume that you want to call the [transfer_from][8] method 
-of the `mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8` [PRFC1 contract][11].
+of the `xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw` [PRFC1 contract][11].
 
 ```js
 import * as borsh from 'borsh';
@@ -416,7 +416,7 @@ const option = (bytes) => new Uint8Array([1, ...bytes]);
 window.xpll.request({
     method: 'call_contract',
     params: {
-        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw',
         method: 'transfer_from',
         args: [
             base64ToBytes(fromAddress),
@@ -467,7 +467,7 @@ The following example shows how to serialize the arguments:
 window.xpll.request({
     method: 'call_contract',
     params: {
-        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw',
         method: 'transfer_from',
         args: [
             { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
@@ -508,7 +508,7 @@ export type CallContractResult = string; // transaction hash
     window.xpll.request({
         method: 'call_contract',
         params: {
-            address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+            address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw',
             method: 'transfer_from',
             args: [
                 { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
@@ -522,7 +522,7 @@ export type CallContractResult = string; // transaction hash
 === "Helper Function"
     ```js
     window.xpll.callContract({
-        address: 'mTcm1Gi520O02C_fuCamRTWVdi2FBBudePWEA-55bT8',
+        address: 'xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw',
         method: "transfer_from",
         args: [
             { type: 'base64', value: 'YChzIE0ZGwKuuJSSVugZ-SlY3RvBzzjjz3__VkftgCY' },
