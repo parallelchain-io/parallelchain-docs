@@ -26,7 +26,7 @@ First, before you stake, you have to lock up (stake) some balance tied to an ope
     --balance <BALANCE> \
     --auto-stake-rewards
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -65,7 +65,7 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
     --operator <OPERATOR_ADDRESS> \
     --amount <AMOUNT>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -93,7 +93,7 @@ You specified the flag `auto-stake-rewards` when you created the Deposit. You ca
     --operator <OPERATOR_ADDRESS> \
     --auto-stake-rewards
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -121,7 +121,7 @@ After you create a Deposit to a Pool, you should now stake some amount of it to 
     --operator <OPERATOR_ADDRESS> \
     --max-amount <MAX_AMOUNT>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -148,15 +148,15 @@ You can also unstake your stake on with the CLI subcommand `stake unstake`.
     --operator <OPERATOR_ADDRESS> \
     --max-amount <MAX_AMOUNT>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe transaction create
-    --nonce <NONCE> \
-    --gas-limit <GAS_LIMIT> \
-    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
-    stake unstake \
-    --operator <OPERATOR_ADDRESS> \
+    ./pchain_client.exe transaction create `
+    --nonce <NONCE> `
+    --gas-limit <GAS_LIMIT> `
+    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
+    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
+    stake unstake `
+    --operator <OPERATOR_ADDRESS> `
     --max-amount <MAX_AMOUNT>
     ```
 
@@ -174,7 +174,7 @@ Suppose you created the transaction file (i.e. `tx.json`) from the step [Creatin
     --operator <OPERATOR_ADDRESS> \
     --max-amount <MAX_AMOUNT>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction append `
     --file <PATH_TO_TRANSACTION_FILE> `
@@ -192,7 +192,7 @@ Your Deposit can be increased due to reward distribution in each epoch. If you w
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client transaction create
+    ./pchain_client transaction create \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -201,15 +201,15 @@ Your Deposit can be increased due to reward distribution in each epoch. If you w
     --operator <OPERATOR_ADDRESS> \
     --max-amount <MAX_AMOUNT>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe transaction create
-    --nonce <NONCE> \
-    --gas-limit <GAS_LIMIT> \
-    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
-    deposit withdraw \
-    --operator <OPERATOR_ADDRESS> \
+    ./pchain_client.exe transaction create `
+    --nonce <NONCE> `
+    --gas-limit <GAS_LIMIT> `
+    --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
+    --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
+    deposit withdraw `
+    --operator <OPERATOR_ADDRESS> `
     --max-amount <MAX_AMOUNT>
     ```
 
