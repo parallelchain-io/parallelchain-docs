@@ -31,7 +31,7 @@ Chrome users can install the extension via the Chrome Web Store.
 
 ##### Manual Installation
 
-1. Download `parallelchain_wallet_extension-0.0.1-chromium.zip`.
+1. Download `xperience_browser_extension-1.0.2-chromium.zip`.
 2. Unzip the file into a folder.
 3. Follow the [instructions here][1] to load the extension. Load the folder when prompted.
 
@@ -45,7 +45,7 @@ Firefox users can install the extension via Firefox Add-ons.
 
 ##### Manual Installation
 
-1. Download `parallelchain_wallet_extension-0.0.1-firefox.zip`.
+1. Download `xperience_browser_extension-1.0.2-firefox.zip`.
 2. Unzip the file into a folder.
 3. Follow the [instructions here][2] to load the extension. Load `manifest.json` in the folder when prompted.
 
