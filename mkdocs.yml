@@ -26,7 +26,7 @@ nav:
       - How does staking work?: concepts/staking/how_does_staking_work.md
       - Validators: concepts/staking/validator.md
       - Delegators: concepts/staking/delegator.md
-      # - Block reward: concepts/staking/block_reward.md
+      - Block reward: concepts/staking/block_reward.md
       - FAQ: concepts/staking/faq.md
     - Storage: concepts/storage.md
     - Explorer: concepts/explorer.md
