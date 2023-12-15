@@ -77,6 +77,7 @@ nav:
       - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
       - Crypto: smart_contract_sdk/advance/crypto.md
       - Staking in Contract: smart_contract_sdk/advance/staking.md
+      - Switching from Solidity to Rust: smart_contract_sdk/advance/switching_language.md
   # - DApp Development:
   #   #need help
   - Tooling:
