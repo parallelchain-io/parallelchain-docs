@@ -38,7 +38,7 @@ The total amount of rewards (issuance) introduced to the network is calculated a
 Total amount of stake x Issuance rate
 ```
 
-For example, the total amount of stake of a validator is `100,000 XPLL` currently, and the issuance rate is `0.001`, then the total amount of XPLL to be issued to that validator in next epoch will be `100,000 * 0.001 = 100 XPLL`.
+For example, if the total amount of stake of a validator is `100,000 XPLL` currently, and the issuance rate is `0.001`, then the total amount of XPLL to be issued to that validator in the next epoch will be `100,000 * 0.001 = 100 XPLL`.
 
 
 The issuance rate is calculated as follows:
@@ -55,11 +55,11 @@ Issuance rate = 0.0150 / 365
 
 ### Delegator Reward
 
-Delegators share the newly issued rewards in proportion to their staked amount in the validator. In addition, the delegator rewards will be substracted for paying commission fee to the validator. The commission fee is set in the validator's setting.
+Delegators share the newly issued rewards in proportion to their staked amount in the validator. In addition, the delegator rewards will be subtracted as a commission fee to the validator. The commission fee is set in the validator's setting.
 
-Consider there will be total amount of rewards `100 XPLL` issued to the validator `V` in next epoch. `V` has a commission fee `1%`, and one of its delegator, `D`, contributes `10%` of the total amount of stakes to `V`.
+Consider there will be a total amount of rewards `100 XPLL` issued to the validator `V` in the next epoch. `V` has a commission fee of `1%`, and one of its delegators, `D`, contributes `10%` of the total amount of stakes to `V`.
 
-Then in next epoch, `D` will be rewarded:
+Then in the next epoch, `D` will be rewarded:
 
 ```
 reward = 100 XPLL * 10% * (100% - 1%) = 9.99 XPLL
@@ -69,5 +69,5 @@ reward = 100 XPLL * 10% * (100% - 1%) = 9.99 XPLL
 
 Note:
 
-- The calculated values in the examples in this page are approximate estimation. Exact calculated values are affected by, for example, decimal truncation in integer division, and sequence of arithmetic opertaions that applied, etc.
-- The formulas are valid since protocol version v0.4, but could be subjected to change in future protocol versions.
+- The calculated values in the examples on this page are approximate estimations. Exact calculated values are affected by, for example, decimal truncation in integer division, sequence of arithmetic operations that are applied, etc.
+- The formulas are valid since protocol version v0.4 but could be subjected to change in future protocol versions.
