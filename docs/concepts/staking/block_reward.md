@@ -54,11 +54,9 @@ $$
 
 ### Delegator Reward
 
-Delegators share the newly issued rewards in proportion to their staked amount in the validator. In addition, the delegator rewards will be subtracted as a commission fee to the validator. The commission fee is set in the validator's setting.
+Delegators receive a portion of the newly issued rewards based on the amount they have staked with the validator. However, it's important to note that the delegator rewards will be reduced by a commission fee, which is determined by the validator and can be adjusted in their settings.
 
-Consider there will be a total amount of rewards `100 XPLL` issued to the validator `V` in the next epoch. `V` has a commission fee of `1%`, and one of its delegators, `D`, contributes `10%` of the total amount of stakes to `V`.
-
-Then in the next epoch, `D` will be rewarded:
+Let's assume that in the upcoming epoch, the validator `V` will receive a *total reward* of `100 XPLL`. `V` has set a *commission fee* of `1%`. Additionally, one of its delegators, `D`, has contributed `10%` of the total staked amount to `V`. Then in the next epoch, `D` will be rewarded:
 
 $$
 \operatorname{Reward} = 100 XPLL \times 10\% \times (100\% - 1\%) = 9.99 XPLL
@@ -68,5 +66,5 @@ $$
 
 Note:
 
-- The calculated values in the examples on this page are approximate estimations. Exact calculated values are affected by, for example, decimal truncation in integer division, sequence of arithmetic operations that are applied, etc.
+- The values provided in the examples are approximate estimates and may not be exact. The accuracy of calculated values can be influenced by factors such as decimal truncation in integer division and the order of arithmetic operations. 
 - The formulas are valid since protocol version v0.4 but could be subjected to change in future protocol versions.
