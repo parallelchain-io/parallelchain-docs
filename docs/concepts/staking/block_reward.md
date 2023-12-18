@@ -22,34 +22,35 @@ Reward formulas can be found in the technical documentation [parallelchain-proto
 
 ### Reward Rate
 
-Over time, the block reward amount decreases as more blocks are added to the blockchain. This is known as the **block reward halving**, and it is a feature of many blockchain networks, including Bitcoin. The block reward halving helps to control the supply of cryptocurrency and prevent inflation.
+The block reward amount gradually decreases as additional blocks are incorporated into the blockchain over time. This process, which is known as the **block reward halving**, is a characteristic found in various blockchain networks, such as Bitcoin. By implementing the block reward halving, the supply of cryptocurrency is regulated, effectively curbing inflationary pressures.
 
-The reward rate is:
+The reward rate is calcuated as following:
 
-- Initially 8.5% per annum in the first year
-- Reduced gradually 15% per annum
-- Kept at 1.5% per annum after 10 years (3650 days)
+- First year: 8.5% per annum
+- Reduce 15% per annum
+- After 10 year (3650 days): keep at 1.5% per annum
 
-The total amount of rewards (issuance) introduced to the network is calculated as follows:
 
-```
-Total amount of stake x Issuance rate
-```
+The **total amount of rewards (issuance)** introduced to the network is calculated as follows:
 
-For example, if the total amount of stake of a validator is `100,000 XPLL` currently, and the issuance rate is `0.001`, then the total amount of XPLL to be issued to that validator in the next epoch will be `100,000 * 0.001 = 100 XPLL`.
+$$
+\operatorname{Total amount of stake} \times \operatorname{Issuance rate}
+$$
+
+For example, if the *total amount of stake* of a validator is `100,000 XPLL` currently, and the *issuance rate* is `0.001`, then the *total amount of XPLL to be issued* to that validator in the next epoch will be `100,000 * 0.001 = 100 XPLL`.
 
 
 The issuance rate is calculated as follows:
 
-```
-Issuance rate at n-th epoch = 0.0835 * 0.85^(n/365) / 365
-```
+$$
+\operatorname{Issuance rate at n-th epoch} = 0.0835 \times \frac{0.85^{\frac{n}{365}}}{365}
+$$
 
 but after 10 years, the formula will be changed to:
 
-```
-Issuance rate = 0.0150 / 365 
-```
+$$
+\operatorname{Issuance rate} = \frac{0.0150}{365} 
+$$
 
 ### Delegator Reward
 
@@ -59,9 +60,9 @@ Consider there will be a total amount of rewards `100 XPLL` issued to the valida
 
 Then in the next epoch, `D` will be rewarded:
 
-```
-reward = 100 XPLL * 10% * (100% - 1%) = 9.99 XPLL
-```
+$$
+\operatorname{Reward} = 100 XPLL \times 10\% \times (100\% - 1\%) = 9.99 XPLL
+$$
 
 --- 
 
