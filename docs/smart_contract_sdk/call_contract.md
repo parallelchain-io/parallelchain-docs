@@ -44,6 +44,7 @@ Here is the command to call a contract:
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -57,6 +58,7 @@ Here is the command to call a contract:
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `

@@ -17,6 +17,7 @@ First, before you stake, you have to lock up (stake) some balance tied to an ope
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -29,6 +30,7 @@ First, before you stake, you have to lock up (stake) some balance tied to an ope
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -57,6 +59,7 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -68,6 +71,7 @@ After creating a Deposit in a Pool, use the CLI subcommands `deposit top-up` if 
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -85,6 +89,7 @@ You specified the flag `auto-stake-rewards` when you created the Deposit. You ca
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -96,6 +101,7 @@ You specified the flag `auto-stake-rewards` when you created the Deposit. You ca
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -113,6 +119,7 @@ After you create a Deposit to a Pool, you should now stake some amount of it to 
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -124,6 +131,7 @@ After you create a Deposit to a Pool, you should now stake some amount of it to 
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -140,6 +148,7 @@ You can also unstake your stake on with the CLI subcommand `stake unstake`.
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -151,6 +160,7 @@ You can also unstake your stake on with the CLI subcommand `stake unstake`.
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -193,6 +203,7 @@ Your Deposit can be increased due to reward distribution in each epoch. If you w
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -204,6 +215,7 @@ Your Deposit can be increased due to reward distribution in each epoch. If you w
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `

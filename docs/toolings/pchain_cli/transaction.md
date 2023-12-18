@@ -49,10 +49,11 @@ Here are some CLI subcommands to indicate corresponding Protocol Transaction Com
     ```
 
 
-First, provide the following 4 parameters:
+First, decide the version of the transaction that you are creating with the flags `--v1` and `--v2`, then provide the following 4 parameters:
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+      <--v1|--v2> \
       --nonce <NONCE> \
       --gas-limit <GAS_LIMIT> \
       --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -62,6 +63,7 @@ First, provide the following 4 parameters:
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+      <--v1|--v2> `
       --nonce <NONCE> `
       --gas-limit <GAS_LIMIT> `
       --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -71,12 +73,13 @@ First, provide the following 4 parameters:
 
 Then, decide the transaction type using the [CLI subcommand](#prepare-transaction-file). Each of them takes different inputs. You can always check the help menu using `--help`.
 
-Make sure you provide both `Parameters` and `Subcommand` parts in one command. The output transaction file (tx.json) will be saved in the current directory. You can also specify the designated file with the flag `--destination`
+Make sure you provide both `Parameters` and `Subcommand` parts in one command. The output transaction file (tx.json) will be saved in the current directory. You can also specify the designated file with the flag `--destination`.
 
 Example - Transfer tokens:
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+      --v2 \
       --nonce 0 \
       --gas-limit 100000 \
       --max-base-fee-per-gas 8 \
@@ -88,6 +91,7 @@ Example - Transfer tokens:
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+      --v2 `
       --nonce 0 `
       --gas-limit 100000 `
       --max-base-fee-per-gas 8 `
@@ -102,6 +106,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ```bash
     ./pchain_client transaction create \
     --destination ~/Documents/deposit-tx.json \
+    --v2 \
     --nonce 0 \
     --gas-limit 100000 \
     --max-base-fee-per-gas 8 \
@@ -114,6 +119,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ```PowerShell
     ./pchain_client.exe transaction create `
     --destination ~/Documents/deposit-tx.json `
+    --v2 `
     --nonce 0 `
     --gas-limit 100000 `
     --max-base-fee-per-gas 8 `
