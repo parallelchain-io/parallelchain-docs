@@ -16,11 +16,11 @@ This command generates a set of ed25519_dalek compatible keys. Random name will 
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys create --name <NAME>
+    ./pchain_client keys create --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys create --name <NAME>
+    ./pchain_client.exe keys create --keypair-name <KEYPAIR_NAME>
     ```
 
 
@@ -29,11 +29,11 @@ If you have already got keys from ParallelChain Explorer, you can import your ac
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys import --private <PRIVATE_KEY> --public <PUBLIC_KEY/ADDRESS> --name <NAME>
+    ./pchain_client keys import --private <PRIVATE_KEY> --public <PUBLIC_KEY/ADDRESS> --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys import --private <PRIVATE_KEY> --public <PUBLIC_KEY/ADDRESS> --name <NAME>
+    ./pchain_client.exe keys import --private <PRIVATE_KEY> --public <PUBLIC_KEY/ADDRESS> --keypair-name <KEYPAIR_NAME>
     ```
 
 `PRIVATE_KEY` and `PUBLIC_KEY/ADDRESS` are Base64url encoded.
