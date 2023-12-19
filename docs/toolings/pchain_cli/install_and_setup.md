@@ -20,7 +20,7 @@ Please note that if this is your first time using `pchain_client`, it is necessa
 
 ## Running pchain_client
 ---
-To check if `pchain_client` is intalled properly, run the following command:
+To check if `pchain_client` is installed properly, run the following command:
 === "Linux / macOS"
     ```bash
     ./pchain_client --version
