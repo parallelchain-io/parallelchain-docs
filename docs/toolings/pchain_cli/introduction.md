@@ -14,7 +14,7 @@ For a detailed description of all available commands, execute `pchain_client --h
 ---
 
 ```terminal
-ParallelChain Client CLI 0.4.3
+ParallelChain Client CLI 0.5.0
 <ParallelChain Lab>
 ParallelChain client (`pchain_client`) is a command-line tool for you to connect and interact with
 the ParallelChain Mainnet/Testnet.

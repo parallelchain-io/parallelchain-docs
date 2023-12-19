@@ -10,22 +10,17 @@ tags:
 ## Installation
 ---
 
-`pchain_client` is an available tool for users on Unix/Linux, MacOS, and Windows operating systems. Simply download the pre-built binary corresponding to your platform and install the `pchain_client`.
+The `pchain_client` tool is accessible to users operating on Unix/Linux, MacOS, and Windows systems. To install `pchain_client`, simply download the pre-built binary that corresponds to your specific platform and proceed with the installation. Here are the straightforward steps to follow:
 
-Here are the simple steps to install `pchain_client`:
+1. Open a web browser and navigate to the [release page](https://github.com/parallelchain-io/pchain-client-cli/releases).
+2. Locate and download the pre-built binary that is compatible with your platform.
+3. Execute the downloaded file to initiate the installation process.
 
-- Open a web browser and go to [release page](https://github.com/parallelchain-io/pchain-client-cli/releases).
-- Follow the link to download pre-built binary available for your platform.
-- Run the downloaded file.
-
-**NOTE:**
-If this is your first time using `pchain_client`, you need to setup `$PCHAIN_CLI_HOME` in environment variables to specify the home path. See more [here](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/).
+Please note that if this is your first time using `pchain_client`, it is necessary to set up the `$PCHAIN_CLI_HOME` environment variable to specify the home path. For detailed instructions on setting up environment variables on Windows, Mac, and Linux systems, please refer to this resource: [here](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/).
 
 ## Running pchain_client
 ---
-
-Upon first use of `pchain_client`, you will be prompted to set up a password to protect your account keypairs. Please note that this password can be different from the password you used in ParallelChain Explorer. Alternatively, you can skip the password protection by simply pressing Enter.
-
+To check if `pchain_client` is intalled properly, run the following command:
 === "Linux / macOS"
     ```bash
     ./pchain_client --version
@@ -34,6 +29,9 @@ Upon first use of `pchain_client`, you will be prompted to set up a password to 
     ```PowerShell
     ./pchain_client.exe --version
     ```
+
+Upon first use of `pchain_client`, you will be prompted to set up a password to protect your account keypairs. Please note that this password can be different from the password you used in ParallelChain Explorer. Alternatively, you can skip the password protection by simply pressing Enter.
+
 You will be required to enter your password twice. If your password is set successfully, you will see a return message with `pchain_client` version shown on console.
 
 **WARNING:**
