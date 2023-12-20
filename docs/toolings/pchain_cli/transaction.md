@@ -48,32 +48,33 @@ Here are some CLI subcommands to indicate corresponding Protocol Transaction Com
     ./pchain_client.exe transaction create --help
     ```
 
+1. Determine the version of the transaction you want to create by using either `--v1` or `--v2` flags.
+2. Provide the other four parameters, including `nonce`, `gas-limit`, `max-base-fee-per-gas` and `priority-fee-per-gas`.
 
-First, decide the version of the transaction that you are creating with the flags `--v1` and `--v2`, then provide the following 4 parameters:
-=== "Linux / macOS"
-    ```bash
-    ./pchain_client transaction create \
-      <--v1|--v2> \
-      --nonce <NONCE> \
-      --gas-limit <GAS_LIMIT> \
-      --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
-      --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
-    ...
-    ```
-=== "Windows PowerShell"
-    ```PowerShell
-    ./pchain_client.exe transaction create `
-      <--v1|--v2> `
-      --nonce <NONCE> `
-      --gas-limit <GAS_LIMIT> `
-      --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
-      --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
-    ...
-    ```
+    === "Linux / macOS"
+        ```bash
+        ./pchain_client transaction create \
+          <--v1|--v2> \
+          --nonce <NONCE> \
+          --gas-limit <GAS_LIMIT> \
+          --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
+          --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> \
+        ...
+        ```
+    === "Windows PowerShell"
+        ```PowerShell
+        ./pchain_client.exe transaction create `
+          <--v1|--v2> `
+          --nonce <NONCE> `
+          --gas-limit <GAS_LIMIT> `
+          --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
+          --priority-fee-per-gas <PRIORITY_FEE_PER_GAS> `
+        ...
+        ```
 
-Then, decide the transaction type using the [CLI subcommand](#prepare-transaction-file). Each of them takes different inputs. You can always check the help menu using `--help`.
+3. Next, determine the transaction type using the [CLI subcommand](#prepare-transaction-file). Each subcommand requires different inputs. You can always refer to the help menu using the `--help` flag.
 
-Make sure you provide both `Parameters` and `Subcommand` parts in one command. The output transaction file (tx.json) will be saved in the current directory. You can also specify the designated file with the flag `--destination`.
+4. The resulting transaction file (tx.json) will be saved in the current directory. Optionally, you can specify a different file location using the `--destination` flag.
 
 Example - Transfer tokens:
 === "Linux / macOS"
@@ -101,7 +102,7 @@ Example - Transfer tokens:
         --amount 100
     ```
 
-Example - Deploy contract and save to designated file `deposit-tx.json`:
+Example - Deploy contract and save to a designated path `~/Documents/deposit-tx.json`:
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
@@ -131,9 +132,9 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
 
 
 ### Append Command to Existing File
-As explained in the beginning of [Transaction](#transaction) section, Transaction in ParallelChain protocol accepts sequence of commands. But you may find that `transaction create` in previous section only support a single Command in Transaction. 
+As explained at the beginning of the [Transaction](#transaction) section, Transaction in the ParallelChain Protocol accepts a sequence of commands. But you may find that the command in the previous section, `transaction create`, only supports a single Command in Transaction. 
 
-If you want to support multiple Commands, use the following command with the [subcommand](#prepare-transaction-file). This appends a `Command` element to the back of the command array in Transaction. Please note that commands in array will be executed in sequential order.
+If you want to support multiple Commands, use the following command with the [subcommand](#prepare-transaction-file). This appends a `Command` element to the back of the command array in Transaction. Please note that commands in the array will be executed in sequential order.
 
 Example:
 === "Linux / macOS"
@@ -154,7 +155,7 @@ Example:
     ```
 
 ### Submit Transaction to ParallelChain
-After preparing the transaction json file, you can now submit the transaction with keypair.
+After preparing the transaction json file, you can now submit the transaction to the blockchain with your keypair.
 
 Example:
 
