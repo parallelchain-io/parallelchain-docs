@@ -25,11 +25,12 @@ When you run this command, you'll see the output of your account's `nonce` value
 0
 ```
 
-Next, to transfer tokens from your account to someone else's account using `pchain_client`, you need to create a transaction file containing one transfer command first. 
+Next, to transfer tokens from your account to someone else's account using `pchain_client`, you need to create a transaction file containing one transfer command first.
 
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create \
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -41,6 +42,7 @@ Next, to transfer tokens from your account to someone else's account using `pcha
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
@@ -116,6 +118,6 @@ You may append an extra transfer transaction with `pchain_client`. After creatin
     --amount <AMOUNT_TO_TRANSFER>
     ```
 
-Currently, if you construct a transaction with `pchain_client`, the fields `nonce`, `gas limit`, `max base fee per gas` and `priority fee per gas` are already filled in after calling command `create`. You need to manually change the transaction JSON file if you want to change them:
+Once you have constructed a transaction using the `pchain_client transaction create` command, the fields in the JSON file will be populated. If necessary, you have the option to manually modify the transaction JSON file.
 
-After chaining up commands you are satisfied with, you can submit the transaction as you did in a single command transaction.
+Once you have successfully chained together the desired commands, you can submit the transaction just as you would with a single command transaction.

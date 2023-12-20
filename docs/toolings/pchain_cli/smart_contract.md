@@ -20,11 +20,27 @@ Command:
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client parse contract-address --address <ADDRESS> --nonce <NONCE>
+    # To parse the first version of contract address which is defined in
+    # ParallelChain Protocol V0.4
+
+    ./pchain_client parse contract-address v1 --address <ADDRESS> --nonce <NONCE>
+    
+    # To parse the second version of contract address which defined in
+    # ParallelChain Protocol V0.5
+
+    ./pchain_client parse contract-address v2 --address <ADDRESS> --nonce <NONCE> --deploy_cmd_index <INDEX>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe parse contract-address --address <ADDRESS> --nonce <NONCE>
+    # To parse the first version of contract address which is defined in
+    # ParallelChain Protocol V0.4
+
+    ./pchain_client parse contract-address v1 --address <ADDRESS> --nonce <NONCE>
+    
+    # To parse the second version of contract address which defined in
+    # ParallelChain Protocol V0.5
+    
+    ./pchain_client parse contract-address v2 --address <ADDRESS> --nonce <NONCE> --deploy_cmd_index <INDEX>
     ```
 
 ### Prepare Contract Method Arguments File

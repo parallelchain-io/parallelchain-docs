@@ -15,11 +15,11 @@ The guide will walk you through the steps to generate and manage your Mainnet / 
 To create an account, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys create --name <NAME>
+    ./pchain_client keys create --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys create --name <NAME>
+    ./pchain_client.exe keys create --keypair-name <KEYPAIR_NAME>
     ```
 
 You will be asked to input your password to save the new keypair.
@@ -70,11 +70,11 @@ To secure your keypair and money, you must export it and save it somewhere secur
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys export --name <NAME>
+    ./pchain_client keys export --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys export --name <NAME>
+    ./pchain_client.exe keys export --keypair-name <KEYPAIR_NAME>
     ```
 
 You will be asked to input your password to export the keypair. The keypair will be saved in the current directory, in JSON format, with the same name as the keypair itself.
@@ -84,11 +84,11 @@ You will be asked to input your password to export the keypair. The keypair will
 To add your keypair, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --name <NAME>
+    ./pchain_client keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --keypair-name <KEYPAIR_NAME>
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --name <NAME>
+    ./pchain_client.exe keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --keypair-name <KEYPAIR_NAME>
     ```
 
 You will be asked to input your password to import the new keypair.

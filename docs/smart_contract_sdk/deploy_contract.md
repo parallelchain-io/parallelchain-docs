@@ -14,6 +14,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
 === "Linux / macOS"
     ```bash
     ./pchain_client transaction create
+    <--v1|--v2> \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
@@ -25,6 +26,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
 === "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
+    <--v1|--v2> `
     --nonce <NONCE> `
     --gas-limit <GAS_LIMIT> `
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> `
