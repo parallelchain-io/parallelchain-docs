@@ -43,7 +43,7 @@ interface ProviderMessage {
 ## Network Changed
 
 If the network that the Provider is connected to is changed,
-   the Provider will emit the event named `networkChanged` with value `network_id: string`.
+   the Provider will emit the event named `networkChanged` with `string` as network id.
 
 ```ts
 interface NetworkChangedEvent {
@@ -55,7 +55,7 @@ interface NetworkChangedEvent {
 ## Active Account Changed
 
 If the current active account is changed,
-the Provider will emit the event named `activeAccountChanged` with value `account_address: string`.
+the Provider will emit the event named `activeAccountChanged` with `string` as account address.
 
 ```ts
 interface ActiveAccountChangedEvent {
@@ -69,3 +69,15 @@ interface ActiveAccountChangedEvent {
     Please check [Permissions][permission] for more details.
 
 [permission]: ./permission.md
+
+## Lock State Changed Event
+
+If the lock state of the wallet is changed,
+the Provider will emit the event named `lockStateChanged` with `boolean` as the wallet lock state.
+
+```ts
+export interface LockStateChangedEvent extends ProviderMessage {
+  readonly type: "lockStateChanged";
+  readonly data: boolean;
+}
+```

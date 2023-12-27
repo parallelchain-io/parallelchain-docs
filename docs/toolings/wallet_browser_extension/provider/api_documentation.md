@@ -88,6 +88,29 @@ type RequestedPermissionResult = Permission;
     window.xpll.requestPermissions();
     ```
 
+## Is Wallet Locked
+
+Return `true` if the wallet is locked; otherwise, return `false`.
+
+```ts
+interface IsWalletLockedRequest {
+  method: "is_wallet_locked";
+}
+type IsWalletLockedResult = boolean;
+```
+
+=== "RPC"
+    ```js
+    window.xpll.request({
+      method: "is_wallet_locked";
+    });
+    ```
+
+=== "Helper Function"
+    ```js
+    window.xpll.isWalletLocked();
+    ```
+
 ## Get Permissions
 
 Return all permissions that have been granted to the wallet.
