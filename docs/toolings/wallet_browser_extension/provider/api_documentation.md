@@ -180,7 +180,7 @@ type GetActiveAccountResult = string | undefined;
 
 ## Get Active Account Balance
 
-Return the balance of the [active account][12] in the smallest unit (e.g. [Gray][5]) of the token.
+Return the balance of the [active account][12] in [XPLL][5].
 
 !!! warning
     The `get_active_account_balance` should have permission granted; otherwise,
@@ -296,7 +296,7 @@ Transfer tokens to another account; return the transaction hash if the request i
 
 ### Params
 
-- `amount`: The amount of tokens to transfer in the smallest unit (e.g. [Gray][5]) of the token.
+- `amount`: The amount of tokens to transfer in [XPLL][5].
 - `recipient`: The address of the recipient account.
 - `nonce`: The nonce of the transaction.
   If not provided, the nonce will be calculated automatically.
@@ -320,12 +320,12 @@ Transfer tokens to another account; return the transaction hash if the request i
 interface SendTokenRequest {
   method: "send_token";
   params: {
-    amount: string;
+    amount: string | number | bigint;
     recipient: string;
-    nonce?: string;
-    gas_limit?: string;
-    max_base_fee_per_gas?: string;
-    priority_fee_per_gas?: string;
+    nonce?: string | number | bigint;
+    gas_limit?: string | number | bigint;
+    max_base_fee_per_gas?: string | number | bigint;
+    priority_fee_per_gas?: string | number | bigint;
   };
 }
 export type SendTokenResult = string; // transaction hash
@@ -433,17 +433,17 @@ by passing the arguments as an array of objects, as seen below.
 ```ts
 interface UintArgument {
     type: 'u8' | 'u16' | 'u32' | 'u64' | 'u128';
-    value: string | number;
+    value: string | number | bigint;
 }
 
 interface IntArgument {
     type: 'i8' | 'i16' | 'i32' | 'i64' | 'i128';
-    value: string | number;
+    value: string | number | bigint;
 }
 
 interface FloatArgument {
     type: 'f32' | 'f64';
-    value: string | number;
+    value: string | number | bigint;
 }
 
 interface BoolArgument {
@@ -459,6 +459,8 @@ interface Base64Argument {
     type: 'base64';
     value: string;
 }
+
+type Argument = UintArgument | IntArgument | FloatArgument | BoolArgument | StringArgument | Base64Argument;
 ```
 
 The following example shows how to serialize the arguments:
@@ -484,20 +486,11 @@ interface CallContractRequest {
   params: {
     method: string;
     address: string;
-    args: (
-      | {
-          value: string;
-          type: "address";
-        }
-      | {
-          value: string | number;
-          type: "amount";
-        }
-    )[];
-    gas_limit?: string;
-    nonce?: string;
-    max_base_fee_per_gas?: string;
-    priority_fee_per_gas?: string;
+    args: Argument[];
+    gas_limit?: string | number | bigint;
+    nonce?: string | number | bigint;
+    max_base_fee_per_gas?: string | number | bigint;
+    priority_fee_per_gas?: string | number | bigint;
   };
 }
 export type CallContractResult = string; // transaction hash
@@ -583,7 +576,7 @@ type WatchAssetResult = boolean;
 [2]: ./error.md
 [3]: ../definition.md#address
 [4]: ./permission.md
-[5]: ../../../introduction/xpll/what_is_xpll.md#denomination
+[5]: ../../../introduction/xpll/what_is_xpll.md
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 [7]: https://borsh.io/
 [8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
