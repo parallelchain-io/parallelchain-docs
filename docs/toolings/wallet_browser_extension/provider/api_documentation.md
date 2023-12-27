@@ -558,6 +558,10 @@ Allows developers to request a specified asset be tracked in the wallet.
 - `address`: The [address][3] of the contract.
 
 !!! warning
+    The `watch_asset` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
+    Please check [Permissions][4] for more detail.
+
+!!! warning
     The request causes a popup to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
