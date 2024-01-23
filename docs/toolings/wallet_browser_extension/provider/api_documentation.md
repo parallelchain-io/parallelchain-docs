@@ -46,14 +46,14 @@ request(data: RequestArguments): Promise<Result>;
 
 To improve the developer experience,
 the Provider also implements a list of helper functions,
-which helps you simplify the RPC method call.
+which helps simplify the RPC method call.
 
 ## Request Permission
 
 Request [permission][4] to access the user's accounts.
 
 !!! warning
-    The request causes a popup to appear.
+    The request causes a pop-up to appear.
     You should only request permission in response to a direct user action, such as a button click.
 
 !!! failure
@@ -90,7 +90,7 @@ type RequestedPermissionResult = Permission;
 
 ## Is Wallet Locked
 
-Return `true` if the wallet is locked; otherwise, return `false`.
+Return `true` if the wallet is locked; return `false` otherwise.
 
 ```ts
 interface IsWalletLockedRequest {
@@ -146,11 +146,11 @@ type GetPermissionsResult = Permission[];
 
 ## Get Accounts
 
-Get the list of [addresses][3] for the accounts owned by the user.
+Return the list of account [addresses][3] owned by the user.
 
 !!! warning
-    The `get_accounts` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
-    Please check [Permissions][4] for more detail.
+    The `get_accounts` should have the permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
+    Please check [Permissions][4] for more details.
 
 
 ```ts
@@ -206,9 +206,9 @@ type GetActiveAccountResult = string | undefined;
 Return the balance of the [active account][12] in [XPLL][5].
 
 !!! warning
-    The `get_active_account_balance` should have permission granted; otherwise,
+    The `get_active_account_balance` should have the permission granted; otherwise,
     the `User Rejected Request 4001` error will be thrown.
-    Please check [Permission][4] for more detail.
+    Please check [Permission][4] for more details.
 
 ```ts
 interface GetActiveAccountBalanceRequest {
@@ -239,9 +239,9 @@ Return the latest transactions of the [active account][12].
 - `order`: The order of transactions to return. The default value is `desc`.
 
 !!! warning
-    The `get_active_account_latest_transactions` should have permission granted; otherwise,
+    The `get_active_account_latest_transactions` should have the permission granted; otherwise,
     the `User Rejected Request 4001` error will be thrown.
-    Please check [Permission][4] for more detail.
+    Please check [Permission][4] for more details.
 
 ```ts
 interface GetActiveAccountLatestTransactionsRequest {
@@ -329,14 +329,14 @@ Transfer tokens to another account; return the transaction hash if the request i
 - `priority_fee_per_gas`: The priority fee per gas of the transaction. The default value is `0`.
 
 !!! warning
-    The request causes a popup to appear.
+    The request causes a pop-up to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
 !!! failure
     If user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
 !!! tip
-    The Send Token is only for XPLL transfers.
+    Send Token is only for XPLL transfers.
     If you want to transfer the [PRFC1 token][11], we should use [Call Contract](#call-contract) instead.
 
 ```ts
@@ -395,18 +395,18 @@ return the transaction hash if the request is successful.
 - `priority_fee_per_gas`: The priority fee per gas of the transaction. The default value is `0`.
 
 !!! warning
-    The request causes a popup to appear.
+    The request causes a pop-up to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
 ### Arguments Serialization
 
-The arguments of the contract's method should be serialized as [Uint8Array][6]
+The arguments of the contract method should be serialized as [Uint8Array][6]
 before passing to the `call_contract` method.
 
-The primitive types are serialized based on [Borsh binary serialization format][7]. You can use the library [borsh-js][10] to help you serialize the arguments.
+The primitive types are serialized based on [Borsh binary serialization format][7]. You can use the library [borsh-js][10] to help serialize the arguments.
 
-The address is base64 encoded string. 
-For more details about base64 serialization, please check [MDN][9].
+The address is a base64 encoded string. 
+For more details about the base64 serialization, please check [MDN][9].
 
 The option type is also based on [Borsh binary serialization format][7]. 
 For instance, `Option<PublicAddress>` is serialized as:
@@ -450,7 +450,7 @@ window.xpll.request({
 });
 ```
 
-Sometimes, it's hard to serialize the arguments by yourself. So, the Provider also provides a handy way to help you serialize the arguments:
+Sometimes, it's hard to serialize the arguments by yourself. Hence, the Provider provides a handy way to help you with the argument serialization:
 by passing the arguments as an array of objects, as seen below.
 
 ```ts
@@ -558,11 +558,11 @@ Allows developers to request a specified asset be tracked in the wallet.
 - `address`: The [address][3] of the contract.
 
 !!! warning
-    The `watch_asset` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
-    Please check [Permissions][4] for more detail.
+    The `watch_asset` should have the permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
+    Please check [Permissions][4] for more details.
 
 !!! warning
-    The request causes a popup to appear.
+    The request causes a pop-up to appear.
     You should only request permissions in response to a direct user action, such as a button click.
 
 !!! failure
