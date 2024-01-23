@@ -8,7 +8,7 @@ tags:
 # Errors
 
 The Provider will reject any RPC request with an error object if the RPC request cannot be fulfilled.
-Every error object should have a `code` property that indicates the error type occurred.
+Every error object should have a `code` property that indicates the error type that occurred.
 
 ## Error Type
 

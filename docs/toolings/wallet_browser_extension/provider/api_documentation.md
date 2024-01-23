@@ -23,7 +23,7 @@ The request method is intended as a transport- and protocol-agnostic wrapper fun
 
 If resolved, the Promise will resolve with a result per the RPC method’s specification.
 If the returned Promise rejects,
-it will reject with a `XPLLProviderRpcError` as specified in the [Errors][2] section below.
+it will reject with an `XPLLProviderRpcError` as specified in the [Errors][2] section below.
 
 ```ts
 interface RequestArguments {
@@ -149,7 +149,7 @@ type GetPermissionsResult = Permission[];
 Return the list of account [addresses][3] owned by the user.
 
 !!! warning
-    The `get_accounts` should have the permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
+    The `get_accounts` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
     Please check [Permissions][4] for more details.
 
 
@@ -180,7 +180,7 @@ return `undefined` if the user still needs to register.
 
 !!! warning
     The `get_active_account` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
-    Please check [Permission][4] for more detail.
+    Please check [Permission][4] for more details.
 
 ```ts
 interface GetActiveAccountRequest {
@@ -333,7 +333,7 @@ Transfer tokens to another account; return the transaction hash if the request i
     You should only request permissions in response to a direct user action, such as a button click.
 
 !!! failure
-    If user rejects the request, the `User Rejected Request 4001` error will be thrown.
+    If the user rejects the request, the `User Rejected Request 4001` error will be thrown.
 
 !!! tip
     Send Token is only for XPLL transfers.
@@ -451,7 +451,7 @@ window.xpll.request({
 ```
 
 Sometimes, it's hard to serialize the arguments by yourself. Hence, the Provider provides a handy way to help you with the argument serialization:
-by passing the arguments as an array of objects, as seen below.
+by passing in the arguments as an array of objects, as seen below.
 
 ```ts
 interface UintArgument {
@@ -558,7 +558,7 @@ Allows developers to request a specified asset be tracked in the wallet.
 - `address`: The [address][3] of the contract.
 
 !!! warning
-    The `watch_asset` should have the permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
+    The `watch_asset` should have permission granted; otherwise, the `User Rejected Request 4001` error will be thrown.
     Please check [Permissions][4] for more details.
 
 !!! warning

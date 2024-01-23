@@ -9,15 +9,15 @@ tags:
 
 ## Dapp
 
-A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface.
+A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a front-end user interface.
 
 ## Provider
 
-A JavaScript object made available to a consumer, that provides access to wallet by means of a Client.
+A JavaScript object made available to a consumer, that provides access to a wallet using a Client.
 
 ## Client
 
-An endpoint that receives Remote Procedure Call (RPC) requests from the Provider, and returns their results.
+An endpoint that receives Remote Procedure Call (RPC) requests from the Provider and returns their results.
 
 ## Wallet
 

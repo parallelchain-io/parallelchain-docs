@@ -8,7 +8,7 @@ tags:
 # Events
 
 The Provider will be implemented per the Node.js [EventEmitter][eventemitter] API
-with the following event handling methods:
+with the following event-handling methods:
 
 - `on`
 - `off`
@@ -23,7 +23,7 @@ with the following event handling methods:
 function handleActiveAccountChanged(accountAddress) {
   // handle active account
 }
-// subscribe the activeAccountChanged event
+// subscribe to the activeAccountChanged event
 window.xpll.on("activeAccountChanged", handleActiveAccountChanged);
 // unsubscribe the activeAccountChanged event
 window.xpll.off("activeAccountChanged", handleActiveAccountChanged);
@@ -43,7 +43,7 @@ interface ProviderMessage {
 ## Network Changed
 
 If the network that the Provider is connected to is changed,
-   the Provider will emit the event named `networkChanged` with `string` as network id.
+   the Provider will emit the event named `networkChanged` with `string` as the network id.
 
 ```ts
 interface NetworkChangedEvent {
@@ -55,7 +55,7 @@ interface NetworkChangedEvent {
 ## Active Account Changed
 
 If the current active account is changed,
-the Provider will emit the event named `activeAccountChanged` with `string` as account address.
+the Provider will emit the event named `activeAccountChanged` with `string` as the account address.
 
 ```ts
 interface ActiveAccountChangedEvent {
