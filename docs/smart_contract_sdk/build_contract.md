@@ -48,7 +48,7 @@ In order to build a `WASM` binary of the smart contract, run the following comma
     ```bash
     ./pchain_compile build --source <PATH_TO_SMART_CONTRACT_CODE>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_compile.exe build --source <PATH_TO_SMART_CONTRACT_CODE>
     ```

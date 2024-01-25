@@ -17,7 +17,7 @@ To create an account, type the following command below:
     ```bash
     ./pchain_client keys create --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys create --name <NAME>
     ```
@@ -30,7 +30,7 @@ This command generates a set of ed25519_dalek-compatible keys. A keypair file in
     ```bash
     ./pchain_client keys list
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys list
     ```
@@ -48,11 +48,11 @@ You will need the keypair and public key to submit transactions.
 You can check the account balance using the account address (public key).
 === "Linux / macOS"
     ```bash
-    ./pchain_client query balance --address <PUBLIC_KEY>
+    ./pchain_client query balance --address <ADDRESS>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe query balance --address <PUBLIC_KEY>
+    ./pchain_client.exe query balance --address <ADDRESS>
     ```
 <details><summary>Terminal Output</summary>
 ```bash
@@ -72,7 +72,7 @@ To secure your keypair and money, you must export it and save it somewhere secur
     ```bash
     ./pchain_client keys export --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe keys export --name <NAME>
     ```
@@ -84,11 +84,11 @@ You will be asked to input your password to export the keypair. The keypair will
 To add your keypair, type the following command below:
 === "Linux / macOS"
     ```bash
-    ./pchain_client keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
+    ./pchain_client keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --name <NAME>
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe keys import --public <PUBLIC_KEY> --private <PRIVATE_KEY> --name <NAME>
+    ./pchain_client.exe keys import --public <PUBLIC_KEY/ADDRESS> --private <PRIVATE_KEY> --name <NAME>
     ```
 
 You will be asked to input your password to import the new keypair.

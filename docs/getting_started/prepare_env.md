@@ -40,7 +40,7 @@ The following command will set the environmental variable **permanently**:
     ##########################################################
     export PCHAIN_CLI_HOME="<PATH_TO_DIRECTORY>"
     ```
-=== "Windows (restart shell to pick up change)"
+=== "Windows PowerShell (restart shell to pick up change)"
     ```PowerShell
     setx PCHAIN_CLI_HOME "<PATH_TO_DIRECTORY>"
     ```
@@ -69,7 +69,7 @@ After installation of `pchain_client`, you had to update the Mainnet / Testnet e
     # Testnet
     ./pchain_client config setup --url https://pchain-test-rpc02.parallelchain.io
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     # Mainnet
     ./pchain_client.exe config setup --url https://pchain-main-rpc02.parallelchain.io

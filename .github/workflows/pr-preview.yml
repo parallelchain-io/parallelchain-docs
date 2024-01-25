@@ -3,13 +3,16 @@ name: 🚀 Preview
 concurrency: preview-${{ github.ref }}
 
 on:
+  workflow_dispatch:
   pull_request:
     types:
       - opened
       - reopened
       - synchronize
       - closed
-
+permissions:
+  contents: write
+  pull-requests: write
 jobs:
   preview:
     name: 🚀 Preview
@@ -34,4 +37,3 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./site/
-

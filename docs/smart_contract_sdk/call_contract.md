@@ -54,7 +54,7 @@ Here is the command to call a contract:
     --arguments <CALL_ARGUMENT_FILE_PATH_WITH_FILE_NAME>
     --amount <AMOUNT_TO_CONTRACT> \
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe transaction create `
     --nonce <NONCE> `
@@ -78,7 +78,7 @@ To query the resulting receipt of the transaction,
     ```bash
     ./pchain_client query tx --hash <TRANSACTION_HASH> 
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe query tx --hash <TRANSACTION_HASH>
     ```
@@ -96,7 +96,7 @@ For example, if the contract method returns a u32 integer, the `return value` is
     ```bash
     pchain_client parse call-result --value BAAAAAUAAAA --data-type u32
     ```
-=== "Windows"
+=== "Windows PowerShell"
     ```PowerShell
     ./pchain_client.exe parse call-result --value BAAAAAUAAAA --data-type u32
     ```

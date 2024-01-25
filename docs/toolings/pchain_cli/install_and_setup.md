@@ -26,9 +26,14 @@ If this is your first time using `pchain_client`, you need to setup `$PCHAIN_CLI
 
 Upon first use of `pchain_client`, you will be prompted to set up a password to protect your account keypairs. Please note that this password can be different from the password you used in ParallelChain Explorer. Alternatively, you can skip the password protection by simply pressing Enter.
 
-```sh
-pchain_client --version
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain_client --version
+    ```
+=== "Windows PowerShell"
+    ```PowerShell
+    ./pchain_client.exe --version
+    ```
 You will be required to enter your password twice. If your password is set successfully, you will see a return message with `pchain_client` version shown on console.
 
 **WARNING:**
@@ -40,7 +45,13 @@ The password is not sent and saved anywhere. You won't be able to recover the pa
 
 Before you can submit transactions or query information on ParallelChain, you need to setup your own choice of ParallelChain RPC API provider URL.
 
-```sh
-pchain_client config setup --url <URL>
-```
+=== "Linux / macOS"
+    ```bash
+    ./pchain_client config setup --url <URL>
+    ```
+=== "Windows PowerShell"
+    ```PowerShell
+    ./pchain_client.exe config setup --url <URL>
+    ```
+
 This would check the status of your chosen provider. If `pchain_client` cannot connect to your provider, a warning message will be shown, and setup fails. You need to set up another url with the above command again.
