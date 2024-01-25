@@ -45,41 +45,39 @@ nav:
   #   - Non-Fungible Token Contract
   #   - Staking Contract
   #   - Epoch Contract
-  - Getting Started:
-    - Installation: getting_started/installation.md
-    - Prepare Environment: getting_started/prepare_env.md
-    - Create Account: getting_started/create_account.md
-    - Transfer Tokens: getting_started/transfer.md
-    - Staking: getting_started/staking.md
-  - Smart Contract Development:
-    - Introduction: smart_contract_sdk/introduction.md
+  - Developer Guide:
+    - Getting Started:
+      - Installation: getting_started/installation.md
+      - Prepare Environment: getting_started/prepare_env.md
+      - Create Account: getting_started/create_account.md
+      - Transfer Tokens: getting_started/transfer.md
+      - Staking: getting_started/staking.md
+    - Smart Contract Development:
+      - Introduction: smart_contract_sdk/introduction.md
     #   - What is Smart Contract on ParallelChain?
     #   - Advantages of ParallelChain Smart Contracts
     #   - ParallelChain Smart Contract Language
-    - Install SDK: smart_contract_sdk/installation.md
-    - Prepare Environment: smart_contract_sdk/prepare_env.md
-    - Develop Contract: smart_contract_sdk/develop_contract.md
-    - Build Contract: smart_contract_sdk/build_contract.md
-    - Deploy Contract: smart_contract_sdk/deploy_contract.md
-    - Call Contract: smart_contract_sdk/call_contract.md
-    - Tutorial:
-      - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
-      - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
-      - Chapter 3: smart_contract_sdk/tutorial/chapter_3.md
-      - Chapter 4: smart_contract_sdk/tutorial/chapter_4.md
-      - Chapter 5: smart_contract_sdk/tutorial/chapter_5.md
-      - Chapter 6: smart_contract_sdk/tutorial/chapter_6.md
-    - Advance: 
-      - Contract Methods: smart_contract_sdk/advance/entrypoints.md
-      - Contract Storage: smart_contract_sdk/advance/contract_storage.md
-      - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
-      - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
-      - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
-      - Crypto: smart_contract_sdk/advance/crypto.md
-      - Staking in Contract: smart_contract_sdk/advance/staking.md
-  # - DApp Development:
-  #   #need help
-  - Tooling:
+      - Install SDK: smart_contract_sdk/installation.md
+      - Prepare Environment: smart_contract_sdk/prepare_env.md
+      - Develop Contract: smart_contract_sdk/develop_contract.md
+      - Build Contract: smart_contract_sdk/build_contract.md
+      - Deploy Contract: smart_contract_sdk/deploy_contract.md
+      - Call Contract: smart_contract_sdk/call_contract.md
+      - Tutorial:
+        - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
+        - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
+        - Chapter 3: smart_contract_sdk/tutorial/chapter_3.md
+        - Chapter 4: smart_contract_sdk/tutorial/chapter_4.md
+        - Chapter 5: smart_contract_sdk/tutorial/chapter_5.md
+        - Chapter 6: smart_contract_sdk/tutorial/chapter_6.md
+      - Advance: 
+        - Contract Methods: smart_contract_sdk/advance/entrypoints.md
+        - Contract Storage: smart_contract_sdk/advance/contract_storage.md
+        - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
+        - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
+        - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
+        - Crypto: smart_contract_sdk/advance/crypto.md
+        - Staking in Contract: smart_contract_sdk/advance/staking.md
     - ParallelChain RPC API:
       - Introduction: toolings/rpc/introduction.md
       - Transaction-related RPC: toolings/rpc/transaction_rpc.md
@@ -102,6 +100,19 @@ nav:
         - Events: toolings/wallet_browser_extension/provider/event.md
         - Permissions: toolings/wallet_browser_extension/provider/permission.md
         - API Documentation: toolings/wallet_browser_extension/provider/api_documentation.md
+  - User Guides:
+    - Wallet Web-Based Tool: 
+      - Create Account: user_guides/wallet_web_based_tool/create_account.md
+      - Transfer Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
+      - Staking: user_guides/wallet_web_based_tool/staking.md
+    - Wallet Browser Extension:
+      - Create Account: user_guides/wallet_browser_extension/create_account.md
+      - Transfer Tokens: user_guides/wallet_browser_extension/transfer_tokens.md
+      - Staking: user_guides/wallet_browser_extension/staking.md
+    - pchain-cli:
+      - Create Account: user_guides/pchain_cli/create_account.md
+      - Transfer Tokens: user_guides/pchain_cli/transfer_tokens.md
+      - Staking: user_guides/pchain_cli/staking.md
 
 extra_css:
   - stylesheets/extra.css
