@@ -102,13 +102,13 @@ nav:
         - API Documentation: toolings/wallet_browser_extension/provider/api_documentation.md
   - User Guides:
     - Wallet Web-Based Tool: 
-      - Create Account: user_guides/wallet_web_based_tool/create_account.md
+      - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
       - Transfer Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
       - Staking: user_guides/wallet_web_based_tool/staking.md
     - Wallet Browser Extension:
-      - Create Account: user_guides/wallet_browser_extension/create_account.md
+      - Creating and Managing Your Account: user_guides/wallet_browser_extension/create_account.md
       - Transfer Tokens: user_guides/wallet_browser_extension/transfer_tokens.md
-      - Staking: user_guides/wallet_browser_extension/staking.md
+      - Staking XPLL: user_guides/wallet_browser_extension/staking.md
     - pchain-cli:
       - Create Account: user_guides/pchain_cli/create_account.md
       - Transfer Tokens: user_guides/pchain_cli/transfer_tokens.md

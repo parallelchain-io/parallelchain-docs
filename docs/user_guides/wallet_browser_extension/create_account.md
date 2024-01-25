@@ -272,8 +272,8 @@ No, you cannot send XPLL tokens to other blockchains at the moment. XPLL and oth
 
 Xperience is a non-custodial wallet that only you have access to. If you lose your recovery key and password, you will lose access to your wallet. We recommend that you write down your recovery key and store it in a secure place.
 
-If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, and then refreshing the page. Please check with your selected browser to find out how to clear your browser cache.
-After that, create a new account by following the steps under Creating Your ParallelChain account.
+If you have lost access to your existing wallet, you can opt to register for a new wallet by clearing the cache of your current browser, and then refreshing the page. Please check with your selected browser to find out how to clear your browser cache.
+After that, register for a new wallet by following the steps under [Register for a New Wallet](#register-for-a-new-wallet).
 
 If you have exported your public and private keys before, you can then recover access to your assets by importing your old account with its public and private keys. For more details, follow the steps under [Exporting Account](#exporting-account) and [Importing Account](#importing-account).
 
