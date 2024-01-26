@@ -45,7 +45,7 @@ Check out the examples below for details or see the full list of commands. The f
 New users can begin either by 
 
 1. [Install and Setup](./install_and_setup.md) or,
-2. [Prepare Environment](../../getting_started/prepare_env.md) or,
+2. [Prepare Environment](./install_and_setup.md#prepare-environment) or,
 3. [Setting up New Account](./manage_account.md)
 
 
@@ -54,7 +54,7 @@ If you are lost at any step, you can always type `pchain_client --help`.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-## Common Use Cases
+##  Content List
 ---
 
 - [Install and Setup](install_and_setup.md#install-and-setup)

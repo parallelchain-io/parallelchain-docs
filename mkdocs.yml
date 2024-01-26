@@ -46,12 +46,6 @@ nav:
   #   - Staking Contract
   #   - Epoch Contract
   - Developer Guides:
-    - Getting Started:
-      - Installation: developer_guides/getting_started/installation.md
-      - Prepare Environment: developer_guides/getting_started/prepare_env.md
-      - Create Account: developer_guides/getting_started/create_account.md
-      - Transfer Tokens: developer_guides/getting_started/transfer.md
-      - Staking: developer_guides/getting_started/staking.md
     - pchain-client: 
       - Introduction: developer_guides/pchain_cli/introduction.md
       - Install and Setup: developer_guides/pchain_cli/install_and_setup.md
@@ -60,31 +54,31 @@ nav:
       - Query: developer_guides/pchain_cli/query.md
       - Smart Contract: developer_guides/pchain_cli/smart_contract.md
     - Smart Contract Development:
-      - Introduction: smart_contract_sdk/introduction.md
+      - Introduction: developer_guides/smart_contract_sdk/introduction.md
     #   - What is Smart Contract on ParallelChain?
     #   - Advantages of ParallelChain Smart Contracts
     #   - ParallelChain Smart Contract Language
-      - Install SDK: smart_contract_sdk/installation.md
-      - Prepare Environment: smart_contract_sdk/prepare_env.md
-      - Develop Contract: smart_contract_sdk/develop_contract.md
-      - Build Contract: smart_contract_sdk/build_contract.md
-      - Deploy Contract: smart_contract_sdk/deploy_contract.md
-      - Call Contract: smart_contract_sdk/call_contract.md
+      - Install SDK: developer_guides/smart_contract_sdk/installation.md
+      - Prepare Environment: developer_guides/smart_contract_sdk/prepare_env.md
+      - Develop Contract: developer_guides/smart_contract_sdk/develop_contract.md
+      - Build Contract: developer_guides/smart_contract_sdk/build_contract.md
+      - Deploy Contract: developer_guides/smart_contract_sdk/deploy_contract.md
+      - Call Contract: developer_guides/smart_contract_sdk/call_contract.md
       - Tutorial:
-        - Chapter 1: smart_contract_sdk/tutorial/chapter_1.md
-        - Chapter 2: smart_contract_sdk/tutorial/chapter_2.md
-        - Chapter 3: smart_contract_sdk/tutorial/chapter_3.md
-        - Chapter 4: smart_contract_sdk/tutorial/chapter_4.md
-        - Chapter 5: smart_contract_sdk/tutorial/chapter_5.md
-        - Chapter 6: smart_contract_sdk/tutorial/chapter_6.md
+        - Chapter 1: developer_guides/smart_contract_sdk/tutorial/chapter_1.md
+        - Chapter 2: developer_guides/smart_contract_sdk/tutorial/chapter_2.md
+        - Chapter 3: developer_guides/smart_contract_sdk/tutorial/chapter_3.md
+        - Chapter 4: developer_guides/smart_contract_sdk/tutorial/chapter_4.md
+        - Chapter 5: developer_guides/smart_contract_sdk/tutorial/chapter_5.md
+        - Chapter 6: developer_guides/smart_contract_sdk/tutorial/chapter_6.md
       - Advance: 
-        - Contract Methods: smart_contract_sdk/advance/entrypoints.md
-        - Contract Storage: smart_contract_sdk/advance/contract_storage.md
-        - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
-        - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
-        - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
-        - Crypto: smart_contract_sdk/advance/crypto.md
-        - Staking in Contract: smart_contract_sdk/advance/staking.md
+        - Contract Methods: developer_guides/smart_contract_sdk/advance/entrypoints.md
+        - Contract Storage: developer_guides/smart_contract_sdk/advance/contract_storage.md
+        - Accessing Information About the Blockchain: developer_guides/smart_contract_sdk/advance/params.md
+        - Cross Contract Call: developer_guides/smart_contract_sdk/advance/cross_contract.md
+        - Transferring Balance: developer_guides/smart_contract_sdk/advance/internal_transaction.md
+        - Crypto: developer_guides/smart_contract_sdk/advance/crypto.md
+        - Staking in Contract: developer_guides/smart_contract_sdk/advance/staking.md
     - ParallelChain RPC API:
       - Introduction: developer_guides/rpc/introduction.md
       - Transaction-related RPC: developer_guides/rpc/transaction_rpc.md

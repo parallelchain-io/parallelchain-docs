@@ -18,7 +18,7 @@ To use smart contracts on ParallelChain Mainnet, developers can write a Contract
 
 The Smart Contract Programming Model is based on Object-Oriented Programming (OOP). In this model, a contract is like a `Rust` `struct` that controls access to persistent storage. Accounts can interact with contracts by submitting transactions that include a call command to invoke methods of the contract. These methods are sometimes called just "methods" for short.
 
-See section [Smart Contract Development](../smart_contract_sdk/introduction.md) for more information of `pchain-sdk`.
+See section [Smart Contract Development](../developer_guides/smart_contract_sdk/introduction.md) for more information of `pchain-sdk`.
 
 ## Why Rust and WebAssembly (WASM)?
 ---
