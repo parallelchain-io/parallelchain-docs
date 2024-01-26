@@ -107,7 +107,8 @@ nav:
       - Staking: user_guides/wallet_web_based_tool/staking.md
     - Wallet Browser Extension:
       - Creating and Managing Your Account: user_guides/wallet_browser_extension/create_account.md
-      - Transfer Tokens: user_guides/wallet_browser_extension/transfer_tokens.md
+      - Transfer Tokens: user_guides//transfer_tokens.md
+      - Managing Tokens: user_guides/wallet_browser_extension/managing_tokens.md
       - Staking XPLL: user_guides/wallet_browser_extension/staking.md
     - pchain-cli:
       - Create Account: user_guides/pchain_cli/create_account.md
