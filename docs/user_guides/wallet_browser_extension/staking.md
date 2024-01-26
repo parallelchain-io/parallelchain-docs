@@ -4,6 +4,8 @@ tags:
 - staking
 - xpll
 ---
+!!! note
+    This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
 You can stake XPLL with network validators to help secure the blockchain and earn rewards. Follow the steps below to stake XPLL tokens with your ParallelChain account. 
 
@@ -18,7 +20,8 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 
 ![Select validtor](../../img/extension/16_Stake%20XPLL.svg){ width=40%  style="display: block; margin: 0 auto" } 
 1. Click **STAKE XPLL**
-2. You will see the list of validators. Select a valid from the list, or search for a specific validator via the search bar at the top.
+
+2. You will see the list of validators. Select a validator from the list, or search for a specific validator via the search bar at the top.
 
 ### Step 2: Deposit XPLL
 #### Through Your Account Balance
@@ -147,7 +150,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **STAKE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been staked with the validator. 
 
 !!! note
-    Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
+    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
 ## Unstaking Your XPLL
 ---
@@ -354,7 +357,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **WITHDRAW DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been withdrawn.
 !!! note
-    Depend on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
+    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
 ## FAQ
 ---
@@ -375,7 +378,7 @@ One full epoch lasts approximately **one day** before it enters the next epoch. 
 You can withdraw the rewards you have earned from staking by unstaking them to your token deposit. Additionally, you may toggle **Auto Stake Rewards** on to avoid the process of unstaking your rewards. After that, you can withdraw the rewards to your account balance. Please refer to the section on [Unstaking Your XPLL](#unstaking-your-xpll) and [Withdrawing Your Stakes](#withdrawing-your-stakes) for the required steps. 
 
 ### Can I move my staked XPLL to another validator? 
-Yes, you can. You will need to *unstake your XPLL tokens* to move them to your token deposit, then *withdraw them to your account balance*. You can then *deposit those tokens another validator pool*, then *stake your tokens* with them.  
+Yes, you can. You will need to *unstake your XPLL tokens* to move them to your token deposit, then *withdraw them to your account balance*. You can then *deposit those tokens to another validator pool*, then *stake your tokens* with them.  
 
 
 ### The transaction status is still showing ‘PENDING’. Why is my transaction not confirmed yet? 

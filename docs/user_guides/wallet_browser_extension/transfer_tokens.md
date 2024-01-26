@@ -3,6 +3,8 @@ tags:
 - Xperience extension
 - xpll
 ---
+!!! note
+    This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
 Sending and receiving assets with digital wallets is a keystone of any blockchain’s decentralized infrastructure. Follow the steps below to send and receive tokens with your ParallelChain account.
 

@@ -101,10 +101,10 @@ nav:
         - Permissions: toolings/wallet_browser_extension/provider/permission.md
         - API Documentation: toolings/wallet_browser_extension/provider/api_documentation.md
   - User Guides:
-    - Wallet Web-Based Tool: 
-      - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
-      - Transfer Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
-      - Staking: user_guides/wallet_web_based_tool/staking.md
+    # - Wallet Web-Based Tool: 
+    #   - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
+    #   - Transfer Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
+    #   - Staking: user_guides/wallet_web_based_tool/staking.md
     - Wallet Browser Extension:
       - Creating and Managing Your Account: user_guides/wallet_browser_extension/create_account.md
       - Transfer Tokens: user_guides//wallet_browser_extension/transfer_tokens.md

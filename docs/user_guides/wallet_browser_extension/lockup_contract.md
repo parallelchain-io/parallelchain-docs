@@ -4,6 +4,9 @@ tags:
 - xpll
 - lockup contract
 ---
+!!! note
+    This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
+    
 Your XPLL allocation might be subject to a **vesting schedule** that determines how many of your tokens are vested (unlocked) as time goes on. You need to first *register the lock-up contract of your allocation* to your account so you can *claim your unlocked tokens* in the future, 
 
 !!! note 
