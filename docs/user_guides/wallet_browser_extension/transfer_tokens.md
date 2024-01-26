@@ -42,7 +42,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 5. You can check the status of your transaction in the **Transactions** tab. It is labeled **TRANSFER**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your tokens have now been sent.  
 
 ## Receiving XPLL Tokens
-
+---
 ### Step 1: Share Your Wallet Address
 1. Click the copy icon next to your wallet address to copy it.
 2. Share your wallet address with the sender through a secure text messaging application.
@@ -53,6 +53,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 2. Once the transaction is confirmed, your wallet balance will be automatically updated.
 
 ## FAQ
+---
 ### What tokens can I send or receive?
 You can send or receive XPLL using either **Xperience Browser Extension** or **ParallelChain Explorer**. However, you can only send or receive **PRFC1 tokens** using **Xperience Browser Extension** for now.
 

@@ -13,6 +13,9 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
     Before you can perform the following steps, you need to have created and logged in to your ParallelChain account. If you are not sure how to do so, refer to [Xperience Browser Extension Tutorials: Creating and Managing Your Account](./create_account.md). 
 
 ## Importing Tokens
+
+---
+
 ![import tokens](../../img/tokens/3_Importing%20Tokens.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -36,6 +39,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 8. If you click **CONFIRM**, you will be taken back to the main page. Your token has now been imported and you will see it under the **Tokens** tab.
 
 ## Viewing Token Details
+---
 ![import tokens](../../img/tokens/6.Navigation%20Token%20tab.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -60,8 +64,8 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 5. You can click the arrow next to the **Balance** field to send tokens. For more details on how to send tokens, refer to [Sending Tokens](./transfer_tokens.md#sending-tokens). 
 
-### Removing Imported Tokens
-
+## Removing Imported Tokens
+---
 ![import tokens](../../img/tokens/8_Remove%20Imported%20Token%20(Navi).svg){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -77,6 +81,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 6. If you click **CONFIRM**, you will be taken back to the main page. Your token has now been removed and you will no longer see the removed token under the **Tokens** tab. 
 
 ## FAQ
+---
 
 ### What types of tokens can I import into my wallet? 
 In this version of Xperience Browser Extension, you can only import **PRFC1 tokens** to your wallet. 

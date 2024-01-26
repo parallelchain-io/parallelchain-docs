@@ -2,12 +2,18 @@
 tags:
 - Xperience extension
 ---
+!!! note
+    This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
-To conduct transactions on ParalleChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through **Xperience Browser Extension**—or through the good old **ParallelChain Explorer**.
+**Xperience** is your ParallelChain wallet, and **Xperience Browser Extension** is its browser extension.
+
+To conduct transactions on ParallelChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through **Xperience Browser Extension**—or through the good old **ParallelChain Explorer**.
 
 The blockchain account you create on ParallelChain is non-custodial, which means only you have control and access to it. You must store your recovery key securely and properly to avoid losing access to your assets. There is no way to retrieve it if it is lost. 
 
 Learn how to create and manage your ParallelChain account using **Xperience Browser Extension** with the steps below. 
+
+ 
 
 ## Install **Xperience Browser Exension**
 ---

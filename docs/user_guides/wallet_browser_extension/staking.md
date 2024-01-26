@@ -71,6 +71,8 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 ## Staking Your XPLL
 You can stake the XPLL that you ahve deposited with the validators to earn rewards.
 
+---
+
 ### Step 1: Navigate to Your Chosen Validator
 ![Stake xpll](../../img/extension/19_View%20Stakes.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
@@ -148,7 +150,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
 ## Unstaking Your XPLL
-
+---
 ### Step 1: Navigate to Your Chosen Validator
 
 ![Check status](../../img/extension/23_Unstake%20Amount.svg){ width=40%  style="display: block; margin: 0 auto" } 
@@ -223,7 +225,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
 ## Topping Up Your Stake
-
+---
 ### Step 1: Navigate to Your Chosen Validator
 ![Check status](../../img/extension/27_Top%20up.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
@@ -280,6 +282,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 
 
 ## Withdrawing Your Stakes
+--- 
 ### Step 1: Navigate to Your Chosen Validator
 
 ![Check status](../../img/extension/31_Withdraw%20staking%20rewards%20(Navigation).svg){ width=40%  style="display: block; margin: 0 auto" } 
@@ -354,7 +357,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     Depend on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
 ## FAQ
-
+---
 ### Why am I not able to stake XPLL tokens?
 You will need to retain a certain number of XPLL in your account balance to pay for transaction fees. Ensure that you have reserved enough XPLL to pay for the gas fees for depositing, staking, unstaking, topping up, or withdrawing XPLL.
 
