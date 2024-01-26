@@ -6,7 +6,7 @@ tags:
 !!! note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
-Sending and receiving assets with digital wallets is a keystone of any blockchain’s decentralized infrastructure. Follow the steps below to send and receive tokens with your ParallelChain account.
+Sending and receiving assets with digital wallets is a keystone of any blockchain’s decentralised infrastructure. Follow the steps below to send and receive tokens with your ParallelChain account.
 
 !!! note
 
@@ -66,7 +66,7 @@ Click on your wallet address in **Xperience Browser Extension**. This will open 
 
 ### Can I cancel or refund transactions? 
 
-No, once a transaction request has been made, it cannot be canceled. 
+No, once a transaction request has been made, it cannot be cancelled. 
 
 ### Where can I seek support or report bugs? 
 

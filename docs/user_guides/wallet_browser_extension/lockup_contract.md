@@ -6,7 +6,7 @@ tags:
 ---
 !!! note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
-    
+
 Your XPLL allocation might be subject to a **vesting schedule** that determines how many of your tokens are vested (unlocked) as time goes on. You need to first *register the lock-up contract of your allocation* to your account so you can *claim your unlocked tokens* in the future, 
 
 !!! note 
@@ -19,7 +19,7 @@ Follow the steps below to register your lock-up contract and claim your tokens w
 
 ## Registering Your Lock-Up Contract
 ---
-### Step 1: Get Your Lock-up Contract Address 
+### Step 1: Get Your Lock-Up Contract Address 
 1. Your lock-up contract address would have been sent to you **via email**. Check your email and copy your lock-up contract address.
 
 ### Step 2: Register Your Lock-Up Contract 
@@ -50,12 +50,12 @@ Follow the steps below to register your lock-up contract and claim your tokens w
 
     ![lockup contract](../../img/extension/13_Lock-Up%20Contract%20Balance.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
-5. You will be taken back to the main page. If you scroll right, you will see your **Lock-up Contract (XPLL)** balance next to your main balance. 
+5. You will be taken back to the main page. If you scroll right, you will see your **Lock-Up Contract (XPLL)** balance next to your main balance. 
 
 !!! note
     Your account comes with a small number of XPLL to pay for the gas fee for the first transaction. For Node Round participants who will operate validator nodes on ParallelChain, the locked balance shown will be **0**, as your allocation has been automatically staked on one of the existing validator nodes. 
 
-## Claiming Your Vesting Tokens
+## Claiming Your Vested Tokens
 ---
 ### Step 1: Check Your Vested Balance 
 ![check vested balance](../../img/extension/14_Select%20a%20validator.svg){ width=40%  style="display: block; margin: 0 auto" } 

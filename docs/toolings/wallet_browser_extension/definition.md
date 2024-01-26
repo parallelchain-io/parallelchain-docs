@@ -9,7 +9,7 @@ tags:
 
 ## Dapp
 
-A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a front-end user interface.
+A decentralised application (dapp) is an application built on a decentralised network that combines a smart contract and a front-end user interface.
 
 ## Provider
 
