@@ -13,13 +13,13 @@ Start by reading about the [ParallelChain Wallet Provider API](./provider/intro.
 ## Supported Platforms
 
 - Chrome browser (Minimum version: Chrome 57)
-- Firefox browser (Minimum version: Firefox 57.0)
+<!-- - Firefox browser (Minimum version: Firefox 57.0) -->
 
 ## Getting Started
 
 ### Prerequisites
 
-- Chrome or Firefox browser installed (Refer to above for supported versions)
+- Chrome browser installed (Refer to above for supported versions)
 
 ### Extension Installation
 
@@ -37,7 +37,7 @@ Chrome users can install the extension via the Chrome Web Store.
 
 [1]: https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 
-#### Firefox
+<!-- #### Firefox
 
 ##### Firefox Add-ons
 
@@ -49,7 +49,7 @@ Firefox users can install the extension via Firefox Add-ons.
 2. Unzip the file into a folder.
 3. Follow the [instructions here][2] to load the extension. Load `manifest.json` in the folder when prompted.
 
-[2]: https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
+[2]: https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/ -->
 
 ## FAQ
 

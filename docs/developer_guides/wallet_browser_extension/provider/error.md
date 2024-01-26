@@ -45,9 +45,9 @@ interface XPLLProviderRpcError extends Error {
 |   -32005    |         Limit exceeded         |                      Request exceeds defined limit                       |
 |   -32006    | JSON-RPC version not supported |              Version of JSON-RPC protocol is not supported               |
 
-> [`4900`] is intended to indicate that the Provider is disconnected from all chains,
-> while [`4901`] is intended to indicate that the Provider is disconnected from a specific chain only.
-> In other words, [`4901`] implies that the Provider is connected to other chains, just not the requested one.
+> [`4900`] is intended to indicate that the Provider is disconnected *from all chains*,
+> while [`4901`] is intended to indicate that the Provider is disconnected *from a specific chain only*.
+> In other words, [`4901`] implies that the Provider is *connected to other chains, just not the requested one*.
 
 [error]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 [structuredClone]: https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
