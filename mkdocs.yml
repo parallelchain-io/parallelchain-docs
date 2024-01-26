@@ -110,6 +110,7 @@ nav:
       - Transfer Tokens: user_guides//transfer_tokens.md
       - Managing Tokens: user_guides/wallet_browser_extension/managing_tokens.md
       - Staking XPLL: user_guides/wallet_browser_extension/staking.md
+      - Lock-up Contract: user_guides/wallet_browser_extension/lockup_contract.md
     - pchain-cli:
       - Create Account: user_guides/pchain_cli/create_account.md
       - Transfer Tokens: user_guides/pchain_cli/transfer_tokens.md

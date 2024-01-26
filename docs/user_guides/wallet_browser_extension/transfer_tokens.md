@@ -12,11 +12,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 ## Sending Tokens
 ---
-
-<div style="display: flex; justify-content: center; gap: 10px">
-<img src="../../../img/tokens/1_Send Tokens.svg" style="width: 40%;">
-<img src="../../../img/tokens/1_Send Tokens.svg" style="width: 40%; "> TODO
-</div>
+![check transfer](../../img/tokens/1_Send%20Tokens.svg){ width=40%  style="display: block; margin: 0 auto" } 
 
 ### Step 1: Fill in Transaction Details
 1. Click **SEND**.
