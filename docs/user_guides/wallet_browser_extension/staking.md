@@ -381,4 +381,4 @@ Transactions are prioritised by the amount of *Priority Fee per Gas* paid. Lower
 
 ### Where can I seek support or report bugs? 
 
-You can visit ParallelChain’s [Discord](https://discord.gg/parallelchainofficial) for community help. If you cannot resolve your issue there, you can write to **walletsupport@parallelchain.io**. 
+You can visit ParallelChain’s [Discord](https://discord.gg/parallelchainofficial) for community help. If you cannot resolve your issue there, you can write to [walletsupport@parallelchain.io](mailto:walletsupport@parallelchain.io). 

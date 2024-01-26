@@ -279,4 +279,4 @@ If you have exported your public and private keys before, you can then recover a
 
 ### Where can I seek support or report bugs?
 
-You can visit ParallelChain's [Discord](https://discord.gg/parallelchainofficial) for community help. If you cannot resolve your issue there, you can write to [walletsupport@parallelchain.io](walletsupport@parallelchain.io).
+You can visit ParallelChain's [Discord](https://discord.gg/parallelchainofficial) for community help. If you cannot resolve your issue there, you can write to [walletsupport@parallelchain.io](mailto:walletsupport@parallelchain.io).
