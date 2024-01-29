@@ -95,10 +95,11 @@ nav:
         - Permissions: developer_guides/wallet_browser_extension/provider/permission.md
         - API Documentation: developer_guides/wallet_browser_extension/provider/api_documentation.md
   - User Guides:
-    # - Wallet Web-Based Tool: 
-    #   - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
-    #   - Transfer Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
-    #   - Staking: user_guides/wallet_web_based_tool/staking.md
+    - Wallet Web-Based Tool: 
+      - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
+      - Transferring Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
+      - Staking XPLL: user_guides/wallet_web_based_tool/staking.md
+      - Lock-Up Contract: user_guides/wallet_web_based_tool/lockup_contract.md
     - Wallet Browser Extension:
       - Creating and Managing Your Account: user_guides/wallet_browser_extension/create_account.md
       - Transferring Tokens: user_guides//wallet_browser_extension/transfer_tokens.md
