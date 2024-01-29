@@ -12,7 +12,7 @@ The blockchain account you create on ParallelChain is non-custodial, which means
  
 Learn how to create and manage your ParallelChain account using **ParallelChain Explorer** with the steps below.
 
-## Creating Your ParallelChain Mainnet Account
+## Creating Your ParallelChain Wallet Account
 ---
 
 ![create acount](../../img/explorer/account/1_creating_an_account.jpg){ width=80%  style="display: block; margin: 0 auto" } 
@@ -170,7 +170,7 @@ Ethereum Virtual Machine (EVM) compatibility is targeted to come with the Lampor
 Xperience is a non-custodial wallet which only you have the access to. If you lose your recovery key and password, you will lose access to any asset that is stored in it. We recommend that you write down your recovery key and store it in a secure place, or follow the steps under Exporting Your Account With Public & Private Keys.
 
 
-If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, then refreshing the page. After that, create a new account by following the steps under [Creating Your ParallelChain Mainnet Account](#create). Please check online to find out how you can clear your respective browser caches.
+If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, then refreshing the page. After that, create a new account by following the steps under [Creating Your ParallelChain Wallet Account](#creating-your-parallelchain-wallet-account). Please check online to find out how you can clear your respective browser caches.
 
 
 ### Are Xperience and Parallel wallet different?

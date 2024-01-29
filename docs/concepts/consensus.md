@@ -51,11 +51,11 @@ HotStuff works by building a 'BlockTree': a directed acyclic graph of Blocks. Bl
 
 HotStuff guarantees that committed Blocks are *immutable*. That is, they can never be *un*-committed as long as at least a supermajority of voting power faithfully executes the protocol. This guarantee enables applications to make hard-to-reverse actions with confidence. 
 
-![A graphic depicting a Tree (DAG) of Blocks. Blocks are coloured depending on how many confirmations they have.](https://github.com/parallelchain-io/hotstuff_rs/blob/master/readme_assets/BlockTree%20Structure%20Diagram.png)
+![A graphic depicting a Tree (DAG) of Blocks. Blocks are coloured depending on how many confirmations they have.](/docs/img/concept_consensus_blocktree%20_diagram.png)
 
 A Block becomes *committed* the instant its third confirmation is written into the BlockTree. Confirmation for a Block `A` is another Block `B` such that there is a path between `B` to `A`.
 
-The choice of third confirmation to define commitment--as opposed to first or second--is not arbitrary. HotStuff's safety and liveness properties hinge upon this condition. If you want to understand why this is the case, you should read the [paper](https://github.com/parallelchain-io/hotstuff_rs/blob/master/readme_assets/HotStuff%20paper.pdf). To summarize:
+The choice of third confirmation to define commitment--as opposed to first or second--is not arbitrary. HotStuff's safety and liveness properties hinge upon this condition. You can read this [paper](https://github.com/parallelchain-io/hotstuff_rs/blob/master/readme_assets/HotStuff%20paper.pdf) to learn more about it. To summarize:
 
 1. Classic BFT consensus algorithms such as PBFT require only 2 confirmations for commitment, but this comes at the cost of expensive leader-replacement flows.
 2. Tendermint requires only 2 confirmations for commitment and has a simple leader-replacement flow, but needs an explicit 'wait-for-N seconds' step to guarantee liveness.
