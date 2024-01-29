@@ -4,16 +4,13 @@ tags:
 - explorer
 ---
 
-To conduct transactions on ParalleChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through the browser extension of the blockchain wallet - **Xperience** - via ParallelChain Explorer.
-
-
-The blockchain and Xperience accounts you create on the **ParallelChain Explorer** are non-custodial, which means only you have control and access to them. 
-
-!!! warning 
-    You must store your recovery keys securely and properly to avoid losing access to your assets. There is no way to retrieve them if they are lost.
-
-
-Learn how to set up your ParallelChain account with the following steps below, or watch the video tutorial [here](https://www.youtube.com/watch?v=_lDRXPmeNzU).
+**Xperience** is your ParallelChain wallet, and **ParallelChain Explorer** is a web-based tool that allows you to access your wallet.
+ 
+To conduct transactions on ParallelChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through **ParallelChain Explorer**—or through the new **Xperience Browser Extension**.
+ 
+The blockchain account you create on ParallelChain is non-custodial, which means only you have control and access to it. You must store your recovery key securely and properly to avoid losing access to your assets. There is no way to retrieve it if it is lost.
+ 
+Learn how to create and manage your ParallelChain account using **ParallelChain Explorer** with the steps below.
 
 ## Creating Your ParallelChain Mainnet Account
 ---
@@ -26,7 +23,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 
 ### Step 2: Create Your Account
 
-1. Create your Xperience wallet account by selecting **CONNECT NOW**.
+1. Create your ParallelChain wallet account by selecting **CONNECT NOW**.
 2. Click the **REGISTER** button.
 3. Your 12-word recovery key will be generated automatically. You should copy your recovery key by clicking **COPY AS TEXT** and pasting it in a secure document, or you should write it down. Store it in a safe and secure location.
 4. Take note that the phrases are stored in a chronological order.
@@ -64,7 +61,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 
 ![import existing wallet](../../img/explorer/account/2_importing_your_wallet_.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
-1. To import an existing Xperience wallet, click on the round icon on the top right hand corner of the webpage, followed by **IMPORT EXISTING WALLET**.
+1. To import an existing ParallelChain wallet, click on the round icon on the top right hand corner of the webpage, followed by **IMPORT EXISTING WALLET**.
 2. Enter your 12-phrase recovery key that you have stored securely when you first created your wallet, then press **NEXT**.
 3. Next, enter your desired password and re-enter it under the **Confirm Password** box, then press **REGISTER**.
 4. You will be prompted to enter your password again to access your wallet. Enter your password in the empty field, and select **VERIFY**.
@@ -136,7 +133,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 2. Tap on **LOCK WALLET** to keep your wallet locked.
 3. You will be prompted to enter your password to access your wallet. Enter your password in the empty field and press **VERIFY’**.
 
-## Navigating Your Xperience Wallet
+## Navigating Your ParallelChain wallet
 ---  
 
 1. **Congratulations** on creating your ParallelChain account.
@@ -151,7 +148,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 ## FAQ 
 ---
 
-### Are my Xperience wallet and account the same thing?
+### Are my ParallelChain wallet and account the same thing?
 
 No, your wallet and your account are not the same. Your account is registered on ParallelChain Mainnet, and your wallet extension helps connect you to your account. This means you are able to recover your account should you lose the device that your wallet extension is installed.
 
@@ -176,6 +173,8 @@ Xperience is a non-custodial wallet which only you have the access to. If you lo
 If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, then refreshing the page. After that, create a new account by following the steps under [Creating Your ParallelChain Mainnet Account](#create). Please check online to find out how you can clear your respective browser caches.
 
 
-### Are Xperience and ParallelWallet different?
-
+### Are Xperience and Parallel wallet different?
 Yes, Xperience and ParallelWallet are two different types of non-custodial wallets. You can store XPLL on both wallets, but the recovery keys are not interchangeable and you should still store them in a secure manner.
+
+### Is the wallet in Xperience Browser Extension the same as the wallet in ParallelChain Explorer?
+Yes, they are the same. You can access your wallet through either **Xperience Browser Extension** or **ParallelChain Explorer**.

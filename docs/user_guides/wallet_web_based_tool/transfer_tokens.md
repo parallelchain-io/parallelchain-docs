@@ -5,7 +5,7 @@ tags:
 - xpll
 ---
 
-Sending and receiving assets with digital wallets is a keystone of any blockchain**s decentralised infrastructure. Follow the steps below to send and receive XPLL tokens with your ParallelChain account. You can also watch the video tutorials to send XPLL tokens [here](https://youtu.be/WvJhzw3fYKo).
+Sending and receiving assets with digital wallets is a keystone of any blockchain's decentralised infrastructure. Follow the steps below to send and receive XPLL tokens with your ParallelChain account. You can also watch the video tutorials to send XPLL tokens [here](https://youtu.be/WvJhzw3fYKo).
 
 ## Sending XPLL Tokens
 ---
@@ -55,7 +55,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 - To share your account address with others, tap on the **Copy** icon beside your wallet address.
 - Send it to the sender through a secure text messaging application.
-- The sender should paste your address in the **To Address** field in their Xperience wallet.
+- The sender should paste your address in the **To Address** field in their ParallelChain wallet.
 
 
 ### Step 2: Receive Your XPLL Tokens
