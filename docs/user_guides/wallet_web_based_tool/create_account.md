@@ -173,7 +173,7 @@ Ethereum Virtual Machine (EVM) compatibility is targeted to come with the Lampor
 Xperience is a non-custodial wallet which only you have the access to. If you lose your recovery key and password, you will lose access to any asset that is stored in it. We recommend that you write down your recovery key and store it in a secure place, or follow the steps under Exporting Your Account With Public & Private Keys.
 
 
-If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, then refreshing the page. After that, create a new account by following the steps under [Creating Your ParallelChain Mainnet Account](#creating-your-parallelchain-mainnet-account). Please check online to find out how you can clear your respective browser caches.
+If you have lost access to your existing account, you can opt to create a new account by clearing the cache of your current browser, then refreshing the page. After that, create a new account by following the steps under [Creating Your ParallelChain Mainnet Account](#create). Please check online to find out how you can clear your respective browser caches.
 
 
 ### Are Xperience and ParallelWallet different?
