@@ -88,4 +88,4 @@ Possible values for `Exit Status` are:
 |0x01|Operation failed|The command failed to do what it is supposed to do.|
 |0x02|Gas exhausted|Execution halted in the middle of the command because the gas limit was hit.|
 
-**Logs** are topic-value pairs emitted during smart contract execution. Logs allow decentralized applications to quickly prove to users that a particular branch/line of code was executed during a transaction, by querying for the existence of logs in blocks.
+**Logs** are topic-value pairs emitted during smart contract execution. Logs allow decentralised applications to quickly prove to users that a particular branch/line of code was executed during a transaction, by querying for the existence of logs in blocks.

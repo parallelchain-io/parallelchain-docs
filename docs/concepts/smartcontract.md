@@ -8,7 +8,7 @@ tags:
 ## What is Smart Contract?
 ---
 
-A **smart contract** is a way to run computer programs on a decentralized network that is secure and fault-tolerant. With smart contracts, users can write code to support their most critical business applications, all on a global, decentralized network.
+A **smart contract** is a way to run computer programs on a decentralised network that is secure and fault-tolerant. With smart contracts, users can write code to support their most critical business applications, all on a global, decentralised network.
 
 To use smart contracts on ParallelChain Mainnet, developers can write a Contract Binary Interface (CBI) Subprotocol that is implemented using a WebAssembly (WASM) module. However, for most developers, it's easier to use the `pchain-sdk` types and macros to write a Contract in **Rust**, and then use the `pchain-compile` commands to compile the Rust source code into WASM bytecode.
 
@@ -18,7 +18,7 @@ To use smart contracts on ParallelChain Mainnet, developers can write a Contract
 
 The Smart Contract Programming Model is based on Object-Oriented Programming (OOP). In this model, a contract is like a `Rust` `struct` that controls access to persistent storage. Accounts can interact with contracts by submitting transactions that include a call command to invoke methods of the contract. These methods are sometimes called just "methods" for short.
 
-See section [Smart Contract Development](../smart_contract_sdk/introduction.md) for more information of `pchain-sdk`.
+See section [Smart Contract Development](../developer_guides/smart_contract_sdk/introduction.md) for more information of `pchain-sdk`.
 
 ## Why Rust and WebAssembly (WASM)?
 ---
