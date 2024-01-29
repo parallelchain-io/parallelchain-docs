@@ -135,6 +135,7 @@ You can stake XPLL which you have deposited with validators to earn rewards.
 
 ### Step 3: Confirm Your Transaction
 ![staking confirm](../../img/explorer/staking/8_staking_confirm.png){ width=90%  style="display: block; margin: 0 auto" }
+
 1. The following fields will appear:
     - **Nonce** - This field will be automatically populated for you.
     - **Max Base Fee per Gas**- This field will be automatically populated for you based on the current Base Fee per Gas of the network.
@@ -237,7 +238,7 @@ Watch the video tutorial on how to top up your XPLL [here](https://youtu.be/aEa1
 
     - Your deposited XPLL will be shown in the **DEPOSIT** field.
 
-![withdraw](../../img/explorer/staking/12_withdraw.png){ width=90%  style="display: block; margin: 0 auto" }
+    ![withdraw](../../img/explorer/staking/12_withdraw.png){ width=90%  style="display: block; margin: 0 auto" }
 
 2. Select **WITHDRAW** to withdraw XPLL from your validator deposit.
 3. The **WITHDRAW MAX** field will appear, and you can enter the amount you wish to withdraw. The amount cannot exceed the current amount deposited with the validator.
@@ -291,7 +292,7 @@ Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sop
     - **CURRENT STAKE** - the balance in the pool which has become part of the current validator set, and is now earning rewards.
     - If you would like to auto-stake your rewards, toggle the **AUTO STAKE REWARDS** field on.
 
-![select validator](../../img/explorer/staking/14_unstake_arrow_to_tentative_stake.png){ width=90%  style="display: block; margin: 0 auto" }
+    ![select validator](../../img/explorer/staking/14_unstake_arrow_to_tentative_stake.png){ width=90%  style="display: block; margin: 0 auto" }
 
 3. To unstake XPLL, tap on the arrow beside the **TENTATIVE STAKE**field.
 
