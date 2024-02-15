@@ -18,14 +18,14 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 
 ### Step 1: Select a Validator
 
-![Select validtor](../../img/extension/16_Stake%20XPLL.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Select validtor](../../img/extension/16_Stake%20XPLL.png){ width=40%  style="display: block; margin: 0 auto" } 
 1. Click **STAKE XPLL**
 
 2. You will see the list of validators. Select a validator from the list, or search for a specific validator via the search bar at the top.
 
 ### Step 2: Deposit XPLL
 #### Through Your Account Balance
-![Deposit XPLL your account balance](../../img/extension/17_Validator%20Details.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Deposit XPLL your account balance](../../img/extension/17_Validator%20Details.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
     - **Pool Name** - the name of the validator
@@ -63,7 +63,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 
 4. You will see the details of the transaction. The transaction status will show **PENDING**. Click **CLOSE**.
 
-    ![View create deposit transaction status](../../img/extension/18_Transactions.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![View create deposit transaction status](../../img/extension/18_Transactions.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transaction** tab. It is labelled **CREATE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been deposited with the validator.
 
@@ -77,7 +77,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 ---
 
 ### Step 1: Navigate to Your Chosen Validator
-![Stake xpll](../../img/extension/19_View%20Stakes.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Stake xpll](../../img/extension/19_View%20Stakes.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Stakes** tab.
 
@@ -97,12 +97,12 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
     - **Next Epoch** - when the next epoch will occur.
 
-    ![tentaive stake](../../img/extension/20_Tentative%20Stakes.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![tentaive stake](../../img/extension/20_Tentative%20Stakes.png){ width=40%  style="display: block; margin: 0 auto" } 
 4. Click the arrow beside the **Tentative Stake** field. 
 
 ### Step 2: Stake with XPLL
 #### From Your Account Balance
-![Stake xpll from account balance](../../img/extension/21_Stake%20amount.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Stake xpll from account balance](../../img/extension/21_Stake%20amount.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
     - **Pool Name** - the name of the validator.
@@ -145,7 +145,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 3. Preview the summary of the tranasction. Click **CONFIRM** to continue or **CANCEL** to make edits.
 4. You will see the detais of the transaction. The transaction status will show **PENDING**. Click **CLOSE**.
 
-    ![Check status](../../img/extension/22_Transaction%20Status.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/22_Transaction%20Status.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **STAKE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been staked with the validator. 
 
@@ -156,7 +156,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 ---
 ### Step 1: Navigate to Your Chosen Validator
 
-![Check status](../../img/extension/23_Unstake%20Amount.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/23_Unstake%20Amount.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Stakes** tab.
 2. Click the validator pool that you wish to unstake XPLL from.
@@ -174,7 +174,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
     - **Next Epoch** - when the next epoch will occur.
 
-    ![Check status](../../img/extension/24_Arrow%20next%20to%20'Tentative%20Stake'.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/24_Arrow%20next%20to%20'Tentative%20Stake'.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 4. Click the arrow beside the **Tentative Stake** field.
  
@@ -182,7 +182,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 
 #### To Your Account Balance
 
-![Check status](../../img/extension/25_Unstake%20Amount%20Field.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/25_Unstake%20Amount%20Field.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
     - **Pool Name** - the name of the validator.
@@ -221,7 +221,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 3. Preview the summary of the tranasction. Click **CONFIRM** to continue or **CANCEL** to make edits.
 4. You will see the detais of the transaction. The transaction status will show **PENDING**. Click **CLOSE**.
 
-    ![Check status](../../img/extension/26_Check%20Unstaking%20Transaction.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/26_Check%20Unstaking%20Transaction.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **UNSTAKE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been unstaked from the validator.
 !!! note
@@ -230,7 +230,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 ## Topping Up Your Stake
 ---
 ### Step 1: Navigate to Your Chosen Validator
-![Check status](../../img/extension/27_Top%20up.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/27_Top%20up.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Stakes** tab.
 2. Click the validator pool that you wish to top up your deposit with.
@@ -248,12 +248,12 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
     - **Next Epoch** - when the next epoch will occur.
 
-    ![Check status](../../img/extension/28_Top%20up%20(Deposit).svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/28_Top%20up%20(Deposit).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 4. Click the arrow beside the **Deposit** field.
 
 ### Step 2: Top Up Your Stake through Your Account Balance
-![Check status](../../img/extension/29_Top%20up%20(Through%20Balance).svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/29_Top%20up%20(Through%20Balance).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
     - **Pool Name** - the name of the validator.
@@ -279,7 +279,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 3. Preview the summary of the transaction. Click **CONFIRM** to continue or **CANCEL** to make edits.
 4. The transaction will show **PENDING**. Click **CLOSE**.
 
-![Check status](../../img/extension/30_Check%20Pending%20Transaction%20(Top%20up).svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/30_Check%20Pending%20Transaction%20(Top%20up).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transaction** tab. It is labelled **TOP UP DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your deposit has now been topped up.
 
@@ -288,7 +288,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 --- 
 ### Step 1: Navigate to Your Chosen Validator
 
-![Check status](../../img/extension/31_Withdraw%20staking%20rewards%20(Navigation).svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/31_Withdraw%20staking%20rewards%20(Navigation).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Stakes** tab.
 2. Click the validator that you wish to withdraw XPLL from.
@@ -306,7 +306,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
     - **Next Epoch** - when the next epoch will occur.
 
-    ![Check status](../../img/extension/32_Arrow%20to%20navigate%20to%20deposit.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/32_Arrow%20to%20navigate%20to%20deposit.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 4. Click the arrow beside the **Deposit** field.
  
@@ -314,7 +314,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 
 #### To Your Account Balance
 
-![Check status](../../img/extension/33_Click%20to%20withdraw.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Check status](../../img/extension/33_Click%20to%20withdraw.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
     - **Pool Name** - the name of the validator.
@@ -353,7 +353,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 3. Preview the summary of the tranasction. Click **CONFIRM** to continue or **CANCEL** to make edits.
 4. You will see the detais of the transaction. The transaction status will show **PENDING**. Click **CLOSE**.
 
-    ![Check status](../../img/extension/34_Check%20Transactions.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![Check status](../../img/extension/34_Check%20Transactions.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **WITHDRAW DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been withdrawn.
 !!! note

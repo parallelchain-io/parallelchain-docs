@@ -17,13 +17,13 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 ---
 
-![import tokens](../../img/tokens/3_Importing%20Tokens.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![import tokens](../../img/tokens/3_Importing%20Tokens.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
 
 2. Click **IMPORT**.  
 
-    ![tokens details](../../img/tokens/4_Address%20&%20Custom%20Name.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![tokens details](../../img/tokens/4_Address%20&%20Custom%20Name.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 3. Enter the token contract address in the **Token contract address** field.  
 
@@ -35,13 +35,13 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 7. Preview the summary of the transaction. Click **CONFIRM** to continue or **CANCEL** to make edits. 
 
-    ![tokens details](../../img/tokens/5_Preview%20Summary%20of%20Transaction.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![tokens details](../../img/tokens/5_Preview%20Summary%20of%20Transaction.png){ width=40%  style="display: block; margin: 0 auto" } 
     
 8. If you click **CONFIRM**, you will be taken back to the main page. Your token has now been imported and you will see it under the **Tokens** tab.
 
 ## Viewing Token Details
 ---
-![import tokens](../../img/tokens/6.Navigation%20Token%20tab.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![import tokens](../../img/tokens/6.Navigation%20Token%20tab.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
 
@@ -49,7 +49,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 3. Click on a token to see more details. 
 
-    ![import tokens](../../img/tokens/7_View%20Token%20Details.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![import tokens](../../img/tokens/7_View%20Token%20Details.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 4. You will see the following details of the token: 
 
@@ -67,7 +67,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 ## Removing Imported Tokens
 ---
-![import tokens](../../img/tokens/8_Remove%20Imported%20Token%20(Navi).svg){ width=40%  style="display: block; margin: 0 auto" } 
+![import tokens](../../img/tokens/8_Remove%20Imported%20Token%20(Navi).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
 

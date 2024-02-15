@@ -26,7 +26,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 ---
 
 ### Obtain Your Recovery Key
-![Create your account](../../img/extension/1_Welcome.svg){ width=80%  style="display: block; margin: 0 auto" } 
+![Create your account](../../img/extension/1_Welcome.png){ width=80%  style="display: block; margin: 0 auto" } 
 
 
 1. Open Xperience Browser Extension by clicking on its icon next to your browser address bar.
@@ -40,7 +40,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 5. Click **Next**.
 
 ### Verify Your Recovery Key
-![Verify your recovery key](../../img/extension/2_Seed%20Phrase.svg){ width=80%  style="display: block; margin: 0 auto" } 
+![Verify your recovery key](../../img/extension/2_Seed%20Phrase.png){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. You will be prompted to fill in some missing words in your recovery key. Refer to your recovery key to enter all the missing words in the blanks.
 
@@ -66,7 +66,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 
 ## Importing an Existing Wallet
 ---
-![Importing existing wallet](../../img/extension/3_Import%20Existing%20Wallet.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Importing existing wallet](../../img/extension/3_Import%20Existing%20Wallet.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Open **Xperience Browser Extension** by clicking on the extension icon next to your browser address bar.
 
@@ -83,7 +83,7 @@ You will be prompted to create a password for your wallet. You can follow the in
 
 ## Logging into Your Wallet
 ---
-![Logging ](../../img/extension/4_Logging%20In.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![Logging ](../../img/extension/4_Logging%20In.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Open **Xperience Browser Extension** by clicking on the extension icon next to your browser address bar.
 
@@ -111,8 +111,8 @@ If you do not remember your password, you can reset your password with your reco
 
 ### Viewing Your Recovery Key
 <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/35_Three Dots Action Menu.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/5_View Recovery Key.svg" style="width: 40%; ">
+    <img src="../../../img/extension/35_Three Dots Action Menu.png" style="width: 40.5%;">
+    <img src="../../../img/extension/5_View Recovery Key.png" style="width: 40%; ">
 </div>
 
    1. Click the icon with three dots on the top-right corner of the extension.
@@ -132,8 +132,8 @@ If you do not remember your password, you can reset your password with your reco
 
 ### Changing Your Password
 <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/35_Three Dots Action Menu.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/6_Change Password.svg" style="width: 40%; ">
+    <img src="../../../img/extension/35_Three Dots Action Menu.png" style="width: 40.5%;">
+    <img src="../../../img/extension/6_Change Password.png" style="width: 40%; ">
 </div>
 
    1. Click the icon with the three dots on the top-right corner of the extension.
@@ -167,8 +167,8 @@ If you do not remember your password, you can reset your password with your reco
 
 ### Erasing Wallet from Device
 <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/35_Three Dots Action Menu.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/7_Erase Wallet from Device.svg" style="width: 40%; ">
+    <img src="../../../img/extension/35_Three Dots Action Menu.png" style="width: 40.5%;">
+    <img src="../../../img/extension/7_Erase Wallet from Device.png" style="width: 40%; ">
 </div>
 
    1. Click the icon with three dots on the top-right corner of the extension.
@@ -190,8 +190,8 @@ If you do not remember your password, you can reset your password with your reco
 ## Exporting Account
 ### As Public and Private Keys
 <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/arrow.svg" style="width: 30%;">
-     <img src="../../../img/extension/8_Export%20Your%20Account%20with%20Public%20&%20Private%20Keys.svg" style="width: 62%;">
+    <img src="../../../img/extension/arrow.png" style="width: 30%;">
+     <img src="../../../img/extension/8_Export%20Your%20Account%20with%20Public%20&%20Private%20Keys.png" style="width: 62%;">
 </div>
 
 
@@ -203,8 +203,8 @@ If you do not remember your password, you can reset your password with your reco
 ### As a JSON File
    Alternatively, you can download the **keypair** of your current account in a **JSON file**.
    <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/arrow.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/Json Keypair Export.svg" style="width: 41%; ">
+    <img src="../../../img/extension/arrow.png" style="width: 40.5%;">
+    <img src="../../../img/extension/Json Keypair Export.png" style="width: 41%; ">
     </div>
    
    1. Click the drop-down arrow right beside your wallet address.
@@ -218,8 +218,8 @@ If you do not remember your password, you can reset your password with your reco
 ## Importing Account
 ### Using Public and Private Keys
    <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/arrow.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/9_Importing%20Your%20Account%20with%20Public%20&%20Private%20Keys.svg" style="width: 40%; ">
+    <img src="../../../img/extension/arrow.png" style="width: 40.5%;">
+    <img src="../../../img/extension/9_Importing%20Your%20Account%20with%20Public%20&%20Private%20Keys.png" style="width: 40%; ">
     </div>
 
    1. Click the drop-down arrow right beside your wallet address.
@@ -235,8 +235,8 @@ If you do not remember your password, you can reset your password with your reco
 
 ### Using a JSON File
    <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/arrow.svg" style="width: 40%;">
-    <img src="../../../img/extension/10_Import%20With%20File.svg" style="width: 40%; ">
+    <img src="../../../img/extension/arrow.png" style="width: 40%;">
+    <img src="../../../img/extension/10_Import%20With%20File.png" style="width: 40%; ">
     </div>
 
 
@@ -252,8 +252,8 @@ If you do not remember your password, you can reset your password with your reco
 ## Locking Your Wallet
 ---
 <div style="display: flex; justify-content: center; gap: 10px">
-    <img src="../../../img/extension/35_Three Dots Action Menu.svg" style="width: 40.5%;">
-    <img src="../../../img/extension/11_Lock%20Wallet.svg" style="width: 40%; ">
+    <img src="../../../img/extension/35_Three Dots Action Menu.png" style="width: 40.5%;">
+    <img src="../../../img/extension/11_Lock%20Wallet.png" style="width: 40%; ">
 </div>
 
    1. Click the icon with three dots on the top-right corner of the extension.

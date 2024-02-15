@@ -14,7 +14,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 ## Sending Tokens
 ---
-![check transfer](../../img/tokens/1_Send%20Tokens.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![check transfer](../../img/tokens/1_Send%20Tokens.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 ### Step 1: Fill in Transaction Details
 1. Click **SEND**.
@@ -39,7 +39,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 4. The transaction status will show **PENDING**. Click **CLOSE**.
 
-    ![check transfer](../../img/tokens/2_Check%20Status%20of%20Transaction.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![check transfer](../../img/tokens/2_Check%20Status%20of%20Transaction.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labeled **TRANSFER**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your tokens have now been sent.  
 
