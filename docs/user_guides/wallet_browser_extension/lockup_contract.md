@@ -23,7 +23,7 @@ Follow the steps below to register your lock-up contract and claim your tokens w
 1. Your lock-up contract address would have been sent to you **via email**. Check your email and copy your lock-up contract address.
 
 ### Step 2: Register Your Lock-Up Contract 
-![register lockup contract](../../img/extension/12_Register%20Your%20Lock-Up%20Contract.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![register lockup contract](../../img/extension/12_Register%20Your%20Lock-Up%20Contract.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Click the *pink file* icon to the right of **STAKE XPLL**. 
 
@@ -48,7 +48,7 @@ Follow the steps below to register your lock-up contract and claim your tokens w
 
 4. Click **CONFIRM**. Your lock-up contract has now been registered. 
 
-    ![lockup contract](../../img/extension/13_Lock-Up%20Contract%20Balance.svg){ width=40%  style="display: block; margin: 0 auto" } 
+    ![lockup contract](../../img/extension/13_Lock-Up%20Contract%20Balance.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You will be taken back to the main page. If you scroll right, you will see your **Lock-Up Contract (XPLL)** balance next to your main balance. 
 
@@ -58,7 +58,7 @@ Follow the steps below to register your lock-up contract and claim your tokens w
 ## Claiming Your Vested Tokens
 ---
 ### Step 1: Check Your Vested Balance 
-![check vested balance](../../img/extension/14_Select%20a%20validator.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![check vested balance](../../img/extension/14_Select%20a%20validator.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Click the *pink file* icon to the right of **STAKE XPLL**. 
 
@@ -75,7 +75,7 @@ Follow the steps below to register your lock-up contract and claim your tokens w
     - **Contract Address** - your lock-up contract address.  
 
 ### Step 2: Claim Your Vested Tokens 
-![claim](../../img/extension/15_Claim.svg){ width=40%  style="display: block; margin: 0 auto" } 
+![claim](../../img/extension/15_Claim.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Click **CLAIM** in the **Unlocked** field. 
 
