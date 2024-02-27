@@ -79,7 +79,7 @@ type RequestedPermissionResult = Permission;
 === "RPC"
     ```js
     window.xpll.request({
-      method: "request_permissions";
+      method: "request_permissions"
     });
     ```
 
@@ -102,7 +102,7 @@ type IsWalletLockedResult = boolean;
 === "RPC"
     ```js
     window.xpll.request({
-      method: "is_wallet_locked";
+      method: "is_wallet_locked"
     });
     ```
 
@@ -135,7 +135,7 @@ type GetPermissionsResult = Permission[];
 === "RPC"
     ```js
     window.xpll.request({
-      method: "get_permissions";
+      method: "get_permissions"
     });
     ```
 
@@ -164,7 +164,7 @@ type GetAccountsResult = string[];
 === "RPC"
     ```js
     window.xpll.request({
-      method: "get_accounts",
+      method: "get_accounts"
     });
     ```
 
@@ -192,7 +192,7 @@ type GetActiveAccountResult = string | undefined;
 === "RPC"
     ```js
     window.xpll.request({
-      method: "get_active_account";
+      method: "get_active_account"
     });
     ```
 
@@ -220,7 +220,7 @@ type GetActiveAccountBalanceResult = string;
 === "RPC"
     ```js
     window.xpll.request({
-      method: "get_active_account_balance";
+      method: "get_active_account_balance"
     });
     ```
 
@@ -278,7 +278,7 @@ type GetActiveAccountLatestTransactionsResult = TransactionSummary[];
       params: {
         limit: 1,
         order: "desc",
-      },
+      }
     });
     ```
 
@@ -304,7 +304,7 @@ type GetCurrentNetworkResult = string | undefined;
 === "RPC"
     ```js
     window.xpll.request({
-      method: "get_current_network";
+      method: "get_current_network"
     });
     ```
 
