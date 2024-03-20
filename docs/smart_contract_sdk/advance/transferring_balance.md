@@ -11,6 +11,8 @@ tags:
 
 `pchain_sdk::transfer` transfers the balance from the Contract Account to another Account and returns the balance of the recipient after the transfer.
 
+Related API in `pchain_sdk::internal`:
+
 ```rust
 /// Transfer the balance amount to another address. 
 fn transfer(recipient: PublicAddress, amount: u64);

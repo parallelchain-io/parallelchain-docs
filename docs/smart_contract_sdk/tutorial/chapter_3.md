@@ -6,14 +6,13 @@ tags:
 ---
 
 # Chapter 3
-We have introduced macros including `contract`, `contract methods`, and `call` in Chapter 1 and accessing values of
-fields from storage in Chapter 2. In this chapter, we will put together all the knowledge and implement the bank
-smart contract that simulates banking operations with data stored in ParallelChain Mainnet. 
+We have introduced macros including `contract`, `contract methods`, and `call` in [Chapter 1](/smart_contract_sdk/tutorial/chapter_1/) and accessing values of
+fields from storage in [Chapter 2](/smart_contract_sdk/tutorial/chapter_2/). In this chapter, we will put together all the knowledge and implement the bank
+smart contract that simulates banking operations with data stored in ParallelChain Mainnet.
 
-Before diving into the writing of a smart contract, let's build the data struct `BankAccount` using the `sdk_method_bindgen`
-macro provided by Parallelchain Mainnet Smart Contract SDK.
+Before diving into the writing of a smart contract, let's define the data struct `BankAccount` which will be stored into the storage.
 
-`bank_account.rs` defined the `BankAccount` data struct which consists of four fields, `first_name`, `last_name`, `account_id`, and `amount`. All these fields will be initialized to 0 or empty upon deployment.
+`bank_account.rs` defined the struct `BankAccount` which consists of four fields, `first_name`, `last_name`, `account_id`, and `amount`.
 
 ### bank_account.rs: define data struct
 
@@ -36,26 +35,17 @@ pub struct BankAccount {
 }
 ```
 
-After defining the data struct, add the following two functions which are responsible for
-loading and storing the value with a given key accordingly. 
-> **Note**
-> The key to be stored is an u8 integer ordered by the index of the fields, e.g. `first_name`
-has key [0].
-
-`get_bank_account()` retrieve the value of the given key using `pchain_sdk::storage::get()`,
-deserialize the result and return an `Option`.
-
-`set_bank_account()` stores the given key-value pair in the storage using 
-`pchain_sdk::storage::set()`.
-
-
-We are using **BorshDeserialize** and **BorshSerialize** in the above code, so remember to update
-the Cargo.toml by adding the **borsh** crate. We need the **base64** crate for encoding the account_id
-too. Therefore, add the following two lines under the dependencies section in Cargo.toml:
+We are using **BorshDeserialize** and **BorshSerialize** in the above struct because we will serialize this struct into bytes and store them into the storage. Remember to update the Cargo.toml by adding the crate [borsh](https://crates.io/crates/borsh). We need the crate [base64](https://crates.io/crates/base64) for encoding the corresponding Account ID too. Therefore, add the following two lines under the dependencies section in Cargo.toml:
 
 - base64 = "0.13"
 - borsh = "=0.10.2"
 
+Here we are not going to define the `BankAccount` data as a field in contract struct. But we will be able to load and save the data by using `storage::get` and `storage::set` explicitly. Let's add the following two methods for getting and setting the value with a given key. 
+
+`get_bank_account()` retrieves the value (i.e. `BankAccount`) of the given key from storage by using `pchain_sdk::storage::get()`.
+
+`set_bank_account()` stores the value (i.e. `BankAccount`) of the given key to storage by using 
+`pchain_sdk::storage::set()`.
 
 ### bank_account.rs: accessing storage
 ```rust
@@ -104,9 +94,13 @@ impl BankAccount {
 
 After having the `BankAccount` struct ready, it is time to start writing the bank smart contract. `use bank_account::BankAccount;` allows us to use the methods defined in `bank_account.rs`.
 
-The macro `contract` on the data struct allows loading/storing fields from/into the world state. The contract struct, `MyBank`, has
-only one field, `num_of_account`, indicating the number of accounts associated with this bank. As mentioned in the previous
-section, the key of `num_of_account` in the storage will be [0] according to its index.
+The macro `contract` above struct defines the basic structure of the contract which has
+only one field, `num_of_account`, indicating the number of accounts associated with this bank. As mentioned in [Chapter 2](/smart_contract_sdk/tutorial/chapter_2),
+
+> **Note**
+> The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.
+
+Therefore, the field `num_of_account` has a key `[0]`.
 
 
 ### lib.rs: define contract struct
@@ -127,12 +121,12 @@ struct MyBank {
 }
 ```
 
-As mentioned in Chapter 1, the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
+As mentioned in [Chapter 1](smart_contract_sdk/tutorial/chapter_1), the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
 We will create the first entrypoint method in `MyBank` impl. Firstly, we need the entrypoint method `open_account()` to create a brand-new account, with the specified `first_name`, `last_name`, `account_id`, and `initial_deposit`.
 
-In `open_account()`, we initialize an instance of `BankAccount`, and store it in the storage directly by invoking `bank_account::set_bank_account`. 
+In `open_account()`, we initialize an instance of `BankAccount`, and store it in the storage directly by invoking `bank_account::set_bank_account()` with its Account ID as a key.
 
-After storing the newly generated account into storage, we have to update the `num_of_account`. Therefore, we obtain the value of the field by doing `MyBank::get_num_of_account()`, like how we get the fields of our pony in Chapter 2. Similarly, store the updated
+After storing the newly generated account into storage, we have to update the `num_of_account`. Therefore, we obtain the value of the field by doing `MyBank::get_num_of_account()`, like how we get the fields of our little pony in Chapter 2. Similarly, store the updated
 value by calling `MyBank::set_num_of_account()`.
  
 ### lib.rs: open a new account
@@ -190,14 +184,14 @@ impl MyBank {
 }
 ```
 
-Now, we have successfully created a function that creates a new bank account, we should support other
+Now, we have successfully implemented an entrypoint method that creates a new bank account, we should support other
 basic banking functionalities.
 
 Let's start with checking account balance, users need to know how much money is left in their accounts.
 
-By calling `bank_account::get_bank_account()` with a given `account_id`, `Option<BankAccount>` will be returned. If 
+The method `bank_account::get_bank_account()` returns `Option<BankAccount>` by a given `account_id`. If 
 `None` is returned, the account does not exist; otherwise, we will be able to obtain the balance of the account by 
-accessing the value of the field `amount`.
+accessing the field `amount`.
 
 ### lib.rs: query account balance
 ```rust
@@ -225,7 +219,7 @@ fn query_account_balance(account_id: String) {
 ```
 
 Lastly, finish up the functionalities of the bank by completing the implementation of `withdraw_money()` and 
-`deposit_money` using the methods mentioned in all previous sections.
+`deposit_money()` using the methods mentioned in all previous sections.
 
 ### lib.rs: withdrawal and deposit
 ```rust

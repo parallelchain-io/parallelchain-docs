@@ -9,7 +9,7 @@ tags:
 
 Cryptographic Function refers to cryptographic functions that are supported from execution runtime so that gas cost can be reduced by avoiding implementation inside a contract. Moreover, It helps in providing complicated calculations which are not feasible in the Wasmer environment (e.g. encryption, hashing).
 
-In ParallelChain Mainnet SDK, precompiles are a set of functions that can be called directly. Please be noted that some functions are selected based on the popularity of the blockchain ecosystem, but are not necessary adopted in the implementation of the ParallelChain Mainnet node.
+Please be noted that some functions are selected based on the popularity of the blockchain ecosystem, but are not necessary adopted in the implementation of the ParallelChain Mainnet node.
 
 | Function | Description | Gas Cost |
 |:---|:---|:---|
@@ -20,10 +20,16 @@ In ParallelChain Mainnet SDK, precompiles are a set of functions that can be cal
 
 The gas consumption is estimated by the compute costs for precompile functions used by developers to deploy smart contracts on ParallelChain Mainnet.
 
-To use the functions, include the module `crypto` and then call the associate methods. For example,
+Related APIs in `pchain_sdk::crypto`:
 
 ```rust
-use pchain_sdk::crypto;
-
-crypto::sha256(input);
+/// Computes the SHA256 digest (32 bytes) of arbitrary input.
+fn sha256(input: Vec<u8>) -> Vec<u8>;
+/// Computes the Keccak256 digest (32 bytes) of arbitrary input.
+fn keccak256(input: Vec<u8>) -> Vec<u8>;
+/// Computes the RIPEMD160 digest (20 bytes) of arbitrary input.
+fn ripemd(input: Vec<u8>) -> Vec<u8>;
+/// Returns whether an Ed25519 signature was produced by a specified by a specified address over some specified message.
+/// Contract call fails if the input `address` or `signature` is not valid.
+fn verify_ed25519_signature(input: Vec<u8>, signature: Vec<u8>, address: Vec<u8>) -> bool;
 ```

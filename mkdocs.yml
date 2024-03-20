@@ -70,13 +70,13 @@ nav:
       - Chapter 5: smart_contract_sdk/tutorial/chapter_5.md
       - Chapter 6: smart_contract_sdk/tutorial/chapter_6.md
     - Advance: 
-      - Contract Methods: smart_contract_sdk/advance/entrypoints.md
+      - Contract Methods: smart_contract_sdk/advance/contract_methods.md
       - Contract Storage: smart_contract_sdk/advance/contract_storage.md
-      - Accessing Information About the Blockchain: smart_contract_sdk/advance/params.md
-      - Cross Contract Call: smart_contract_sdk/advance/cross_contract.md
-      - Transferring Balance: smart_contract_sdk/advance/internal_transaction.md
-      - Crypto: smart_contract_sdk/advance/crypto.md
-      - Staking in Contract: smart_contract_sdk/advance/staking.md
+      - Accessing Information About the Blockchain: smart_contract_sdk/advance/accessing_info_about_blockchain.md
+      - Cross Contract Call: smart_contract_sdk/advance/cross_contract_call.md
+      - Transferring Balance: smart_contract_sdk/advance/transferring_balance.md
+      - Crypto: smart_contract_sdk/advance/cryptographic_functions.md
+      - Staking in Contract: smart_contract_sdk/advance/staking_in_contract.md
   # - DApp Development:
   #   #need help
   - Tooling:

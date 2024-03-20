@@ -13,10 +13,10 @@ In Chapter 2, we will implement a smart contract called `MyLittlePony`, to demon
 - define fields as data in contract storage
 
 
-From the last chapter, we have learned that the macro `contract` on struct allows loading or storing fields from or into the world state. 
-The key to be stored is an u8 integer ordered by the index of the fields.
+From the last chapter, we have learned that the macro `contract` on struct allows getting or setting data from or into the [world state](/concepts/storage/#world-state). 
+The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.
 
-In this chapter, we first create a struct, `MyLittlePony`, that consists of `name`, `age`, and `gender`. In this case, `name` has key [0] while `age` has key [1].
+In this chapter, we first create a struct, `MyLittlePony`, that consists of `name`, `age`, and `gender`. In this case, `name` has key `[0]` while `age` has key `[1]`.
 
 
 ### lib.rs: define MyLittlePony
@@ -34,8 +34,8 @@ pub struct MyLittlePony {
 ```
 
 Next, we need to declare the `Gender` struct, which is the type of the `gender` field. To use the nested
-struct in the contract struct, we need the `contract_field` macro to access the key-value pair in canonical format.
-For instance, `name` in `Gender` struct has a key [2][0] in the contract `MyLittlePony`.
+struct in the contract struct, we need the `contract_field` macro to define the key of its fields in canonical format.
+For instance, `gender` should have a key started with `[2]` in the contract `MyLittlePony`, so the `name` in `Gender` struct has a key `[2][0]`.
 
 ### lib.rs: define Gender
 ```rust
@@ -49,7 +49,7 @@ struct Gender {
 ---
 
 After getting all the structs ready, we should start implementing the contract methods. This smart
-contract should provide three functionalities:
+contract should provide three method calls:
 
 - self_introduction()
 - grow_up()
@@ -57,8 +57,7 @@ contract should provide three functionalities:
 
 
 Firstly, `self_introduction()` uses receiver `&self` to load all data before executing this method.
-All data will be loaded to the receiver self from the world state. Therefore, we can have access to all the 
-fields in the contract, including the fields in the `Gender` struct.
+All data will be loaded to the receiver self from the world state. In this way, we can obtain all the values of the fields in the contract, including the fields in the `Gender` struct.
 
 ### lib.rs: load data with &self
 ```rust
@@ -73,12 +72,11 @@ impl MyLittlePony {
 }
 ```
 
-In the next method, we are going to illustrate how we can use contract getter and setter to obtain/store
-data from or to the world state. Write cost is smaller compared to what we did in `self_introduction()`
-because there is only one key-value pair in the world state to be mutated.
+In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write [gas cost](/concepts/gas/) is smaller compared to what we did in `self_introduction()`
+because only one key-value pair (i.e. `age`) is involved.
 
-Instead of passing `&self` as an argument, simply do `Self::get_<field_name>()` to obtain value and 
-`Self::set_<field_name>()` to store updated value.
+Instead of passing `&self` as an argument, simply do `Self::get_<field_name>()` to get the value and 
+`Self::set_<field_name>()` to set updated value.
 
 ### lib.rs: getter and setter
 ```rust
@@ -91,7 +89,7 @@ fn grow_up() {
 
 Lastly, we want to change our little pony, so we use a mutable receiver `&mut self` to load data before
 executing this method, then store all data after execution. However, we should be cautious when using
-a mutable receiver as it is expensive to load and store since it mutates all key-value pairs in the world state.
+a mutable receiver as it is expensive to load and store since it mutates all key-value pairs (i.e. `name`, `age` and `gender`) in the world state.
 
 ### lib.rs: load data with a mutable receiver
 ```rust

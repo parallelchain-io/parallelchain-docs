@@ -6,11 +6,12 @@ tags:
   - Staking
 ---
 
-# Chapter 6 - Network Commands
+# Chapter 6
 
-In the last chapter of the tutorial, we are going to talk about how to use network commands in smart contracts. 
+In the last chapter of the tutorial, we are going to talk about how to use [staking commands](/concepts/transaction/#staking-commands) in smart contracts. 
 
-In ParallelChain Mainnet, there are six different network commands:
+In ParallelChain Mainnet, there are six different staking commands:
+
 - Create deposit
 - Set deposit settings
 - Top-up deposit
@@ -18,9 +19,9 @@ In ParallelChain Mainnet, there are six different network commands:
 - Stake deposit
 - Unstake deposit
 
-We will demonstrate how the above network commands can be created and sent to 
-the network through the use of a smart contract. We will use the contract, `MyPool` 
-to guide you through the steps of creating a stake in a pool with the network commands.
+We will demonstrate how the above staking commands can be created within a smart contract 
+which acts as owner of the deposit/stakes (See [Staking in Contract](/smart_contract_sdk/advance/staking_in_contract/)). We will use the contract, `MyPool`, 
+to guide you through the steps of creating a stake in a pool.
 
 ### lib.rs: define a struct
 ```rust
@@ -37,8 +38,7 @@ pub struct MyPool {
 }
 
 ```
-We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. However, as mentioned in previous chapters, it will be initialized to 0 upon deployment. Therefore, we have to add an init function to initialize the address
-to the values we specified.
+We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. Remind that these data will be all zeros by default. Therefore, we have to add an initialization function to set the addresses that we want.
 
 ### lib.rs: initialise struct
 ```rust
@@ -58,16 +58,18 @@ impl MyPool {
 After adding the `init()` function, we can try creating a deposit into the pool. `pchain_sdk::network:defer_create_deposit()` allows us to deposit some XPLL into a specified pool. In this contract, we have already specified the pool in the field `pool_operator`.
 
 
-The network commands are "deferred" because the actual execution of such commands occurs after the execution of a successful call. 
+The staking commands are "deferred" because the actual execution of such commands occurs after the execution of a successful call. 
 > **Note**: 
 > The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer
 sufficient balance to the contract for the operation.
 
 
-To check if the deposit is successful, you can check the deposit using `pchain-client` with the following command:
-> ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
+To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](/toolings/pchain_cli/query/#get-deposit-and-stake):
+```sh
+./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
+```
 
-### lib.rs: successful network command
+### lib.rs: successful staking command
 ```rust
     #[call]
     fn create_deposit(balance: u64, auto_stake_rewards: bool) {
@@ -79,7 +81,7 @@ It was mentioned above that the `defer` call will only take place after a succes
 
 Check the deposit again using `pchain-client`, the deposit balance in the pool should remain unchanged.
 
-### lib.rs: failed network command
+### lib.rs: failed staking command
 
 ```rust
     #[call]
@@ -92,12 +94,12 @@ Check the deposit again using `pchain-client`, the deposit balance in the pool s
 
 ---
 
-Another characteristic of the network commands is that the return value in the transaction receipt will be
-overwritten by the deferred staking commands. 
+!!! Note
+    The [return values](/concepts/transaction/#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
 
 In the method `stake_deposit()`, we should be expecting that the `return_values` in the receipt will be the 
-balance of the contract. However, since there is a defer network command in the method call, the `return_values`
-will be overwritten by the return value from the `pchain_sdk::network::defer_staking_deposit()` command.
+balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another defer staking command in the method call, the `return_values`
+will be overwritten by the result of executing `pchain_sdk::network::defer_staking_deposit()` command.
 
 ### lib.rs: overwriting return value
 ```rust
@@ -110,13 +112,12 @@ will be overwritten by the return value from the `pchain_sdk::network::defer_sta
 
 ---
 
-Lastly, we can include multiple network commands within one transaction. In this `multiple_defer()` function,
-we put the commands for unstaking and withdrawing deposits in the same function.
+Lastly, we can include multiple defer staking commands within one transaction. In this method `multiple_defer()`,
+we put the defer staking commands for unstaking and withdrawing deposits together.
 
-Both the commands will be executed after the success of the transaction, and in the order they were called
-in the method call. After invoking this method call, the stake of the deposit should have been successfully withdrawn.
+Both the commands will be executed after the success of the transaction, and in the order they were called. After invoking this method call, the stake of the deposit should have been successfully unstaked and withdrawn.
 
-### lib.rs: multiple network commands
+### lib.rs: multiple staking commands
 ```rust
     #[call]
     fn multiple_defer(max_amount: u64) {

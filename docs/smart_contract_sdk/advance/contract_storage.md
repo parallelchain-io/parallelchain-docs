@@ -94,7 +94,7 @@ impl Pet {
 
 Lazily stores a list of items in `Storage`. Vector implements `Index`, `IndexMut`, and has an `iter` method, so most of the things you can do with `std::vec::Vec`, you can probably do with `Vector` too.
 
-In the below example, the contract field `nicknames` is a `Vector` of `String`. It loads data from the world state only when it is needed to be read, and stores data after the method call. It calls `iter()` to get an iterator as `std::vec::Vec` and cal `push()` to save data to the world state. Besides, it supports indexing for accessing particular indexed elements.
+In the below example, the contract field `nicknames` is a `Vector` of `String`. It loads data from the world state only when it is needed to be read, and stores data after the method call. It calls `iter()` to get an iterator as `std::vec::Vec`, and calls `push()` to save data to the world state. Besides, it supports indexing for accessing particular indexed elements.
 
 ```rust
 #[contract]

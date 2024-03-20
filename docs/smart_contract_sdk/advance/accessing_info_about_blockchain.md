@@ -8,9 +8,9 @@ tags:
 
 # Accessing Information about the Blockchain
 
-Contract Methods can be written not only depending on call arguments and the contract's storage, but also on information about the Blockchain, e.g., the previous block hash, or the identity of the External Account that originated the Call Transaction. 
+Contract Methods can be written to not only depend on call arguments and the contract's storage, but also on information about the Blockchain, e.g., the previous block hash, or the identity of the External Account that originated the Transaction with Call Command.
 
-Functions for getting information about the Transaction that triggered a Contract call and information about the larger Blockchain, in general, are defined in `pchain_sdk::transaction` and `pchain_sdk::blockchain` respectively. Internally, these functions are thin wrappers around functions defined in the Imports Set of the Contract ABI.
+Functions for getting information about the Transaction that triggered a Contract call and information about the larger Blockchain in general are defined in `pchain_sdk::transaction` and `pchain_sdk::blockchain` respectively. Internally, these functions are thin wrappers around functions defined in the Imports Set of the CBI.
 
 
 ## Parameters from Blockchain and Transaction

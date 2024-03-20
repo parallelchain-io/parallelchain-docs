@@ -14,7 +14,7 @@ Firstly, we have to prepare the `Cargo.toml`, which specifies the name, version,
 ```toml
 [package]
 name = "hello_contract"
-version = "0.1.0"
+version = "0.4.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -23,22 +23,21 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-pchain-sdk = { version = "LATEST_VERSION"}
+pchain-sdk = { git = "https://github.com/parallelchain-io/pchain-sdk.git" }
 ```
 
 ---
 
-After preparing `Cargol.toml`, we can now start preparing the smart contract.  
+After preparing `Cargo.toml`, we can now start preparing the smart contract.  
 
-`#[contract]` defines basic struct as a programming model of a contract. 
+`#[contract]` defines basic [struct](https://doc.rust-lang.org/book/ch05-01-defining-structs.html) as a programming model of a contract. 
 Fields are data representations of contract storage.
 
-`#[contract_methods]` defines impl for the contract struct. 
-Methods declared in the impl are callable by Transaction Command Call if their visibility is `pub`.
+`#[contract_methods]` defines [impl](https://doc.rust-lang.org/std/keyword.impl.html) for the contract struct. 
 
-`#[call]` macro applies to impl methods for the contract method call. 
+`#[call]` macro applies to impl methods for the contract method call. Methods declared under this macro are callable by [Transaction Command - Call](/concepts/transaction/).
 
-In the file, we have added a method called `hello()`, `pchain_sdk::log()` logs the key and value and stores them into a tmp directory when the method is invoked.
+In the file, we have added a method called `hello()`. In this method, the SDK provided function `pchain_sdk::log()` logs the information as a key-value pair and appends it to the [Logs](/concepts/transaction/#receipt-and-logs) in a transaction receipt.
 
 ### lib.rs
 ```rust
@@ -64,7 +63,7 @@ impl HelloContract {
 
 ---
 
-Next, we can add two other methods, which illustrate how we can set or read values from the storage.
+Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate [pchain_sdk::storage](/smart_contract_sdk/advance/contract_storage/#accessing-storage).
 
 ```rust
 #[call]
