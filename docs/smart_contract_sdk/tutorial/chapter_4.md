@@ -14,8 +14,6 @@ the two contracts by:
 - calling another contract's entrypoint methods.
 - sending tokens from the balance of one contract to another contract.
 
----
-
 Firstly, use the macro `use_contract` to specify the contract entrypoint methods in a trait.
 The address is hard-coded when using this macro. It is recommended to remove or comment out 
 the methods that are not intended to be used. 

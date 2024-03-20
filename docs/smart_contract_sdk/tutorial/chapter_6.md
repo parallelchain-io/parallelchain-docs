@@ -38,7 +38,7 @@ pub struct MyPool {
 }
 
 ```
-We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. Remind that these data will be all zeros by default. Therefore, we have to add an initialization function to set the addresses that we want.
+We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. These data will be all zeros by default. Therefore, we have to add an initialization function to set the addresses we want.
 
 ### lib.rs: initialise struct
 ```rust
@@ -98,7 +98,7 @@ Check the deposit again using `pchain-client`, the deposit balance in the pool s
     The [return values](/concepts/transaction/#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
 
 In the method `stake_deposit()`, we should be expecting that the `return_values` in the receipt will be the 
-balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another defer staking command in the method call, the `return_values`
+balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another deferred staking command in the method call, the `return_values`
 will be overwritten by the result of executing `pchain_sdk::network::defer_staking_deposit()` command.
 
 ### lib.rs: overwriting return value
@@ -112,8 +112,8 @@ will be overwritten by the result of executing `pchain_sdk::network::defer_staki
 
 ---
 
-Lastly, we can include multiple defer staking commands within one transaction. In this method `multiple_defer()`,
-we put the defer staking commands for unstaking and withdrawing deposits together.
+Lastly, we can include multiple deferred staking commands within one transaction. In this method `multiple_defer()`,
+we put the deferred staking commands for unstaking and withdrawing deposits together.
 
 Both the commands will be executed after the success of the transaction, and in the order they were called. After invoking this method call, the stake of the deposit should have been successfully unstaked and withdrawn.
 

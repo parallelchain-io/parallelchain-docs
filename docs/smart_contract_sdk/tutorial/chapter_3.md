@@ -10,7 +10,7 @@ We have introduced macros including `contract`, `contract methods`, and `call` i
 fields from storage in [Chapter 2](/smart_contract_sdk/tutorial/chapter_2/). In this chapter, we will put together all the knowledge and implement the bank
 smart contract that simulates banking operations with data stored in ParallelChain Mainnet.
 
-Before diving into the writing of a smart contract, let's define the data struct `BankAccount` which will be stored into the storage.
+Before diving into the writing of a smart contract, let's define the data struct `BankAccount` which will be stored in the storage.
 
 `bank_account.rs` defined the struct `BankAccount` which consists of four fields, `first_name`, `last_name`, `account_id`, and `amount`.
 
@@ -126,7 +126,7 @@ We will create the first entrypoint method in `MyBank` impl. Firstly, we need th
 
 In `open_account()`, we initialize an instance of `BankAccount`, and store it in the storage directly by invoking `bank_account::set_bank_account()` with its Account ID as a key.
 
-After storing the newly generated account into storage, we have to update the `num_of_account`. Therefore, we obtain the value of the field by doing `MyBank::get_num_of_account()`, like how we get the fields of our little pony in Chapter 2. Similarly, store the updated
+After storing the newly generated account into storage, we have to update the `num_of_account`. Therefore, we obtain the value of the field by doing `MyBank::get_num_of_account()`, like how we get the fields of our little pony in Chapter 2. Similarly, set the updated
 value by calling `MyBank::set_num_of_account()`.
  
 ### lib.rs: open a new account
@@ -198,12 +198,12 @@ accessing the field `amount`.
 #[call]
 fn query_account_balance(account_id: String) {
     match bank_account::get_bank_account(account_id.as_bytes()) {
-        Some(balance) => {
+        Some(account) => {
             pchain_sdk::log(
                 format!("bank: query_account_balance").as_bytes(),
                 format!(
                     "The current balance is: {}", 
-                    &balance.amount
+                    &account.amount
                 ).as_bytes()
             );
         },
@@ -226,12 +226,12 @@ Lastly, finish up the functionalities of the bank by completing the implementati
 #[call]
 fn withdraw_money(account_id: String, amount_to_withdraw: u64) {
     match bank_account::get_bank_account(account_id.as_bytes()) {
-        Some(mut query_result) => {
-            match query_result.withdraw_from_balance(amount_to_withdraw) {
+        Some(mut account) => {
+            match account.withdraw_from_balance(amount_to_withdraw) {
                 Some(balance) => {
 
                     // update the world state
-                    bank_account::set_bank_account(account_id.as_bytes(), &query_result);
+                    bank_account::set_bank_account(account_id.as_bytes(), &account);
 
                     pchain_sdk::log(
                         format!("bank: withdraw_money").as_bytes(),
@@ -239,9 +239,9 @@ fn withdraw_money(account_id: String, amount_to_withdraw: u64) {
                         Name: {} {}\n
                         Account Number: {}\n
                         Balance: {}", 
-                        &query_result.first_name,
-                        &query_result.last_name,
-                        &query_result.account_id,
+                        &account.first_name,
+                        &account.last_name,
+                        &account.account_id,
                         &balance).as_bytes()
                     );
                 }
@@ -263,19 +263,19 @@ fn withdraw_money(account_id: String, amount_to_withdraw: u64) {
 #[call]
 fn deposit_money(account_id: String, amount_to_deposit: u64) {
     match bank_account::get_bank_account(account_id.as_bytes()) {
-        Some(mut query_result) => {
-            query_result.deposit_to_balance(amount_to_deposit);
+        Some(mut account) => {
+            account.deposit_to_balance(amount_to_deposit);
 
             // update the world state
-            bank_account::set_bank_account(account_id.as_bytes(), &query_result);
+            bank_account::set_bank_account(account_id.as_bytes(), &account);
 
             pchain_sdk::log(
                 format!("bank: deposit_money").as_bytes(),
                 format!("The updated balance is: \nName: {} {}\nAccount Number: {}\nBalance: {}", 
-                &query_result.first_name,
-                &query_result.last_name,
-                &query_result.account_id,
-                &query_result.amount).as_bytes()
+                &account.first_name,
+                &account.last_name,
+                &account.account_id,
+                &account.amount).as_bytes()
             );
         },
         None => pchain_sdk::log(
