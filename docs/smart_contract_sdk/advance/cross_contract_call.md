@@ -25,5 +25,4 @@ fn call<T: borsh::BorshDeserialize>(address: PublicAddress, method_name: &str, a
 /// It returns Option of Vec of bytes. Interpretation on the bytes depends on caller
 fn call_untyped(contract_address: PublicAddress, method_name: &str, arguments: Vec<u8>, value: u64) -> Option<Vec<u8>>;
 ```
-
-The tutorial [Chapter 4](/smart_contract_sdk/tutorial/chapter_4/) illustrates the details by example smart contract [ContractProxy](https://github.com/parallelchain-io/example-smart-contracts/blob/main/chapter_4/src/lib.rs).
+Check out the [Tutorial 4](/smart_contract_sdk/tutorial/chapter_4.md) for the tutorial that illustrates the details by example smart contract [ContractProxy](https://github.com/parallelchain-io/example-smart-contracts/blob/main/chapter_4/src/lib.rs).
