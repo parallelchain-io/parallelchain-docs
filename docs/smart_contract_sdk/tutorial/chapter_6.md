@@ -8,7 +8,7 @@ tags:
 
 # Chapter 6
 
-In the last chapter of the tutorial, we are going to talk about how to use [staking commands](/concepts/transaction/#staking-commands) in smart contracts. 
+In the last chapter of the tutorial, we are going to talk about how to use [staking commands](/concepts/transaction#staking-commands) in smart contracts. 
 
 In ParallelChain Mainnet, there are six different staking commands:
 
@@ -40,7 +40,7 @@ pub struct MyPool {
 ```
 We have created the struct `MyPool`, which consists of the addresses of the `pool_operator` and `my_friend`. These data will be all zeros by default. Therefore, we have to add an initialization function to set the addresses we want.
 
-### lib.rs: initialise struct
+### lib.rs: initialize struct
 ```rust
 #[contract_methods]
 impl MyPool {
@@ -64,7 +64,7 @@ The staking commands are "deferred" because the actual execution of such command
 sufficient balance to the contract for the operation.
 
 
-To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](/toolings/pchain_cli/query/#get-deposit-and-stake):
+To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](/toolings/pchain_cli/query#get-deposit-and-stake):
 ```sh
 ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
 ```
@@ -95,7 +95,7 @@ Check the deposit again using `pchain-client`, the deposit balance in the pool s
 ---
 
 !!! Note
-    The [return values](/concepts/transaction/#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
+    The [return values](/concepts/transaction#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
 
 In the method `stake_deposit()`, we should be expecting that the `return_values` in the receipt will be the 
 balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another deferred staking command in the method call, the `return_values`

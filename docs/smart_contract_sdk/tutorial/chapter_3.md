@@ -121,7 +121,7 @@ struct MyBank {
 }
 ```
 
-As mentioned in [Chapter 1](smart_contract_sdk/tutorial/chapter_1), the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
+As mentioned in [Chapter 1](/smart_contract_sdk/tutorial/chapter_1), the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
 We will create the first entrypoint method in `MyBank` impl. Firstly, we need the entrypoint method `open_account()` to create a brand-new account, with the specified `first_name`, `last_name`, `account_id`, and `initial_deposit`.
 
 In `open_account()`, we initialize an instance of `BankAccount`, and store it in the storage directly by invoking `bank_account::set_bank_account()` with its Account ID as a key.
