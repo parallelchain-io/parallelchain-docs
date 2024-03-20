@@ -2823,7 +2823,7 @@
 
 
 <h1 id="chapter-6">Chapter 6</h1>
-<p>In the last chapter of the tutorial, we are going to talk about how to use <a href="/concepts/transaction#staking-commands">staking commands</a> in smart contracts. </p>
+<p>In the last chapter of the tutorial, we are going to talk about how to use <a href="../../../../concepts/transaction#staking-commands">staking commands</a> in smart contracts. </p>
 <p>In ParallelChain Mainnet, there are six different staking commands:</p>
 <ul>
 <li>Create deposit</li>
@@ -2834,7 +2834,7 @@
 <li>Unstake deposit</li>
 </ul>
 <p>We will demonstrate how the above staking commands can be created within a smart contract 
-which acts as owner of the deposit/stakes (See <a href="/smart_contract_sdk/advance/staking_in_contract/">Staking in Contract</a>). We will use the contract, <code>MyPool</code>, 
+which acts as owner of the deposit/stakes (See <a href="../../advance/staking_in_contract/">Staking in Contract</a>). We will use the contract, <code>MyPool</code>, 
 to guide you through the steps of creating a stake in a pool.</p>
 <h3 id="librs-define-a-struct">lib.rs: define a struct</h3>
 <p><div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">pchain_sdk</span>::<span class="p">{</span>
@@ -2869,7 +2869,7 @@ We have created the struct <code>MyPool</code>, which consists of the addresses 
 The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer
 sufficient balance to the contract for the operation.</p>
 </blockquote>
-<p>To check if the deposit is successful, you can check the deposit using <code>pchain-client</code> with the following <a href="/toolings/pchain_cli/query#get-deposit-and-stake">command</a>:
+<p>To check if the deposit is successful, you can check the deposit using <code>pchain-client</code> with the following <a href="../../../pchain_cli/query#get-deposit-and-stake">command</a>:
 <div class="highlight"><pre><span></span><code>./pchain_client<span class="w"> </span>query<span class="w"> </span>deposit<span class="w"> </span>--operator<span class="w"> </span>&lt;OPERATOR_ADDRESS&gt;<span class="w"> </span>--owner<span class="w"> </span>&lt;CONTRACT_ADDRESS&gt;
 </code></pre></div></p>
 <h3 id="librs-successful-staking-command">lib.rs: successful staking command</h3>
@@ -2891,7 +2891,7 @@ sufficient balance to the contract for the operation.</p>
 <hr />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a href="/concepts/transaction#receipt-and-logs">return values</a> in the transaction receipt will be overwritten by the deferred staking commands. </p>
+<p>The <a href="../../../../concepts/transaction#receipt-and-logs">return values</a> in the transaction receipt will be overwritten by the deferred staking commands. </p>
 </div>
 <p>In the method <code>stake_deposit()</code>, we should be expecting that the <code>return_values</code> in the receipt will be the 
 balance of the contract (see <a href="https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md">ParallelChain Mainnet Protocol</a>). However, since there is another deferred staking command in the method call, the <code>return_values</code>

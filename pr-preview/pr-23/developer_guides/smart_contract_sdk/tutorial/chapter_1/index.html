@@ -2766,8 +2766,8 @@
 <p><code>#[contract]</code> defines basic <a href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html">struct</a> as a programming model of a contract. 
 Fields are data representations of contract storage.</p>
 <p><code>#[contract_methods]</code> defines <a href="https://doc.rust-lang.org/std/keyword.impl.html">impl</a> for the contract struct. </p>
-<p><code>#[call]</code> macro applies to impl methods for the contract method call. Methods declared under this macro are callable by <a href="/concepts/transaction/">Transaction Command - Call</a>.</p>
-<p>In the file, we have added a method called <code>hello()</code>. In this method, the SDK provided function <code>pchain_sdk::log()</code> logs the information as a key-value pair and appends it to the <a href="/concepts/transaction#receipt-and-logs">Logs</a> in a transaction receipt.</p>
+<p><code>#[call]</code> macro applies to impl methods for the contract method call. Methods declared under this macro are callable by <a href="../../../../concepts/transaction">Transaction Command - Call</a>.</p>
+<p>In the file, we have added a method called <code>hello()</code>. In this method, the SDK provided function <code>pchain_sdk::log()</code> logs the information as a key-value pair and appends it to the <a href="../../../../concepts/transaction#receipt-and-logs">Logs</a> in a transaction receipt.</p>
 <h3 id="librs">lib.rs</h3>
 <div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">pchain_sdk</span>::<span class="p">{</span>
 <span class="w">    </span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="n">contract_methods</span><span class="p">,</span><span class="w"> </span><span class="n">call</span><span class="p">,</span><span class="w"> </span><span class="n">storage</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="p">,</span><span class="w"> </span>
@@ -2789,7 +2789,7 @@ Fields are data representations of contract storage.</p>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<p>Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate <a href="/smart_contract_sdk/advance/contract_storage#accessing-storage">pchain_sdk::storage</a>.</p>
+<p>Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate <a href="../../../smart_contract_sdk/advance/contract_storage#accessing-storage">pchain_sdk::storage</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#[call]</span>
 <span class="k">fn</span> <span class="nf">hello_set_many</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">{</span>

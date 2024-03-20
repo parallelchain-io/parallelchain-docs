@@ -2663,7 +2663,7 @@
 
   <h1>Staking in Contract</h1>
 
-<p>Contract address can be used as owner in staking, in other words, to perform staking on behalf of a contract. It is done by invoking a contract call to create <a href="/concepts/transaction#staking-commands">staking command(s)</a> (i.e. Create Deposit, TopupDeposit, ... etc) inside the contract method. The execution of these staking commands will be deferred after the successful execution of the entire contract call. To create deferred staking command, you can call functions <code>defer_*</code> provided by the SDK.</p>
+<p>Contract address can be used as owner in staking, in other words, to perform staking on behalf of a contract. It is done by invoking a contract call to create <a href="../../../../concepts/transaction#staking-commands">staking command(s)</a> (i.e. Create Deposit, TopupDeposit, ... etc) inside the contract method. The execution of these staking commands will be deferred after the successful execution of the entire contract call. To create deferred staking command, you can call functions <code>defer_*</code> provided by the SDK.</p>
 <p><strong>Notes:</strong></p>
 <ul>
 <li>The owner of the staking is using a contract address.</li>
@@ -2685,7 +2685,7 @@
 <span class="sd">/// Remove stakes from an existing Pool.</span>
 <span class="k">fn</span> <span class="nf">defer_unstake_deposit</span><span class="p">(</span><span class="n">operator</span>: <span class="nc">PublicAddress</span><span class="p">,</span><span class="w"> </span><span class="n">max_amount</span>: <span class="kt">u64</span><span class="p">);</span>
 </code></pre></div>
-<p>Check out the <a href="/smart_contract_sdk/tutorial/chapter_6.md">Tutorial 6</a> for the tutorial on using <code>defer</code> calls in smart contracts.</p>
+<p>Check out the <a href="../../tutorial/chapter_6/">Tutorial 6</a> for the tutorial on using <code>defer</code> calls in smart contracts.</p>
 
 
 

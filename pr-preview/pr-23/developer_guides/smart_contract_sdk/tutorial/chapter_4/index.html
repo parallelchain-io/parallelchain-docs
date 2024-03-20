@@ -2782,7 +2782,7 @@
 
 <h1 id="chapter-4">Chapter 4</h1>
 <p>This chapter introduces the use of the <code>use_contract</code> macro to interact with other contracts. 
-We have <code>ContractProxy</code> that serves as a middle-man to another contract <code>MyLittlePony</code> (see <a href="/smart_contract_sdk/tutorial/chapter_2/">Chapter 2</a>). We are going to explore the interaction between 
+We have <code>ContractProxy</code> that serves as a middle-man to another contract <code>MyLittlePony</code> (see <a href="../chapter_2/">Chapter 2</a>). We are going to explore the interaction between 
 the two contracts by:</p>
 <ul>
 <li>calling another contract's entrypoint methods.</li>
@@ -2824,7 +2824,7 @@ can be simply calling the methods in the trait as <a href="https://doc.rust-lang
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<p>The above example has shown how we can use the <code>use_contract</code> macro to do <a href="/smart_contract_sdk/advance/cross_contract_call/">cross-contract calls</a>. It is also possible
+<p>The above example has shown how we can use the <code>use_contract</code> macro to do <a href="../../advance/cross_contract_call/">cross-contract calls</a>. It is also possible
 to use <code>pchain_sdk::call_untyped()</code> to do so. We pass the contract address as an argument so that the contract
 address does not need to be hard-coded in the contract.</p>
 <h3 id="librs-pchain_sdkcall_untyped">lib.rs: pchain_sdk::call_untyped()</h3>
@@ -2842,7 +2842,7 @@ address does not need to be hard-coded in the contract.</p>
 <hr />
 <h3 id="librs-transfer-contract-balance">lib.rs: transfer contract balance</h3>
 <p>Except by calling the entrypoint methods from <code>MyLittlePony</code>, we can also transfer the balance from the 
-contract to a specific address by <code>pchain_sdk::transfer()</code> (see <a href="/smart_contract_sdk/advance/transferring_balance/">Transferring Balance</a>).</p>
+contract to a specific address by <code>pchain_sdk::transfer()</code> (see <a href="../../advance/transferring_balance/">Transferring Balance</a>).</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#[call]</span>
 <span class="k">fn</span> <span class="nf">send_tokens</span><span class="p">(</span><span class="n">to_address</span>: <span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span>:<span class="kt">u64</span><span class="p">){</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">contract_address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base64url</span>::<span class="n">decode</span><span class="p">(</span><span class="n">to_address</span><span class="p">).</span><span class="n">unwrap</span><span class="p">().</span><span class="n">try_into</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>

@@ -2804,7 +2804,7 @@
 <li>define entrypoint methods</li>
 <li>define fields as data in contract storage</li>
 </ul>
-<p>From the last chapter, we have learned that the macro <code>contract</code> on struct allows getting or setting data from or into the <a href="/concepts/storage#world-state">world state</a>. 
+<p>From the last chapter, we have learned that the macro <code>contract</code> on struct allows getting or setting data from or into the <a href="../../../../concepts/storage#world-state">world state</a>. 
 The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.</p>
 <p>In this chapter, we first create a struct, <code>MyLittlePony</code>, that consists of <code>name</code>, <code>age</code>, and <code>gender</code>. In this case, <code>name</code> has key <code>[0]</code> while <code>age</code> has key <code>[1]</code>.</p>
 <h3 id="librs-define-mylittlepony">lib.rs: define MyLittlePony</h3>
@@ -2850,7 +2850,7 @@ All data will be loaded to the receiver self from the world state. In this way, 
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write <a href="/concepts/gas/">gas cost</a> is smaller compared to what we did in <code>self_introduction()</code>
+<p>In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write <a href="../../../../concepts/gas/">gas cost</a> is smaller compared to what we did in <code>self_introduction()</code>
 because only one key-value pair (i.e. <code>age</code>) is involved.</p>
 <p>Instead of passing <code>&amp;self</code> as an argument, simply do <code>Self::get_&lt;field_name&gt;()</code> to get the value and 
 <code>Self::set_&lt;field_name&gt;()</code> to set updated value.</p>

@@ -2835,8 +2835,8 @@
 
 
 <h1 id="chapter-3">Chapter 3</h1>
-<p>We have introduced macros including <code>contract</code>, <code>contract methods</code>, and <code>call</code> in <a href="/smart_contract_sdk/tutorial/chapter_1/">Chapter 1</a> and accessing values of
-fields from storage in <a href="/smart_contract_sdk/tutorial/chapter_2/">Chapter 2</a>. In this chapter, we will put together all the knowledge and implement the bank
+<p>We have introduced macros including <code>contract</code>, <code>contract methods</code>, and <code>call</code> in <a href="../chapter_1/">Chapter 1</a> and accessing values of
+fields from storage in <a href="../chapter_2/">Chapter 2</a>. In this chapter, we will put together all the knowledge and implement the bank
 smart contract that simulates banking operations with data stored in ParallelChain Mainnet.</p>
 <p>Before diving into the writing of a smart contract, let's define the data struct <code>BankAccount</code> which will be stored in the storage.</p>
 <p><code>bank_account.rs</code> defined the struct <code>BankAccount</code> which consists of four fields, <code>first_name</code>, <code>last_name</code>, <code>account_id</code>, and <code>amount</code>.</p>
@@ -2908,7 +2908,7 @@ of deposit and withdrawal.</p>
 <hr />
 <p>After having the <code>BankAccount</code> struct ready, it is time to start writing the bank smart contract. <code>use bank_account::BankAccount;</code> allows us to use the methods defined in <code>bank_account.rs</code>.</p>
 <p>The macro <code>contract</code> above struct defines the basic structure of the contract which has
-only one field, <code>num_of_account</code>, indicating the number of accounts associated with this bank. As mentioned in <a href="/smart_contract_sdk/tutorial/chapter_2">Chapter 2</a>,</p>
+only one field, <code>num_of_account</code>, indicating the number of accounts associated with this bank. As mentioned in <a href="../chapter_2">Chapter 2</a>,</p>
 <blockquote>
 <p><strong>Note</strong>
 The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.</p>
@@ -2928,7 +2928,7 @@ The key to be stored started with a zero-indexed u8 integer ordered by the field
 <span class="w">    </span><span class="n">num_of_account</span>: <span class="kt">u64</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>As mentioned in <a href="/smart_contract_sdk/tutorial/chapter_1">Chapter 1</a>, the macro <code>#[contract_methods]</code> generates entrypoint methods that can be called in transaction.
+<p>As mentioned in <a href="../chapter_1">Chapter 1</a>, the macro <code>#[contract_methods]</code> generates entrypoint methods that can be called in transaction.
 We will create the first entrypoint method in <code>MyBank</code> impl. Firstly, we need the entrypoint method <code>open_account()</code> to create a brand-new account, with the specified <code>first_name</code>, <code>last_name</code>, <code>account_id</code>, and <code>initial_deposit</code>.</p>
 <p>In <code>open_account()</code>, we initialize an instance of <code>BankAccount</code>, and store it in the storage directly by invoking <code>bank_account::set_bank_account()</code> with its Account ID as a key.</p>
 <p>After storing the newly generated account into storage, we have to update the <code>num_of_account</code>. Therefore, we obtain the value of the field by doing <code>MyBank::get_num_of_account()</code>, like how we get the fields of our little pony in Chapter 2. Similarly, set the updated

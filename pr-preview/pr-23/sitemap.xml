@@ -111,11 +111,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.parallelchain.io/developer_guides/pchain_client_rust/</loc>
-         <lastmod>2024-03-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.parallelchain.io/developer_guides/pchain_cli/contract_publish/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
@@ -322,16 +317,6 @@
     </url>
     <url>
          <loc>https://docs.parallelchain.io/introduction/xpll/what_is_xpll/</loc>
-         <lastmod>2024-03-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.parallelchain.io/running_nodes/requirement/</loc>
-         <lastmod>2024-03-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.parallelchain.io/running_nodes/running_node/</loc>
          <lastmod>2024-03-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
