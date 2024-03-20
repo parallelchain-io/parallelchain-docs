@@ -6,7 +6,7 @@ tags:
 
 # Storage
 
-**Storage** is a decentralized database to store all necessary information to maintain a node and support data query of the blockchain. Unlike traditional decentralized databases which split data into chunks on different peers, each node instead broadcast the transactions that it received to other peer nodes. Once other nodes receive the transactions, they would execute transactions, verify the changes and update their database locally.
+**Storage** is a decentralised database to store all necessary information to maintain a node and support data query of the blockchain. Unlike traditional decentralised databases which split data into chunks on different peers, each node instead broadcast the transactions that it received to other peer nodes. Once other nodes receive the transactions, they would execute transactions, verify the changes and update their database locally.
 
 Elements inside storage include:
 
