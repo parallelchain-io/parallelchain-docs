@@ -6,8 +6,8 @@ tags:
 ---
 
 # Chapter 3
-We have introduced macros including `contract`, `contract methods`, and `call` in [Chapter 1](/smart_contract_sdk/tutorial/chapter_1/) and accessing values of
-fields from storage in [Chapter 2](/smart_contract_sdk/tutorial/chapter_2/). In this chapter, we will put together all the knowledge and implement the bank
+We have introduced macros including `contract`, `contract methods`, and `call` in [Chapter 1](../chapter_1/) and accessing values of
+fields from storage in [Chapter 2](../chapter_2/). In this chapter, we will put together all the knowledge and implement the bank
 smart contract that simulates banking operations with data stored in ParallelChain Mainnet.
 
 Before diving into the writing of a smart contract, let's define the data struct `BankAccount` which will be stored in the storage.
@@ -95,7 +95,7 @@ impl BankAccount {
 After having the `BankAccount` struct ready, it is time to start writing the bank smart contract. `use bank_account::BankAccount;` allows us to use the methods defined in `bank_account.rs`.
 
 The macro `contract` above struct defines the basic structure of the contract which has
-only one field, `num_of_account`, indicating the number of accounts associated with this bank. As mentioned in [Chapter 2](/smart_contract_sdk/tutorial/chapter_2),
+only one field, `num_of_account`, indicating the number of accounts associated with this bank. As mentioned in [Chapter 2](../chapter_2),
 
 > **Note**
 > The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.
@@ -121,7 +121,7 @@ struct MyBank {
 }
 ```
 
-As mentioned in [Chapter 1](/smart_contract_sdk/tutorial/chapter_1), the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
+As mentioned in [Chapter 1](../chapter_1), the macro `#[contract_methods]` generates entrypoint methods that can be called in transaction.
 We will create the first entrypoint method in `MyBank` impl. Firstly, we need the entrypoint method `open_account()` to create a brand-new account, with the specified `first_name`, `last_name`, `account_id`, and `initial_deposit`.
 
 In `open_account()`, we initialize an instance of `BankAccount`, and store it in the storage directly by invoking `bank_account::set_bank_account()` with its Account ID as a key.

@@ -8,7 +8,7 @@ tags:
 
 # Chapter 6
 
-In the last chapter of the tutorial, we are going to talk about how to use [staking commands](/concepts/transaction#staking-commands) in smart contracts. 
+In the last chapter of the tutorial, we are going to talk about how to use [staking commands](../../../../concepts/transaction#staking-commands) in smart contracts. 
 
 In ParallelChain Mainnet, there are six different staking commands:
 
@@ -20,7 +20,7 @@ In ParallelChain Mainnet, there are six different staking commands:
 - Unstake deposit
 
 We will demonstrate how the above staking commands can be created within a smart contract 
-which acts as owner of the deposit/stakes (See [Staking in Contract](/smart_contract_sdk/advance/staking_in_contract/)). We will use the contract, `MyPool`, 
+which acts as owner of the deposit/stakes (See [Staking in Contract](../../advance/staking_in_contract/)). We will use the contract, `MyPool`, 
 to guide you through the steps of creating a stake in a pool.
 
 ### lib.rs: define a struct
@@ -64,7 +64,7 @@ The staking commands are "deferred" because the actual execution of such command
 sufficient balance to the contract for the operation.
 
 
-To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](/toolings/pchain_cli/query#get-deposit-and-stake):
+To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../pchain_cli/query#get-deposit-and-stake):
 ```sh
 ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
 ```
@@ -95,7 +95,7 @@ Check the deposit again using `pchain-client`, the deposit balance in the pool s
 ---
 
 !!! Note
-    The [return values](/concepts/transaction#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
+    The [return values](../../../../concepts/transaction#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
 
 In the method `stake_deposit()`, we should be expecting that the `return_values` in the receipt will be the 
 balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another deferred staking command in the method call, the `return_values`

@@ -13,7 +13,7 @@ In Chapter 2, we will implement a smart contract called `MyLittlePony`, to demon
 - define fields as data in contract storage
 
 
-From the last chapter, we have learned that the macro `contract` on struct allows getting or setting data from or into the [world state](/concepts/storage#world-state). 
+From the last chapter, we have learned that the macro `contract` on struct allows getting or setting data from or into the [world state](../../../../concepts/storage#world-state). 
 The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.
 
 In this chapter, we first create a struct, `MyLittlePony`, that consists of `name`, `age`, and `gender`. In this case, `name` has key `[0]` while `age` has key `[1]`.
@@ -72,7 +72,7 @@ impl MyLittlePony {
 }
 ```
 
-In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write [gas cost](/concepts/gas/) is smaller compared to what we did in `self_introduction()`
+In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write [gas cost](../../../../concepts/gas/) is smaller compared to what we did in `self_introduction()`
 because only one key-value pair (i.e. `age`) is involved.
 
 Instead of passing `&self` as an argument, simply do `Self::get_<field_name>()` to get the value and 

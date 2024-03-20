@@ -5,7 +5,7 @@ tags:
   - Staking
 ---
 
-Contract address can be used as owner in staking, in other words, to perform staking on behalf of a contract. It is done by invoking a contract call to create [staking command(s)](/concepts/transaction#staking-commands) (i.e. Create Deposit, TopupDeposit, ... etc) inside the contract method. The execution of these staking commands will be deferred after the successful execution of the entire contract call. To create deferred staking command, you can call functions `defer_*` provided by the SDK.
+Contract address can be used as owner in staking, in other words, to perform staking on behalf of a contract. It is done by invoking a contract call to create [staking command(s)](../../../../concepts/transaction#staking-commands) (i.e. Create Deposit, TopupDeposit, ... etc) inside the contract method. The execution of these staking commands will be deferred after the successful execution of the entire contract call. To create deferred staking command, you can call functions `defer_*` provided by the SDK.
 
 __Notes:__
 
@@ -31,4 +31,4 @@ fn defer_stake_deposit(operator: PublicAddress, max_amount: u64);
 fn defer_unstake_deposit(operator: PublicAddress, max_amount: u64);
 ```
 
-Check out the [Tutorial 6](/smart_contract_sdk/tutorial/chapter_6.md) for the tutorial on using `defer` calls in smart contracts.
+Check out the [Tutorial 6](../tutorial/chapter_6.md) for the tutorial on using `defer` calls in smart contracts.
