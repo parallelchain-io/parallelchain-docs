@@ -84,7 +84,6 @@ nav:
       - Transaction-related RPC: developer_guides/rpc/transaction_rpc.md
       - Block-related RPC: developer_guides/rpc/block_rpc.md
       - State-related RPC: developer_guides/rpc/state_rpc.md
-    # - pchain-client-rust: developer_guides/pchain_client_rust.md
     - Wallet Browser Extension:
       - Introduction: developer_guides/wallet_browser_extension/intro.md
       - Definitions: developer_guides/wallet_browser_extension/definition.md
