@@ -31,7 +31,7 @@ my_first_contract
 └── Cargo.toml # You import your packages and the SDK here
 ```
 
-For more information on Rust's crate system, see [Rust Book Chapter 7: Packages and Crates](https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html?highlight=crate#packages-and-crates)
+For more information on Rust's crate system, see [Rust Book Chapter 7: Packages and Crates](https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html)
 
 Please specify the dependency in `Cargo.toml` for using SDK by fetching from [crates.io](https://crates.io/) or repository in Github.
 
@@ -99,7 +99,7 @@ If you installed `pchain_compile` with `cargo install`, you can simply run:
 pchain_compile build --source <PATH_TO_SMART_CONTRACT_CODE>
 ```
 
-A `.wasm` file will be generated in the current directory. It will be needed for the [next section](./deploy_contract.md).
+A `.wasm` file will be generated in the current directory.
 
 ## Deploying a Smart Contract
 
@@ -128,7 +128,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
     --cbi-version <CBI_VERSION> 
     ```
 
-You can follow the instruction in [Create Transaction](../developer_guides/pchain_cli/transaction.md) about submiting a transaction through `pchain-client`.
+You can follow the instruction in [Create Transaction](../../for_users/pchain_client_cli/transaction.md) about submiting a transaction through `pchain-client`.
 
 ## Checking Contract in State
 
@@ -206,7 +206,7 @@ Here is the command to call a contract:
 
 The gas limit required for the transaction depends on the complexity of the smart contract. For safety reasons, you can always set a higher gas limit. You can also test contract calls on testnet to reassure.
 
-You can follow the instruction in [Create Transaction](../developer_guides/pchain_cli/transaction.md) about submiting a transaction through `pchain-client`.
+You can follow the instruction in [Create Transaction](../../for_users/pchain_client_cli/transaction.md) about submiting a transaction through `pchain-client`.
 
 To query the resulting receipt of the transaction, 
 

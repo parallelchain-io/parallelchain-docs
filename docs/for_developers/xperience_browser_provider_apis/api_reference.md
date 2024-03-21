@@ -175,7 +175,7 @@ type GetAccountsResult = string[];
 
 ## Get Active Account
 
-Get the [address][3] of the currently [active account][12];  
+Get the [address][3] of the currently [active account][11];  
 return `undefined` if the user still needs to register.
 
 !!! warning
@@ -203,7 +203,7 @@ type GetActiveAccountResult = string | undefined;
 
 ## Get Active Account Balance
 
-Return the balance of the [active account][12] in [XPLL][5].
+Return the balance of the [active account][11] in [XPLL][5].
 
 !!! warning
     The `get_active_account_balance` should have the permission granted; otherwise,
@@ -231,7 +231,7 @@ type GetActiveAccountBalanceResult = string;
 
 ## Get Active Account Latest Transactions
 
-Return the latest transactions of the [active account][12].
+Return the latest transactions of the [active account][11].
 
 ### Params
 
@@ -337,7 +337,7 @@ Transfer tokens to another account; return the transaction hash if the request i
 
 !!! tip
     Send Token is only for XPLL transfers.
-    If you want to transfer the [PRFC1 token][11], we should use [Call Contract](#call-contract) instead.
+    If you want to transfer the [PRFC1 token][10], we should use [Call Contract](#call-contract) instead.
 
 ```ts
 interface SendTokenRequest {
@@ -403,10 +403,10 @@ return the transaction hash if the request is successful.
 The arguments of the contract method should be serialized as [Uint8Array][6]
 before passing to the `call_contract` method.
 
-The primitive types are serialized based on [Borsh binary serialization format][7]. You can use the library [borsh-js][10] to help serialize the arguments.
+The primitive types are serialized based on [Borsh binary serialization format][7]. You can use the library [borsh-js][9] to help serialize the arguments.
 
 The address is a base64 encoded string. 
-For more details about the base64 serialization, please check [MDN][9].
+For more details about the base64 serialization, please check [MDN][8].
 
 The option type is also based on [Borsh binary serialization format][7]. 
 For instance, `Option<PublicAddress>` is serialized as:
@@ -419,8 +419,8 @@ const optionBytes = new Uint8Array([1, ...addressBytes]); // Option<PublicAddres
 
 The following example shows how to serialize the arguments:
 
-Assume that you want to call the [transfer_from][8] method 
-of the `xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw` [PRFC1 contract][11].
+Assume that you want to call the `transfer_from()` method 
+of the `xXAbY4DmeOHHuRCmE9dXczV38BoO-CTKYeWra8YOlLw` [PRFC1 contract][10].
 
 ```js
 import * as borsh from 'borsh';
@@ -554,7 +554,7 @@ Allows developers to request a specified asset be tracked in the wallet.
 
 ### Params
 
-- `type`: The type string is the commonly accepted name of the interface implemented by the asset’s contract, e.g. [PRFC1][11].
+- `type`: The type string is the commonly accepted name of the interface implemented by the asset’s contract, e.g. [PRFC1][10].
 - `address`: The [address][3] of the contract.
 
 !!! warning
@@ -599,15 +599,14 @@ type WatchAssetResult = boolean;
     });
     ```
 
-[1]: ../definition.md#remote-procedure-call-rpc
-[2]: ./error.md
-[3]: ../definition.md#address
-[4]: ./permission.md
-[5]: ../../../introduction/xpll/what_is_xpll.md
+[1]: definitions.md#remote-procedure-call-rpc
+[2]: error.md
+[3]: definitions.md#address
+[4]: permissions.md
+[5]: ../../introduction.md#what-is-xpll
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 [7]: https://borsh.io/
-[8]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md#transfer_from
-[9]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
-[10]: https://github.com/near/borsh-js
-[11]: https://github.com/parallelchain-io/prfcs/blob/master/PRFCS/prfc-1.md
-[12]: ../definition.md#active-account
+[8]: https://developer.mozilla.org/en-US/docs/Glossary/Base64
+[9]: https://github.com/near/borsh-js
+[10]: https://github.com/parallelchain-io/prfcs
+[11]: definitions.md#active-account

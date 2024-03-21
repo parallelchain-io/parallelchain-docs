@@ -36,10 +36,10 @@ interface Permission {
 
 Request permission to access the user's accounts.
 
-Check out the API documentation [Request Permissions](./api_documentation.md#request-permission) for details.
+Check out the API documentation [Request Permissions](api_reference.md#request-permission) for details.
 
 ## Get Permissions
 
 Return all permissions that have been granted to the wallet.
 
-Check out the API documentation for [Get Permissions](./api_documentation.md#get-permissions) for details.
+Check out the API documentation for [Get Permissions](api_reference.md#get-permissions) for details.

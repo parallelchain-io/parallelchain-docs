@@ -22,7 +22,7 @@ Copy your Lock-up Contract address in the email
 ### Step 2: Access Your Xperience Explorer Account
 ![access account](../../img/explorer/lock-up/1_login.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
-1. Access the [blockchain explorer](https://explorer.parallelchain.io/explorer?network=Mainnet), or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
+1. Access the [ParallelChain Explorer](https://explorer.parallelchain.io), or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
 2. To log in, click on the *round* icon on the top right hand corner of the explorer page and enter your password.
 3. Press the **LOGIN** button.
 
@@ -58,7 +58,7 @@ Watch the video tutorial to register your locked-up contract [here](https://yout
 ### Step 1: Log Into Your ParallelChain Wallet Account
 
 
-1. Access the [blockchain explorer](explorer.parallelchain.io) , or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
+1. Access the [ParallelChain Explorer](https://explorer.parallelchain.io), or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
 
 2. To log in, click on the *round* icon on the top right hand corner of the webpage and enter your password.
 
@@ -66,7 +66,7 @@ Watch the video tutorial to register your locked-up contract [here](https://yout
 3. Press the **LOGIN** button.
 
 
-    !!! note
+    !!! Note
         If you do not remember your password, you can choose to log in with your recovery key. Once you have access to your account, you should set a new password through your wallet settings.
 
 

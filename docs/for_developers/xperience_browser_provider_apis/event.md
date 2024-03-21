@@ -66,9 +66,9 @@ interface ActiveAccountChangedEvent {
 
 !!! warning
     The `activeAccountChanged` event will only fire after permission has been granted.
-    Please check [Permissions][permission] for more details.
+    Please check [Permissions][permissions] for more details.
 
-[permission]: ./permission.md
+[permissions]: ./permissions.md
 
 ## Lock State Changed Event
 

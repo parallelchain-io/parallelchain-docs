@@ -18,10 +18,9 @@ Related API in `pchain_sdk::internal`:
 fn transfer(recipient: PublicAddress, amount: u64);
 ```
 
-__Notes:__
-
-- Balance is deducted from the contract, but not the caller's account.
-- Gas cost is deducted from the caller's account.
+!!! Notes
+    - Balance is deducted from the contract, but not the caller's account.
+    - Gas cost is deducted from the caller's account.
 
 Example:
 

@@ -9,7 +9,20 @@ tags:
 
 # Transactions
 
-## Command
+A **transaction** is a digitally signed instruction that tells the Mainnet state machine to execute a sequence of commands. 
+
+A transaction has the following fields:
+
+- `Signer`: the public address of the external-owned account that signed this transaction.
+- `Nonce`: the number of transactions signed by the signer that has been included on the blockchain before this transaction. This ensures that all of the signer’s transactions are included in the blockchain in an expected order and prevents the same transaction from being included in multiple blocks.
+- `Commands`: a sequence of [Commands](#commands) to be executed in a transaction.
+- `Gas Limit`: the maximum number of gas units that should be used in executing this transaction.
+- `Max Base Fee per Gas`: the maximum number of grays that the signer is willing to burn for a gas unit used in this transaction.
+- `Priority Fee per Gas`: the number of grays that the signer is willing to pay the block proposer for including this transaction in a block.
+- `Signature`: the signature formed by signing over content in this transaction using the signer’s private key.
+- `Hash`: the cryptographic hash of the signature.
+
+## Commands
 
 A command is a useful operation that Parallelchain allows the user to do. A sequence of commands can be inserted into a transaction to be carried out. There are currently 13 different kinds of commands, each corresponding to a variant of the command enum type. These are further divided into three categories: **account commands**, **staking commands**, and **protocol commands**. Most commands take inputs, which are part of the command type as the fields of its corresponding variant.
 
@@ -39,32 +52,15 @@ A command is a useful operation that Parallelchain allows the user to do. A sequ
 |Stake| <li>Operator (`PublicAddress`)</li> <li>Max amount (`u64`)</li> |Try to stake a given amount from a deposit.|
 |Unstake| <li>Operator (`PublicAddress`)</li> <li>Max amount (`u64`)</li> |Try to reduce a deposit's stake by a given amount.|
 
-> **Notes**: 
+!!! Note
+    *The actual amount of tokens that could be withdrawn, staked, or unstaked by the final three kinds of commands depends on timing and order, factors that users do not have precise control over. For example, the number of tokens that can be withdrawn from a deposit can change significantly between epochs as the deposit's [bonded balance](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Blockchain.md#delegated-proof-of-stake) decreases, or increases.*
 
-> *The actual amount of tokens that could be withdrawn, staked, or unstaked by the final three kinds of commands depends on timing and order, factors that users do not have precise control over. For example, the number of tokens that can be withdrawn from a deposit can change significantly between epochs as the deposit's [bonded balance](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Blockchain.md#delegated-proof-of-stake) decreases, or increases.*
-
-> *Therefore, these commands accept as input a "max amount" instead of a precise amount. These commands try to withdraw, stake, or unstake as close to the maximum amount as possible, and inform the precise amount in its return value.*
+    *Therefore, these commands accept as input a "max amount" instead of a precise amount. These commands try to withdraw, stake, or unstake as close to the maximum amount as possible, and inform the precise amount in its return value.*
 
 ### Protocol commands
 |**Name**|**Input**|**Description**|
 |---|---|---|
 |Next epoch|None|Reward the current epoch's validators, and confirm the next epoch's validator set.|
-
-## Transaction
-
-A **transaction** is a digitally signed instruction that tells the Mainnet state machine to execute a sequence of commands. 
-
-A transaction has the following fields:
-
-- `Signer`: the public address of the external-owned account that signed this transaction.
-- `Nonce`: the number of transactions signed by the signer that has been included on the blockchain before this transaction. This ensures that all of the signer’s transactions are included in the blockchain in an expected order and prevents the same transaction from being included in multiple blocks.
-- `Commands`: a sequence of [Commands](transaction.md#command) to be executed in a transaction.
-- `Gas Limit`: the maximum number of gas units that should be used in executing this transaction.
-- `Max Base Fee per Gas`: the maximum number of grays that the signer is willing to burn for a gas unit used in this transaction.
-- `Priority Fee per Gas`: the number of grays that the signer is willing to pay the block proposer for including this transaction in a block.
-- `Signature`: the signature formed by signing over content in this transaction using the signer’s private key.
-- `Hash`: the cryptographic hash of the signature.
-
 
 ## Receipt and Logs
 

@@ -3,6 +3,8 @@ tags:
   - ParallelChain Mainnet
   - ParallelChain Testnet 
   - Testnet 4
+  - Explorer
+  - Xperience Broswer Extension
 ---
 
 # Networks
@@ -21,4 +23,39 @@ For more information about the consensus protocol, please read the section [Cons
 To ensure the new features in ParallelChain Mainnet have what it takes to survive decentralised deployment, they must first be battle-tested. This is where ParallelChain Testnet comes into play by allowing developers, or simply users, to develop and run smart contracts or transactions on ParallelChain and experiment with the blockchain, at no cost.
 
 The current testnet iteration delivers on Byzantine Fault Tolerant (BFT) consensus, the cornerstone of security in ParallelChain's proof-of-stake network. Besides this, Testnet 4 delivers big leaps in the contract SDK and developer experience, as well as a web Wallet.
-Both Mainnet and Testnet are accessible through Explorer.
+Both Mainnet and Testnet are accessible through [Explorer](#parallelchain-explorer).
+
+## Accessing the Networks
+
+There are two client tools for accessing Mainnet and Testnet. 
+
+- **ParallelChain Explorer**: Web-based tool with a crypto wallet for interacting with Mainnet and Testnet.
+- **Xperience Browser Extension**: Browser Extension of the ParallelChain Explorer Wallet.
+
+### ParallelChain Explorer
+
+**ParallelChain Explorer** is a web-based tool integrated with the ParallelChain Mainnet ecosystem, which allows users to visualize and interact with the Mainnet and Testnet. By using the explorer, users can search for real-time and historical information about the blockchain. 
+
+What you can do:
+
+- **Search and Navigation**: Find specific blocks, transactions, and accounts easily by using block hash, transaction hash, and account address.
+- **Block Details**: Explore details of specific blocks, including block height, timestamp, transaction information, etc.
+- **Transaction Details**: Explore details of specific transactions, including signer/recipient account information, timestamp, consumed gas, etc.
+- **Account Details**: Explore details of specific accounts, including nonce, contract count, transaction history, etc.
+- **Staking Details**: Explore details of staking information for each pool, including operator, pool power, and commission rate, etc.
+- **Network Statistics**: Gain insights into network-wide statistics, including gas consumption, block production time, reward issuance, etc.
+- **Wallet**: Seamlessly create a ParallelChain wallet account and make transactions.
+
+**Check out our [ParallelChain Explorer](https://explorer.parallelchain.io/explorer)!**
+
+### Xperience Browser Extension
+
+**Xperience Browser Extension** is a browser extension that allows you to integrate your [dApp](../../for_developers/xperience_browser_provider_apis/introduction) with ParallelChain Wallet.
+
+This enables your dapp to interact with your dapp users' XPLL accounts, to:
+
+- Send [transactions](transactions.md)
+  - [Stake](staking.md) XPLL
+- Trigger confirmation for [smart contract](../../for_developers/smart_contracts/introduction) calls 
+
+**The browser extension is available on the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf) now.**

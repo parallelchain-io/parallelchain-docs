@@ -8,7 +8,7 @@ tags:
 # Example - Contract Proxy
 
 This chapter introduces the use of the `use_contract` macro to interact with other contracts. 
-We have `ContractProxy` that serves as a middle-man to another contract `MyLittlePony` (see [Chapter 2](../chapter_2/)). We are going to explore the interaction between 
+We have `ContractProxy` that serves as a middle-man to another contract [My Little Pony](2_my_little_pony.md). We are going to explore the interaction between 
 the two contracts by:
 
 - calling another contract's entrypoint methods.
@@ -57,9 +57,7 @@ impl ContractProxy {
 }
 ```
 
----
-
-The above example has shown how we can use the `use_contract` macro to do [cross-contract calls](../../advance/cross_contract_call/). It is also possible
+The above example has shown how we can use the `use_contract` macro to do [cross-contract calls](../advanced/cross_contract_call.md). It is also possible
 to use `pchain_sdk::call_untyped()` to do so. We pass the contract address as an argument so that the contract
 address does not need to be hard-coded in the contract.
 
@@ -77,11 +75,9 @@ fn grow_up_2(address: String) {
 }
 ```
 
----
-
 ### lib.rs: transfer contract balance
 Except by calling the entrypoint methods from `MyLittlePony`, we can also transfer the balance from the 
-contract to a specific address by `pchain_sdk::transfer()` (see [Transferring Balance](../../advance/transferring_balance/)).
+contract to a specific address by `pchain_sdk::transfer()` (see [Transferring Balance](../advanced/transferring_balance.md)).
 
 ```rust
 #[call]

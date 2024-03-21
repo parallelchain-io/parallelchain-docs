@@ -6,6 +6,10 @@ tags:
 
 # Consensus Mechanism
 
+A blockchain consensus mechanism is a protocol that enables multiple participants in a blockchain network to agree on the current state of the blockchain and validate transactions without a centralised authority. By doing so, consensus mechanisms ensure the security of the blockchain and validate the authenticity of transactions.
+
+ParallelChain Mainnet uses a variant of consensus procotol called **HotStuff** to validate transactions on the network.
+
 ## The HotStuff Consensus Protocol
 
 HotStuff works by building a 'BlockTree': a directed acyclic graph of Blocks. Block is a structure with a `data` field which applications are free to populate with arbitrary byte-arrays. In consensus algorithm literature, we typically talk of consensus algorithms as maintaining state machines that change their internal states in response to commands, hence the choice of terminology.

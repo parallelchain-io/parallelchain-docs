@@ -33,9 +33,9 @@ Fields are data representations of contract storage.
 
 `#[contract_methods]` defines [impl](https://doc.rust-lang.org/std/keyword.impl.html) for the contract struct. 
 
-`#[call]` macro applies to impl methods for the contract method call. Methods declared under this macro are callable by [Transaction Command - Call](../../../../concepts/transaction).
+`#[call]` macro applies to impl methods for the contract method call. Methods declared under this macro are callable by [Transaction Command - Call](../../../fundamentals/transactions.md#account-commands).
 
-In the file, we have added a method called `hello()`. In this method, the SDK provided function `pchain_sdk::log()` logs the information as a key-value pair and appends it to the [Logs](../../../../concepts/transaction#receipt-and-logs) in a transaction receipt.
+In the file, we have added a method called `hello()`. In this method, the SDK provided function `pchain_sdk::log()` logs the information as a key-value pair and appends it to the [Logs](../../../fundamentals/transactions.md#receipt-and-logs) in a transaction receipt.
 
 ### lib.rs
 ```rust
@@ -59,7 +59,7 @@ impl HelloContract {
 }
 ```
 
-Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate [pchain_sdk::storage](../../../smart_contract_sdk/advance/contract_storage#accessing-storage).
+Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate [pchain_sdk::storage](../../smart_contracts/advance/contract_storage.md#accessing-storage).
 
 ```rust
 #[call]

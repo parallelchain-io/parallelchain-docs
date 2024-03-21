@@ -15,8 +15,6 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 
 ## Importing Tokens
 
----
-
 ![import tokens](../../img/tokens/3_Importing%20Tokens.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -40,7 +38,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 8. If you click **CONFIRM**, you will be taken back to the main page. Your token has now been imported and you will see it under the **Tokens** tab.
 
 ## Viewing Token Details
----
+
 ![import tokens](../../img/tokens/6.Navigation%20Token%20tab.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -66,7 +64,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 5. You can click the arrow next to the **Balance** field to send tokens. For more details on how to send tokens, refer to [Sending Tokens](./transfer_tokens.md#sending-tokens). 
 
 ## Removing Imported Tokens
----
+
 ![import tokens](../../img/tokens/8_Remove%20Imported%20Token%20(Navi).png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. On the main page, click the **Tokens** tab.  
@@ -82,16 +80,21 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
 6. If you click **CONFIRM**, you will be taken back to the main page. Your token has now been removed and you will no longer see the removed token under the **Tokens** tab. 
 
 ## FAQ
----
 
 ### What types of tokens can I import into my wallet? 
 In this version of Xperience Browser Extension, you can only import **PRFC1 tokens** to your wallet. 
 
+---
+
 ### Can I add NFTs to my wallet? 
 This version of Xperience Browser Extension (v1.0.2) does not support NFT.  
 
+---
+
 ### Can I remove XPLL from my wallet? 
 No, you cannot remove XPLL from your wallet. You can only remove tokens that you have imported.
+
+---
 
 ### Where can I seek support or report bugs? 
 You can visit ParallelChain’s [Discord](https://discord.gg/parallelchainofficial) for community help. If you cannot resolve your issue there, you can write to [walletsupport@parallelchain.io](mailto:walletsupport@parallelchain.io). 

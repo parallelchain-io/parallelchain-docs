@@ -8,7 +8,6 @@ tags:
 Sending and receiving assets with digital wallets is a keystone of any blockchain's decentralised infrastructure. Follow the steps below to send and receive XPLL tokens with your ParallelChain account. You can also watch the video tutorials to send XPLL tokens [here](https://youtu.be/WvJhzw3fYKo).
 
 ## Sending XPLL Tokens
----
 
 ### Step 1: Log Into Your Wallet
 ![send_and_receive](../../img/explorer/transfer/1_send_receive.jpg){ width=80%  style="display: block; margin: 0 auto" } 
@@ -48,7 +47,6 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 
 ## Receiving XPLL Tokens
----
 
 ### Step 1: Share Your Account Address
 
@@ -66,11 +64,11 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 
 
 ## FAQ
---- 
 
 ### I have not received my XPLL tokens. Where can I check the transaction status?
 To check the status of your transaction, you can access the [ParallelChain blockchain explorer](https://explorer.parallelchain.io/) and key in your wallet address. It will display the status and amount being sent. If you are the transaction initiator, you can refer to the status on your wallet's **ACTIVITY** tab.
 
+---
 
 ### Can I cancel or refund transactions?
 No, once a transaction request has been made, it cannot be cancelled.

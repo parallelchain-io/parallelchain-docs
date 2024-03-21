@@ -8,7 +8,7 @@ tags:
 
 # Example - My Pool
 
-In the last chapter of the tutorial, we are going to talk about how to use [staking commands](../../../../concepts/transaction#staking-commands) in smart contracts. 
+In the last chapter of the tutorial, we are going to talk about how to use [staking commands](../../../fundamentals/transactions.md#staking-commands) in smart contracts. 
 
 In ParallelChain Mainnet, there are six different staking commands:
 
@@ -20,7 +20,7 @@ In ParallelChain Mainnet, there are six different staking commands:
 - Unstake deposit
 
 We will demonstrate how the above staking commands can be created within a smart contract 
-which acts as owner of the deposit/stakes (See [Staking in Contract](../../advance/staking_in_contract/)). We will use the contract, `MyPool`, 
+which acts as owner of the deposit/stakes (See [Staking in Contract](../advanced/staking_in_contract.md)). We will use the contract, `MyPool`, 
 to guide you through the steps of creating a stake in a pool.
 
 ### lib.rs: define a struct
@@ -57,12 +57,13 @@ After adding the `init()` function, we can try creating a deposit into the pool.
 
 
 The staking commands are "deferred" because the actual execution of such commands occurs after the execution of a successful call. 
-> **Note**: 
-> The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer
+
+!!! Note 
+    The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer
 sufficient balance to the contract for the operation.
 
 
-To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../pchain_cli/query#get-deposit-and-stake):
+To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../for_users/pchain_client_cli/query.md#get-deposit-and-stake):
 ```sh
 ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
 ```

@@ -7,13 +7,13 @@ tags:
 
 # Example - My Little Pony
 
-In Chapter 2, we will implement a smart contract called `MyLittlePony`, to demonstrate how a contract can:
+In this chapter, we will implement a smart contract called `MyLittlePony`, to demonstrate how a contract can:
 
 - define entrypoint methods
 - define fields as data in contract storage
 
 
-From the last chapter, we have learned that the macro `contract` on struct allows getting or setting data from or into the [world state](../../../../concepts/storage#world-state). 
+From the last chapter, we have learned that the macro `contract` on struct allows getting or setting data from or into the [world state](../../../fundamentals/nodes.md#world-state). 
 The key to be stored started with a zero-indexed u8 integer ordered by the fields in the contract struct.
 
 In this chapter, we first create a struct, `MyLittlePony`, that consists of `name`, `age`, and `gender`. In this case, `name` has key `[0]` while `age` has key `[1]`.

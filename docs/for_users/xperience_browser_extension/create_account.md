@@ -1,11 +1,11 @@
 ---
 tags:
-- Xperience extension
+- Xperience browser extension
 ---
 !!! note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
-**Xperience** is your ParallelChain wallet, and **Xperience Browser Extension** is its browser extension.
+**Xperience Browser Extension** is browser extension of your ParellelChain Explorer Wallet.
 
 To conduct transactions on ParallelChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through **Xperience Browser Extension**—or through the good old **ParallelChain Explorer**.
 
@@ -16,14 +16,12 @@ Learn how to create and manage your ParallelChain account using **Xperience Brow
  
 
 ## Install **Xperience Browser Exension**
----
 
 For Chrome users, install the extension via the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf). The extension currently only works on Chrome.
 
 If necessary, refer to [these instructions](https://support.google.com/chrome_webstore/answer/2664769?hl=en) on installing Chrome extensions.
 
 ## Register for a New Wallet
----
 
 ### Obtain Your Recovery Key
 ![Create your account](../../img/extension/1_Welcome.png){ width=80%  style="display: block; margin: 0 auto" } 
@@ -65,7 +63,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 4. You will be prompted to enter your password again to log in to your wallet.
 
 ## Importing an Existing Wallet
----
+
 ![Importing existing wallet](../../img/extension/3_Import%20Existing%20Wallet.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Open **Xperience Browser Extension** by clicking on the extension icon next to your browser address bar.
@@ -79,10 +77,10 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 You will be prompted to create a password for your wallet. You can follow the instructions [here](#create-your-password).
 
 !!! note
-    Importing your wallet only recovers accounts associated with the recovery key. Refer to the steps in [Exporting Account with Public and Private Keys](#exporting-account-with-public-and-private-keys) and [Importing Your Account Using Public and Private Keys](#importing-account-with-public-and-private-keys) to export and import individual accounts.
+    Importing your wallet only recovers accounts associated with the recovery key. Refer to the steps in [Exporting Account](#exporting-account) and [Importing Account](#importing-account) to export and import individual accounts.
 
 ## Logging into Your Wallet
----
+
 ![Logging ](../../img/extension/4_Logging%20In.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. Open **Xperience Browser Extension** by clicking on the extension icon next to your browser address bar.
@@ -107,7 +105,6 @@ If you do not remember your password, you can reset your password with your reco
 5. You will be prompted to enter your password again to log in to your wallet. Enter your new password and click **VERIFY**. You can now access your wallet. -->
 
 ## Configuring Your Security and Login
----
 
 ### Viewing Your Recovery Key
 <div style="display: flex; justify-content: center; gap: 10px">
@@ -177,7 +174,7 @@ If you do not remember your password, you can reset your password with your reco
 
    3. Enter your password and click **VERIFY**.
 
-    !!! note 
+    !!! Note 
         If you do not remember your password, you can reset your password with your recovery key. 
        
         - Click **VERIFY WITH RECOVERY KEY**.
@@ -211,8 +208,8 @@ If you do not remember your password, you can reset your password with your reco
    2. Click the download icon beside your wallet address to start the download.
    3. Store the JSON file securely. You can open the file with any text editor, like Notepad or Microsoft Word.
 
-!!! note 
-    If you wish to recover your account on another wallet, you can do so by importing your accounts. Refer to the steps in [Importing Your Account with Public & Private Keys]() or [Importing Your Account with a JSON File]().
+!!! Note 
+    If you wish to recover your account on another wallet, you can do so by importing your accounts. Refer to the steps in [Importing Account](#importing-account).
 
 
 ## Importing Account
@@ -244,13 +241,13 @@ If you do not remember your password, you can reset your password with your reco
    2. Click **IMPORT**. 
    3. Click **IMPORT WITH FILE** and select the appropriate JSON file.
    
-    !!! note 
-        If you are not sure how to export your JSON file, refer to [Exporting Your Account as a JSON File](#as-a-json-file).
+    !!! Note 
+        If you are not sure how to export your JSON file, refer to [Exporting Account as a JSON File](#as-a-json-file).
 
    4. Click **IMPORT**. You have successfully imported your account.
 
 ## Locking Your Wallet
----
+
 <div style="display: flex; justify-content: center; gap: 10px">
     <img src="../../../img/extension/35_Three Dots Action Menu.png" style="width: 40.5%;">
     <img src="../../../img/extension/11_Lock%20Wallet.png" style="width: 40%; ">
@@ -266,13 +263,19 @@ If you do not remember your password, you can reset your password with your reco
 
 Yes, they are the same. You can access your wallet through either **Xperience Browser Extension** or **ParallelChain Explorer**.
 
+---
+
 ### Is my Xperience Browser Extension the same as my ParallelChain account?
 
 No, they are not the same. Your ParallelChain account is the keypair registered on the **ParallelChain Mainnet**, and the Xperience browser extension is simply a platform that connects you to your ParallelChain account. You can access your ParallelChain account as long as you have your keypair, even if you lose the device the Xperience Browser Extension is installed on.
 
+---
+
 ### Can I send XPLL tokens to other blockchains like Ethereum?
 
 No, you cannot send XPLL tokens to other blockchains at the moment. XPLL and other PRFC tokens are currently only compatible with the ParallelChain Mainnet network, and sending your tokens to other network addresses will lose your tokens.
+
+---
 
 ### What happens if I lose both my recovery key and password?
 
@@ -282,6 +285,8 @@ If you have lost access to your existing wallet, you can opt to register for a n
 After that, register for a new wallet by following the steps under [Register for a New Wallet](#register-for-a-new-wallet).
 
 If you have exported your public and private keys before, you can then recover access to your assets by importing your old account with its public and private keys. For more details, follow the steps under [Exporting Account](#exporting-account) and [Importing Account](#importing-account).
+
+---
 
 ### Where can I seek support or report bugs?
 

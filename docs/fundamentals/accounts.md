@@ -21,14 +21,12 @@ Elements inside an account include:
 
 The followings are elements that only apply to Contract Accounts:
 
-- **Contract Code**: The binary of the contract that was deployed to the blockchain (applies to Contract Accounts).
+- **Contract Code**: The binary of the [smart contract](../for_developers/smart_contracts/introduction.md) that was deployed to the blockchain (applies to Contract Accounts).
 - **CBI Version**: The version of the Contract Binary Interface.
 - **Storage Hash**: The 32-byte SHA256 root hash of its Storage Trie. This is empty for an External.
 
-> **Notes**: 
-> These accounts cannot be distinguished from each other just by looking at the address format.
-
---- 
+!!! Note
+    These accounts cannot be distinguished from each other just by looking at the address format.
 
 A **Network Account** is a single identified network-wide account that maintains the state of ParallelChain Mainnet. This account is not associated with Ed25519 material. The network-significant data that the Network Account stores are composed of various fields:
 
