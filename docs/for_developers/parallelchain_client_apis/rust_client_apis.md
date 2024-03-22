@@ -2,25 +2,43 @@
 tags:
   - Tools
   - ParallelChain RPC API
+  - Rust
+  - Client
 ---
 
 # Rust Client APIs
 
-This document specifies the ParallelChain RPC API, an HTTP API that Fullnodes make available to clients. 
+ParallelChain RPC APIs are the HTTP APIs that Fullnodes make available to clients. 
 
-We spell out the general properties of the API, and then list the available RPCs. With each RPC, we define a request structure and a response structure. 
+In the section [ParallelChain Client Library](#parallelchain-client-library-rust), we introduce the Rust Library to make RPC calls programatically. 
 
-For readability, we categorize RPCs into [transaction-related RPCs](./transaction_rpc.md), [block-related RPCs](./block_rpc.md), and [state-related RPCs](./state_rpc.md).
+The Client Library allows you to easily submit RPC requests and parse RPC responses without the need to understand the details of HTTP URL, request format or response format. The formation of HTTP APIs is specified in [ParallelChain Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/RPC.md).
 
+## ParallelChain Client Library (Rust) 
 
-## General Properties
+[ParallelChain Client Library](https://github.com/parallelchain-io/pchain-client-rust) is a Rust programming language implementation of ParallelChain RPC API. We will show how to use the library by example code. To use the library in your rust project, first add dependency [pchain-client](https://crates.io/crates/pchain-client) in `Cargo.toml` file. You will also need the dependency [pchain-types](https://crates.io/crates/pchain-types) for necessary basic types, and the dependency [tokio](https://crates.io/crates/tokio) to run the client in asynchronous application.
 
-1. Procedures are reachable over HTTP at a URL suffixed by the procedure’s name.
-2. All HTTP requests should be **POST**.
-3. Request and response structures are serialized using **Borsh** and carried in **HTTP message bodies**. 
-4. Procedures are “strongly typed”. If a procedure receives a request that cannot be deserialized, it will send back a response with an empty body and a **Bad Request (400)** status code.
-5. Conversely, if a procedure receives a request that can be deserialized, the response it sends back must have an **OK (200)** status code. This is even if, for example, something was “not found” (e.g., a block was not found with a specified hash), or a transaction was not added to the mempool. Error statuses are reported in response structures.
-6. All requests and OK responses should have a content-type of "application/octet-stream". This is so that we can easily extend the RPC API in the future to support other serialization schemes, e.g., JSON using "application/json".
+Cargo.toml:
+```rust
+[dependencies]
+pchain-client = "0.4.3"
+pchain-types = "0.4.3"
+tokio = {version = "1", features = ["full"]}
+```
+
+You can instantiate the struct `pchain_client::Client` by providing the link to a ParallelChain RPC endpoint.
+
+```rust
+#[tokio::main]
+async fn main() {
+    /// Connect to Testnet RPC endpoint
+    let client = Client::new("https://pchain-test-rpc02.parallelchain.io");
+    /// ...
+}
+```
+
+!!! Note
+    RPC endpoints for [Mainnet](../../fundamentals/networks.md#parallelchain-mainnet) and [Testnet](../../fundamentals/networks.md#parallelchain-testnet) are `https://pchain-main-rpc02.parallelchain.io` and `https://pchain-test-rpc02.parallelchain.io` respectively.
 
 ## Transaction Related RPCs
 
@@ -28,7 +46,30 @@ For readability, we categorize RPCs into [transaction-related RPCs](./transactio
 
 Submit a transaction to the mempool.
 
-#### Request
+
+```rust
+// The function submit_transaction creates SubmitTransactionRequest from the input transaction.
+let response: SubmitTransactionResponse = client
+    .submit_transaction(&Transaction::new(
+        &signer,
+        nonce,
+        vec![Command::Transfer(TransferInput {
+            amount,
+            recipient,
+        })],
+        gas_limit,
+        max_base_fee_per_gas,
+        priority_fee_per_gas,
+    ))
+    .await
+    .unwrap();
+```
+!!! Note
+    The variable `signer` is the [Keypair](https://docs.rs/pchain-types/0.4.3/pchain_types/cryptography/type.Keypair.html) of the [EOA](../../fundamentals/accounts.md) as the signer of the transaction. Check out the module [pchain_types::cryptograhy](https://docs.rs/pchain-types/0.4.3/pchain_types/cryptography/index.html) for generating or importing keypair.
+
+    In case you need free tokens for submitting transactions to Testnet, check out the [Faucet Service](../../fundamentals/networks.md#faucet-service) for details.
+
+**Request**
 
 ```rust
 struct SubmitTransactionRequest {
@@ -36,7 +77,7 @@ struct SubmitTransactionRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct SubmitTransactionResponse {
@@ -59,7 +100,18 @@ enum SubmitTransactionError {
 
 Get a transaction and optionally its receipt.
 
-#### Request
+
+```rust
+let response: TransactionResponse = client
+    .transaction(&TransactionRequest {
+        transaction_hash,
+        include_receipt,
+    })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct TransactionRequest {    
@@ -68,7 +120,7 @@ struct TransactionRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct TransactionResponse {
@@ -85,7 +137,14 @@ struct TransactionResponse {
 
 Find out where a transaction is in the blockchain.
 
-#### Request
+```rust
+let response: TransactionPositionResponse = client
+    .transaction_position(&TransactionPositionRequest { transaction_hash })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct TransactionPositionRequest {
@@ -93,7 +152,7 @@ struct TransactionPositionRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct TransactionPositionResponse {
@@ -109,7 +168,14 @@ struct TransactionPositionResponse {
 
 Get a transaction's receipt.
 
-#### Request
+```rust
+let response: ReceiptResponse = client
+    .receipt(&ReceiptRequest { transaction_hash })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct ReceiptRequest {    
@@ -117,7 +183,7 @@ struct ReceiptRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct ReceiptResponse {
@@ -134,7 +200,14 @@ struct ReceiptResponse {
 
 Get a block by its block hash.
 
-#### Request
+```rust
+let response: BlockResponse = client
+    .block(&BlockRequest { block_hash })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct BlockRequest {
@@ -142,7 +215,7 @@ struct BlockRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct BlockResponse {
@@ -156,7 +229,14 @@ struct BlockResponse {
 
 Get a block header by its block hash.
 
-#### Request
+```rust
+let response: BlockHeaderResponse = client
+    .block_header(&BlockHeaderRequest { block_hash })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct BlockHeaderRequest {
@@ -164,7 +244,7 @@ struct BlockHeaderRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct BlockHeaderResponse {
@@ -178,7 +258,14 @@ struct BlockHeaderResponse {
 
 Get the height of the block with a given block hash. 
 
-#### Request
+```rust
+let response: BlockHeightByHashResponse = client
+    .block_height_by_hash(&BlockHeightByHashRequest { block_hash })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct BlockHeightByHashRequest {
@@ -186,7 +273,7 @@ struct BlockHeightByHashRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct BlockHeightByHashResponse {
@@ -201,7 +288,14 @@ struct BlockHeightByHashResponse {
 
 Get the hash of a block at a given height.
 
-#### Request
+```rust
+let response: BlockHashByHeightResponse = client
+    .block_hash_by_height(&BlockHashByHeightRequest { block_height })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct BlockHashByHeightRequest {
@@ -209,7 +303,7 @@ struct BlockHashByHeightRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct BlockHashByHeightResponse {
@@ -224,11 +318,18 @@ struct BlockHashByHeightResponse {
 
 Get the hash of the highest committed block. 
 
-#### Request
+```rust
+let response: HighestCommittedBlockResponse = client
+    .highest_committed_block()
+    .await
+    .unwrap();
+```
+
+**Request**
 
 None.
 
-#### Response
+**Response**
 
 ```rust
 struct HighestCommittedBlockResponse {
@@ -250,7 +351,18 @@ Some of the following RPCs' response structures reference types unique to this d
 
 Get the state of a set of accounts (optionally including their contract code), and/or a set of storage tuples.
 
-#### Request
+```rust
+let response: StateResponse = client
+    .state(&StateRequest {
+        accounts,
+        include_contract,
+        storage_keys,
+    })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct StateRequest {
@@ -260,7 +372,7 @@ struct StateRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct StateResponse {
@@ -276,7 +388,21 @@ struct StateResponse {
 
 Get the previous, current, and next validator sets, optionally including the stakes delegated to them.  
 
-#### Request
+```rust
+ let response: ValidatorSetsResponse = client
+    .validator_sets(&ValidatorSetsRequest {
+        include_prev,
+        include_prev_delegators,
+        include_curr,
+        include_curr_delegators,
+        include_next,
+        include_next_delegators,
+    })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct ValidatorSetsRequest {
@@ -289,7 +415,7 @@ struct ValidatorSetsRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct ValidatorSetsResponse {
@@ -307,7 +433,17 @@ struct ValidatorSetsResponse {
 
 Get a set of pools.
 
-#### Request
+```rust
+let response = client
+    .pools(&PoolsRequest {
+        include_stakes,
+        operators,
+    })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct PoolsRequest {
@@ -316,7 +452,7 @@ struct PoolsRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct PoolsResponse {
@@ -331,7 +467,14 @@ struct PoolsResponse {
 
 Get a set of deposits.
 
-#### Request
+```rust
+let response: DepositsResponse = client
+    .deposits(&DepositsRequest { stakes })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct DepositsRequest {
@@ -339,7 +482,7 @@ struct DepositsRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct DepositsResponse {
@@ -352,9 +495,16 @@ struct DepositsResponse {
 
 ### stakes
 
-Get a set of deposits.
+Get a set of stakes.
 
-#### Request
+```rust
+let response: StakesResponse = client
+    .stakes(&StakesRequest { stakes })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct StakesRequest {
@@ -362,7 +512,7 @@ struct StakesRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct StakesResponse {
@@ -377,7 +527,18 @@ struct StakesResponse {
 
 Call a method in a contract in a read-only way.
 
-#### Request
+```rust
+let response: ViewResponse = client
+    .view(&ViewRequest {
+        target,
+        method,
+        arguments,
+    })
+    .await
+    .unwrap();
+```
+
+**Request**
 
 ```rust
 struct ViewRequest {
@@ -387,7 +548,7 @@ struct ViewRequest {
 }
 ```
 
-#### Response
+**Response**
 
 ```rust
 struct ViewResponse {

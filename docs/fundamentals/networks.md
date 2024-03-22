@@ -23,7 +23,7 @@ For more information about the consensus protocol, please read the section [Cons
 To ensure the new features in ParallelChain Mainnet have what it takes to survive decentralised deployment, they must first be battle-tested. This is where ParallelChain Testnet comes into play by allowing developers, or simply users, to develop and run smart contracts or transactions on ParallelChain and experiment with the blockchain, at no cost.
 
 The current testnet iteration delivers on Byzantine Fault Tolerant (BFT) consensus, the cornerstone of security in ParallelChain's proof-of-stake network. Besides this, Testnet 4 delivers big leaps in the contract SDK and developer experience, as well as a web Wallet.
-Both Mainnet and Testnet are accessible through [Explorer](#parallelchain-explorer).
+Both Mainnet and Testnet are accessible through [Explorer](#parallelchain-explorer). But only onTestnet, a service called [Faucet Service](#faucet-service) provides free tokens to users.
 
 ## Accessing the Networks
 
@@ -59,3 +59,11 @@ This enables your dapp to interact with your dapp users' XPLL accounts, to:
 - Trigger confirmation for [smart contract](../../for_developers/smart_contracts/introduction) calls 
 
 **The browser extension is available on the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf) now.**
+
+### Faucet Service
+
+The **Faucet Service** of our Testnet issues free testing tokens to users to test the blockchain network on Testnet.
+
+To obtain testing tokens, create your Testnet account first. Account can be easily created by using Web Wallet in **ParallelChain Explorer** (See [here](../for_users/web_wallet/create_account.md)), or **Xperience Browser Extension** (See [here](../for_users/xperience_browser_extension/create_account.md)).
+
+The created account should have an empty balance initially. **You can request free tokens from [Faucet Service](https://faucet.parallelchain.io).**

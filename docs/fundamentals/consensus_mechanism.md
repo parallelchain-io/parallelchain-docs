@@ -16,7 +16,7 @@ HotStuff works by building a 'BlockTree': a directed acyclic graph of Blocks. Bl
 
 HotStuff guarantees that committed Blocks are *immutable*. That is, they can never be *un*-committed as long as at least a supermajority of voting power faithfully executes the protocol. This guarantee enables applications to make hard-to-reverse actions with confidence. 
 
-![A graphic depicting a Tree (DAG) of Blocks. Blocks are coloured depending on how many confirmations they have.](../../img/BlockTree%20Structure%20Diagram.png)
+![A graphic depicting a Tree (DAG) of Blocks. Blocks are coloured depending on how many confirmations they have.](../img/BlockTree%20Structure%20Diagram.png)
 
 A Block becomes *committed* the instant its third confirmation is written into the BlockTree. Confirmation for a Block `A` is another Block `B` such that there is a path between `B` to `A`.
 

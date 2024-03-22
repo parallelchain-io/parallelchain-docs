@@ -92,7 +92,7 @@ Check the deposit again using `pchain-client`, the deposit balance in the pool s
 ```
 
 !!! Note
-    The [return values](../../../../concepts/transaction#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
+    The [return values](../../../fundamentals/transactions.md#receipt-and-logs) in the transaction receipt will be overwritten by the deferred staking commands. 
 
 In the method `stake_deposit()`, we should be expecting that the `return_values` in the receipt will be the 
 balance of the contract (see [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Runtime.md)). However, since there is another deferred staking command in the method call, the `return_values`

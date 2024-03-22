@@ -59,7 +59,7 @@ impl HelloContract {
 }
 ```
 
-Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate [pchain_sdk::storage](../../smart_contracts/advance/contract_storage.md#accessing-storage).
+Next, we can add two other methods, which illustrate how we can set and get values from the storage by using the SDK provided functions in crate [pchain_sdk::storage](../advanced/contract_storage.md#accessing-storage).
 
 ```rust
 #[call]

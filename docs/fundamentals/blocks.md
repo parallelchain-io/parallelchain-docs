@@ -22,7 +22,7 @@ Elements inside a block include:
 - `Receipt Hash` - the root hash of the Merkle Tree that contains the execution results of the transactions included in the block
 - `State Hash` - the root hash of the Merkle Tree that represents the current world state
 - `Log Bloom` - a 256-byte block-level [Bloom Filter](https://en.wikipedia.org/wiki/Bloom_filter) that combines all the Bloom Filters of each Log topic from the block's receipts
-- `Transactions` - the [transactions]((transactions.md)) that are included in the block
+- `Transactions` - the [transactions](transactions.md) that are included in the block
 - `Receipts` - the execution results of the transactions that are included in the block
 
 A block is a fundamental data structure in a blockchain system that serves as a container for a batch of transactions. It plays a critical role in maintaining the integrity and immutability of the blockchain.

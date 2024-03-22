@@ -70,7 +70,7 @@ impl MyLittlePony {
 }
 ```
 
-In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write [gas cost](../../../../concepts/gas/) is smaller compared to what we did in `self_introduction()`
+In the next method, we are going to illustrate how we can use contract getter and setter to access the data in the world state. The advantage of this is that the Write [gas cost](../../../fundamentals/gas.md) is smaller compared to what we did in `self_introduction()`
 because only one key-value pair (i.e. `age`) is involved.
 
 Instead of passing `&self` as an argument, simply do `Self::get_<field_name>()` to get the value and 
