@@ -4,11 +4,11 @@ tags:
 - explorer
 ---
 
-**ParallelChain Explorer** is a web-based tool that allows you to access your web wallet.
+You can use **Web Wallet** on [ParallelChain Explorer](../../fundamentals/networks.md#parallelchain-explorer) on without any installation.
  
 To conduct transactions on ParallelChain Mainnet you will first need to create an account on the blockchain to access the network. Accounts are free to create, and they can be set up through **ParallelChain Explorer**—or through the new [**Xperience Browser Extension**](../xperience_browser_extension/create_account.md).
  
-The blockchain account you create on ParallelChain is non-custodial, which means only you have control and access to it. You must store your recovery key securely and properly to avoid losing access to your assets. There is no way to retrieve it if it is lost.
+The account ([EOA](../../fundamentals/accounts.md#accounts)) you create on ParallelChain is non-custodial, which means only you have control and access to it. You must store your recovery key securely and properly to avoid losing access to your assets. There is no way to retrieve it if it is lost.
  
 Learn how to create and manage your ParallelChain account using **ParallelChain Explorer** with the steps below.
 
@@ -16,11 +16,11 @@ Learn how to create and manage your ParallelChain account using **ParallelChain 
 
 ![create acount](../../img/explorer/account/1_creating_an_account.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
-### Step 1: Access ParallelChain Explorer
+### Access ParallelChain Explorer
 
 Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?network=Mainnet) to start your account creation process.
 
-### Step 2: Create Your Account
+### Create Your Account
 
 1. Create your ParallelChain wallet account by selecting **CONNECT NOW**.
 2. Click the **REGISTER** button.
@@ -29,7 +29,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 5. Click **NEXT** once you have stored it safely
 
 
-### Step 3: Verify Your Recovery Key
+### Verify Your Recovery Key
 
 1. To make sure that your recovery key are stored securely, you will be prompted to fill in blanks which correspond to the phrases displayed in the previous step.
 2. Enter the words which correspond to the chronological positions of the recovery key.
@@ -37,7 +37,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 4. If an error message appears, refer to your recovery key again and check if you have keyed in the wrong phrase.
 
 
-### Step 4: Create Your Password
+### Create Your Password
 
 1. Create a password for your wallet. Your password can contain any characters, and it must be at least 8 characters long.
 2. This password is only limited to the wallet access on the particular device you are registering your account on, and it cannot be used on another device.
@@ -46,7 +46,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 5. You will be prompted to enter your password again to access your wallet. Enter your password in the empty field, then click **VERIFY**.
 
 
-### Step 5: Logging Into Your Wallet
+### Login Your Wallet
 
 1. To log in, click on the round icon on the top right hand corner of the webpage and enter your password
 2. Press the **VERIFY** button.
@@ -64,9 +64,9 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 2. Enter your 12-phrase recovery key that you have stored securely when you first created your wallet, then press **NEXT**.
 3. Next, enter your desired password and re-enter it under the **Confirm Password** box, then press **REGISTER**.
 4. You will be prompted to enter your password again to access your wallet. Enter your password in the empty field, and select **VERIFY**.
-5. Importing your wallet only recovers accounts associated with the recovery key. Refer to the steps under [Exporting Your Account With Public And Private Keys](#exporting-your-account-with-public-and-private-keys) and [Importing Your Account Using Public And Private Keys](#importing-your-account-using-public-and-private-keys) to export and import individual accounts.
+5. Importing your wallet only recovers accounts associated with the recovery key. Refer to the steps under [Export Your Account](#export-your-account) and [Import Your Account From Public And Private Keys](#import-your-account-from-public-and-private-keys) to export and import individual accounts.
 
-## Configure Your Security & Login
+## Configuring Security & Login
 
 ### View Your Recovery Key
 ![view recovery key](../../img/explorer/account/3_view_recovery_key.jpg){ width=80%  style="display: block; margin: 0 auto" } 
@@ -77,7 +77,7 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 4. Tap on **VIEW RECOVERY KEY** to preview your recovery key.
 
 
-### Change Passwords
+### Change Your Password
 ![change password](../../img/explorer/account/4_change_password.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. Click the icon with three dots on the top right hand corner of the wallet.
@@ -97,16 +97,16 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 5. If you do not remember your password, you can choose to log in with your recovery key by selecting **VERIFY WITH RECOVERY KEY** and re-entering your 12-phrase recovery key.
 6. You will be shown a loading screen that says **Erasing Wallet Data**. Your wallet data has now been removed from your device.
 
-### Exporting Your Account With Public And Private Keys
+### Export Your Account
 ![export account](../../img/explorer/account/6_download_key.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. To export an existing account, click on the *drop-down arrow* right beside your wallet address. Your wallet address acts as your **public key**.
 2. Click on the *key* icon to preview your account **private key**.
 3. Save your public and private key in a secure location.
 4. You can also download the key pair of your current account through the *download* icon beside your wallet address as a **JSON file**.
-5. Store the JSON file in a secure manner. If you wish to recover your account on another wallet, you can do so by following the instructions under [Importing Your Account Using Public And Private Keys](#importing-your-account-using-public-and-private-keys), or import it with the JSON file under [Importing Your Account With A JSON file](#importing-your-account-with-a-json-file). You can view the information by opening the file with a text-based document such as Microsoft Word.
+5. Store the JSON file in a secure manner. If you wish to recover your account on another wallet, you can do so by following the instructions under [Import Your Account From Public And Private Keys](#import-your-account-from-public-and-private-keys), or import it with the JSON file under [Import Your Account From a JSON file](#import-your-account-from-a-json-file). You can view the information by opening the file with a text-based document such as Microsoft Word.
 
-### Importing Your Account Using Public And Private Keys
+### Import Your Account From Public And Private Keys
 ![import account](../../img/explorer/account/7_importing_your_account.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. To import an existing account, click on the *drop-down arrow* right beside your wallet address
@@ -114,18 +114,18 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 3. Enter your desired account name under the **Account Name**
 4. Enter your public key in the **Public Key** field.
 5. Enter your private key in the **Private Key** field.
-6. If you are not sure where to find your public and private key, learn how to find them under [Exporting Your Account With Public And Private Keys](#exporting-your-account-with-public-and-private-keys).
+6. If you are not sure where to find your public and private key, learn how to find them under [Export Your Account](#export-your-account).
 7. Click **IMPORT** once you are done.
 
-### Importing Your Account With A JSON file
+### Import Your Account From a JSON file
 ![import json](../../img/explorer/account/8_importing_your_account_with_JSON.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. To import an existing account, click on the *drop-down arrow* right beside your wallet address.
 2. Click the **IMPORT** button
-3. Click on **Import With File** and select the appropriate JSON file. Learn how to export your JSON file under [Exporting Your Account With Public & Private Keys](#exporting-your-account-with-public-and-private-keys).
+3. Click on **Import With File** and select the appropriate JSON file. Learn how to export your JSON file under [Export Your Account](#export-your-account).
 4. Once you are done, click on **IMPORT** and your account will be added to the wallet.
 
-### Locking Your Wallet
+### Lock Your Wallet
 ![import json](../../img/explorer/account/9_lock_wallet.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. Click the icon with *three dots* on the top right hand corner of the wallet.
@@ -147,20 +147,19 @@ Access [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?netwo
 
 ### Are my ParallelChain wallet and account the same thing?
 
-No, your wallet and your account are not the same. Your account is registered on ParallelChain Mainnet, and your wallet extension helps connect you to your account. This means you are able to recover your account should you lose the device that your wallet extension is installed.
+No, your wallet and your [account](../../fundamentals/accounts.md) are not the same. Your account is registered on ParallelChain Mainnet, and your wallet extension helps connect you to your account. This means you are able to recover your account should you lose the device that your wallet extension is installed.
 
 ---
 
 ### What kind of digital assets can I store in my Xperience account?
 
-Currently, it can store XPLL. In the near future, you will be able to store other ParallelChain-based cryptocurrencies and non-fungible tokens (NFTs).
+Currently, it can store [XPLL](../../introduction.md#what-is-xpll). In the near future, you will be able to store other ParallelChain-based cryptocurrencies and non-fungible tokens (NFTs).
 
 ---
 
 ### Can I send XPLL tokens to other blockchains like Ethereum?
 
-No, you cannot send XPLL tokens to other blockchains at the moment. XPLL and other PRFC tokens currently only exist on ParallelChain Mainnet network, and sending your tokens to other network addresses will cause you to lose your tokens.
-Ethereum Virtual Machine (EVM) compatibility is targeted to come with the Lamport epoch as part of the [development roadmap](https://parallelchain.io/roadmap).
+No, you cannot send XPLL tokens to other blockchains at the moment. XPLL and other [PRFC](../../for_developers/smart_contracts/prfc.md) tokens currently only exist on ParallelChain Mainnet network, and sending your tokens to other network addresses will cause you to lose your tokens.
 
 ---
 

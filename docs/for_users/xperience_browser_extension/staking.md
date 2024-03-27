@@ -13,7 +13,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 
     Before you can perform the following steps, you need to have created and be logged in to your ParallelChain account. If you are not sure how to do so, refer to [Xperience Browser Extension Tutorials: Creating and Managing Your Account](./create_account.md). 
 
-## Depositing XPLL with a Validator
+## Depositing Your XPLL
 
 ### Step 1: Select a Validator
 
@@ -23,7 +23,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 2. You will see the list of validators. Select a validator from the list, or search for a specific validator via the search bar at the top.
 
 ### Step 2: Deposit XPLL
-#### Through Your Account Balance
+#### Through Your Account
 ![Deposit XPLL your account balance](../../img/extension/17_Validator%20Details.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
@@ -97,8 +97,8 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     ![tentaive stake](../../img/extension/20_Tentative%20Stakes.png){ width=40%  style="display: block; margin: 0 auto" } 
 4. Click the arrow beside the **Tentative Stake** field. 
 
-### Step 2: Stake with XPLL
-#### From Your Account Balance
+### Step 2: Stake XPLL
+#### From Your Account
 ![Stake xpll from account balance](../../img/extension/21_Stake%20amount.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 1. You will see the following details of the validator:
@@ -149,6 +149,63 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 !!! note
     Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
+
+## Topping Up Your Stake
+
+### Step 1: Navigate to Your Chosen Validator
+![Check status](../../img/extension/27_Top%20up.png){ width=40%  style="display: block; margin: 0 auto" } 
+
+1. On the main page, click the **Stakes** tab.
+2. Click the validator pool that you wish to top up your deposit with.
+3. You will see the following details of the validator:
+    - **Pool Name** - the name of the validator.
+    - **Operator** - the validator's address.
+    - **Pool Stake** - the number of XPLL staked with the validator.
+    - **Commission Fee** - the percentage of your rewards that validator will take as a commission fee.
+
+    You will also see the following information:
+
+    - **Deposit** - the number of XPLL you have deposited with the validator.
+    - **Tentative Stake** - the number of XPLL you have in the validator pool that will become part of the current stake in the future.
+    - **Current Stake** - the number of XPLL you have in the validator pool that is part of the current validator set and is now earning rewards.
+    - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
+    - **Next Epoch** - when the next epoch will occur.
+
+    ![Check status](../../img/extension/28_Top%20up%20(Deposit).png){ width=40%  style="display: block; margin: 0 auto" } 
+
+4. Click the arrow beside the **Deposit** field.
+
+### Step 2: Top-Up Your Stake Through Your Account
+![Check status](../../img/extension/29_Top%20up%20(Through%20Balance).png){ width=40%  style="display: block; margin: 0 auto" } 
+
+1. You will see the following details of the validator:
+    - **Pool Name** - the name of the validator.
+    - **Operator** - the validator's address.
+    - **Pool Stake** - the number of XPLL staked with the validator.
+    - **Commission Fee** - the percentage of your rewards that validator will take as a commission fee.
+    - **Deposit** - the number of XPLL you have deposited with the validator.
+    - **Tentative Stake** - the number of XPLL you have in the validator pool that will become part of the current stake in the future.
+
+2. Click **TOP-UP** to deposit more XPLL with the validator.
+3. The **Top-Up** field will appear. Enter the number of XPLL you wish to top up. The number cannot be more than your account balance.
+4. Click **NEXT**.
+
+### Step 3: Confirm Your Transaction
+1. You will see the following additional fields:
+    - **Nonce** - will be automatically filled in for you.
+    - **Max Base Fee per Gas** - will be automatically filled in for you based on the current Base Fee per Gas of the network.
+    - **Priority Fee per Gas** - determines the priority of your transaction. The minimum fee is 0 XPLL.
+    - **Gas Limit** - will be automatically filled in for you.
+    - **Estimated Gas Fee** - the approximate gas fee that will be charged for your transaction.
+
+2. If you are satisfied with the fields, click **NEXT**.
+3. Preview the summary of the transaction. Click **CONFIRM** to continue or **CANCEL** to make edits.
+4. The transaction will show **PENDING**. Click **CLOSE**.
+
+![Check status](../../img/extension/30_Check%20Pending%20Transaction%20(Top%20up).png){ width=40%  style="display: block; margin: 0 auto" } 
+
+5. You can check the status of your transaction in the **Transaction** tab. It is labelled **TOP UP DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your deposit has now been topped up.
+
 ## Unstaking Your XPLL
 
 ### Step 1: Navigate to Your Chosen Validator
@@ -177,7 +234,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
  
 ### Step 2: Unstake XPLL
 
-#### To Your Account Balance
+#### To Your Account
 
 ![Check status](../../img/extension/25_Unstake%20Amount%20Field.png){ width=40%  style="display: block; margin: 0 auto" } 
 
@@ -224,63 +281,6 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 !!! note
     Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
 
-## Topping Up Your Stake
-
-### Step 1: Navigate to Your Chosen Validator
-![Check status](../../img/extension/27_Top%20up.png){ width=40%  style="display: block; margin: 0 auto" } 
-
-1. On the main page, click the **Stakes** tab.
-2. Click the validator pool that you wish to top up your deposit with.
-3. You will see the following details of the validator:
-    - **Pool Name** - the name of the validator.
-    - **Operator** - the validator's address.
-    - **Pool Stake** - the number of XPLL staked with the validator.
-    - **Commission Fee** - the percentage of your rewards that validator will take as a commission fee.
-
-    You will also see the following information:
-
-    - **Deposit** - the number of XPLL you have deposited with the validator.
-    - **Tentative Stake** - the number of XPLL you have in the validator pool that will become part of the current stake in the future.
-    - **Current Stake** - the number of XPLL you have in the validator pool that is part of the current validator set and is now earning rewards.
-    - **Auto Stake Rewards** - whether you have chosen to stake your rewards automatically.
-    - **Next Epoch** - when the next epoch will occur.
-
-    ![Check status](../../img/extension/28_Top%20up%20(Deposit).png){ width=40%  style="display: block; margin: 0 auto" } 
-
-4. Click the arrow beside the **Deposit** field.
-
-### Step 2: Top Up Your Stake through Your Account Balance
-![Check status](../../img/extension/29_Top%20up%20(Through%20Balance).png){ width=40%  style="display: block; margin: 0 auto" } 
-
-1. You will see the following details of the validator:
-    - **Pool Name** - the name of the validator.
-    - **Operator** - the validator's address.
-    - **Pool Stake** - the number of XPLL staked with the validator.
-    - **Commission Fee** - the percentage of your rewards that validator will take as a commission fee.
-    - **Deposit** - the number of XPLL you have deposited with the validator.
-    - **Tentative Stake** - the number of XPLL you have in the validator pool that will become part of the current stake in the future.
-
-2. Click **TOP-UP** to deposit more XPLL with the validator.
-3. The **Top-Up** field will appear. Enter the number of XPLL you wish to top up. The number cannot be more than your account balance.
-4. Click **NEXT**.
-
-### Step 3: Confirm Your Transaction
-1. You will see the following additional fields:
-    - **Nonce** - will be automatically filled in for you.
-    - **Max Base Fee per Gas** - will be automatically filled in for you based on the current Base Fee per Gas of the network.
-    - **Priority Fee per Gas** - determines the priority of your transaction. The minimum fee is 0 XPLL.
-    - **Gas Limit** - will be automatically filled in for you.
-    - **Estimated Gas Fee** - the approximate gas fee that will be charged for your transaction.
-
-2. If you are satisfied with the fields, click **NEXT**.
-3. Preview the summary of the transaction. Click **CONFIRM** to continue or **CANCEL** to make edits.
-4. The transaction will show **PENDING**. Click **CLOSE**.
-
-![Check status](../../img/extension/30_Check%20Pending%20Transaction%20(Top%20up).png){ width=40%  style="display: block; margin: 0 auto" } 
-
-5. You can check the status of your transaction in the **Transaction** tab. It is labelled **TOP UP DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your deposit has now been topped up.
-
-
 ## Withdrawing Your Stakes
 
 ### Step 1: Navigate to Your Chosen Validator
@@ -309,7 +309,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
  
 ### Step 2: Withdraw Stakes
 
-#### To Your Account Balance
+#### To Your Account
 
 ![Check status](../../img/extension/33_Click%20to%20withdraw.png){ width=40%  style="display: block; margin: 0 auto" } 
 

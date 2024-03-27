@@ -13,17 +13,15 @@ The blockchain account you create on ParallelChain is non-custodial, which means
 
 Learn how to create and manage your ParallelChain account using **Xperience Browser Extension** with the steps below. 
 
- 
+## Installing Xperience Browser Exension
 
-## Install **Xperience Browser Exension**
-
-For Chrome users, install the extension via the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf). The extension currently only works on Chrome.
+The extension currently only works on Chrome. Chrome user can install the extension via the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf). 
 
 If necessary, refer to [these instructions](https://support.google.com/chrome_webstore/answer/2664769?hl=en) on installing Chrome extensions.
 
-## Register for a New Wallet
+## Registering for a New Wallet
 
-### Obtain Your Recovery Key
+### Getting Your Recovery Key
 ![Create your account](../../img/extension/1_Welcome.png){ width=80%  style="display: block; margin: 0 auto" } 
 
 
@@ -37,7 +35,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 
 5. Click **Next**.
 
-### Verify Your Recovery Key
+### Verifying Your Recovery Key
 ![Verify your recovery key](../../img/extension/2_Seed%20Phrase.png){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. You will be prompted to fill in some missing words in your recovery key. Refer to your recovery key to enter all the missing words in the blanks.
@@ -46,7 +44,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 
 3. If an error message appears, refer to your recovery key again and check if you have entered the correct words.
 
-### Create Your Password
+### Creating Your Password
 1. Create a password for your wallet and enter it in the **Password** field. Your password can contain any characters, but it must satisfy the following conditions:
     - at least 8 characters long, 
     - at least 1 uppercase letter,

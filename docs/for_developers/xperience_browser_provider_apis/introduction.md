@@ -15,32 +15,11 @@ This API is specified by [EIP-1193][2], which promotes wallet interoperability b
 
 Xperience Browser Provider API is designed to be minimal, event-driven, and agnostic of transport and [RPC][3] protocols. Its functionality is easily extended by defining new RPC methods and message event types.
 
-## Installation for Chrome
+## Installing Xperience Browser Extension
 
-### Chrome Web Store
+The extension currently only works on Chrome. Chrome user can install the extension via the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf). 
 
-Chrome users can install the extension via the [Chrome Web Store](https://chromewebstore.google.com/detail/xperience-browser-extensi/gpfllmjckejjhmmdmgbgmclmhopekjpf).
-
-### Manual Installation
-
-1. Download `xperience_browser_extension-1.0.2-chromium.zip`.
-2. Unzip the file into a folder.
-3. Follow the [instructions here][4] to load the extension. Load the folder when prompted.
-
-
-<!-- #### Firefox
-
-##### Firefox Add-ons
-
-Firefox users can install the extension via Firefox Add-ons.
-
-##### Manual Installation
-
-1. Download `xperience_browser_extension-1.0.2-firefox.zip`.
-2. Unzip the file into a folder.
-3. Follow the [instructions here][5] to load the extension. Load `manifest.json` in the folder when prompted.
-
-[5]: https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/ -->
+If necessary, refer to [these instructions](https://support.google.com/chrome_webstore/answer/2664769?hl=en) on installing Chrome extensions.
 
 ## FAQ
 
@@ -55,7 +34,7 @@ If this is your first time setting up the wallet, a separate notification window
 
 
 
-[1]: ../xperience_browser_provider_apis/definitions.md#provider
+[1]: definitions.md#provider
 [2]: https://eips.ethereum.org/EIPS/eip-1193
 [3]: ../xperience_browser_provider_apis/definitions.md#remote-procedure-call-rpc
 [4]: https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked

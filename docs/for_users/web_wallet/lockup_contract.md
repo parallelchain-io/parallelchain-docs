@@ -12,27 +12,24 @@ Your XPLL allocation might be subject to a vesting schedule that determines how 
     
 Follow the steps below to register your Lock-up Contract to your ParallelChain wallet account. You can also watch the video tutorial [here](https://www.youtube.com/watch?v=ZxojrGycSmQ).
 
-## Registering Your Lock-Up Contract
 
-
-### Step 1: Check Your Email For Your Lock-up Contract Address
-Copy your Lock-up Contract address in the email
-
-
-### Step 2: Access Your Xperience Explorer Account
+## Logging in Your Wallet
 ![access account](../../img/explorer/lock-up/1_login.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
+
 1. Access the [ParallelChain Explorer](https://explorer.parallelchain.io), or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
-2. To log in, click on the *round* icon on the top right hand corner of the explorer page and enter your password.
+2. To log in, click on the round icon on the top right hand corner of the explorer page and enter your password.
 3. Press the **LOGIN** button.
+4. If you do not remember your password, you can choose to log in with your recovery key. Once you have access to your account, you should set a new password through your wallet settings.
+5. Once you are verified, you can access your wallet account.
 
-    !!! note
-        If you do not remember your password, you can choose to log in with your recovery key. Once you have access to your account, you should set a new password through your wallet settings.
+## Registering Your Lock-Up Contract
 
-4. Once you are verified, you can access your wallet account.
+### Step 1: Get Your Lock-Up Contract Address 
+1. Your lock-up contract address would have been sent to you **via email**. Check your email and copy your lock-up contract address.
 
 
-### Step 3: Register Your Lock-Up Contract
+### Step 2: Register Your Lock-Up Contract
 ![register contract](../../img/explorer/lock-up/2_contract.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. Click the *pink icon* located on the right side of the **STAKE** button.
@@ -54,26 +51,7 @@ Watch the video tutorial to register your locked-up contract [here](https://yout
 
 ## Claiming Your Vested Tokens
 
-
-### Step 1: Log Into Your ParallelChain Wallet Account
-
-
-1. Access the [ParallelChain Explorer](https://explorer.parallelchain.io), or click on the **EXPLORER** button on the [ParallelChain homepage](https://parallelchain.io/).
-
-2. To log in, click on the *round* icon on the top right hand corner of the webpage and enter your password.
-
-
-3. Press the **LOGIN** button.
-
-
-    !!! Note
-        If you do not remember your password, you can choose to log in with your recovery key. Once you have access to your account, you should set a new password through your wallet settings.
-
-
-4. Once you are verified, you can access your wallet account.
-
-
-### Step 2: Check Your Vested Balance
+### Step 1: Check Your Vested Balance
 ![check vested balance](../../img/explorer/lock-up/5_click_button.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 
@@ -92,7 +70,7 @@ Watch the video tutorial to register your locked-up contract [here](https://yout
 4. Under tte **UNLOCKED** field, you can see the amount of tokens that is currently available to claim (unlock).
 
 
-### Claim Your Vested Tokens
+### Step 2: Claim Your Vested Tokens
 ![claim](../../img/explorer/lock-up/6_claim.jpg){ width=80%  style="display: block; margin: 0 auto" } 
 
 1. Under the **UNLOCKED** field, press the **CLAIM** button to initiate your token claim.

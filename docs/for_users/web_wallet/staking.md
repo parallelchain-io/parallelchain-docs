@@ -7,7 +7,7 @@ tags:
 
 You can stake XPLL with network validators to help secure the blockchain and earn rewards in the meantime. Follow the steps below to stake XPLL tokens with your ParallelChain account. You can also watch the video tutorial [here](https://youtu.be/aEa1T-sopmA).
 
-## Access Your Xperience Explorer Account
+## Logging in Your Wallet
 
 ![access account](../../img/explorer/staking/1_login.jpg){ width=90%  style="display: block; margin: 0 auto" } 
 
@@ -19,7 +19,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 5. Once you are verified, you can access your wallet account.
 
 
-## Depositing XPLL to Staking Wallet
+## Depositing Your XPLL
 
 ### Step 1: Select a validator
 ![select validator](../../img/explorer/staking/2_select_validator.png){ width=90%  style="display: block; margin: 0 auto" }
@@ -28,8 +28,9 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 2. You will see the list of validator pools you can stake in.
 3. Choose from the list, or search for a specific validator via the search bar at the top labelled **SEARCH OPERATOR ADDRESS**.
 
+### Step 2: Deposit XPLL
 
-### Step 2a: Deposit XPLL Through Your Balance Account
+#### Through Your Account
 ![validator details](../../img/explorer/staking/3_validator_details.png){ width=90%  style="display: block; margin: 0 auto" }
 
 1. Once you have selected your desired validator, the details of the validator pool will be displayed.
@@ -44,7 +45,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 4. If you would like to auto-stake your rewards, toggle the **AUTO STAKE REWARDS** field on.
 
 
-### Step 2b: Deposit XPLL Through Your Lock-Up Contract
+#### Through Your Lock-Up Contract
 1. Once you have selected your desired validator, the details of the validator pool will be displayed.
 
     - **LOCK-UP CONTRACT (XPLL)** field and **LOCKED** field, your tokens that are still vested are shown here.
@@ -82,7 +83,7 @@ Watch the video tutorial to learn how to deposit XPLL to the staking wallet [her
 You can stake XPLL which you have deposited with validators to earn rewards.
 
 
-### Step 1: Navigate to your chosen validator
+### Step 1: Navigate To Your Chosen Validator
 ![selet validator](../../img/explorer/staking/5_navigate_to_validator.png){ width=90%  style="display: block; margin: 0 auto" }
 
 1. On the main page, select the **STAKES** tab which is located beside the **TRANSACTIONS** tab. Then select the pool which you wish to top up XPLL.
@@ -97,7 +98,9 @@ You can stake XPLL which you have deposited with validators to earn rewards.
 3. To stake XPLL, tap on the arrow beside the **TENTATIVE STAKE** field.
 
 
-### Step 2a: Stake With XPLL From Your Balance Account
+### Step 2: Stake XPLL
+
+#### From Your Account
 ![validator details](../../img/explorer/staking/7_stake.png){ width=90%  style="display: block; margin: 0 auto" }
 
 1. The details of the validator pool will be displayed as shown:
@@ -114,7 +117,7 @@ You can stake XPLL which you have deposited with validators to earn rewards.
 4. To add more staked XPLL, select the **STAKE** button. Enter the amount of XPLL you wish to stake in the **STAKE MAX** field. The number cannot exceed the amount of XPLL you have deposited.
 5. Press **NEXT** once you are comfortable with the amount.
 
-### Step 2b: Stake With XPLL From Your Lock-Up Contract
+#### From Your Lock-Up Contract
 1. The details of the validator pool will be displayed as shown:
 
     - **LOCK-UP CONTRACT (XPLL)**/**LOCKED** - your tokens that are still vested.
@@ -153,10 +156,10 @@ You can stake XPLL which you have deposited with validators to earn rewards.
 Watch the video tutorial on how to stake your XPLL [here](https://youtu.be/aEa1T-sopmA).
 
 
-## Top-Up Your Stake
+## Topping Up Your Stake
 
 
-### Step 1: Navigate to your chosen validator
+### Step 1: Navigate To Your Chosen Validator
 ![validator details](../../img/explorer/staking/9_top_up_select_validator.png){ width=90%  style="display: block; margin: 0 auto" }
 
 1. On the main page, select the **STAKES** tab which is located beside the **TRANSACTIONS** tab. Then select the pool which you wish to top up XPLL.
@@ -173,7 +176,7 @@ Watch the video tutorial on how to stake your XPLL [here](https://youtu.be/aEa1T
 
 
 
-### Step 2: Top-up Your Stake Through Your Balance Account
+### Step 2: Top-up Your Stake Through Your Account
 1. Once you have selected your desired validator, the details of the validator pool will be displayed as shown:
 
     - Selecting the drop-down arrow under the **POOL NAME**:
@@ -210,7 +213,7 @@ Watch the video tutorial on how to top up your XPLL [here](https://youtu.be/aEa1
 
 ## Withdrawing Your Stakes
 
-### Step 1: Navigate to your chosen validator
+### Step 1: Navigate To Your Chosen Validator
 ![validator details](../../img/explorer/staking/12a_withdraw_select_validator.png){ width=90%  style="display: block; margin: 0 auto"}
 
 1. On the main page, select the **STAKES** tab which is located beside the **TRANSACTIONS** tab. Then select the pool which you wish to withdraw XPLL.
@@ -226,7 +229,9 @@ Watch the video tutorial on how to top up your XPLL [here](https://youtu.be/aEa1
 3. To withdraw XPLL, tap on the arrow beside the **DEPOSIT** field.
 
 
-### Step 2a: Withdraw Stakes To Your Balance Account
+### Step 2: Withdraw Stakes
+
+#### To Your Account
 
 1. The details of the validator pool will be displayed as shown:
 
@@ -243,7 +248,7 @@ Watch the video tutorial on how to top up your XPLL [here](https://youtu.be/aEa1
 3. The **WITHDRAW MAX** field will appear, and you can enter the amount you wish to withdraw. The amount cannot exceed the current amount deposited with the validator.
 
 
-### Step 2b: Withdraw Stakes Through Your Lock-Up Contract
+#### To Your Lock-Up Contract
 1. The details of the validator pool will be displayed as shown:
 
     - **LOCK-UP CONTRACT (XPLL)**/**LOCKED** - your tokens that are still vested.
@@ -279,7 +284,7 @@ Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sop
 
 ## Unstaking Your XPLL
 
-### Step 1: Navigate to your chosen validator
+### Step 1: Navigate To Your Chosen Validator
 
 ![validator details](../../img/explorer/staking/14a_unstake_select_validator.png){ width=90%  style="display: block; margin: 0 auto"}
 
@@ -295,8 +300,9 @@ Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sop
 
 3. To unstake XPLL, tap on the arrow beside the **TENTATIVE STAKE**field.
 
+### Step 2: Unstake XPLL
 
-### Step 2a: Unstake XPLL To Your Balance Account
+#### To Your Account
 
 ![unstake](../../img/explorer/staking/15_unstake.png){ width=90%  style="display: block; margin: 0 auto" }
 
@@ -313,7 +319,7 @@ Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sop
 4. Press **NEXT** once you are comfortable with the amount.
 
 
-### Step 2b: Unstake XPLL To Your Lock-Up Contract
+#### To Your Lock-Up Contract
 1. The details of the validator pool will be displayed as shown:
 
     - **LOCK-UP CONTRACT (XPLL)**/**LOCKED** - your tokens that are still vested.
