@@ -32,24 +32,25 @@ Runtime can be considered as a **Transition Function** that deterministically ex
 
 ## World State
 
-The [World State](https://github.com/parallelchain-io/pchain-world-state) is a set of key-value tuples representing the state of every account, stored inside a set of Merkle Patricia Trie (MPT) data structures. It is organized into five sections:
+The [World State](https://github.com/parallelchain-io/pchain-world-state) is a set of key-value tuples representing the state of every account, stored inside a set of Merkle Patricia Trie (MPT) data structures. Key-value tuples can be inserted to a MPT. The MPT in return computes a hash value called **state hash** that is deterministic to all the data that it has. 
 
-- **Merkle Patricia Trie** specifies the variant of the MPT data structure that the ParallelChain protocol uses. The world state is comprised of two kinds of MPTs.
-- **Accounts Trie** specifies the first kind of MPT in the world state: the singular Accounts Trie.
-- **Storage Tries** specifies the second kind of MPT: the Storage Trie. Unlike the accounts trie, which is singular, there can be many storage tries.
-- **Network Account Storage** specifies the contents of the storage trie under a special account called the Network Account.
-- **Genesis State** specifies the initial contents of the entire world state, before any transaction is executed.
+ParallelChain Protocol uses two kinds of MPT:
+
+- **Accounts Trie**: The singular Accounts Trie. It stores the fields such as **Nonce** and **Balance** of all the [accounts](accounts.md) in the blockchain. 
+- **Storage Tries**: Unlike the `Accounts Trie`, there can be many `Storage Tries`. It stores key-value tuples associated with a specific account. These accounts are generally the [Contract Accounts](accounts.md) which inserts the key-value tuples according to its [Contract](../for_developers/smart_contracts/introduction.md) implementation. It is also used by a special account called [Network Account](accounts.md#network-account).
+
+
 
 ## P2P Network
 
-ParallelChain replicas maintain a peer-to-peer network (P2P). P2P implements two high-level functionalities:
+[ParallelChain Network](https://github.com/parallelchain-io/pchain-network) is a peer-to-peer networking (P2P) component for ParallelChain replicas. It is built using [libp2p](https://docs.libp2p.io/concepts/introduction/overview/) which provides functionalities of messaging and peer discovery.
 
 - **Messaging**: P2P enables replicas to send messages to each other to replicate the state machine, maintain a pool of pending transactions, as well as notify each other of dropped transactions.
 - **Peer Discovery**: in order for messages to eventually be received by all of their intended recipients, the P2P network needs to be connected. However, forming a connected network topology is challenging, because the number of replicas for any particular ParallelChain blockchain is unbounded and can far exceed the number of transport-layer connections that a computer can feasibly maintain. Starting from a small set of "boot nodes", P2P's peer discovery forms and maintains a connected network topology without requiring every replica to be aware of every other replica.
 
 ## Mempool
 
-A **mempool** is a component of the blockchain network that keeps transactions that have not yet been added to a block. It can refer to two things:
+[Mempool](https://github.com/parallelchain-io/pchain-mempool) is a component of the blockchain network that keeps transactions that have not yet been added to a block. It can refer to two things:
 
 - The mempool of validating nodes and fullnodes, which accepts pending transactions for future inclusion in a block. (Only validating nodes can create new blocks.)
 - The set of not-yet-confirmed transactions that are stored in the individual mempools of nodes in the network. This set can vary between nodes due to network delays and partitions.
@@ -58,6 +59,13 @@ A **mempool** is a component of the blockchain network that keeps transactions t
 
 When a transaction is submitted to the blockchain network, it is first sent to the mempool where it waits to be executed. The mempool acts like a queue, storing the pending transactions and arranging them to be executed by block producers. Transactions are prioritized based on how much the sender is willing to pay for network resources, which is indicated in a field called `Max Base Fee Per Gas` within the transaction. The higher the fee, the higher the priority of the transaction.
 
+### Base Fee Per Gas in ParallelChain Mainnet
+
+In ParallelChain Mainnet, the `base fee per gas` is calculated according to the [Base fee formula](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Blockchain.md#base-fee-formula). This is nearly identical to Ethereum's EIP-1559 and shares the same purpose: *adjust the cost of a transaction based on how busy the network is*.
+
+!!! Note
+    Validator nodes in ParallelChain Mainnet provided at the initial Launch do not take `priority fee` into the ranking calculation.
+
 ### Max Base Fee Per Gas and EIP-1559 in Ethereum
 
 The priority ranking method based on the `Max Base Fee Per Gas` is a crucial component of the EIP-1559 model for transaction processing in Ethereum.
@@ -65,10 +73,3 @@ The priority ranking method based on the `Max Base Fee Per Gas` is a crucial com
 In the EIP-1559 model, each transaction specifies two fees: the `base fee` and the `priority fee`. The `base fee` is dynamically determined by the network based on the current demand for block space and adjusts itself to keep block utilization at a target level. The `priority fee` is the amount that the user is willing to pay in addition to the base fee to prioritize their transaction.
 
 When a transaction is submitted to the network, it is placed in the mempool, and the `priority fee` value of the transaction is used to rank it. Transactions with higher priority fees are placed higher in the mempool, making them more likely to be included in the next block. However, unlike the traditional method of simply sorting transactions by the fee amount, EIP-1559 allows for more efficient use of block space by dynamically adjusting the `base fee`, which incentivizes users to pay only what they need to get their transaction included. This helps to prevent congestion and ensures that transactions are processed in an efficient and timely manner.
-
-### Base Fee Per Gas in ParallelChain Mainnet
-
-In ParallelChain Mainnet, the `base fee per gas` is calculated according to the [Base fee formula](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Blockchain.md#base-fee-formula). This is nearly identical to Ethereum's EIP-1559 and shares the same purpose: *adjust the cost of a transaction based on how busy the network is*.
-
-!!! Note
-    Validator nodes in ParallelChain Mainnet provided at the initial Launch do not take `priority fee` into the ranking calculation.

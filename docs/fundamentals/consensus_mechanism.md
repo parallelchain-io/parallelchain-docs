@@ -18,7 +18,7 @@ HotStuff guarantees that committed Blocks are *immutable*. That is, they can nev
 
 ![A graphic depicting a Tree (DAG) of Blocks. Blocks are coloured depending on how many confirmations they have.](../img/BlockTree%20Structure%20Diagram.png)
 
-A Block becomes *committed* the instant its third confirmation is written into the BlockTree. Confirmation for a Block `A` is another Block `B` such that there is a path between `B` to `A`.
+A Block becomes **committed** the instant its third confirmation is written into the BlockTree. Confirmation for a Block `A` is another Block `B` such that there is a path between `B` to `A`.
 
 The choice of third confirmation to define commitment--as opposed to first or second--is not arbitrary. HotStuff's safety and liveness properties hinge upon this condition. You can read this [paper](https://github.com/parallelchain-io/hotstuff_rs/blob/master/readme_assets/HotStuff%20paper.pdf) to learn more about it. To summarize:
 

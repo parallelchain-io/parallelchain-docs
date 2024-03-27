@@ -16,20 +16,67 @@ A transaction has the following fields:
 - `Signer`: the public address of the external-owned account that signed this transaction.
 - `Nonce`: the number of transactions signed by the signer that has been included on the blockchain before this transaction. This ensures that all of the signer’s transactions are included in the blockchain in an expected order and prevents the same transaction from being included in multiple blocks.
 - `Commands`: a sequence of [Commands](#commands) to be executed in a transaction.
-- `Gas Limit`: the maximum number of gas units that should be used in executing this transaction.
+- `Gas Limit`: the maximum number of [gas](gas.md) units that should be used in executing this transaction.
 - `Max Base Fee per Gas`: the maximum number of grays that the signer is willing to burn for a gas unit used in this transaction.
 - `Priority Fee per Gas`: the number of grays that the signer is willing to pay the block proposer for including this transaction in a block.
 - `Signature`: the signature formed by signing over content in this transaction using the signer’s private key.
 - `Hash`: the cryptographic hash of the signature.
 
+Example of a transaction queried by [ParallelChain Client CLI](../for_users/pchain_client_cli/introduction.md):
+
+```json
+{
+  "transaction": {
+    "commands": [
+      {
+        "Transfer": {
+          "recipient": "kxrCl32WEzr7gr4Awb3jAMQtoh5zY8grabqlu-x42jY",
+          "amount": 2000000000
+        }
+      }
+    ],
+    "signer": "qPReY5x_DPKAx1v30UrU1x1RI61Wd2OxeZo2eSWcjMU",
+    "priority_fee_per_gas": 0,
+    "gas_limit": 67500000,
+    "max_base_fee_per_gas": 8,
+    "nonce": 428,
+    "hash": "dOrjtT7o5Y97mlLJFaCvdNUq6UgVQItVYGXHPoDw5n4",
+    "signature": "RLM3k5VDDzBqkQ7ios4TMP9LwL50n8hNQ7OjH-wcTE0Ts6F3uWDaA5J52sCyYr3aGGGElXKiIatqH15qVwMUAA"
+  },
+  "receipt": [
+    {
+      "status_code": "Success",
+      "gas_used": 32820,
+      "return_values": "",
+      "logs": []
+    }
+  ]
+}
+```
+
+## How Transaction Works
+
+A transaction is created by an [EOA](accounts.md#accounts) who sets the fields such as `nonce`, `gas_limit` of a transaction. The field `signer` is the address (public key) of the account, and the signature is created by signing the the content of the transaction with the private key of the account. Finally, the field `hash` is computed from the signature field.
+
+EOA submits transaction to the blockchain [network](networks.md). The [nodes](nodes.md) will then execute the transaction in order to produce a block. The transaction execution mutates the [state](nodes.md#world-state) of blockchain. For example, if the transaction includes a [Transfer Command](#account-commands), balances of the signer and recipient can be updated upon a successful execution.
+
+In the end, the transaction becomes part of a [block](blocks.md) if it is executed and validated successfully, Otherwise, the transaction will be dropped by the network.
+
+See also:
+
+- [Create Transaction by CLI](../for_users/pchain_client_cli/transaction.md)
+- [Transferring Tokens by Web Wallet](../for_users/web_wallet/transfer_tokens.md)
+- [Transferring Tokens by Xperience Browser Extension](../for_users/xperience_browser_extension/transfer_tokens.md)
+
 ## Commands
 
-A command is a useful operation that Parallelchain allows the user to do. A sequence of commands can be inserted into a transaction to be carried out. There are currently 13 different kinds of commands, each corresponding to a variant of the command enum type. These are further divided into three categories: **account commands**, **staking commands**, and **protocol commands**. Most commands take inputs, which are part of the command type as the fields of its corresponding variant.
+A command is a useful operation that Parallelchain allows the user to do. A sequence of commands can be inserted into a transaction to be carried out. There are currently 13 different kinds of commands, each corresponding to a variant of the command enum type. These are further divided into three categories: [account commands](#account-commands), [staking commands](#staking-commands), and [protocol commands](#protocol-commands). Most commands take inputs, which are part of the command type as the fields of its corresponding variant.
 
+In the below subsections, the input types are represented in [Rust programming language](https://www.rust-lang.org). For example, `PublicAddress` is 32-byte data. `Vec<u8>` is vector of unsigned 8-bit integers (bytes). 
 
 ### Account commands
 
-#### Transfer
+**Account commands** are the commands specific to mutate state of [Accounts](accounts.md) in the blockchain.
 
 |**Name**|**Input**|**Description**|
 |---|---|---|
@@ -39,6 +86,7 @@ A command is a useful operation that Parallelchain allows the user to do. A sequ
 
 ### Staking commands
 
+**Staking commands** are mainly associated with the [staking](staking.md) process in ParallelChain Mainnet ecosystem.
 
 |**Name**|**Input**|**Description**|
 |---|---|---|
@@ -58,9 +106,12 @@ A command is a useful operation that Parallelchain allows the user to do. A sequ
     *Therefore, these commands accept as input a "max amount" instead of a precise amount. These commands try to withdraw, stake, or unstake as close to the maximum amount as possible, and inform the precise amount in its return value.*
 
 ### Protocol commands
+
+**Protocol commands** are the commands which mutates the state of the whole network (i.e. mutates the state of [Network Account](accounts.md#network-account) in the blockchain). The current protocol version has only one protocol command, `Next Epoch`.
+
 |**Name**|**Input**|**Description**|
 |---|---|---|
-|Next epoch|None|Reward the current epoch's validators, and confirm the next epoch's validator set.|
+|Next epoch|None|Reward the current [epoch](blocks.md#epoch-block)'s validators, and confirm the next epoch's validator set.|
 
 ## Receipt and Logs
 

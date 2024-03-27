@@ -11,10 +11,10 @@ tags:
 
 There are different categories of gas cost in the ParallelChain Mainnet ecosystem:
 
-- WASM opcode execution inside a contract call
+- WASM opcode execution inside a contract [call](transactions.md#account-commands)
 - Reading and writing WASM memory from host functions inside a contract call
 - Transaction-related data storage
-- World state storage and access
+- [World state](nodes.md#world-state) storage and access
 - Cryptographic operations
 
 Details about gas can be found in [ParallelChain Mainnet Protocol](https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Gas.md).
