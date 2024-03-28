@@ -35,7 +35,7 @@ Transactions contained within the block are executed by the blockchain system, w
 
 In addition to transactions and receipts, the block also contains a Bloom filter, which is a probabilistic data structure used to efficiently query logs associated with the transactions contained in the block.
 
-Example of a block queried by [ParallelChain Client CLI](../for_users/pchain_client_cli/introduction.md):
+Example of a block queried by [ParallelChain Client CLI](../for_users/pchain_client_cli/querying_blockchain.md):
 
 ```json
 {

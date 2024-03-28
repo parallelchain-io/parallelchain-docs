@@ -49,13 +49,12 @@ nav:
       - API Reference: for_developers/xperience_browser_provider_apis/api_reference.md
 
   - For End-Users:
-    - ParallelChain Client CLI: 
-      - Introduction: for_users/pchain_client_cli/introduction.md
-      - Install and Setup: for_users/pchain_client_cli/install_and_setup.md
-      - Manage Account: for_users/pchain_client_cli/manage_account.md
-      - Create Transaction: for_users/pchain_client_cli/transaction.md
-      - Query: for_users/pchain_client_cli/query.md
-      - Smart Contract: for_users/pchain_client_cli/smart_contract.md
+    - ParallelChain Client CLI:
+      - Getting Started: for_users/pchain_client_cli/getting_started.md
+      - Managing Account: for_users/pchain_client_cli/managing_account.md
+      - Creating Transaction: for_users/pchain_client_cli/creating_transaction.md
+      - Querying Blockchain: for_users/pchain_client_cli/querying_blockchain.md
+      - Interacting with Smart Contract: for_users/pchain_client_cli/interacting_with_smart_contract.md
     
     - Web Wallet: 
       - Creating and Managing Your Account: for_users/web_wallet/create_account.md

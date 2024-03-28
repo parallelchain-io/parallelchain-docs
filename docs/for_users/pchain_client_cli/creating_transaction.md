@@ -5,9 +5,6 @@ tags:
   - pchain-cli-rust
 ---
 
-
-## Transaction 
-
 A transaction is a digitally signed instruction that tells the ParallelChain state machine to execute a sequence of commands. There are different kinds of [Commands](https://docs.rs/pchain-types/0.4.3/pchain_types/blockchain/enum.Command.html) in ParallelChain protocol. 
 
 `pchain_client` accepts transaction in json format. This section will demonstrate how to prepare your transaction file and submit it with your account keys.

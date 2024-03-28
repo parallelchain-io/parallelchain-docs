@@ -63,7 +63,7 @@ The staking commands are "deferred" because the actual execution of such command
 sufficient balance to the contract for the operation.
 
 
-To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../for_users/pchain_client_cli/query.md#get-deposit-and-stake):
+To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../for_users/pchain_client_cli/querying_blockchain.md#get-deposit-and-stake):
 ```sh
 ./pchain_client query deposit --operator <OPERATOR_ADDRESS> --owner <CONTRACT_ADDRESS>
 ```

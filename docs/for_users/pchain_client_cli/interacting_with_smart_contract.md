@@ -5,9 +5,6 @@ tags:
   - pchain-cli-rust
 ---
 
-
-## Smart Contract
-
 Smart contracts are computer programs that are stored on a blockchain. You need to provide some necessary information such as contract address, method name, and arguments in order to invoke method of the contract.
 
 ### Retrieve Contract Address

@@ -21,10 +21,10 @@ To verify that [**Testnet**](../../fundamentals/networks.md#parallelchain-testne
 
 * [https://pchain-test-rpc02.parallelchain.io](https://pchain-test-rpc02.parallelchain.io)
 
-You can use [ParallelChain Client CLI](../../for_users/pchain_client_cli/introduction.md) (called `pchain_client`) to interact with the `Testnet` node.
+You can use [ParallelChain Client CLI](../../for_users/pchain_client_cli/getting_started.md) (called `pchain_client`) to interact with the `Testnet` node.
 
 ## Setting Up ParallelChain Client CLI
 
 Before we start developing the smart contracts, the `pchain_client` executable needs to be configured.
 
-If you are not yet familiar with `pchain_client`, See [Install and Setup](../../for_users/pchain_client_cli/install_and_setup.md) to install `pchain_client` and learn about the basic functionalities before proceeding with smart contract development.
+If you are not yet familiar with `pchain_client`, See [Install and Setup](../../for_users/pchain_client_cli/getting_started.md) to install `pchain_client` and learn about the basic functionalities before proceeding with smart contract development.

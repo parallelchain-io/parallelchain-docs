@@ -5,9 +5,6 @@ tags:
   - pchain-cli-rust
 ---
 
-
-## Manage Account
-
 In ParallelChain, an account is identified by the public key of Ed25519 keypair. You can either generate new keys or import your existing Ed25519 keypair to make transactions in `pchain_client`. Both operations require password (if you setup before).
 
 ### Generate New Keypair

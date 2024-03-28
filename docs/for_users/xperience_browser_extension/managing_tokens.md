@@ -61,7 +61,7 @@ You can manage other tokens apart from XPLL using the Xperience Browser Extensio
     - The **Contract Address** - the token contract address.  
     - The **Token Custom Name** - the custom name you entered for the token. 
 
-5. You can click the arrow next to the **Balance** field to send tokens. For more details on how to send tokens, refer to [Sending Tokens](./transfer_tokens.md#sending-tokens). 
+5. You can click the arrow next to the **Balance** field to send tokens. For more details on how to send tokens, refer to [Sending Tokens](./create_account.md#sending-tokens). 
 
 ## Removing Imported Tokens
 

@@ -22,7 +22,7 @@ A transaction has the following fields:
 - `Signature`: the signature formed by signing over content in this transaction using the signer’s private key.
 - `Hash`: the cryptographic hash of the signature.
 
-Example of a transaction queried by [ParallelChain Client CLI](../for_users/pchain_client_cli/introduction.md):
+Example of a transaction queried by [ParallelChain Client CLI](../for_users/pchain_client_cli/querying_blockchain.md):
 
 ```json
 {
@@ -64,7 +64,7 @@ In the end, the transaction becomes part of a [block](blocks.md) if it is execut
 
 See also:
 
-- [Create Transaction by CLI](../for_users/pchain_client_cli/transaction.md)
+- [Create Transaction by CLI](../for_users/pchain_client_cli/creating_transaction.md)
 - [Transferring Tokens by Web Wallet](../for_users/web_wallet/transfer_tokens.md)
 - [Transferring Tokens by Xperience Browser Extension](../for_users/xperience_browser_extension/transfer_tokens.md)
 

@@ -44,7 +44,7 @@ On the other hand, a **Contract Account** is not made up of cryptographic keys. 
 
 See also:
 
-- [Create Account by CLI](../for_users/pchain_client_cli/manage_account.md)
+- [Create Account by CLI](../for_users/pchain_client_cli/managing_account.md)
 - [Create Account by Web Wallet](../for_users/web_wallet/create_account.md)
 - [Create Account by Xperience Browser Extension](../for_users/xperience_browser_extension/create_account.md)
 

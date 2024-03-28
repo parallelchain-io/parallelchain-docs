@@ -5,9 +5,35 @@ tags:
   - pchain-cli-rust
 ---
 
-# Install and Setup
+ParallelChain Client CLI (`pchain_client`) is an easy-to-use, fully-featured CLI for interacting with ParallelChain. 
+For a detailed description of all available commands, execute `pchain_client --help`. 
 
-## Installation
+**Usage**
+
+```terminal
+ParallelChain Client CLI 0.4.3
+<ParallelChain Lab>
+ParallelChain client (`pchain_client`) is a command-line tool for you to connect and interact with
+the ParallelChain Mainnet/Testnet.
+
+USAGE:
+    pchain_client <SUBCOMMAND>
+
+OPTIONS:
+    -h, --help       Print help information
+    -V, --version    Print version information
+
+SUBCOMMANDS:
+    transaction    Construct and submit Transactions to ParallelChain network
+    query          Query blockchain and world state information for ParallelChain network
+    keys           Locally stores and manage account keypairs you created. (Password required)
+    parse          Utilities functions to deserialize return values in CommandReceipt, and
+                       compute contract address
+    config         Get and set Fullnode RPC url to interact with ParallelChain
+    help           Print this message or the help of the given subcommand(s)
+```
+
+## Installing ParallelChain Client CLI
 
 `pchain_client` is an available tool for users on Unix/Linux, MacOS, and Windows operating systems. Simply download the pre-built binary corresponding to your platform and install the `pchain_client`.
 
@@ -61,7 +87,7 @@ The installation process for Linux and macOS is similar. To install `pchain_clie
 
 ## Running pchain_client
 
-### Creating Password
+### Create Password
 
 For the first time to use `pchain_client`, you need to create your password for using it. The terminal should prompt you as follows:
 
@@ -87,9 +113,9 @@ You will be required to enter your password twice. If your password is set succe
     The password is not sent and saved anywhere. You won't be able to recover the password if you lose it. Please keep your password safe. You will be required to provide this password to submit transactions and manage keypairs later.
 
 
-## Prepare Environment
+## Preparing Environment
 
-### Setting Environmental Variables
+### Set Environmental Variables
 
 Specify the location of the directory for storing your config and keypair by setting the environmental variable `PCHAIN_CLI_HOME`. 
 
@@ -127,7 +153,7 @@ The following command will set the environmental variable **permanently**:
     setx PCHAIN_CLI_HOME "<PATH_TO_DIRECTORY>"
     ```
 
-### Setting Endpoint Interacting with Parallelchain
+### Setup Endpoint
 
 After installation of `pchain_client`, you had to update the Mainnet / Testnet endpoint to communicate with the Mainnet / Testnet. 
 
