@@ -8,7 +8,7 @@ tags:
 
 # Example - My Pool
 
-In the last chapter of the tutorial, we are going to talk about how to use [staking commands](../../../fundamentals/transactions.md#staking-commands) in smart contracts. 
+We are going to study how to use [staking commands](../../../fundamentals/transactions.md#staking-commands) in smart contracts. 
 
 In ParallelChain Mainnet, there are six different staking commands:
 

@@ -7,7 +7,7 @@ tags:
 
 # Example - My Little Pony
 
-In this chapter, we will implement a smart contract called `MyLittlePony`, to demonstrate how a contract can:
+We will implement a smart contract called `MyLittlePony`, to demonstrate how a contract can:
 
 - define entrypoint methods
 - define fields as data in contract storage

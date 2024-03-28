@@ -7,10 +7,9 @@ tags:
 
 # Example - My Collections
 
-In the previous chapters, we have understood how we write contract methods and access storage in the world state.
-In this chapter, we are going to demonstrate the use of module [collections](https://github.com/parallelchain-io/pchain-sdk/blob/main/README.md#storage-and-collections) in `pchian-sdk`.
+We are going to demonstrate the use of module [collections](https://github.com/parallelchain-io/pchain-sdk/blob/main/README.md#storage-and-collections) in `pchian-sdk`.
 
-`pchain-sdk` provides several collection structures that are designed for gas efficiency:
+`collections` are designed as a data structure for gas efficiency:
 
 - Cacher: allows lazy initialization
 - Vector: lazily stores a list of items

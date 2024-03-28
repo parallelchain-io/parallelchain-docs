@@ -7,7 +7,7 @@ tags:
 
 # Example - Hello Contract
 
-In this chapter, we will go through the steps of creating a simple smart contract with the help of `pchain-sdk`.
+We will go through the steps of creating a simple smart contract with the help of `pchain-sdk`.
 
 Firstly, we have to prepare the `Cargo.toml`, which specifies the name, version, and year of edition of the smart contract. We need to use `pchain-sdk` for this smart contract development, so remember to add `pchain-sdk = { version = "LATEST_VERSION"}` under dependencies.
 ### Cargo.toml

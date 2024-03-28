@@ -8,8 +8,7 @@ tags:
 # Example - My Bank
 
 We have introduced macros including `contract`, `contract methods`, and `call` in the contract [Hello Contract](1_hello_contract.md) and accessing values of
-fields from storage in the contract [My Little Pony](2_my_little_pony.md). In this chapter, we will put together all the knowledge and implement the bank
-smart contract that simulates banking operations with data stored in ParallelChain Mainnet.
+fields from storage in the contract [My Little Pony](2_my_little_pony.md). Here we will put together all the knowledge and implement the bank smart contract that simulates banking operations with data stored in ParallelChain Mainnet.
 
 Before diving into the writing of a smart contract, let's define the data struct `BankAccount` which will be stored in the storage.
 

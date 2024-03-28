@@ -7,7 +7,7 @@ tags:
 
 # Preparing Environment
 
-In this section, you need the tools and environment to develop and run smart contracts. You can utilize our Mainnet to deploy and make contract calls. You may consider testing your transaction on Testnet before doing it on Mainnet.
+You have the the tools to develop smart contracts. You also need the environment to deploy and call your smart contracts. You can utilize the [Mainnet](../../fundamentals/networks.md#parallelchain-mainnet) as a production environment for your business application, as well as the [Testnet](..//../fundamentals/networks.md#parallelchain-testnet) as a testing environment before deploying your release to Mainnet.
 
 ## Checking the Network
 
@@ -21,9 +21,9 @@ To verify that [**Testnet**](../../fundamentals/networks.md#parallelchain-testne
 
 * [https://pchain-test-rpc02.parallelchain.io](https://pchain-test-rpc02.parallelchain.io)
 
-You can use ParallelChain Client CLI (called `pchain_client`) to interact with the `testnet` node.
+You can use [ParallelChain Client CLI](../../for_users/pchain_client_cli/introduction.md) (called `pchain_client`) to interact with the `Testnet` node.
 
-## Set Up ParallelChain Client 
+## Setting Up ParallelChain Client CLI
 
 Before we start developing the smart contracts, the `pchain_client` executable needs to be configured.
 

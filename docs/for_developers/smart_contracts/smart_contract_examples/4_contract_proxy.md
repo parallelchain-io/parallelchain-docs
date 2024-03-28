@@ -7,16 +7,14 @@ tags:
 
 # Example - Contract Proxy
 
-This chapter introduces the use of the `use_contract` macro to interact with other contracts. 
-We have `ContractProxy` that serves as a middle-man to another contract [My Little Pony](2_my_little_pony.md). We are going to explore the interaction between 
-the two contracts by:
+We will look at how the contract `ContractProxy` use the `use_contract` macro to interact with other contracts. In general, `ContractProxy` is a contract that serves as a middle-man to another contract [My Little Pony](2_my_little_pony.md). 
+
+There are two kinds of interaction between the two contracts:
 
 - calling another contract's entrypoint methods.
 - sending tokens from the balance of one contract to another contract.
 
-Firstly, use the macro `use_contract` to specify the contract entrypoint methods in a trait.
-The address is hard-coded when using this macro. It is recommended to remove or comment out 
-the methods that are not intended to be used. 
+To call another contract, firstly use the macro `use_contract` to specify the contract entrypoint methods in a trait. The address is hard-coded when using this macro. It is recommended to remove or comment out  the methods that are not intended to be used. 
 
 Recall that we have a deployed contract called `MyLittlePony` that consists of three methods,
 `self_introduction()`, `grow_up()`, and `change_person()`. We are going to use `grow_up()` in 

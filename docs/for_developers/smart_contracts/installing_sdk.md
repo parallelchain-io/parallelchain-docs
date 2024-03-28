@@ -7,7 +7,7 @@ tags:
 
 ## Installing Rust
 
-To install the required toolkits, the standard method is by `rustup`, which maintains dependencies and is a version manager for `cargo` and `rustc` (the rust compiler). Detailed installation instructions can be found on the [official website](https://www.rust-lang.org/tools/install)
+To install the required toolkits, the standard method is by `rustup`, which maintains dependencies and is a version manager for `cargo` and `rustc` (the rust compiler). Detailed installation instructions can be found on the [official website](https://www.rust-lang.org/tools/install).
 
 ## Setting up a Development Environment
 
@@ -15,7 +15,7 @@ A recommended Integrated Development Environment (IDE) is [VSCode](https://code.
 
 ## Installing Wasm Toolchain (Optional)
 
-ParallelChain Mainnet also provides a smart contract compilation tool called `pchain-compile` to compile your Rust smart contract into WASM bytecode. While not necessary, the Installation of Wasm Toolchain can help check if your code is compilable before using the time-consuming process in the use of `pchain-compile`.
+ParallelChain Mainnet also provides a smart contract compilation tool called [pchain-compile](getting_started.md#building-the-contract-with-pchain_compile) to compile your Rust smart contract into WASM bytecode. While not necessary, the Installation of Wasm Toolchain can help check if your code is compilable before using the time-consuming process in the use of `pchain-compile`.
 
 The `wasm32-unknown-unknown` toolchain is required for smart contracts to compile as WASM. To add the wasm toolchain in Rust, type the command below:
 ```bash
