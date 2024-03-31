@@ -3,17 +3,17 @@ tags:
 - Xperience extension
 - xpll
 ---
-!!! note
+!!! Note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
 Sending and receiving assets with digital wallets is a keystone of any blockchain’s decentralised infrastructure. Follow the steps below to send and receive tokens with your ParallelChain account.
 
-!!! note
+!!! Note
 
     Before you can perform the following steps, you need to have created and logged in to your ParallelChain account. If you are not sure how to do so, refer to [Xperience Browser Extension Tutorials: Creating and Managing Your Account](./create_account.md). 
 
 ## Sending Tokens
----
+
 ![check transfer](../../img/tokens/1_Send%20Tokens.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 ### Step 1: Fill in Transaction Details
@@ -21,7 +21,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 2. Select the token to send by clicking the down arrow in the **Token** field.
 3. Enter the address that you want to send tokens to in the **To Address** field.
 
-    !!! note 
+    !!! Note 
         If you are transferring tokens between your own accounts, you can access your different accounts by clicking the down arrow next to your account name and address. You can copy the address of the receiving account by clicking the copy icon beside its address. 
 4. Enter the number of tokens you would like to send in the **Send** field. The amount must not be a negative number, and it cannot be more than the number of tokens you currently have.
 5. Click **NEXT**.
@@ -44,7 +44,7 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 5. You can check the status of your transaction in the **Transactions** tab. It is labeled **TRANSFER**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your tokens have now been sent.  
 
 ## Receiving XPLL Tokens
----
+
 ### Step 1: Share Your Wallet Address
 1. Click the copy icon next to your wallet address to copy it.
 2. Share your wallet address with the sender through a secure text messaging application.
@@ -55,18 +55,24 @@ Sending and receiving assets with digital wallets is a keystone of any blockchai
 2. Once the transaction is confirmed, your wallet balance will be automatically updated.
 
 ## FAQ
----
+
 ### What tokens can I send or receive?
 You can send or receive XPLL using either **Xperience Browser Extension** or **ParallelChain Explorer**. However, you can only send or receive **PRFC1 tokens** using **Xperience Browser Extension** for now.
+
+---
 
 ### I have not received my tokens. Where can I check the transaction status?
 To check the transaction status of the token transfer, you can use [ParallelChain Explorer](https://explorer.parallelchain.io/explorer?network=Mainnet).
 
 Click on your wallet address in **Xperience Browser Extension**. This will open **ParallelChain Explorer**. Enter your wallet address in the search field. Under the **Transactions** section, **RECEIVED** tab, you can see your transactions for receiving tokens. 
 
+---
+
 ### Can I cancel or refund transactions? 
 
 No, once a transaction request has been made, it cannot be cancelled. 
+
+---
 
 ### Where can I seek support or report bugs? 
 

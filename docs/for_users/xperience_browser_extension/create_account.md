@@ -2,7 +2,7 @@
 tags:
 - Xperience browser extension
 ---
-!!! note
+!!! Note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
 **Xperience Browser Extension** is browser extension of your ParellelChain Explorer Wallet.
@@ -53,7 +53,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 
 2. Enter your password again in the **Confirm Password** field. If you receive a `Passwords do not match` error, re-enter your password and check that both your entries are the same.
 
-    !!! note
+    !!! Note
         This password is only limited to the wallet access on the particular device you are registering your account on, and it cannot be accessed from another device.
 
 3. Click **REGISTER**. Congratulations! Your ParallelChain account has now been created.
@@ -74,7 +74,7 @@ If necessary, refer to [these instructions](https://support.google.com/chrome_we
 
 You will be prompted to create a password for your wallet. You can follow the instructions [here](#create-your-password).
 
-!!! note
+!!! Note
     Importing your wallet only recovers accounts associated with the recovery key. Refer to the steps in [Exporting Account](#exporting-account) and [Importing Account](#importing-account) to export and import individual accounts.
 
 ## Logging into Your Wallet
@@ -116,11 +116,10 @@ If you do not remember your password, you can reset your password with your reco
 
    3. Enter your password and click **VERIFY**.
 
-    !!! note
-        If you do not remember your password, you can **log in with your recovery key**. 
-        
+    !!! Note
+        If you do not remember your password, you can **log in with your recovery key**.
+
         - Click **VERIFY WITH RECOVERY KEY**.
-        
         - Enter your 12-word recovery key and click **Next**.
 
    6. Click **View Recovery Key**. You will see your 12-word recovery key.
@@ -137,7 +136,7 @@ If you do not remember your password, you can reset your password with your reco
 
    3. Enter your password and click **VERIFY**.
 
-    !!! note 
+    !!! Note 
         If you do not remember your password, you can reset your password with your recovery key. 
        
         - Click **VERIFY WITH RECOVERY KEY**.
@@ -152,7 +151,7 @@ If you do not remember your password, you can reset your password with your reco
 
    5. Enter your password again in the **Confirm Password** field. If you receive a `Passwords do not match` error, re-enter your password and check that both your entries are the same.
     
-    !!! note 
+    !!! Note 
         This password is only limited to the wallet access on the particular device you are registering your account on, and it cannot be accessed from another device.
 
          
@@ -223,7 +222,7 @@ If you do not remember your password, you can reset your password with your reco
    4. Enter your private key in the **Private Key** field.
    5. Enter your desired account name in the **Account Name** field.
 
-    !!! note 
+    !!! Note 
         If you are not sure where to find your public and private keys, refer to [Exporting Account as Public & Private Keys](#as-public-and-private-keys).
    
    6. Click **IMPORT**. You have successfully imported your account.

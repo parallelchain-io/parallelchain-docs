@@ -4,13 +4,13 @@ tags:
 - xpll
 ---
 
-!!! note
+!!! Note
     This process is new to **Xperience Browser Extension**. It is not available on **ParallelChain Explorer**. 
 
 You can manage other tokens apart from XPLL using the Xperience Browser Extension. Follow the steps below to manage tokens in your ParallelChain account. 
 
 
-!!! note
+!!! Note
     Before you can perform the following steps, you need to have created and logged in to your ParallelChain account. If you are not sure how to do so, refer to [Xperience Browser Extension Tutorials: Creating and Managing Your Account](./create_account.md). 
 
 ## Importing Tokens

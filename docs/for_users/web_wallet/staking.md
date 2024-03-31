@@ -63,9 +63,9 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 
 1. The following fields will appear:
     - **Nonce** - This field will be automatically populated for you.
-    - **Max Base Fee per Gas**- This field will be automatically populated for you based on the current Base Fee per Gas of the network.
-    - **Priority Fee per Gas**- This determines the priority of your transaction, and the minimum fee is 0 XPLL.
-    - **Gas Limit**- This field will be automatically populated for you.
+    - **Max Base Fee per Gas** - This field will be automatically populated for you based on the current Base Fee per Gas of the network.
+    - **Priority Fee per Gas** - This determines the priority of your transaction, and the minimum fee is 0 XPLL.
+    - **Gas Limit** - This field will be automatically populated for you.
 
 2. Once you are satisfied with the populated fields, press **NEXT** at the bottom.
 3. Preview the summary of the transaction, then press **CONFIRM** to continue, or **CANCEL** to make edits
@@ -148,10 +148,9 @@ You can stake XPLL which you have deposited with validators to earn rewards.
 2. Once you are satisfied with the populated fields, press **NEXT** at the bottom.
 3. Preview the summary of the transaction, then press **CONFIRM** to continue, or **CANCEL** to make edits.
 4. The status of the token deposit will be shown as **PENDING**. When it is validated by the network, a **SUCCESS** will be shown under its status tab. 
-    !!! note
-        Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
-5. The staking will take approximately two epochs to be confirmed.
 
+!!! Note
+    Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
 
 Watch the video tutorial on how to stake your XPLL [here](https://youtu.be/aEa1T-sopmA).
 
@@ -276,7 +275,10 @@ Watch the video tutorial on how to top up your XPLL [here](https://youtu.be/aEa1
 
 2. Once you are satisfied with the populated fields, press **NEXT** at the bottom
 3. Preview the summary of the transaction, then press **CONFIRM** to continue, or **CANCEL** to make edits
-4. The status of the token withdrawal will be shown as **PENDING**. When it is validated by the network, a **SUCCESS** will be shown under its status tab. Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
+4. The status of the token withdrawal will be shown as **PENDING**. When it is validated by the network, a **SUCCESS** will be shown under its status tab. 
+
+!!! Note
+    Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
 
 
 Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sopmA).
@@ -349,8 +351,11 @@ Watch the video tutorial to withdraw your XPLL [here](https://youtu.be/aEa1T-sop
 
 2. Once you are satisfied with the populated fields, press **NEXT** at the bottom.
 3. Preview the summary of the transaction, then press **CONFIRM** to continue, or **CANCEL** to make edits.
-4. The status of the token deposit will be shown as **PENDING**. When it is validated by the network, a **SUCCESS** will be shown under its status tab. Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
-5. The request to unstake will take approximately two epochs to be confirmed.
+4. The status of the token deposit will be shown as **PENDING**. When it is validated by the network, a **SUCCESS** will be shown under its status tab.
+
+!!! Note
+    Due to the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
+
 
 
 Watch the video tutorial to unstake your XPLL [here](https://youtu.be/aEa1T-sopmA).

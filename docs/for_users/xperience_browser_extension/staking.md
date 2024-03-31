@@ -4,12 +4,12 @@ tags:
 - staking
 - xpll
 ---
-!!! note
+!!! Note
     This process is the same on Xperience Browser Extension as it is on ParallelChain Explorer. 
 
 You can stake XPLL with network validators to help secure the blockchain and earn rewards. Follow the steps below to stake XPLL tokens with your ParallelChain account. 
 
-!!! note
+!!! Note
 
     Before you can perform the following steps, you need to have created and be logged in to your ParallelChain account. If you are not sure how to do so, refer to [Xperience Browser Extension Tutorials: Creating and Managing Your Account](./create_account.md). 
 
@@ -18,8 +18,8 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 ### Step 1: Select a Validator
 
 ![Select validtor](../../img/extension/16_Stake%20XPLL.png){ width=40%  style="display: block; margin: 0 auto" } 
-1. Click **STAKE XPLL**
 
+1. Click **STAKE XPLL**.
 2. You will see the list of validators. Select a validator from the list, or search for a specific validator via the search bar at the top.
 
 ### Step 2: Deposit XPLL
@@ -71,7 +71,7 @@ You can stake XPLL with network validators to help secure the blockchain and ear
 7. To start earning XPLL from staking, follow the instruction in the **Staking Your XPLL** section below.
 
 ## Staking Your XPLL
-You can stake the XPLL that you ahve deposited with the validators to earn rewards.
+You can stake the XPLL that you have deposited with the validators to earn rewards.
 
 ### Step 1: Navigate to Your Chosen Validator
 ![Stake xpll](../../img/extension/19_View%20Stakes.png){ width=40%  style="display: block; margin: 0 auto" } 
@@ -95,6 +95,7 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     - **Next Epoch** - when the next epoch will occur.
 
     ![tentaive stake](../../img/extension/20_Tentative%20Stakes.png){ width=40%  style="display: block; margin: 0 auto" } 
+
 4. Click the arrow beside the **Tentative Stake** field. 
 
 ### Step 2: Stake XPLL
@@ -146,8 +147,8 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **STAKE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been staked with the validator. 
 
-!!! note
-    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
+!!! Note
+    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
 
 
 ## Topping Up Your Stake
@@ -278,8 +279,8 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     ![Check status](../../img/extension/26_Check%20Unstaking%20Transaction.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **UNSTAKE DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been unstaked from the validator.
-!!! note
-    Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
+!!! Note
+    Depends on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
 
 ## Withdrawing Your Stakes
 
@@ -353,8 +354,8 @@ You can stake the XPLL that you ahve deposited with the validators to earn rewar
     ![Check status](../../img/extension/34_Check%20Transactions.png){ width=40%  style="display: block; margin: 0 auto" } 
 
 5. You can check the status of your transaction in the **Transactions** tab. It is labelled **WITHDRAW DEPOSIT**. When the transaction is validated by the network, the transaction status will show **SUCCESS**. Your XPLL have now been withdrawn.
-!!! note
-    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount. The staking will take approximately **two epochs** to be confirmed.
+!!! Note
+    Depending on the network state when your transaction gets included, the actual amount may differ slightly from your desired amount.
 
 ## FAQ
 

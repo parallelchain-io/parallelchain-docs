@@ -7,7 +7,7 @@ tags:
 
 Your XPLL allocation might be subject to a vesting schedule that determines how many of your tokens are vested (unlocked) as time goes on. In order to **claim** the unlocked portion in the future, you need to first ***register** the Lock-up Contract* of your allocation to your account. 
 
-!!! note    
+!!! Note    
     Each Lock-up Contract is unique to each holder. 
     
 Follow the steps below to register your Lock-up Contract to your ParallelChain wallet account. You can also watch the video tutorial [here](https://www.youtube.com/watch?v=ZxojrGycSmQ).
@@ -42,7 +42,7 @@ Follow the steps below to register your Lock-up Contract to your ParallelChain w
 5. Click the **CONFIRM** button to confirm.
 
 
-!!! note
+!!! Note
     For **Node Round participants** who will operate validator nodes on ParallelChain, the *locked balance* shown will be **0** as your allocation has been automatically staked on one of the existing validator nodes.
 
 
