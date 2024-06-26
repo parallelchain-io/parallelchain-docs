@@ -33,7 +33,7 @@ Block rewards in ParallelChain Mainnet gradually reduce according to the followi
 The **total amount of rewards (issuance)** introduced to the network is calculated as follows:
 
 $$
-\text{Total amount of stake} \times \text{Issuance rate}
+\operatorname{Total amount of stake} \times \operatorname{Issuance rate}
 $$
 
 For example, if the *total amount of stake* of a validator is `100,000 XPLL` currently, and the *issuance rate* is `0.001`, then the *total amount of XPLL to be issued* to that validator in the next epoch will be `100,000 * 0.001 = 100 XPLL`.
