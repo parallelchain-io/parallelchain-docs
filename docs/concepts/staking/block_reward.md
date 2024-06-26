@@ -11,7 +11,9 @@ tags:
 
 Block rewards in a blockchain serve as an incentive for validators who actively contribute to the creation of new blocks within the blockchain network. 
 
-In DPoS blockchains, validators are selected to validate transactions and generate new blocks based on the quantity of XPLL they have staked within the network. As a reward for their contributions, validators receive a share of the transaction fees and a portion of the block rewards for successfully creating new blocks. 
+In DPoS blockchains, validators are selected to validate transactions and generate new blocks based on the quantity of XPLL they have staked within the network. As a reward for their contributions, validators receive two kinds of rewards:
+1. **Priority Fees**: an amount of *existing* XPLL that transaction signers *transfer* to block proposers to reward them for including their transaction.
+2. **Block Rewards**: an amount of *new* XPLL created ("issued") at the end of every epoch according to a function of the total amount of XPLL staked.
 
 Block rewards play a crucial role in blockchain networks by serving multiple purposes. They incentivize miners and validators' participation in the network's consensus process, thereby upholding the security and integrity of the network. Additionally, block rewards facilitate the introduction of new XPLL into circulation, ensuring the long-term sustainability of the network.
 
