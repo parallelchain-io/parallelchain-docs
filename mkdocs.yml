@@ -5,111 +5,69 @@ repo_url: https://github.com/parallelchain-io/parallelchain-docs
 copyright: ParallelChain Lab 2023
 
 nav:
-  - Introduction:
-    - What is ParallelChain?: introduction/what_parallelchain.md
-    - Why Build on ParallelChain?: introduction/why_parallelchain.md
-    - XPLL:
-      - What is XPLL?: introduction/xpll/what_is_xpll.md
-      - How to get XPLL?: introduction/xpll/how_to_get.md
-  - Concepts:
-    - Account: concepts/account.md
-    - Block: concepts/block.md
-    - Transaction, Command and Receipt: concepts/transaction.md
-    - Epoch: concepts/epoch.md
-    - Consensus: concepts/consensus.md
-    - Gas: concepts/gas.md
-    - Mempool: concepts/mempool.md
-    - Smart Contract: concepts/smartcontract.md
-    - PRFC: concepts/PRFC.md
-    - Staking:
-      - What is staking?: concepts/staking/what_is_staking.md
-      - How does staking work?: concepts/staking/how_does_staking_work.md
-      - Validators: concepts/staking/validator.md
-      - Delegators: concepts/staking/delegator.md
-      - Block reward: concepts/staking/block_reward.md
-      - FAQ: concepts/staking/faq.md
-    - Storage: concepts/storage.md
-    - Explorer: concepts/explorer.md
-    - Wallet: concepts/wallet.md
-    - Mainnet: concepts/mainnet.md
-    - Testnet: concepts/testnet.md
-  # - Architecture:
-  #   - Reading Data from ParallelChain
-  #   - Writing Data to ParallelChain
-  #   - Interacting with Account and Wallet
-  # - Running Nodes:
-  #   - Hardware & Software Requirements: running_nodes/requirement.md
-  #   - Running a Node: running_nodes/running_node.md
-  # - ParallelChain Core Contracts
-  #   - Fungible Token Contract
-  #   - Non-Fungible Token Contract
-  #   - Staking Contract
-  #   - Epoch Contract
-  - Developer Guides:
-    - pchain-client: 
-      - Introduction: developer_guides/pchain_cli/introduction.md
-      - Install and Setup: developer_guides/pchain_cli/install_and_setup.md
-      - Manage Account: developer_guides/pchain_cli/manage_account.md
-      - Create Transaction: developer_guides/pchain_cli/transaction.md
-      - Query: developer_guides/pchain_cli/query.md
-      - Smart Contract: developer_guides/pchain_cli/smart_contract.md
-    - Smart Contract Development:
-      - Introduction: developer_guides/smart_contract_sdk/introduction.md
-    #   - What is Smart Contract on ParallelChain?
-    #   - Advantages of ParallelChain Smart Contracts
-    #   - ParallelChain Smart Contract Language
-      - Install SDK: developer_guides/smart_contract_sdk/installation.md
-      - Prepare Environment: developer_guides/smart_contract_sdk/prepare_env.md
-      - Develop Contract: developer_guides/smart_contract_sdk/develop_contract.md
-      - Build Contract: developer_guides/smart_contract_sdk/build_contract.md
-      - Deploy Contract: developer_guides/smart_contract_sdk/deploy_contract.md
-      - Call Contract: developer_guides/smart_contract_sdk/call_contract.md
-      - Tutorial:
-        - Chapter 1: developer_guides/smart_contract_sdk/tutorial/chapter_1.md
-        - Chapter 2: developer_guides/smart_contract_sdk/tutorial/chapter_2.md
-        - Chapter 3: developer_guides/smart_contract_sdk/tutorial/chapter_3.md
-        - Chapter 4: developer_guides/smart_contract_sdk/tutorial/chapter_4.md
-        - Chapter 5: developer_guides/smart_contract_sdk/tutorial/chapter_5.md
-        - Chapter 6: developer_guides/smart_contract_sdk/tutorial/chapter_6.md
-      - Advance: 
-        - Contract Methods: developer_guides/smart_contract_sdk/advance/entrypoints.md
-        - Contract Storage: developer_guides/smart_contract_sdk/advance/contract_storage.md
-        - Accessing Information About the Blockchain: developer_guides/smart_contract_sdk/advance/params.md
-        - Cross Contract Call: developer_guides/smart_contract_sdk/advance/cross_contract.md
-        - Transferring Balance: developer_guides/smart_contract_sdk/advance/internal_transaction.md
-        - Crypto: developer_guides/smart_contract_sdk/advance/crypto.md
-        - Staking in Contract: developer_guides/smart_contract_sdk/advance/staking.md
-    - ParallelChain RPC API:
-      - Introduction: developer_guides/rpc/introduction.md
-      - Transaction-related RPC: developer_guides/rpc/transaction_rpc.md
-      - Block-related RPC: developer_guides/rpc/block_rpc.md
-      - State-related RPC: developer_guides/rpc/state_rpc.md
-    # - pchain-client-rust: developer_guides/pchain_client_rust.md
-    - Wallet Browser Extension:
-      - Introduction: developer_guides/wallet_browser_extension/intro.md
-      - Definitions: developer_guides/wallet_browser_extension/definition.md
-      - Extension Provider API: 
-        - Introduction: developer_guides/wallet_browser_extension/provider/intro.md
-        - Errors: developer_guides/wallet_browser_extension/provider/error.md
-        - Events: developer_guides/wallet_browser_extension/provider/event.md
-        - Permissions: developer_guides/wallet_browser_extension/provider/permission.md
-        - API Documentation: developer_guides/wallet_browser_extension/provider/api_documentation.md
-  - User Guides:
-    - Wallet Web-Based Tool: 
-      - Creating and Managing Your Account: user_guides/wallet_web_based_tool/create_account.md
-      - Transferring Tokens: user_guides/wallet_web_based_tool/transfer_tokens.md
-      - Staking XPLL: user_guides/wallet_web_based_tool/staking.md
-      - Lock-Up Contract: user_guides/wallet_web_based_tool/lockup_contract.md
-    - Wallet Browser Extension:
-      - Creating and Managing Your Account: user_guides/wallet_browser_extension/create_account.md
-      - Transferring Tokens: user_guides//wallet_browser_extension/transfer_tokens.md
-      - Managing Tokens: user_guides/wallet_browser_extension/managing_tokens.md
-      - Staking XPLL: user_guides/wallet_browser_extension/staking.md
-      - Lock-Up Contract: user_guides/wallet_browser_extension/lockup_contract.md
-    - pchain-cli:
-      - Create Account: user_guides/pchain_cli/create_account.md
-      - Transfer Tokens: user_guides/pchain_cli/transfer_tokens.md
-      - Staking: user_guides/pchain_cli/staking.md
+  - Introduction: introduction.md
+  - Fundamentals:
+    - Accounts: fundamentals/accounts.md
+    - Blocks: fundamentals/blocks.md
+    - Transactions: fundamentals/transactions.md
+    - Gas: fundamentals/gas.md
+    - Nodes: fundamentals/nodes.md
+    - Networks: fundamentals/networks.md
+    - Consensus Mechanism: fundamentals/consensus_mechanism.md
+    - Staking: fundamentals/staking.md
+  - For Developers:
+    - Smart Contracts:
+      - Introduction: for_developers/smart_contracts/introduction.md
+      - Installing SDK: for_developers/smart_contracts/installing_sdk.md
+      - Preparing Environment: for_developers/smart_contracts/preparing_env.md
+      - Getting Started: for_developers/smart_contracts/getting_started.md
+      - Smart Contract Examples:
+        - Hello Contract: for_developers/smart_contracts/smart_contract_examples/1_hello_contract.md
+        - My Little Pony: for_developers/smart_contracts/smart_contract_examples/2_my_little_pony.md
+        - My Bank: for_developers/smart_contracts/smart_contract_examples/3_my_bank.md
+        - Contract Proxy: for_developers/smart_contracts/smart_contract_examples/4_contract_proxy.md
+        - My Collections: for_developers/smart_contracts/smart_contract_examples/5_my_collections.md
+        - My Pool: for_developers/smart_contracts/smart_contract_examples/6_my_pool.md
+      - Advanced: 
+        - Contract Methods: for_developers/smart_contracts/advanced/contract_methods.md
+        - Contract Storage: for_developers/smart_contracts/advanced/contract_storage.md
+        - Accessing Information About the Blockchain: for_developers/smart_contracts/advanced/accessing_info_about_blockchain.md
+        - Cross Contract Call: for_developers/smart_contracts/advanced/cross_contract_call.md
+        - Transferring Balance: for_developers/smart_contracts/advanced/transferring_balance.md
+        - Cryptographic Functions: for_developers/smart_contracts/advanced/cryptographic_functions.md
+        - Staking in Contract: for_developers/smart_contracts/advanced/staking_in_contract.md
+      - PRFC: for_developers/smart_contracts/prfc.md
+    - ParallelChain Client APIs:
+      - JavaScript APIs: for_developers/parallelchain_client_apis/javascript_apis.md
+      - Rust Client APIs: for_developers/parallelchain_client_apis/rust_client_apis.md
+    - Xperience Browser Provider APIs:
+      - Introduction: for_developers/xperience_browser_provider_apis/introduction.md
+      - Definitions: for_developers/xperience_browser_provider_apis/definitions.md
+      - Errors: for_developers/xperience_browser_provider_apis/error.md
+      - Events: for_developers/xperience_browser_provider_apis/event.md
+      - Permissions: for_developers/xperience_browser_provider_apis/permissions.md
+      - API Reference: for_developers/xperience_browser_provider_apis/api_reference.md
+
+  - For End-Users:
+    - ParallelChain Client CLI:
+      - Getting Started: for_users/pchain_client_cli/getting_started.md
+      - Managing Account: for_users/pchain_client_cli/managing_account.md
+      - Creating Transaction: for_users/pchain_client_cli/creating_transaction.md
+      - Querying Blockchain: for_users/pchain_client_cli/querying_blockchain.md
+      - Interacting with Smart Contract: for_users/pchain_client_cli/interacting_with_smart_contract.md
+    
+    - Web Wallet: 
+      - Creating and Managing Your Account: for_users/web_wallet/create_account.md
+      - Transferring Tokens: for_users/web_wallet/transfer_tokens.md
+      - Staking XPLL: for_users/web_wallet/staking.md
+      - Lock-Up Contract: for_users/web_wallet/lockup_contract.md
+    
+    - Xperience Browser Extension:
+      - Creating and Managing Your Account: for_users/xperience_browser_extension/create_account.md
+      - Transferring Tokens: for_users//xperience_browser_extension/transfer_tokens.md
+      - Managing Tokens: for_users/xperience_browser_extension/managing_tokens.md
+      - Staking XPLL: for_users/xperience_browser_extension/staking.md
+      - Lock-Up Contract: for_users/xperience_browser_extension/lockup_contract.md
 
 extra_css:
   - stylesheets/extra.css
