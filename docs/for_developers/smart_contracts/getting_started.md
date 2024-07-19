@@ -139,7 +139,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
 
 === "Linux / macOS"
     ```bash
-    ./pchain_client transaction create
+    ./pchain_client transaction create \
     --nonce <NONCE> \
     --gas-limit <GAS_LIMIT> \
     --max-base-fee-per-gas <MAX_BASE_FEE_PER_GAS> \
