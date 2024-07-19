@@ -11,7 +11,7 @@ For a detailed description of all available commands, execute `pchain_client --h
 **Usage**
 
 ```terminal
-ParallelChain Client CLI 0.4.3
+ParallelChain Client CLI 0.4.4
 <ParallelChain Lab>
 ParallelChain client (`pchain_client`) is a command-line tool for you to connect and interact with
 the ParallelChain Mainnet/Testnet.
@@ -56,11 +56,11 @@ The installation process for Linux and macOS is similar. To install `pchain_clie
 
     === "Linux"
         ```bash
-        tar -xvf pchain_client_linux_v0.4.3.tar.gz 
+        tar -xvf pchain_client_linux_v0.4.4.tar.gz
         ```
     === "macOS"
         ```bash
-        tar -xvf pchain_client_mac_v0.4.3.tar.gz 
+        tar -xvf pchain_client_mac_v0.4.4.tar.gz
         ```
 
 3. Follow the instructions in Section [Preparing Environment](#preparing-environment) to get ready for interacting with the blockchain.
