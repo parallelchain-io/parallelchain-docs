@@ -63,7 +63,7 @@ address does not need to be hard-coded in the contract.
 ```rust
 #[call]
 fn grow_up_2(address: String) {
-    let contract_address = base64url::decode(address).unwrap().try_into().unwrap();
+    let contract_address = base64url::decode(&address).unwrap().try_into().unwrap();
     pchain_sdk::call_untyped(
         contract_address,
         "grow_up", 
@@ -80,7 +80,7 @@ contract to a specific address by `pchain_sdk::transfer()` (see [Transferring Ba
 ```rust
 #[call]
 fn send_tokens(to_address: String, value :u64){
-    let contract_address = base64url::decode(to_address).unwrap().try_into().unwrap();
+    let contract_address = base64url::decode(&to_address).unwrap().try_into().unwrap();
     pchain_sdk::transfer(
         contract_address,
         value
