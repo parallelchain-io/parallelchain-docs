@@ -44,7 +44,7 @@ SUBCOMMANDS:
 2. Unzip the file to extract the executable `pchain_client.exe`.
 3. Open Powershell by pressing *WIN+R* and typing `powershell`.
 4. Navigate to the directory where `pchain_client.exe` is located using the `cd` command. For example, if the executable is located at `C:\Development`, type `cd C:\Development`.
-5. Follow the instructions in Section [Prepare Environment](#prepare-environment) to get ready for interacting with the blockchain.
+5. Follow the instructions in Section [Preparing Environment](#preparing-environment) to get ready for interacting with the blockchain.
 
 ### Linux / macOS
 
@@ -63,7 +63,7 @@ The installation process for Linux and macOS is similar. To install `pchain_clie
         tar -xvf pchain_client_mac_v0.4.3.tar.gz 
         ```
 
-3. Follow the instructions in Section [Prepare Environment](#prepare-environment) to get ready for interacting with the blockchain.
+3. Follow the instructions in Section [Preparing Environment](#preparing-environment) to get ready for interacting with the blockchain.
 
 
 !!! Tips
