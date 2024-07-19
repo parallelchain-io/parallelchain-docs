@@ -59,8 +59,7 @@ After adding the `init()` function, we can try creating a deposit into the pool.
 The staking commands are "deferred" because the actual execution of such commands occurs after the execution of a successful call. 
 
 !!! Note 
-    The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer
-sufficient balance to the contract for the operation.
+    The deposit is created on behalf of the contract address, not from your account address, so make sure to transfer sufficient balance to the contract for the operation.
 
 
 To check if the deposit is successful, you can check the deposit using `pchain-client` with the following [command](../../../for_users/pchain_client_cli/querying_blockchain.md#get-deposit-and-stake):
