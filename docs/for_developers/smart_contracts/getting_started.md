@@ -256,15 +256,15 @@ The commands stored in `transaction` and command receipts in `receipt` are follo
 
 To parse the response from the contract method, represented in the field named `return value` , which is in `CallResult` format, you can use the `parse call-result` command in ParallelChain Client.
 
-For example, if the contract method returns a u32 integer, the `return value` is "BAAAAAUAAAA" you can parse the `CallResult` data structure using the `--data-type u32` flag:
+For example, if the contract method returns a u32 integer, the `return value` is "BQAAAA" you can parse the `CallResult` data structure using the `--data-type u32` flag:
 
 === "Linux / macOS"
     ```bash
-    pchain_client parse call-result --value BAAAAAUAAAA --data-type u32
+    pchain_client parse call-result --value BQAAAA --data-type u32
     ```
 === "Windows PowerShell"
     ```PowerShell
-    ./pchain_client.exe parse call-result --value BAAAAAUAAAA --data-type u32
+    ./pchain_client.exe parse call-result --value BQAAAA --data-type u32
     ```
 
-The output will be the parsed value of the `CallResult`, which in this case is `4`. For more details, you can use the `help` command to see the usage of the tool or take a look at the example `argument,json`.
+The output will be the parsed value of the `CallResult`, which in this case is `5`. For more details, you can use the `help` command to see the usage of the tool or take a look at the example `argument,json`.
