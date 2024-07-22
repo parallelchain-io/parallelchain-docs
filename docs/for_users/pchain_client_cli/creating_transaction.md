@@ -99,7 +99,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ./pchain_client transaction create \
     --destination ~/Documents/deposit-tx.json \
     --nonce 0 \
-    --gas-limit 100000 \
+    --gas-limit 500000000 \
     --max-base-fee-per-gas 8 \
     --priority-fee-per-gas 0 \
     deploy \
@@ -111,7 +111,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ./pchain_client.exe transaction create `
     --destination ~/Documents/deposit-tx.json `
     --nonce 0 `
-    --gas-limit 100000 `
+    --gas-limit 500000000 `
     --max-base-fee-per-gas 8 `
     --priority-fee-per-gas 0 `
     deploy `
