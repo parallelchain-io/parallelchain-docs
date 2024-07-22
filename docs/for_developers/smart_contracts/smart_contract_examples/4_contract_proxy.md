@@ -59,6 +59,9 @@ The above example has shown how we can use the `use_contract` macro to do [cross
 to use `pchain_sdk::call_untyped()` to do so. We pass the contract address as an argument so that the contract
 address does not need to be hard-coded in the contract.
 
+!!! note
+    Add `base64url = "0.1.0"` under `[Dependency]` in `Cargo.toml` for the project.
+
 ### lib.rs: pchain_sdk::call_untyped()
 ```rust
 #[call]
