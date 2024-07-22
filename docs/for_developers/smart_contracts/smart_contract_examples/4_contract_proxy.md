@@ -29,7 +29,7 @@ use pchain_sdk::{
     use_contract, call, contract, contract_methods
 };
 
-#[use_contract("-jUt6jrEfMRD1JM9n6_yAASl2cwsc4tg1Bqp07gvQpU")]
+#[use_contract("xxT5OXMonFm8wcDw-io1jeyAEnxSddGPOG-ZezArCV4")]
 pub trait MyLittlePony {
     //fn self_introduction() -> String;
     fn grow_up();
