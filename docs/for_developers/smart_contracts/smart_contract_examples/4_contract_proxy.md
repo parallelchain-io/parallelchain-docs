@@ -20,6 +20,9 @@ Recall that we have a deployed contract called `MyLittlePony` that consists of t
 `self_introduction()`, `grow_up()`, and `change_person()`. We are going to use `grow_up()` in 
 `ContractProxy`, so we can comment out the rest of them. 
 
+!!! Pre-requisites
+    Deploy [My Little Pony](./2_my_little_pony.md) smart contract, and then replace the address supplied to `use_contract` macro with the smart contract address of My Little Pony.
+
 ### lib.rs: define a trait
 ```rust
 use pchain_sdk::{
