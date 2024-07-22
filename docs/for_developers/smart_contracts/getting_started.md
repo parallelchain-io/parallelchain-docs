@@ -160,7 +160,7 @@ You can deploy the contract using the pchain_client command line tool. You shoul
     --cbi-version <CBI_VERSION> 
     ```
 
-You can follow the instruction in [Create Transaction](../../for_users/pchain_client_cli/creating_transaction.md) about submitting a transaction through `pchain-client`.
+You can refer to the instruction and example arguments in [Create & Submit Transaction](../../for_users/pchain_client_cli/creating_transaction.md) to create and submit a transaction through `pchain-client`.
 
 ## Checking Contract In State
 
@@ -237,7 +237,7 @@ The command argument `arguments` is the JSON file that contains the method argum
 
 The gas limit required for the transaction depends on the complexity of the smart contract. For safety reasons, you can always set a higher gas limit. You can also test contract calls on testnet to reassure.
 
-You can follow the instruction in [Create Transaction](../../for_users/pchain_client_cli/creating_transaction.md) about submitting a transaction through `pchain-client`.
+You can refer to the instruction and example arguments in [Create & Submit Transaction](../../for_users/pchain_client_cli/creating_transaction.md) to create and submit a transaction through `pchain-client`.
 
 To query the resulting receipt of the transaction, 
 
