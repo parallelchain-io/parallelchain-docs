@@ -146,6 +146,9 @@ Example:
 ### Submit Transaction to ParallelChain
 After preparing the transaction json file, you can now submit the transaction with keypair.
 
+!!! Note
+    Executing transactions may require paying for gas fees. If you are testing transactions on Parallelchain Testnet, you can get free testnet tokens from the [Faucet Service](../../fundamentals/networks.md#faucet-service) to pay for the gas fees.
+
 Example:
 
 === "Linux / macOS"
