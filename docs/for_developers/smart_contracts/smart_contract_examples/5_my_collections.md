@@ -11,7 +11,7 @@ We are going to demonstrate the use of module [collections](https://github.com/p
 
 `collections` are designed as a data structure for gas efficiency:
 
-- Cacher: allows lazy initialization
+- Cacher: allows lazy loading of a field in contract storage
 - Vector: lazily stores a list of items
 - FastMap: lazily stores items into a key-value map
 - IterableMap: lazily stores items into an iterable key-value map
@@ -37,7 +37,7 @@ pub struct MyCollections {
 ```
 
 ### Cacher
-`Cacher` is a data wrapper to support Lazy Read and Lazy Write to Contract Storage.
+`Cacher` is a data wrapper to support Lazy Read and Lazy Write to a field in Contract Storage.
 
 ```rust
 #[contract_methods]

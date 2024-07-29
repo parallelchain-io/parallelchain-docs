@@ -20,13 +20,16 @@ Recall that we have a deployed contract called `MyLittlePony` that consists of t
 `self_introduction()`, `grow_up()`, and `change_person()`. We are going to use `grow_up()` in 
 `ContractProxy`, so we can comment out the rest of them. 
 
+!!! Pre-requisites
+    Deploy [My Little Pony](./2_my_little_pony.md) smart contract, and then replace the address supplied to `use_contract` macro with the smart contract address of My Little Pony.
+
 ### lib.rs: define a trait
 ```rust
 use pchain_sdk::{
     use_contract, call, contract, contract_methods
 };
 
-#[use_contract("-jUt6jrEfMRD1JM9n6_yAASl2cwsc4tg1Bqp07gvQpU")]
+#[use_contract("xxT5OXMonFm8wcDw-io1jeyAEnxSddGPOG-ZezArCV4")]
 pub trait MyLittlePony {
     //fn self_introduction() -> String;
     fn grow_up();
@@ -59,11 +62,14 @@ The above example has shown how we can use the `use_contract` macro to do [cross
 to use `pchain_sdk::call_untyped()` to do so. We pass the contract address as an argument so that the contract
 address does not need to be hard-coded in the contract.
 
+!!! note
+    Add `base64url = "0.1.0"` under `[Dependency]` in `Cargo.toml` for the project.
+
 ### lib.rs: pchain_sdk::call_untyped()
 ```rust
 #[call]
 fn grow_up_2(address: String) {
-    let contract_address = base64url::decode(address).unwrap().try_into().unwrap();
+    let contract_address = base64url::decode(&address).unwrap().try_into().unwrap();
     pchain_sdk::call_untyped(
         contract_address,
         "grow_up", 
@@ -80,7 +86,7 @@ contract to a specific address by `pchain_sdk::transfer()` (see [Transferring Ba
 ```rust
 #[call]
 fn send_tokens(to_address: String, value :u64){
-    let contract_address = base64url::decode(to_address).unwrap().try_into().unwrap();
+    let contract_address = base64url::decode(&to_address).unwrap().try_into().unwrap();
     pchain_sdk::transfer(
         contract_address,
         value

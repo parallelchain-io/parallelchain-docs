@@ -11,7 +11,7 @@ For a detailed description of all available commands, execute `pchain_client --h
 **Usage**
 
 ```terminal
-ParallelChain Client CLI 0.4.3
+ParallelChain Client CLI 0.4.4
 <ParallelChain Lab>
 ParallelChain client (`pchain_client`) is a command-line tool for you to connect and interact with
 the ParallelChain Mainnet/Testnet.
@@ -44,7 +44,7 @@ SUBCOMMANDS:
 2. Unzip the file to extract the executable `pchain_client.exe`.
 3. Open Powershell by pressing *WIN+R* and typing `powershell`.
 4. Navigate to the directory where `pchain_client.exe` is located using the `cd` command. For example, if the executable is located at `C:\Development`, type `cd C:\Development`.
-5. Follow the instructions in Section [Prepare Environment](#prepare-environment) to get ready for interacting with the blockchain.
+5. Follow the instructions in Section [Preparing Environment](#preparing-environment) to get ready for interacting with the blockchain.
 
 ### Linux / macOS
 
@@ -56,14 +56,14 @@ The installation process for Linux and macOS is similar. To install `pchain_clie
 
     === "Linux"
         ```bash
-        tar -xvf pchain_client_linux_v0.4.3.tar.gz 
+        tar -xvf pchain_client_linux_v0.4.4.tar.gz
         ```
     === "macOS"
         ```bash
-        tar -xvf pchain_client_mac_v0.4.3.tar.gz 
+        tar -xvf pchain_client_mac_v0.4.4.tar.gz
         ```
 
-3. Follow the instructions in Section [Prepare Environment](#prepare-environment) to get ready for interacting with the blockchain.
+3. Follow the instructions in Section [Preparing Environment](#preparing-environment) to get ready for interacting with the blockchain.
 
 
 !!! Tips
@@ -84,34 +84,6 @@ The installation process for Linux and macOS is similar. To install `pchain_clie
 
 !!! note
     If this is your first time using `pchain_client`, you need to set up `$PCHAIN_CLI_HOME` in environment variables to specify the home path. See more [here](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/).
-
-## Running pchain_client
-
-### Create Password
-
-For the first time to use `pchain_client`, you need to create your password for using it. The terminal should prompt you as follows:
-
-```text
-First time using ParallelChain Client CLI. Please set up a password to protect your keypairs.
-Your password: 
-```
-
-This password is only used by the CLI, and **NOT** associated with the blockchain. It is used for encryption and decryption of your keypairs so that the keypairs are stored in your computer more securely. Alternatively, you can skip the password protection by simply pressing **Enter**.
-
-You will be required to enter your password twice. If your password is set successfully, you will see a return message with the `pchain_client` version shown on the console.
-
-=== "Linux / macOS"
-    ```bash
-    ./pchain_client --version
-    ```
-=== "Windows PowerShell"
-    ```PowerShell
-    ./pchain_client.exe --version
-    ```
-
-!!! warning
-    The password is not sent and saved anywhere. You won't be able to recover the password if you lose it. Please keep your password safe. You will be required to provide this password to submit transactions and manage keypairs later.
-
 
 ## Preparing Environment
 
@@ -179,3 +151,30 @@ This would check the status of your chosen provider. If `pchain_client` cannot c
 A `config.toml` file will be created in the folder specified by the environment variable `PCHAIN_CLI_HOME` upon success. It only needs to be executed once.
 
 Now you can start the journey to play around with `pchain_client`!
+
+## Running pchain_client
+
+### Create Password
+
+For the first time to use `pchain_client`, you need to create your password for using it. The terminal should prompt you as follows:
+
+```text
+First time using ParallelChain Client CLI. Please set up a password to protect your keypairs.
+Your password: 
+```
+
+This password is only used by the CLI, and **NOT** associated with the blockchain. It is used for encryption and decryption of your keypairs so that the keypairs are stored in your computer more securely. Alternatively, you can skip the password protection by simply pressing **Enter**.
+
+You will be required to enter your password twice. If your password is set successfully, you will see a return message with the `pchain_client` version shown on the console.
+
+=== "Linux / macOS"
+    ```bash
+    ./pchain_client --version
+    ```
+=== "Windows PowerShell"
+    ```PowerShell
+    ./pchain_client.exe --version
+    ```
+
+!!! warning
+    The password is not sent and saved anywhere. You won't be able to recover the password if you lose it. Please keep your password safe. You will be required to provide this password to submit transactions and manage keypairs later.
