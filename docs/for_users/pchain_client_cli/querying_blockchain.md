@@ -10,6 +10,10 @@ tags:
 Use `pchain_client query --help` to check the full list available to query.
 
 ### Check Account Related Information
+
+!!! Note
+    If you don't have access to an account yet, check "See also" under [How Account Works](../../fundamentals/accounts.md#how-account-works) to create an account.
+
 To check Externally Owned Accounts (EOA) information such as balance and nonce, your account address (public key) is always needed.
 
 Commands:

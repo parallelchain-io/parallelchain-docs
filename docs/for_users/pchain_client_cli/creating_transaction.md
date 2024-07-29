@@ -99,7 +99,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ./pchain_client transaction create \
     --destination ~/Documents/deposit-tx.json \
     --nonce 0 \
-    --gas-limit 100000 \
+    --gas-limit 500000000 \
     --max-base-fee-per-gas 8 \
     --priority-fee-per-gas 0 \
     deploy \
@@ -111,7 +111,7 @@ Example - Deploy contract and save to designated file `deposit-tx.json`:
     ./pchain_client.exe transaction create `
     --destination ~/Documents/deposit-tx.json `
     --nonce 0 `
-    --gas-limit 100000 `
+    --gas-limit 500000000 `
     --max-base-fee-per-gas 8 `
     --priority-fee-per-gas 0 `
     deploy `
@@ -144,7 +144,10 @@ Example:
     ```
 
 ### Submit Transaction to ParallelChain
-After preparing the transaction json file, you can now submit the transaction with keypair.
+After preparing the transaction json file, you can now submit the transaction with [keypair](../../for_users/pchain_client_cli/managing_account.md/).
+
+!!! Note
+    Executing transactions may require paying for gas fees. If you are testing transactions on Parallelchain Testnet, you can get free testnet tokens from the [Faucet Service](../../fundamentals/networks.md#faucet-service) to pay for the gas fees.
 
 Example:
 
