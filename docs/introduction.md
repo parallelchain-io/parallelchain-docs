@@ -12,11 +12,8 @@ Integrated with **BINGO**, an AI-powered identity verification platform, and cut
 
 ParallelChain has a strong focus on security, scalability and interoperability. It aims to provide a robust identity system for developers of every blockchain to build more secure and compliant applications.
 
-#### ParallelChain Foundation
-The continued development of ParallelChain is supported by the ParallelChain Foundation, an independent governance body based in Switzerland, and it is dedicated to increasing awareness and growing a strong builder community for ParallelChain.
-
 #### Digital Identity Reinvented
-ParallelChain is engineered to provide a secure and user-centric digital identity framework. By embracing **self-sovereign identity (SSI)**, users can issue, manage, and revoke identity credentials without relying on centralized authorities. This decentralized approach fosters greater privacy and data ownership, allowing individuals to selectively share personal information with third parties while keeping sensitive details private. ParallelChain’s **Verifiable** Credentials system, anchored on the blockchain, ensures that identity attestations are tamper-proof and can be verified instantly in real-time across multiple platforms.
+ParallelChain is engineered to provide a secure and user-centric digital identity framework. By embracing **self-sovereign identity (SSI)**, users can issue, manage, and revoke identity credentials without relying on centralized authorities. This decentralized approach fosters greater privacy and data ownership, allowing individuals to selectively share personal information with third parties while keeping sensitive details private. ParallelChain’s **Verifiable Credentials** system, anchored on the blockchain, ensures that identity attestations are tamper-proof and can be verified instantly in real-time across multiple platforms.
 
 The SSI model removes reliance on centralized identity systems, reducing risks such as hacking and unauthorized access to data. It also supports seamless cross-border identity verification, streamlining processes in industries like finance, healthcare, and e-commerce where secure digital identities are critical. By combining **Zero-Knowledge Proofs (ZKPs)** with advanced cryptographic techniques, ParallelChain allows for identity verification without exposing unnecessary personal information, creating a privacy-first ecosystem that remains compliant with stringent regulations like GDPR and other global data protection laws.
 
@@ -51,3 +48,6 @@ XPLL can be acquired through several channels:
   - Biconomy.com
   - Letsexchange.io
 - **Participating in the Ecosystem**: Developers, validators, and ecosystem participants can earn XPLL through their contributions to the network, including running nodes, participating in governance, or building decentralized applications (dApps).
+
+## ParallelChain Foundation
+The continued development of ParallelChain is supported by the ParallelChain Foundation, an independent governance body based in Switzerland, and it is dedicated to increasing awareness and growing a strong builder community for ParallelChain.
