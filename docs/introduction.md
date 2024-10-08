@@ -6,29 +6,28 @@ tags:
 
 ## What is ParallelChain
 
-**ParallelChain** is a dual-blockchain ecosystem powered by two Layer-1 blockchain networks, **ParallelChain Mainnet** and **ParallelChain Enterprise**.
+**ParallelChain** is a Layer-1 proof-of-stake public blockchain platform that places digital identity at its core, empowering the decentralised web and its users with trusted identities that users fully own, control, and have the power to monetise. 
 
-ParallelChain Mainnet is a **Delegated Proof-of-Stake** open-source platform that is suitable for building decentralised, web2 and web3-interoperable blockchain applications; and ParallelChain Enterprise is a business-native, permissioned blockchain that supports decentralised enterprise solutions that feature stronger privacy, scalability, and compliance features. The coupling of both blockchains in a permissioned-permissionless blockchain interoperability will bring Web2 and Web3 into a scalable, networked economy.
+Integrated with **BINGO**, an AI-powered identity verification platform, and cutting-edge privacy technologies, ParallelChain brings trusted digital identities on-chain and facilitates anonymous verification without intermediaries. This model not only enhances user privacy but also ensures compliance with stringent data protection regulations like GDPR, empowering decentralised applications (DApps) with compliance readiness.
 
-The continued development of ParallelChain is supported by the **ParallelChain Foundation**, an independent governance body based in Switzerland, and it is dedicated to increasing awareness and growing a strong builder community for ParallelChain.
+ParallelChain has a strong focus on security, scalability and interoperability. It aims to provide a robust identity system for developers of every blockchain to build more secure and compliant applications.
+
+#### ParallelChain Foundation
+The continued development of ParallelChain is supported by the ParallelChain Foundation, an independent governance body based in Switzerland, and it is dedicated to increasing awareness and growing a strong builder community for ParallelChain.
+
+#### Digital Identity Reinvented
+ParallelChain is engineered to provide a secure and user-centric digital identity framework. By embracing **self-sovereign identity (SSI)**, users can issue, manage, and revoke identity credentials without relying on centralized authorities. This decentralized approach fosters greater privacy and data ownership, allowing individuals to selectively share personal information with third parties while keeping sensitive details private. ParallelChain’s **Verifiable** Credentials system, anchored on the blockchain, ensures that identity attestations are tamper-proof and can be verified instantly in real-time across multiple platforms.
+
+The SSI model removes reliance on centralized identity systems, reducing risks such as hacking and unauthorized access to data. It also supports seamless cross-border identity verification, streamlining processes in industries like finance, healthcare, and e-commerce where secure digital identities are critical. By combining **Zero-Knowledge Proofs (ZKPs)** with advanced cryptographic techniques, ParallelChain allows for identity verification without exposing unnecessary personal information, creating a privacy-first ecosystem that remains compliant with stringent regulations like GDPR and other global data protection laws.
+
+ParallelChain also integrates **BINGO**, an AI-powered identity engine that supports one-to-many and one-to-one biometric verification. This makes the platform highly suitable for applications that require secure and real-time identity validation, such as financial services, healthcare, and government institutions.
+
 
 
 ## What is XPLL
-**XPLL** is the native cryptocurrency of ParallelChain Mainnet (**TXPLL** in Testnet). The users of the ParallelChain Mainnet need XPLLs to pay for their transaction fees when using the network. The transaction fee is denoted in GRAY, the smallest unit of XPLL, where 1 GRAY = 0.00000001 XPLL. Other than that, XPLL also plays an important role in this Delegated Proof-of-Stake (DPoS) Mainnet; it incentivizes good behaviors and punishes actions that threaten the network's security, availability, and user experience.
+**XPLL** is the native utility token of ParallelChain Mainnet (TXPLL in Testnet). It is used to pay for transaction fees, participate in staking, and engage in network governance. XPLL operates within a Delegated Proof-of-Stake (DPoS) consensus mechanism, which ensures network integrity and security. Users pay transaction fees in GRAY, the smallest unit of XPLL, where **1 GRAY = 0.00000001 XPLL**.
 
-
-### Utilities
-
-XPLL acts like your ticket to the ParallelChain Ecosystem; its utilities include the following:
-
-- **Pay** transaction fees on ParallelChain
-- **Stake** XPLL to run a validator node
-- **Delegate** to earn block rewards
-- **Vote** on proposals and help govern the network
-
-### Denomination
-
-The smallest denomination of XPLL is called **Gray**. Users buy XPLL to pay for gas costs with the ParallelChain Mainnet and other purposes as mentioned in previous [Utilities](#utilities) section. 
+XPLL also plays a key role in incentivizing network validators and participants to maintain security and efficiency, while punishing any malicious activity that threatens the network’s stability. Validator nodes stake XPLL to process transactions, contributing to the network's decentralization.
 
 The goal of defining a denomination for XPLL is to standardize its scale with all currencies in the financial system. The table below shows the different denominations of XPLL, their abbreviations, and their equivalent values in terms of XPLL.
 
@@ -45,18 +44,10 @@ The goal of defining a denomination for XPLL is to standardize its scale with al
 
 ## How to Get XPLL
 
-There are several ways to obtain XPLLs, the native tokens of ParallelChain.
-
-### Staking Rewards
-
-Users can stake XPLL with the network validators to help secure the blockchain and earn rewards in the meantime. Staking is a process of locking up a certain amount of XPLL for a period of time in the process of validating transactions, adding new blocks, etc. Therefore, users will be rewarded with additional XPLL for contributing to the security and integrity of the network.
-
-To learn more about staking, read [Staking](./fundamentals/staking.md).
-
-
-
-### Ecosystem Activities - Ambassador Programme
-
-Users can earn XPLL by participating in our **Ambassador Programme** on [Zealy.io](https://zealy.io/c/parallelchain/questboard). There are a variety of tasks and missions for community members to complete. In return, community members will receive rewards, perks, and badges by leveling up on Zealy. This is an opportunity for community members to earn XPLLs while keeping everyone engaged.
-
-For more information about the ParallelChain Ambassador Programme, read [here](https://parallelchain.io/company/newsroom/parallelchain-zealy-announcement-and-ambassador-programme-update).
+XPLL can be acquired through several channels:
+- **Staking Rewards**: Users can stake XPLL by delegating it to validators, securing the network while earning additional XPLL as rewards. To learn more about staking, read [Staking](./fundamentals/staking.md).
+- **Exchanges**: XPLL can be purchased on exchanges that support the ParallelChain ecosystem.
+  - Gate.io
+  - Biconomy.com
+  - Letsexchange.io
+- **Participating in the Ecosystem**: Developers, validators, and ecosystem participants can earn XPLL through their contributions to the network, including running nodes, participating in governance, or building decentralized applications (dApps).
