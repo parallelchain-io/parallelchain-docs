@@ -42,11 +42,15 @@ The goal of defining a denomination for XPLL is to standardize its scale with al
 ## How to Get XPLL
 
 XPLL can be acquired through several channels:
+
 - **Staking Rewards**: Users can stake XPLL by delegating it to validators, securing the network while earning additional XPLL as rewards. To learn more about staking, read [Staking](./fundamentals/staking.md).
+  
 - **Exchanges**: XPLL can be purchased on exchanges that support the ParallelChain ecosystem.
-  - Gate.io
-  - Biconomy.com
-  - Letsexchange.io
+  
+    - Gate.io
+    - Biconomy.com
+    - Letsexchange.io
+  
 - **Participating in the Ecosystem**: Developers, validators, and ecosystem participants can earn XPLL through their contributions to the network, including running nodes, participating in governance, or building decentralized applications (dApps).
 
 ## ParallelChain Foundation
