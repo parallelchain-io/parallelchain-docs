@@ -24,9 +24,6 @@ jobs:
           # predictable.
           python-version: '3.12.7'
 
-      - name: Upgrade pip (Python package manager) version
-        run: pip install --upgrade pip
-
       - name: Install mkdocs
         run: pip install mkdocs
 
