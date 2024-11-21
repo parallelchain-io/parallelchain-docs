@@ -1,17 +1,41 @@
 name: Documentation Deployment
+
 run-name: Deploying to GitHub Pages
+
 on:
   push:
     branches:
       - main
+
 permissions:
     contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - run: pip install --upgrade pip
-      - run: pip install mkdocs pymdown-extensions mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - name: Checkout main branch 
+        uses: actions/checkout@v2
+
+      - name: Installing Python
+        uses: actions/setup-python@v2
+        with:
+          # actions/setup-python recommends that python-version be fixed so that workflow runs are more 
+          # predictable.
+          python-version: '3.12.7'
+
+      - name: Upgrade pip (Python package manager) version
+        run: pip install --upgrade pip
+
+      - name: Install mkdocs
+        run: pip install mkdocs
+
+      - name: Install pymdown-extensions
+        run: pip install pymdown-extensions mkdocs-material
+
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+
+      # This step force-pushes the docs to the "gh-pages" branch of the parallelchain-docs repo.
+      - name: Build and deploy mkdocs
+        run: mkdocs gh-deploy --force

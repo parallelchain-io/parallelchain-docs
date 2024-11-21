@@ -10,9 +10,11 @@ on:
       - reopened
       - synchronize
       - closed
+
 permissions:
   contents: write
   pull-requests: write
+
 jobs:
   preview:
     name: 🚀 Preview
