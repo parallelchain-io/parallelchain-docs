@@ -1,0 +1,2348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.parallelchain.io/fundamentals/transactions/">
+      
+      
+        <link rel="prev" href="../blocks/">
+      
+      
+        <link rel="next" href="../gas/">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Transactions - ParallelChain Mainnet Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transactions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="header.title">
+    <a href="../.." title="ParallelChain Mainnet Documentation" class="md-header__button md-logo" aria-label="ParallelChain Mainnet Documentation" data-md-component="logo" target="_blank">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ParallelChain Mainnet Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transactions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/parallelchain-io/parallelchain-docs" title="source.link.title" class="md-source" data-md-component="source" target="_blank">
+    <div class="md-source__icon md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </div>
+    <div class="md-source__repository">
+      parallelchain-io/parallelchain-docs
+    </div>
+  </a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ParallelChain Mainnet Documentation" class="md-nav__button md-logo" aria-label="ParallelChain Mainnet Documentation" data-md-component="logo">
+      
+  <img src="../../img/parallelchain-logo.svg" alt="logo">
+
+    </a>
+    ParallelChain Mainnet Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/parallelchain-io/parallelchain-docs" title="source.link.title" class="md-source" data-md-component="source" target="_blank">
+    <div class="md-source__icon md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </div>
+    <div class="md-source__repository">
+      parallelchain-io/parallelchain-docs
+    </div>
+  </a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentals
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accounts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-transaction-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Transaction Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staking-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staking commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receipt-and-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receipt and Logs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consensus_mechanism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consensus Mechanism
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../staking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For Developers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Smart Contracts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Smart Contracts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/installing_sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/preparing_env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preparing Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_5" id="__nav_3_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Smart Contract Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Smart Contract Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/1_hello_contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello Contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/2_my_little_pony/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Little Pony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/3_my_bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/4_contract_proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contract Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/5_my_collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/smart_contract_examples/6_my_pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Pool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_6" id="__nav_3_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/contract_methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contract Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/contract_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contract Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/accessing_info_about_blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Information About the Blockchain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/cross_contract_call/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross Contract Call
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/transferring_balance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring Balance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/cryptographic_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cryptographic Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/advanced/staking_in_contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staking in Contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/smart_contracts/prfc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PRFC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ParallelChain Client APIs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            ParallelChain Client APIs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/parallelchain_client_apis/javascript_apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/parallelchain_client_apis/rust_client_apis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Client APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xperience Browser Provider APIs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Xperience Browser Provider APIs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/permissions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_developers/xperience_browser_provider_apis/api_reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For End-Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            For End-Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ParallelChain Client CLI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            ParallelChain Client CLI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/pchain_client_cli/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/pchain_client_cli/managing_account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/pchain_client_cli/creating_transaction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Transaction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/pchain_client_cli/querying_blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Querying Blockchain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/pchain_client_cli/interacting_with_smart_contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interacting with Smart Contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Wallet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web Wallet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/web_wallet/create_account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Managing Your Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/web_wallet/transfer_tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/web_wallet/staking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staking XPLL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/web_wallet/lockup_contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock-Up Contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Xperience Browser Extension
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Xperience Browser Extension
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/xperience_browser_extension/create_account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Managing Your Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/xperience_browser_extension/transfer_tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/xperience_browser_extension/managing_tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/xperience_browser_extension/staking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Staking XPLL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for_users/xperience_browser_extension/lockup_contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock-Up Contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-transaction-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Transaction Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Account commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#staking-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staking commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receipt-and-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receipt and Logs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#transaction" class="md-tag">Transaction</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#receipt" class="md-tag">Receipt</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#nonce" class="md-tag">Nonce</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#exit-status" class="md-tag">Exit Status</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#log" class="md-tag">Log</a>
+    
+  
+</nav>
+
+
+  
+  
+
+
+<h1 id="transactions">Transactions</h1>
+<p>A <strong>transaction</strong> is a digitally signed instruction that tells the Mainnet state machine to execute a sequence of commands. </p>
+<p>A transaction has the following fields:</p>
+<ul>
+<li><code>Signer</code>: the public address of the external-owned account that signed this transaction.</li>
+<li><code>Nonce</code>: the number of transactions signed by the signer that has been included on the blockchain before this transaction. This ensures that all of the signer’s transactions are included in the blockchain in an expected order and prevents the same transaction from being included in multiple blocks.</li>
+<li><code>Commands</code>: a sequence of <a href="#commands">Commands</a> to be executed in a transaction.</li>
+<li><code>Gas Limit</code>: the maximum number of <a href="../gas/">gas</a> units that should be used in executing this transaction.</li>
+<li><code>Max Base Fee per Gas</code>: the maximum number of grays that the signer is willing to burn for a gas unit used in this transaction.</li>
+<li><code>Priority Fee per Gas</code>: the number of grays that the signer is willing to pay the block proposer for including this transaction in a block.</li>
+<li><code>Signature</code>: the signature formed by signing over content in this transaction using the signer’s private key.</li>
+<li><code>Hash</code>: the cryptographic hash of the signature.</li>
+</ul>
+<p>Example of a transaction queried by <a href="../../for_users/pchain_client_cli/querying_blockchain/">ParallelChain Client CLI</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;transaction&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;commands&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Transfer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;recipient&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kxrCl32WEzr7gr4Awb3jAMQtoh5zY8grabqlu-x42jY&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2000000000</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;signer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;qPReY5x_DPKAx1v30UrU1x1RI61Wd2OxeZo2eSWcjMU&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;priority_fee_per_gas&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;gas_limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">67500000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;max_base_fee_per_gas&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;nonce&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">428</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dOrjtT7o5Y97mlLJFaCvdNUq6UgVQItVYGXHPoDw5n4&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RLM3k5VDDzBqkQ7ios4TMP9LwL50n8hNQ7OjH-wcTE0Ts6F3uWDaA5J52sCyYr3aGGGElXKiIatqH15qVwMUAA&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;receipt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;status_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;gas_used&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">32820</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;return_values&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;logs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="how-transaction-works">How Transaction Works</h2>
+<p>A transaction is created by an <a href="../accounts/#accounts">EOA</a> who sets the fields such as <code>nonce</code>, <code>gas_limit</code> of a transaction. The field <code>signer</code> is the address (public key) of the account, and the signature is created by signing the the content of the transaction with the private key of the account. Finally, the field <code>hash</code> is computed from the signature field.</p>
+<p>EOA submits transaction to the blockchain <a href="../networks/">network</a>. The <a href="../nodes/">nodes</a> will then execute the transaction in order to produce a block. The transaction execution mutates the <a href="../nodes/#world-state">state</a> of blockchain. For example, if the transaction includes a <a href="#account-commands">Transfer Command</a>, balances of the signer and recipient can be updated upon a successful execution.</p>
+<p>In the end, the transaction becomes part of a <a href="../blocks/">block</a> if it is executed and validated successfully, Otherwise, the transaction will be dropped by the network.</p>
+<p>See also:</p>
+<ul>
+<li><a href="../../for_users/pchain_client_cli/creating_transaction/">Create Transaction by CLI</a></li>
+<li><a href="../../for_users/web_wallet/transfer_tokens/">Transferring Tokens by Web Wallet</a></li>
+<li><a href="../../for_users/xperience_browser_extension/transfer_tokens/">Transferring Tokens by Xperience Browser Extension</a></li>
+</ul>
+<h2 id="commands">Commands</h2>
+<p>A command is a useful operation that Parallelchain allows the user to do. A sequence of commands can be inserted into a transaction to be carried out. There are currently 13 different kinds of commands, each corresponding to a variant of the command enum type. These are further divided into three categories: <a href="#account-commands">account commands</a>, <a href="#staking-commands">staking commands</a>, and <a href="#protocol-commands">protocol commands</a>. Most commands take inputs, which are part of the command type as the fields of its corresponding variant.</p>
+<p>In the below subsections, the input types are represented in <a href="https://www.rust-lang.org">Rust programming language</a>. For example, <code>PublicAddress</code> is 32-byte data. <code>Vec&lt;u8&gt;</code> is vector of unsigned 8-bit integers (bytes). </p>
+<h3 id="account-commands">Account commands</h3>
+<p><strong>Account commands</strong> are the commands specific to mutate state of <a href="../accounts/">Accounts</a> in the blockchain.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transfer</td>
+<td><li>Recipient (<code>PublicAddress</code>)</li> <li>Amount (<code>u64</code>)</li></td>
+<td>Transfer an amount from the signer's balance to the recipient's balance.</td>
+</tr>
+<tr>
+<td>Deploy</td>
+<td><li>Contract (<code>Vec&lt;u8&gt;</code>)</li> <li>CBI version (<code>u32</code>)</li></td>
+<td>Deploy a contract that implements a given CBI version.</td>
+</tr>
+<tr>
+<td>Call</td>
+<td><li>Target (<code>PublicAddress</code>)</li> <li>method (<code>String</code>)</li> <li>arguments (<code>Option&lt;Vec&lt;Vec&lt;u8&gt;&gt;&gt;</code>)</li> <li>amount (<code>Option&lt;u64&gt;</code>)</li></td>
+<td>Call a contract method with given arguments, optionally transferring some tokens.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="staking-commands">Staking commands</h3>
+<p><strong>Staking commands</strong> are mainly associated with the <a href="../staking/">staking</a> process in ParallelChain Mainnet ecosystem.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create pool</td>
+<td><li>Commission rate (<code>u8</code>)</li></td>
+<td>Create a new pool with the signer as the operator which charges a given commission rate on the validator rewards of delegated stakes</td>
+</tr>
+<tr>
+<td>Set pool settings</td>
+<td><li>Commission rate (<code>u8</code>)</li></td>
+<td>Set the commission rate of an existing pool, operated by the signer.</td>
+</tr>
+<tr>
+<td>Delete pool</td>
+<td><li>None</li></td>
+<td>Delete an existing pool, as well as all of its existing stakes.</td>
+</tr>
+<tr>
+<td>Create Deposit</td>
+<td><li>Operator (<code>PublicAddress</code>)</li> <li>Balance (<code>u64</code>)</li> <li>Auto stake rewards (<code>bool</code>)</li></td>
+<td>Create a deposit that targets a given operator, with the given balance, and stake the validator rewards that it receives optionally.</td>
+</tr>
+<tr>
+<td>Set deposit settings</td>
+<td><li>Operator (<code>PublicAddress</code>)</li> <li>Auto stake rewards? (<code>bool</code>)</li></td>
+<td>Set whether a given deposit automatically stakes validator rewards.</td>
+</tr>
+<tr>
+<td>Top up deposit</td>
+<td><li>Operator (<code>PublicAddress</code>)</li> <li>Balance (<code>u64</code>)</li></td>
+<td>Transfer more tokens into an existing deposit.</td>
+</tr>
+<tr>
+<td>Withdraw Deposit</td>
+<td><li>Operator (<code>PublicAdddress</code>)</li> <li>Max amount (<code>u64</code>)</li></td>
+<td>Try to withdraw a given amount from a deposit into the signer's balance.</td>
+</tr>
+<tr>
+<td>Stake</td>
+<td><li>Operator (<code>PublicAddress</code>)</li> <li>Max amount (<code>u64</code>)</li></td>
+<td>Try to stake a given amount from a deposit.</td>
+</tr>
+<tr>
+<td>Unstake</td>
+<td><li>Operator (<code>PublicAddress</code>)</li> <li>Max amount (<code>u64</code>)</li></td>
+<td>Try to reduce a deposit's stake by a given amount.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>The actual amount of tokens that could be withdrawn, staked, or unstaked by the final three kinds of commands depends on timing and order, factors that users do not have precise control over. For example, the number of tokens that can be withdrawn from a deposit can change significantly between epochs as the deposit's <a href="https://github.com/parallelchain-io/parallelchain-protocol/blob/master/Blockchain.md#delegated-proof-of-stake">bonded balance</a> decreases, or increases.</em></p>
+<p><em>Therefore, these commands accept as input a "max amount" instead of a precise amount. These commands try to withdraw, stake, or unstake as close to the maximum amount as possible, and inform the precise amount in its return value.</em></p>
+</div>
+<h3 id="protocol-commands">Protocol commands</h3>
+<p><strong>Protocol commands</strong> are the commands which mutates the state of the whole network (i.e. mutates the state of <a href="../accounts/#network-account">Network Account</a> in the blockchain). The current protocol version has only one protocol command, <code>Next Epoch</code>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Next epoch</td>
+<td>None</td>
+<td>Reward the current <a href="../blocks/#epoch-block">epoch</a>'s validators, and confirm the next epoch's validator set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="receipt-and-logs">Receipt and Logs</h2>
+<p>A <strong>receipt</strong> is produced upon execution of each transaction. It consists of a sequence of <code>CommandReceipt</code>, which provides a succinct summary of what happened during the execution of the corresponding <code>Command</code> in a transaction.</p>
+<p>A Command Receipt has the following fields:</p>
+<ul>
+<li><code>Exit Status</code>: tells whether the corresponding command in the sequence succeeded in doing its operation and, if it failed, whether the failure is because of gas exhaustion or some other reason.</li>
+<li><code>Gas Used</code>: how much gas was used in the execution of the transaction. This will at most be the transaction’s gas limit.</li>
+<li><code>Return Values</code>: the return values of the corresponding command.</li>
+<li><code>Logs</code>: the logs emitted during the corresponding call command.</li>
+</ul>
+<p>Possible values for <code>Exit Status</code> are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0x00</td>
+<td style="text-align: left;">Operation successful</td>
+<td style="text-align: left;">The command successfully did what it is supposed to do.</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x01</td>
+<td style="text-align: left;">Operation failed</td>
+<td style="text-align: left;">The command failed to do what it is supposed to do.</td>
+</tr>
+<tr>
+<td style="text-align: left;">0x02</td>
+<td style="text-align: left;">Gas exhausted</td>
+<td style="text-align: left;">Execution halted in the middle of the command because the gas limit was hit.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logs</strong> are topic-value pairs emitted during smart contract execution. Logs allow decentralised applications to quickly prove to users that a particular branch/line of code was executed during a transaction, by querying for the existence of logs in blocks.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ParallelChain Lab 2023
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
