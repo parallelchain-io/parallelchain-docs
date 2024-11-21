@@ -1,0 +1,50 @@
+name: Deploy PR preview to GitHub Pages
+run-name: "Deploy preview for PR #${{ github.event.pull_request.number }}"
+
+concurrency: preview-${{ github.ref }}
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  preview:
+    name: Deploy PR preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: Checkout PR source branch
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12.7"
+
+      - name: Install mkdocs
+        run: pip install mkdocs
+
+      - name: Install pymdown-extensions
+        run: pip install pymdown-extensions
+
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+
+      - name: Build documentation 
+        run: mkdocs build
+
+      - name: Deploy generated documentation 
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./site/
