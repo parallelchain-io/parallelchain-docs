@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    name: 
+    name: Deploy `main`
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch 
@@ -31,7 +31,7 @@ jobs:
         run: pip install mkdocs
 
       - name: Install pymdown-extensions
-        run: pip install pymdown-extensions mkdocs-material
+        run: pip install pymdown-extensions
 
       - name: Install mkdocs-material
         run: pip install mkdocs-material

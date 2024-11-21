@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   preview:
-    name: 
+    name: Deploy PR preview
     runs-on: ubuntu-latest
     steps:
       - name: Cancel previous runs
