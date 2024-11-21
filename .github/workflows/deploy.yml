@@ -1,6 +1,5 @@
-name: Documentation Deployment
-
-run-name: Deploying to GitHub Pages
+name: "Deploy `main` branch to GitHub Pages"
+run-name: "Deploy `main` (sha: ${{ github.sha }}) to Pages"
 
 on:
   push:
@@ -12,12 +11,13 @@ permissions:
 
 jobs:
   deploy:
+    name: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch 
         uses: actions/checkout@v2
 
-      - name: Installing Python
+      - name: Install Python
         uses: actions/setup-python@v2
         with:
           # actions/setup-python recommends that python-version be fixed so that workflow runs are more 
@@ -37,5 +37,5 @@ jobs:
         run: pip install mkdocs-material
 
       # This step force-pushes the docs to the "gh-pages" branch of the parallelchain-docs repo.
-      - name: Build and deploy mkdocs
+      - name: Build and deploy documentation
         run: mkdocs gh-deploy --force
